@@ -61,47 +61,53 @@ const successStories = [
 ];
 
 const team = [
+  // 1. COO and Executive Director – Joseph Faluyi
   {
-    name: "Dr. Amina Diallo",
-    title: "Executive Director",
-    role: "Climate Finance & Diplomacy",
-    bio: "Former UN climate negotiator with 15+ years experience in international development and environmental policy. Led successful climate finance initiatives across West Africa.",
-    photo: "/assets/leadership/rs=w:1023,h:1023,cg:true,m.jpeg",
+    name: "Joseph Faluyi",
+    title: "COO and Executive Director",
+    role: "Oversees programme delivery, governance, and field partnerships across the Sahel.",
+    bio: "Operations leader ensuring effective implementation and deep community engagement across Great Green Wall countries.",
+    photo: "/assets/leadership/COO and Executive Director.jpeg",
   },
+  // 2. Dr. Frannie Leautier – Managing Director of Southbridge Investments
   {
-    name: "Jean-Pierre Mbebe",
-    title: "Technical Director",
-    role: "Agroforestry & Land Restoration",
-    bio: "Specialist in regenerative agriculture and ecosystem restoration. Developed innovative planting techniques that have restored over 100,000 hectares of degraded land.",
-    photo: "/assets/leadership/rs=w:1023,h:1023,cg:true.jpeg",
+    name: "Dr. Frannie Leautier",
+    title: "Managing Director of Southbridge Investments",
+    role: "Development finance and innovative climate investment.",
+    bio: "Renowned development finance expert pioneering blended finance models that unlock inclusive, climate-resilient growth.",
+    photo: "/assets/leadership/Dr. Frannie Leautier.jpeg",
   },
+  // 3. Grand Patron – His Excellency Olusegun Obasanjo
   {
-    name: "Dr. Sarah Chen",
-    title: "Research Director",
-    role: "Climate Science & Monitoring",
-    bio: "Climate scientist with expertise in ecosystem monitoring and data analysis. Leads our research initiatives and impact assessment programs.",
-    photo: "/assets/leadership/rs=w:1023,h:1023,cg:true_1.jpeg",
+    name: "His Excellency Olusegun Obasanjo",
+    title: "Grand Patron",
+    role: "Former President of Nigeria",
+    bio: "Statesman and Grand Patron of GGWoA, championing pan-African cooperation and long-term investment in the Great Green Wall.",
+    photo: "/assets/leadership/Grand Patron.jpeg",
   },
+  // 4. Patron – Aliko Dangote, GCON
   {
-    name: "Mohammed Al-Khouri",
-    title: "Partnerships Director",
-    role: "Strategic Alliances & Development",
-    bio: "Expert in building multi-stakeholder partnerships and resource mobilization. Connects communities with governments, donors, and technical partners.",
-    photo: "/assets/leadership/rs=w:1023,h:1023,cg:true_2.jpeg",
+    name: "Aliko Dangote, GCON",
+    title: "Patron",
+    role: "Chairman Dangote Group",
+    bio: "Business leader mobilizing private sector capital and industrial know-how to strengthen restoration economies across the Sahel.",
+    photo: "/assets/leadership/Aliko Dangote.jpeg",
   },
+  // 5. H.E. Youssou N'Dour – Former Minister of Tourism for Senegal
   {
-    name: "Dr. Fatima Zahra",
-    title: "Community Programs Director",
-    role: "Community Development & Education",
-    bio: "Community development specialist focused on women's leadership and youth engagement. Designs and implements community-based restoration programs.",
-    photo: "/assets/leadership/rs=w:1023,h:1023,cg:true_3.jpeg",
+    name: "H.E. Youssou N'Dour",
+    title: "Former Minister of Tourism for Senegal",
+    role: "Cultural diplomacy and creative advocacy.",
+    bio: "Artist and statesman using his global platform to connect culture, youth, and environmental stewardship for the Great Green Wall.",
+    photo: "/assets/leadership/H.E. Youssou N'Dour .jpeg",
   },
+  // 6. Chief Executive Officer – Ramatoulaye Diallo N'diaye
   {
-    name: "Carlos Rodriguez",
-    title: "Operations Director",
-    role: "Program Management & Logistics",
-    bio: "Operations expert with extensive experience in large-scale program management across multiple countries. Ensures efficient implementation of our restoration projects.",
-    photo: "/assets/leadership/rs=w:1023,h:1023,cg:true_4.jpeg",
+    name: "Ramatoulaye Diallo N'diaye",
+    title: "Chief Executive Officer",
+    role: "Mobilizes culture, finance, and diplomacy to accelerate the Great Green Wall.",
+    bio: "Chief Executive Officer of GGWoA, leading cross-sector coalitions that align governments, investors, and communities around restoration.",
+    photo: "/assets/leadership/Ramatoulaye Diallo N'diaye.jpeg",
   },
 ];
 
@@ -576,6 +582,15 @@ export default function HomePage() {
               <p className="text-offWhite/70 text-lg leading-relaxed">
                 Great Green Wall of Africa Foundation. Building a living infrastructure for nature, culture, and prosperity.
               </p>
+              <p className="mt-4 text-sm text-offWhite/70">
+                433 Plaza Real, Suite 275, Boca Raton, Florida 33432, United States
+              </p>
+              <a
+                href="mailto:Inquiry@ggwoa.org"
+                className="mt-2 inline-block text-sm font-semibold text-accent hover:text-offWhite"
+              >
+                Inquiry@ggwoa.org
+              </a>
               <div className="flex items-center gap-4 mt-8">
                 <a href="#" className="w-12 h-12 bg-accent/20 rounded-full flex items-center justify-center hover:bg-accent transition-all duration-300">
                   <svg className="w-6 h-6 text-offWhite" fill="currentColor" viewBox="0 0 24 24">

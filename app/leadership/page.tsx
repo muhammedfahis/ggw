@@ -12,71 +12,94 @@ export default function LeadershipPage() {
     }, []);
 
     const patrons = [
+        // 1. Dr. Frannie Leautier – Managing Director of Southbridge Investments
+        {
+            title: "Distinguished Leader",
+            name: "Dr. Frannie Leautier",
+            role: "Managing Director of Southbridge Investments",
+            image: "/assets/leadership/Dr. Frannie Leautier.jpeg",
+            bio: "Senior Partner and CEO at SouthBridge Investments with a distinguished career at the World Bank Group and African Development Bank, leading infrastructure, risk and asset management across the African continent.",
+        },
+        // 2. Grand Patron – His Excellency Olusegun Obasanjo – Former President of Nigeria
         {
             title: "Grand Patron",
-            name: "H.E. Olusegun Obasanjo",
+            name: "His Excellency Olusegun Obasanjo",
             role: "Former President of Nigeria",
-            image: "/assets/leadership/rs=w:1023,h:1023,cg:true.jpeg",
-            bio: "Distinguished statesman and global leader committed to sustainable development across Africa."
+            image: "/assets/leadership/Grand Patron.jpeg",
+            bio: "Former President of Nigeria (1999–2007) and respected African statesman, lending diplomatic authority and long-term vision to the Great Green Wall movement.",
         },
+        // 3. Aliko Dangote.jpeg = Patron – Aliko Dangote, GCON – Chairman Dangote Group
         {
             title: "Patron",
             name: "Aliko Dangote, GCON",
-            role: "Chairman, Dangote Group",
-            image: "/assets/leadership/rs=w:1023,h:1023,cg:true_1.jpeg",
-            bio: "Visionary business leader driving economic empowerment and environmental stewardship."
-        },
-        {
-            title: "Patron",
-            name: "Maman Sidikou",
-            role: "AU Special Representative",
-            image: "/assets/leadership/rs=w:1023,h:1023,cg:true_2.jpeg",
-            bio: "Diplomatic champion fostering regional cooperation and peace-building initiatives."
+            role: "Chairman Dangote Group",
+            image: "/assets/leadership/Aliko Dangote.jpeg",
+            bio: "Chairman of the Dangote Group and one of Africa’s most influential industrialists, championing private sector participation in climate and restoration initiatives.",
         },
     ];
 
     const board = [
-        {
-            name: "H.E. Ramatoulaye Diallo N’Daiye",
-            role: "Chairman and CEO",
-            image: "/assets/leadership/rs=w:1023,h:1023,cg:true_3.jpeg",
-            bio: "Strategic leader uniting culture, finance, and diplomacy to accelerate the Great Green Wall vision."
-        },
-        {
-            name: "H.E. Dr. Lassina Zerbo",
-            role: "Executive Secretary Emeritus, CTBTO & President, RAEB",
-            image: "/assets/leadership/rs=w:1023,h:1023,cg:true_4.jpeg",
-            bio: "International expert bringing scientific excellence and global governance experience."
-        },
+        // 1. H.E. Youssou N'Dour – Former Minister of Tourism for Senegal
         {
             name: "H.E. Youssou N'Dour",
             role: "Former Minister of Tourism for Senegal",
-            image: "/assets/leadership/rs=w:1023,h:1023,cg:true_5.jpeg",
-            bio: "Cultural icon and advocate leveraging artistic influence for environmental advocacy."
+            image: "/assets/leadership/H.E. Youssou N'Dour .jpeg",
+            bio: "World‑renowned Senegalese musician, activist and former Minister of Tourism and Culture, using his cultural platform to mobilize support for climate action.",
         },
+        // 2. Chief Executive Officer – Ramatoulaye Diallo N'diaye
         {
-            name: "Richard Soundardjee",
-            role: "Managing Director, CICC",
-            image: "/assets/leadership/rs=w:1023,h:1023,cg:true_6.jpeg",
-            bio: "Financial strategist mobilizing investment for sustainable infrastructure development."
+            name: "Ramatoulaye Diallo N'diaye",
+            role: "Chief Executive Officer",
+            image: "/assets/leadership/Ramatoulaye Diallo N'diaye.jpeg",
+            bio: "Founder and CEO of GGWoA with over two decades of experience in mobile financial services, telecoms and investment, dedicated to climate resilience and the empowerment of women and youth in Africa.",
         },
+        // 3. H.E. Dr. Lassina Zerbo – full role description
         {
-            name: "Dr. Frannie Léautier",
-            role: "Managing Director, SouthBridge Investments",
-            image: "/assets/leadership/rs=w:1023,h:1023,cg:true_7.jpeg",
-            bio: "Development finance expert pioneering innovative funding models for climate resilience."
+            name: "H.E. Dr. Lassina Zerbo",
+            role: "Executive Secretary Emeritus Comprehensive Nuclear Test-Ban Treaty Organization (CTBTO); Chairman Rwanda Atomic Energy Board (RAEB); Former Prime Minister of Burkina Faso",
+            image: "/assets/leadership/H.E. Dr. Lassina Zerbo.jpeg",
+            bio: "Geophysicist and nuclear science diplomat, former Executive Secretary of the CTBTO, advising on science‑driven governance and energy security for a resilient Sahel.",
         },
+        // 4. Richad Soundardjee – Managing Director China International Capital Corporation
+        {
+            name: "Richad Soundardjee",
+            role: "Managing Director China International Capital Corporation",
+            image: "/assets/leadership/Richad Soundardjee.jpeg",
+            bio: "Managing Director at CICC with previous senior leadership at Société Générale, structuring capital markets solutions for emerging markets and sustainable infrastructure.",
+        },
+        // 5. Abderrahmane Sissako – Film Director, Screenwriter, Producer
         {
             name: "Abderrahmane Sissako",
-            role: "Film Director",
-            image: "/assets/leadership/abderrahmane-sissako.jpeg",
-            bio: "Acclaimed filmmaker using storytelling to amplify environmental narratives."
+            role: "Film Director, Screenwriter, Producer",
+            image: "/assets/leadership/Abderrahmane Sissako.jpeg",
+            bio: "Mauritanian‑born Malian filmmaker behind works such as Timbuktu, Bamako and Waiting for Happiness, bringing global attention to stories of justice, culture and the environment.",
+        },
+        // 6. Patron – Aliko Dangote, GCON – Chairman Dangote Group (Strategic Steward card shares Patron image)
+        {
+            name: "Aliko Dangote, GCON",
+            role: "Chairman Dangote Group",
+            image: "/assets/leadership/Aliko Dangote.jpeg",
+            bio: "Patron and strategic steward bringing private sector scale and long-term investment to the Great Green Wall.",
+        },
+        // 7. Patron – H.E. Ambassador Maman Sambo Sidikou
+        {
+            name: "H.E. Ambassador Maman Sambo Sidikou",
+            role: "AU Special Rep for Mali and the Sahel; Former UN Special Rep. of the Secretary-General for West Africa and the Sahel",
+            image: "/assets/leadership/H.E. Ambassador Maman Sambo Sidikou.png",
+            bio: "Diplomatic champion fostering regional cooperation, peace-building and strategic partnerships across the Sahel and West Africa.",
+        },
+        // 8. COO and Executive Director – Joseph Faluyi
+        {
+            name: "Joseph Faluyi",
+            role: "COO and Executive Director",
+            image: "/assets/leadership/COO and Executive Director.jpeg",
+            bio: "Operations leader ensuring effective implementation and deep community engagement across Great Green Wall countries.",
         },
     ];
 
     const management = [
         {
-            name: "Ramatoulaye Diallo N’Daiye",
+            name: "Ramatoulaye Diallo N'diaye",
             role: "Chief Executive Officer",
             focus: "Mobilizes culture, finance, and diplomacy to accelerate the Great Green Wall.",
             bio: "Visionary executive leading cross-sector partnerships and strategic initiatives."

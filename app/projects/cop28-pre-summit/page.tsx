@@ -2,72 +2,72 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata = {
-  title: "IMAGINE-1 | GGWoA Foundation",
+  title: "COP28 Pre-summit Series | GGWoA Foundation",
   description:
-    "Pan-African creative campaign reframing the Great Green Wall through music, film, and immersive art to inspire global action and local pride.",
+    "Aligning climate, education, food security, health, and culture coalitions ahead of COP28 through cross-sector dialogues and showcases.",
 };
 
 const stats = [
   {
-    value: "50+",
-    label: "Artists Engaged",
-    detail: "Musicians, filmmakers, visual artists, and storytellers from across the continent.",
+    value: "12",
+    label: "Countries Engaged",
+    detail: "Coalitions and leaders connected across the Great Green Wall and beyond.",
   },
   {
-    value: "3+",
-    label: "Cities & Hubs",
-    detail: "Programming anchored in key Great Green Wall and cultural hubs.",
+    value: "5+",
+    label: "Thematic Tracks",
+    detail: "Climate, education, food systems, health, and culture brought into one conversation.",
   },
   {
-    value: "Millions",
-    label: "Digital Impressions",
-    detail: "Audiences reached through concerts, screenings, and digital campaigns.",
+    value: "100+",
+    label: "Stakeholders",
+    detail: "Officials, practitioners, artists, and funders participating in the series.",
   },
 ];
 
 const approach = [
   {
-    title: "Music & Live Performance",
-    body: "Concerts and sonic collaborations that position restoration as a shared cultural project, not just a policy target.",
+    title: "Strategic Dialogues",
+    body: "High-level sessions aligning ministries, multilaterals, and technical partners around shared COP28 priorities.",
   },
   {
-    title: "Film & Visual Storytelling",
-    body: "Short films, documentaries, and visual essays that follow communities along the Great Green Wall in their own words.",
+    title: "Coalition Building",
+    body: "Working groups that bridge climate, health, education, food security, and culture so commitments reinforce each other.",
   },
   {
-    title: "Immersive & Digital Art",
-    body: "Installations, exhibitions, and online experiences that invite audiences to imagine resilient Sahel futures.",
+    title: "Story-led Sessions",
+    body: "Panels and showcases that elevate frontline experiences and cultural narratives alongside policy discussions.",
   },
 ];
 
 const galleryImages = [
   {
-    src: "/assets/projects/rs=w:365,h:365,cg:true_3.jpeg",
-    alt: "Artists performing at an IMAGINE-1 showcase",
+    src: "/assets/projects/rs=w:365,h:365,cg:true.jpeg",
+    alt: "Speakers on stage at a COP28 pre-summit session",
   },
   {
-    src: "/assets/projects/rs=w:365,h:365,cg:true.jpeg",
-    alt: "Audience at a Great Green Wall storytelling event",
+    src: "/assets/projects/rs=w:365,h:365,cg:true_1.jpeg",
+    alt: "Participants engaged in a breakout discussion circle",
   },
   {
     src: "/assets/projects/rs=w:365,h:365,cg:true_2.jpeg",
-    alt: "Film crew capturing scenes in a Sahelian landscape",
+    alt: "Delegates networking around the Great Green Wall exhibit",
   },
   {
-    src: "/assets/projects/rs=w:365,h:365,cg:true_4.jpeg",
-    alt: "Immersive installation inspired by the Great Green Wall",
+    src: "/assets/projects/rs=w:365,h:365,cg:true_3.jpeg",
+    alt: "Artist-led performance during the pre-summit series",
   },
 ];
 
-export default function ImagineOnePage() {
+export default function Cop28PreSummitPage() {
   return (
     <main className="bg-offWhite text-charcoal min-h-screen">
       {/* Hero Section */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="/assets/projects/rs=w:365,h:365,cg:true_3.jpeg"
-            alt="Stage lighting at an IMAGINE-1 performance"
+            src="/assets/projects/rs=w:365,h:365,cg:true.jpeg"
+            alt="Stage and audience during a COP28 pre-summit event"
             fill
             priority
             className="object-cover"
@@ -80,20 +80,20 @@ export default function ImagineOnePage() {
           <div className="max-w-6xl mx-auto text-center">
             <div className="space-y-8">
               <p className="font-accent text-xs uppercase tracking-wider text-accent mb-6">
-                CREATIVE CAMPAIGN
+                CLIMATE SUMMIT SERIES
               </p>
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-heading font-bold text-offWhite mb-8 leading-tight">
-                IMAGINE-1
+                COP28 Pre-summit Series
               </h1>
               <p className="text-xl md:text-2xl lg:text-3xl text-offWhite/90 max-w-4xl mx-auto leading-relaxed mb-12">
-                Pan-African creative campaign reframing the Great Green Wall through music, film, and immersive art so that restoration feels as cultural as it is technical.
+                Aligning climate, education, food security, health, and culture coalitions ahead of COP28 through cross-sector dialogues that put communities at the centre.
               </p>
               <div className="flex flex-col sm:flex-row gap-6 justify-center">
                 <Link
                   href="/contact"
                   className="bg-offWhite text-primary px-10 py-5 rounded-full font-semibold text-lg hover:bg-offWhite/90 transition-all duration-300 hover:scale-105 hover:shadow-2xl inline-flex items-center gap-3 justify-center"
                 >
-                  Partner on IMAGINE-1
+                  Explore Partnerships
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M16.01 11H4v2h12.01v3L20 12l-3.99-4v3z" />
                   </svg>
@@ -121,11 +121,11 @@ export default function ImagineOnePage() {
               PROJECT OVERVIEW
             </p>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-deepEarth mb-8 leading-tight">
-              Culture as Climate Infrastructure
+              One Table for Many Coalitions
             </h2>
             <div className="w-32 h-1 bg-accent mx-auto mb-8" />
             <p className="text-xl text-charcoal/80 max-w-3xl mx-auto leading-relaxed">
-              IMAGINE-1 invites artists and audiences to see the Great Green Wall not just as a technical project, but as the backbone of stories, sounds, and images that define a generation.
+              The COP28 Pre-summit Series convened leaders from multiple sectors so that commitments on paper translate into coordinated action across ministries, agencies, and movements.
             </p>
           </div>
 
@@ -159,19 +159,19 @@ export default function ImagineOnePage() {
                 PROJECT BACKGROUND
               </p>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-deepEarth mb-6 leading-tight">
-                Reframing the Great Green Wall in the Public Imagination
+                Preparing the Ground Before the Summit Stage
               </h2>
               <div className="w-24 h-1 bg-accent mb-6" />
             </div>
             <div className="space-y-5 text-lg text-charcoal/80 leading-relaxed">
               <p>
-                While policymakers negotiate targets and financiers structure deals, artists are often the ones who make climate futures feel tangible. IMAGINE-1 gathers a constellation of creators to tell the story of the Great Green Wall as a cultural renaissance.
+                Large summits often move quickly, leaving limited space for deep coordination. The Pre-summit Series created a slower, more intentional runway where partners could align priorities, clarify roles, and surface gaps before arriving at COP28.
               </p>
               <p>
-                Through residencies, labs, and commissions, the programme supports works that travel between festivals, neighbourhood venues, and digital platforms, ensuring that Sahelian voices are centred in global conversations.
+                Sessions were designed with communities in mind: what does a health commitment mean for a village clinic; how does a food systems pledge reach farmers in the Sahel; how can culture keep momentum alive after delegates fly home.
               </p>
               <p>
-                Every song, film, and installation becomes an entry point for new allies—from local youth to international audiences—to see themselves inside the restoration story.
+                By bringing together climate, health, education, food security, and arts leaders, the series helped move from parallel efforts to a more braided approach.
               </p>
             </div>
           </div>
@@ -179,8 +179,8 @@ export default function ImagineOnePage() {
           <div className="bg-white rounded-3xl shadow-lg border border-accent/20 overflow-hidden">
             <div className="relative h-80 md:h-96 lg:h-[420px] overflow-hidden">
               <Image
-                src="/assets/projects/rs=w:365,h:365,cg:true.jpeg"
-                alt="Artist speaking on stage about the Great Green Wall"
+                src="/assets/projects/rs=w:365,h:365,cg:true_1.jpeg"
+                alt="Panel of speakers addressing cross-sector collaboration at COP28 pre-summit"
                 fill
                 className="object-cover transition-transform duration-700 hover:scale-105"
                 sizes="(max-width: 1024px) 100vw, 50vw"
@@ -191,9 +191,9 @@ export default function ImagineOnePage() {
                   FIELD NOTE
                 </p>
                 <p className="text-xl md:text-2xl font-heading font-semibold leading-tight mb-2">
-                  "When audiences sing along to restoration anthems, they carry the Great Green Wall into their daily lives."
+                  "When climate, health, and culture sit at the same table, we design commitments real people can feel."
                 </p>
-                <p className="text-sm opacity-90">IMAGINE-1 curator</p>
+                <p className="text-sm opacity-90">Participant, COP28 Pre-summit Series</p>
               </div>
             </div>
           </div>
@@ -208,11 +208,11 @@ export default function ImagineOnePage() {
               PROGRAMME DESIGN
             </p>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-deepEarth mb-8 leading-tight">
-              How IMAGINE-1 Comes to Life
+              How the Series Was Structured
             </h2>
             <div className="w-32 h-1 bg-accent mx-auto mb-8" />
             <p className="text-xl text-charcoal/80 max-w-3xl mx-auto leading-relaxed">
-              The programme weaves together residencies, co-creation labs, and showcases so that artists can experiment, produce, and present work in close dialogue with communities along the Wall.
+              Each gathering layered strategic briefings with grounded stories and creative interventions, so that decisions were anchored in lived realities.
             </p>
           </div>
 
@@ -235,19 +235,19 @@ export default function ImagineOnePage() {
         </div>
       </section>
 
-      {/* Residency & Showcases Gallery */}
+      {/* Series Gallery */}
       <section className="px-6 md:px-12 lg:px-32 py-20 md:py-32 bg-offWhite">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <p className="font-accent text-xs uppercase tracking-wider text-accent mb-6">
-              RESIDENCIES & SHOWCASES
+              SERIES HIGHLIGHTS
             </p>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-deepEarth mb-8 leading-tight">
-              Moments from IMAGINE-1
+              Scenes from the Pre-summit Series
             </h2>
             <div className="w-32 h-1 bg-accent mx-auto mb-8" />
             <p className="text-xl text-charcoal/80 max-w-3xl mx-auto leading-relaxed">
-              A glimpse into performances, screenings, and installations that are helping the world feel the promise of the Great Green Wall.
+              Moments from plenaries, working groups, and cultural performances that shaped the road to COP28.
             </p>
           </div>
 
@@ -280,13 +280,13 @@ export default function ImagineOnePage() {
         <div className="max-w-4xl mx-auto text-center">
           <div className="space-y-8">
             <p className="font-accent text-xs uppercase tracking-wider text-accent mb-6">
-              JOIN THE CAMPAIGN
+              BEYOND THE SUMMIT
             </p>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-offWhite mb-8 leading-tight">
-              Co-create the Stories of the Great Green Wall
+              Turn Commitments into Coordinated Action
             </h2>
             <p className="text-xl md:text-2xl text-offWhite/90 mb-12 leading-relaxed max-w-3xl mx-auto">
-              From commissioning new works to hosting showcases, partners can help IMAGINE-1 bring restoration stories to stages, screens, and public spaces worldwide.
+              Work with GGWoA to design convenings, coalitions, and creative moments that keep the spirit of the COP28 Pre-summit Series alive in communities across the Sahel and beyond.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Link

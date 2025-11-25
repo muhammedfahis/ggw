@@ -108,8 +108,6 @@ const impactStats = [
 ];
 
 export default function ProjectsPage() {
-    const filters = ["All Projects", "Restoration", "Livelihoods", "Arts & Culture", "Education"];
-
     return (
         <main className="bg-offWhite text-charcoal min-h-screen">
             {/* Hero Section */}
@@ -169,27 +167,6 @@ export default function ProjectsPage() {
                                 <div className="text-charcoal/70 leading-relaxed">{stat.detail}</div>
                             </div>
                         ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* Filter Navigation */}
-            <section className="sticky top-0 bg-white/95 backdrop-blur-sm border-b border-accent/20 z-40 px-6 md:px-12 lg:px-32 py-6">
-                <div className="max-w-6xl mx-auto">
-                    <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-                        <div className="flex flex-wrap items-center gap-3">
-                            {filters.map((filter) => (
-                                <div
-                                    key={filter}
-                                    className="px-6 py-3 rounded-full text-sm font-semibold whitespace-nowrap bg-transparent border border-accent/30 text-charcoal"
-                                >
-                                    {filter}
-                                </div>
-                            ))}
-                        </div>
-                        <div className="hidden md:flex items-center gap-2 text-sm text-charcoal/60 bg-secondary px-4 py-2 rounded-full">
-                            <span>Showing 6 projects</span>
-                        </div>
                     </div>
                 </div>
             </section>
