@@ -94,29 +94,20 @@ export default function ContactPage() {
         <main className="bg-offWhite text-charcoal min-h-screen">
             {/* Hero Section */}
             <section className="relative overflow-hidden">
-                {/* Subtle Background Pattern */}
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-secondary/10 to-primary/5"></div>
                 <div className="absolute inset-0">
-                    <div className="absolute inset-0 opacity-20">
-                        <div className="absolute top-0 left-0 w-96 h-96 bg-accent/10 rounded-full blur-3xl"></div>
-                        <div className="absolute bottom-0 right-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div>
-                    </div>
+                    <div className="absolute inset-0 bg-[url('/assets/home/rs=w:1920,m.jpeg')] bg-cover bg-center opacity-20"></div>
+                    <div className="absolute inset-0 bg-gradient-to-br from-primary/70 via-primary/60 to-primary/80"></div>
                 </div>
-                
-                <div className="relative z-10 px-6 md:px-12 lg:px-32 py-24 md:py-32">
-                    <div className="max-w-4xl mx-auto text-center">
+                <div className="relative z-10 px-6 md:px-12 lg:px-32 py-[120px] md:py-[140px] lg:py-[160px]">
+                    <div className="max-w-6xl mx-auto text-center">
                         <div className={`space-y-8 ${isLoaded ? 'animate-fade-in-up' : 'opacity-0'}`}>
-                            <div className="space-y-4">
-                                <p className="font-accent text-xs uppercase tracking-wider text-accent animate-slide-in-left">
-                                    GET IN TOUCH
-                                </p>
-                                <h1 className="text-5xl md:text-6xl lg:text-7xl font-heading font-bold text-deepEarth leading-tight animate-slide-in-right">
-                                    Contact Us
-                                </h1>
-                                <p className="text-xl md:text-2xl text-charcoal/70 max-w-2xl mx-auto leading-relaxed animate-fade-in-up" style={{animationDelay: '0.2s'}}>
-                                    We'd love to hear from you
-                                </p>
-                            </div>
+                            <p className="font-accent text-xs uppercase tracking-wider text-accent mb-6" style={{animationDelay: '0.2s'}}>GET IN TOUCH</p>
+                            <h1 className="text-5xl md:text-6xl lg:text-7xl font-heading font-bold text-offWhite mb-8 leading-tight" style={{animationDelay: '0.4s'}}>
+                                Contact Us
+                            </h1>
+                            <p className="text-xl md:text-2xl lg:text-3xl text-offWhite/90 max-w-4xl mx-auto leading-relaxed" style={{animationDelay: '0.6s'}}>
+                                We'd love to hear from you
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -124,12 +115,12 @@ export default function ContactPage() {
 
             {/* Contact Form Section */}
             <section className="px-6 md:px-12 lg:px-32 py-20 md:py-32">
-                <div className="max-w-2xl mx-auto">
+                <div className="max-w-lg mx-auto">
                     <div className={`bg-white rounded-3xl shadow-xl border border-accent/20 p-8 md:p-12 animate-fade-in-up ${isLoaded ? '' : 'opacity-0'}`} style={{animationDelay: '0.4s'}}>
-                        <form onSubmit={handleSubmit} className="space-y-6">
+                        <form onSubmit={handleSubmit} className="space-y-8">
                             {/* Name Field */}
                             <div>
-                                <label htmlFor="name" className="block text-sm font-medium text-charcoal mb-2">
+                                <label htmlFor="name" className="block text-sm font-semibold text-charcoal mb-3">
                                     Name
                                 </label>
                                 <input
@@ -137,7 +128,7 @@ export default function ContactPage() {
                                     id="name"
                                     value={formData.name}
                                     onChange={(e) => handleInputChange('name', e.target.value)}
-                                    className={`w-full px-4 py-3 rounded-2xl border transition-all duration-300 bg-offWhite focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary/20 ${
+                                    className={`w-full px-6 py-4 rounded-2xl border transition-all duration-300 bg-offWhite focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary/20 text-lg ${
                                         errors.name 
                                             ? 'border-red-500 focus:border-red-500' 
                                             : 'border-accent/20 focus:border-primary'
@@ -153,7 +144,7 @@ export default function ContactPage() {
 
                             {/* Email Field */}
                             <div>
-                                <label htmlFor="email" className="block text-sm font-medium text-charcoal mb-2">
+                                <label htmlFor="email" className="block text-sm font-semibold text-charcoal mb-3">
                                     Email
                                 </label>
                                 <input
@@ -161,7 +152,7 @@ export default function ContactPage() {
                                     id="email"
                                     value={formData.email}
                                     onChange={(e) => handleInputChange('email', e.target.value)}
-                                    className={`w-full px-4 py-3 rounded-2xl border transition-all duration-300 bg-offWhite focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary/20 ${
+                                    className={`w-full px-6 py-4 rounded-2xl border transition-all duration-300 bg-offWhite focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary/20 text-lg ${
                                         errors.email 
                                             ? 'border-red-500 focus:border-red-500' 
                                             : 'border-accent/20 focus:border-primary'
@@ -177,7 +168,7 @@ export default function ContactPage() {
 
                             {/* Phone Field */}
                             <div>
-                                <label htmlFor="phone" className="block text-sm font-medium text-charcoal mb-2">
+                                <label htmlFor="phone" className="block text-sm font-semibold text-charcoal mb-3">
                                     Phone Number
                                 </label>
                                 <input
@@ -185,7 +176,7 @@ export default function ContactPage() {
                                     id="phone"
                                     value={formData.phone}
                                     onChange={(e) => handleInputChange('phone', e.target.value)}
-                                    className={`w-full px-4 py-3 rounded-2xl border transition-all duration-300 bg-offWhite focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary/20 ${
+                                    className={`w-full px-6 py-4 rounded-2xl border transition-all duration-300 bg-offWhite focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary/20 text-lg ${
                                         errors.phone 
                                             ? 'border-red-500 focus:border-red-500' 
                                             : 'border-accent/20 focus:border-primary'
@@ -202,7 +193,7 @@ export default function ContactPage() {
                             {/* Submit Button */}
                             <button
                                 type="submit"
-                                className="w-full btn-primary py-4 text-lg font-semibold flex items-center justify-center gap-3 group hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-300"
+                                className="w-full bg-accent text-primary py-5 text-lg font-semibold rounded-full flex items-center justify-center gap-3 group hover:bg-accent/90 hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300"
                             >
                                 <svg className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" fill="currentColor" viewBox="0 0 24 24">
                                     <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
@@ -212,7 +203,7 @@ export default function ContactPage() {
                         </form>
 
                         {/* Note Under Form */}
-                        <div className="mt-8 text-center animate-fade-in-up" style={{animationDelay: '0.6s'}}>
+                        <div className="mt-12 text-center animate-fade-in-up" style={{animationDelay: '0.6s'}}>
                             <p className="text-sm text-charcoal/60">
                                 We'll get back to you as soon as possible.
                             </p>

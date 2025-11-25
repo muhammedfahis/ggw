@@ -38,7 +38,6 @@ export function Footer() {
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.3em] text-ggwAccent">Connect</p>
             <div className="mt-4 space-y-3 text-sm text-ggwDark/70">
-              <p>433 Plaza Real, Suite 275<br />Boca Raton, FL 33432</p>
               <a href="mailto:Inquiry@ggwoa.org" className="font-semibold text-ggwGreen transition hover:text-ggwDark">
                 Inquiry@ggwoa.org
               </a>
