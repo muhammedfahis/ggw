@@ -1,165 +1,334 @@
+"use client";
+
 import Image from "next/image";
-
-export const metadata = {
-  title: "Leadership | GGWoA Foundation",
-};
-
-const patrons = [
-  {
-    title: "Grand Patron",
-    name: "H.E. Olusegun Obasanjo",
-    role: "Former President of Nigeria",
-    image: "/assets/leadership/rs=w:1023,h:1023,cg:true.jpeg",
-  },
-  {
-    title: "Patron",
-    name: "Aliko Dangote, GCON",
-    role: "Chairman, Dangote Group",
-    image: "/assets/leadership/rs=w:1023,h:1023,cg:true_1.jpeg",
-  },
-  {
-    title: "Patron",
-    name: "H.E. Amb. Maman Sambo Sidikou",
-    role: "AU Special Representative for Mali & the Sahel",
-    image: "/assets/leadership/rs=w:1023,h:1023,cg:true_2.jpeg",
-  },
-];
-
-const board = [
-  {
-    name: "H.E. Ramatoulaye Diallo N'diaye",
-    role: "Chairman & CEO",
-    image: "/assets/leadership/rs=w:1023,h:1023,cg:true_3.jpeg",
-  },
-  {
-    name: "H.E. Dr. Lassina Zerbo",
-    role: "Executive Secretary Emeritus, CTBTO",
-    image: "/assets/leadership/rs=w:1023,h:1023,cg:true_4.jpeg",
-  },
-  {
-    name: "H.E. Youssou N'Dour",
-    role: "Former Minister of Tourism for Senegal",
-    image: "/assets/leadership/rs=w:1023,h:1023,cg:true_5.jpeg",
-  },
-  {
-    name: "Richad Soundardjee",
-    role: "Managing Director, CICC",
-    image: "/assets/leadership/rs=w:1023,h:1023,cg:true_6.jpeg",
-  },
-  {
-    name: "Dr. Frannie Léautier",
-    role: "Managing Director, SouthBridge Investments",
-    image: "/assets/leadership/rs=w:1023,h:1023,cg:true_7.jpeg",
-  },
-  {
-    name: "Abderrahmane Sissako",
-    role: "Film Director & Producer",
-    image: "/assets/leadership/abderrahmane-sissako.jpeg",
-  },
-];
-
-const management = [
-  {
-    name: "Ramatoulaye Diallo N'diaye",
-    role: "Chief Executive Officer",
-    focus: "Mobilizes culture, finance, and diplomacy to accelerate the Great Green Wall.",
-  },
-  {
-    name: "Joseph Faluyi",
-    role: "COO & Executive Director",
-    focus: "Oversees programme delivery, governance, and field partnerships across the Sahel.",
-  },
-  {
-    name: "Regional Fellows",
-    role: "Community Leads",
-    focus: "Embed with villages to co-design adaptation labs, education hubs, and stewardship campaigns.",
-  },
-];
+import { useState, useEffect } from "react";
 
 export default function LeadershipPage() {
-  return (
-    <main className="bg-ggwBg text-ggwDark">
-      <section className="py-24">
-        <div className="mx-auto max-w-6xl px-4 text-center md:px-6">
-          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-ggwAccent">Leadership</p>
-          <h1 className="mt-4 text-4xl font-semibold md:text-5xl">Patrons, board, and management behind the Great Green Wall.</h1>
-          <p className="mt-4 text-lg text-ggwDark/80">
-            Statespeople, business leaders, creators, and scientists combine their disciplines so that communities along the Sahel can thrive.
-          </p>
-        </div>
-      </section>
+    const [isLoaded, setIsLoaded] = useState(false);
 
-      <section className="pb-16">
-        <div className="mx-auto max-w-6xl px-4 md:px-6">
-          <div className="rounded-[40px] border border-ggwDark/5 bg-white px-6 py-10 shadow-sm md:px-10">
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-ggwAccent">Patrons</p>
-            <div className="mt-8 grid gap-6 md:grid-cols-3">
-              {patrons.map((patron) => (
-                <article key={patron.name} className="rounded-[28px] border border-ggwDark/5 bg-ggwBg/70 p-6 text-center">
-                  <div className="relative mx-auto h-40 w-40 overflow-hidden rounded-[24px] border border-ggwDark/10">
-                    <Image src={patron.image} alt={patron.name} fill className="object-cover" sizes="160px" />
-                  </div>
-                  <p className="mt-4 text-xs font-semibold uppercase tracking-[0.3em] text-ggwGreen">{patron.title}</p>
-                  <h2 className="mt-2 text-xl font-semibold">{patron.name}</h2>
-                  <p className="text-sm text-ggwDark/70">{patron.role}</p>
-                </article>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+    useEffect(() => {
+        setIsLoaded(true);
+    }, []);
 
-      <section className="pb-16">
-        <div className="mx-auto max-w-6xl px-4 md:px-6">
-          <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-ggwAccent">Board of directors</p>
-              <h3 className="mt-3 text-3xl font-semibold">Stewards aligning culture, policy, and finance.</h3>
-            </div>
-            <p className="max-w-xl text-sm text-ggwDark/70">
-              The board ensures governance spans diplomacy, private sector innovation, and creative advocacy.
-            </p>
-          </div>
-          <div className="mt-10 grid gap-6 md:grid-cols-2">
-            {board.map((member) => (
-              <article key={member.name} className="rounded-[32px] border border-ggwDark/5 bg-white p-6 shadow-sm">
-                <div className="flex items-center gap-4">
-                  <div className="relative h-20 w-20 overflow-hidden rounded-2xl border border-ggwDark/10">
-                    <Image src={member.image} alt={member.name} fill className="object-cover" sizes="80px" />
-                  </div>
-                  <div>
-                    <h4 className="text-lg font-semibold">{member.name}</h4>
-                    <p className="text-sm text-ggwDark/70">{member.role}</p>
-                  </div>
+    const patrons = [
+        {
+            title: "Grand Patron",
+            name: "H.E. Olusegun Obasanjo",
+            role: "Former President of Nigeria",
+            image: "/assets/leadership/rs=w:1023,h:1023,cg:true.jpeg",
+            bio: "Distinguished statesman and global leader committed to sustainable development across Africa."
+        },
+        {
+            title: "Patron",
+            name: "Aliko Dangote, GCON",
+            role: "Chairman, Dangote Group",
+            image: "/assets/leadership/rs=w:1023,h:1023,cg:true_1.jpeg",
+            bio: "Visionary business leader driving economic empowerment and environmental stewardship."
+        },
+        {
+            title: "Patron",
+            name: "H.E. Amb. Maman Sambo Sidikou",
+            role: "AU Special Representative for Mali & the Sahel",
+            image: "/assets/leadership/rs=w:1023,h:1023,cg:true_2.jpeg",
+            bio: "Diplomatic champion fostering regional cooperation and peace-building initiatives."
+        },
+    ];
+
+    const board = [
+        {
+            name: "H.E. Ramatoulaye Diallo N'diaye",
+            role: "Chairman & CEO",
+            image: "/assets/leadership/rs=w:1023,h:1023,cg:true_3.jpeg",
+            bio: "Strategic leader uniting culture, finance, and diplomacy to accelerate the Great Green Wall vision."
+        },
+        {
+            name: "H.E. Dr. Lassina Zerbo",
+            role: "Executive Secretary Emeritus, CTBTO",
+            image: "/assets/leadership/rs=w:1023,h:1023,cg:true_4.jpeg",
+            bio: "International expert bringing scientific excellence and global governance experience."
+        },
+        {
+            name: "H.E. Youssou N'Dour",
+            role: "Former Minister of Tourism for Senegal",
+            image: "/assets/leadership/rs=w:1023,h:1023,cg:true_5.jpeg",
+            bio: "Cultural icon and advocate leveraging artistic influence for environmental advocacy."
+        },
+        {
+            name: "Richad Soundardjee",
+            role: "Managing Director, CICC",
+            image: "/assets/leadership/rs=w:1023,h:1023,cg:true_6.jpeg",
+            bio: "Financial strategist mobilizing investment for sustainable infrastructure development."
+        },
+        {
+            name: "Dr. Frannie Léautier",
+            role: "Managing Director, SouthBridge Investments",
+            image: "/assets/leadership/rs=w:1023,h:1023,cg:true_7.jpeg",
+            bio: "Development finance expert pioneering innovative funding models for climate resilience."
+        },
+        {
+            name: "Abderrahmane Sissako",
+            role: "Film Director & Producer",
+            image: "/assets/leadership/abderrahmane-sissako.jpeg",
+            bio: "Acclaimed filmmaker using storytelling to amplify environmental narratives."
+        },
+    ];
+
+    const management = [
+        {
+            name: "Ramatoulaye Diallo N'diaye",
+            role: "Chief Executive Officer",
+            focus: "Mobilizes culture, finance, and diplomacy to accelerate the Great Green Wall.",
+            bio: "Visionary executive leading cross-sector partnerships and strategic initiatives."
+        },
+        {
+            name: "Joseph Faluyi",
+            role: "COO & Executive Director",
+            focus: "Oversees programme delivery, governance, and field partnerships across the Sahel.",
+            bio: "Operations expert ensuring effective implementation and community engagement."
+        },
+        {
+            name: "Regional Fellows",
+            role: "Community Leads",
+            focus: "Embed with villages to co-design adaptation labs, education hubs, and stewardship campaigns.",
+            bio: "Dedicated community facilitators driving grassroots innovation and local capacity building."
+        },
+    ];
+
+    return (
+        <main className="bg-offWhite text-charcoal min-h-screen">
+            {/* Hero Section */}
+            <section className="relative overflow-hidden">
+                {/* Background Pattern */}
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-secondary/5 to-primary/10"></div>
+                <div className="absolute inset-0">
+                    <div className="absolute inset-0 opacity-20">
+                        <div className="absolute top-0 left-0 w-96 h-96 bg-accent/10 rounded-full blur-3xl"></div>
+                        <div className="absolute bottom-0 right-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div>
+                    </div>
                 </div>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
+                
+                <div className="relative z-10 px-6 md:px-12 lg:px-32 py-24 md:py-32">
+                    <div className="max-w-6xl mx-auto text-center">
+                        <div className={`space-y-8 ${isLoaded ? 'animate-fade-in-up' : 'opacity-0'}`}>
+                            <div className="space-y-4">
+                                <p className="font-accent text-xs uppercase tracking-wider text-accent animate-slide-in-left">
+                                    LEADERSHIP
+                                </p>
+                                <h1 className="text-5xl md:text-6xl lg:text-7xl font-heading font-bold text-deepEarth leading-tight animate-slide-in-right">
+                                    Meet the Leadership Team
+                                </h1>
+                                <p className="text-xl md:text-2xl text-charcoal/70 max-w-4xl mx-auto leading-relaxed animate-fade-in-up" style={{animationDelay: '0.2s'}}>
+                                    Statespeople, business leaders, creators, and scientists combine their disciplines so that communities along the Sahel can thrive.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-      <section className="pb-24">
-        <div className="mx-auto max-w-6xl rounded-[40px] border border-ggwDark/5 bg-white/90 px-6 py-12 shadow-sm md:px-10">
-          <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-ggwAccent">Management team</p>
-              <h3 className="mt-3 text-3xl font-semibold">Operational nerve centre.</h3>
-            </div>
-            <p className="max-w-xl text-sm text-ggwDark/70">
-              Programme directors and regional fellows stay embedded within partner communities to guide implementation.
-            </p>
-          </div>
-          <div className="mt-8 grid gap-6 md:grid-cols-3">
-            {management.map((person) => (
-              <article key={person.name} className="rounded-[28px] border border-ggwDark/5 bg-ggwBg/70 p-5">
-                <p className="text-xs font-semibold uppercase tracking-[0.3em] text-ggwGreen">{person.role}</p>
-                <h4 className="mt-2 text-xl font-semibold">{person.name}</h4>
-                <p className="mt-2 text-sm text-ggwDark/70">{person.focus}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-    </main>
-  );
+            {/* Patrons Section */}
+            <section className="px-6 md:px-12 lg:px-32 py-20 md:py-32">
+                <div className="max-w-7xl mx-auto">
+                    <div className="text-center mb-16 animate-fade-in-up" style={{animationDelay: '0.4s'}}>
+                        <h2 className="text-4xl md:text-5xl font-heading font-bold text-deepEarth mb-4">
+                            Grand Patrons
+                        </h2>
+                        <p className="text-lg text-charcoal/70 max-w-3xl mx-auto">
+                            Distinguished global leaders providing strategic vision and diplomatic influence
+                        </p>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+                        {patrons.map((patron, index) => (
+                            <article 
+                                key={patron.name}
+                                className={`group cursor-pointer animate-fade-in-up`}
+                                style={{animationDelay: `${0.6 + index * 0.1}s`}}
+                            >
+                                <div className="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 overflow-hidden">
+                                    {/* Image Container */}
+                                    <div className="relative aspect-[4/5] overflow-hidden">
+                                        <Image
+                                            src={patron.image}
+                                            alt={patron.name}
+                                            fill
+                                            className="object-cover transition-transform duration-700 group-hover:scale-105"
+                                            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                                        />
+                                        
+                                        {/* Overlay */}
+                                        <div className="absolute inset-0 bg-gradient-to-t from-deepEarth/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                        
+                                        {/* Title Badge */}
+                                        <div className="absolute top-6 left-6">
+                                            <span className="px-4 py-2 bg-accent text-primary rounded-full text-sm font-bold uppercase tracking-wide">
+                                                {patron.title}
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    {/* Content */}
+                                    <div className="p-8">
+                                        <h3 className="text-2xl font-bold text-deepEarth mb-2">{patron.name}</h3>
+                                        <p className="text-charcoal/60 font-medium mb-4">{patron.role}</p>
+                                        <p className="text-charcoal/70 leading-relaxed">{patron.bio}</p>
+                                        
+                                        {/* Hover Link */}
+                                        <div className="mt-6 flex items-center gap-2 text-accent font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                            <span>View Profile</span>
+                                            <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-300" fill="currentColor" viewBox="0 0 24 24">
+                                                <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* Board Section */}
+            <section className="px-6 md:px-12 lg:px-32 py-20 md:py-32 bg-gradient-to-br from-primary/5 to-secondary/50">
+                <div className="max-w-7xl mx-auto">
+                    <div className="text-center mb-16 animate-fade-in-up" style={{animationDelay: '0.8s'}}>
+                        <h2 className="text-4xl md:text-5xl font-heading font-bold text-deepEarth mb-4">
+                            Board of Directors
+                        </h2>
+                        <p className="text-lg text-charcoal/70 max-w-3xl mx-auto">
+                            Stewards aligning culture, policy, and finance for sustainable impact
+                        </p>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
+                        {board.map((member, index) => (
+                            <article 
+                                key={member.name}
+                                className={`group cursor-pointer animate-fade-in-up`}
+                                style={{animationDelay: `${1.0 + index * 0.1}s`}}
+                            >
+                                <div className="bg-white/90 backdrop-blur-sm rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 overflow-hidden">
+                                    {/* Image Container */}
+                                    <div className="relative aspect-[4/5] overflow-hidden">
+                                        <Image
+                                            src={member.image}
+                                            alt={member.name}
+                                            fill
+                                            className="object-cover transition-transform duration-700 group-hover:scale-105"
+                                            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                                        />
+                                        
+                                        {/* Overlay */}
+                                        <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                        
+                                        {/* Board Badge */}
+                                        <div className="absolute top-6 left-6">
+                                            <span className="px-4 py-2 bg-primary text-white rounded-full text-sm font-bold uppercase tracking-wide">
+                                                BOARD
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    {/* Content */}
+                                    <div className="p-8">
+                                        <h3 className="text-2xl font-bold text-deepEarth mb-2">{member.name}</h3>
+                                        <p className="text-charcoal/60 font-medium mb-4">{member.role}</p>
+                                        <p className="text-charcoal/70 leading-relaxed">{member.bio}</p>
+                                        
+                                        {/* Social Links */}
+                                        <div className="mt-6 flex items-center gap-4">
+                                            <button className="w-10 h-10 bg-accent/10 rounded-full flex items-center justify-center text-accent hover:bg-accent hover:text-white transition-colors duration-300">
+                                                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                                    <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+                                                </svg>
+                                            </button>
+                                            <button className="w-10 h-10 bg-accent/10 rounded-full flex items-center justify-center text-accent hover:bg-accent hover:text-white transition-colors duration-300">
+                                                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                                    <path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"/>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* Management Section */}
+            <section className="px-6 md:px-12 lg:px-32 py-20 md:py-32">
+                <div className="max-w-7xl mx-auto">
+                    <div className="text-center mb-16 animate-fade-in-up" style={{animationDelay: '1.2s'}}>
+                        <h2 className="text-4xl md:text-5xl font-heading font-bold text-deepEarth mb-4">
+                            Management Team
+                        </h2>
+                        <p className="text-lg text-charcoal/70 max-w-3xl mx-auto">
+                            Operational nerve centre driving implementation and community engagement
+                        </p>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+                        {management.map((person, index) => (
+                            <article 
+                                key={person.name}
+                                className={`group cursor-pointer animate-fade-in-up`}
+                                style={{animationDelay: `${1.4 + index * 0.1}s`}}
+                            >
+                                <div className="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 p-8">
+                                    {/* Role Badge */}
+                                    <div className="mb-6">
+                                        <span className="px-4 py-2 bg-secondary/10 text-secondary rounded-full text-sm font-bold uppercase tracking-wide">
+                                            {person.role}
+                                        </span>
+                                    </div>
+
+                                    {/* Content */}
+                                    <h3 className="text-2xl font-bold text-deepEarth mb-4">{person.name}</h3>
+                                    <p className="text-charcoal/70 leading-relaxed mb-6">{person.focus}</p>
+                                    <p className="text-charcoal/60 leading-relaxed">{person.bio}</p>
+                                    
+                                    {/* Contact Link */}
+                                    <div className="mt-8 flex items-center gap-2 text-accent font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                                        </svg>
+                                        <span>Get in Touch</span>
+                                    </div>
+                                </div>
+                            </article>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* CTA Section */}
+            <section className="px-6 md:px-12 lg:px-32 py-20 md:py-32 bg-gradient-to-br from-primary to-deepEarth">
+                <div className="max-w-4xl mx-auto text-center text-white">
+                    <div className="animate-fade-in-up" style={{animationDelay: '1.6s'}}>
+                        <h2 className="text-4xl md:text-5xl font-heading font-bold mb-8 leading-tight">
+                            Want to Join Our Leadership Team?
+                        </h2>
+                        <p className="text-xl mb-12 text-white/90 leading-relaxed">
+                            We're always looking for passionate leaders who want to make a difference in the Sahel region and beyond.
+                        </p>
+                        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                            <button className="btn-warm px-8 py-4 flex items-center gap-3 justify-center">
+                                View Open Roles
+                                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M20 6h-2.18c.11-.31.18-.65.18-1a2.996 2.996 0 0 0-5.5-1.65l-.5.67-.5-.68C10.96 2.54 10.05 2 9 2 7.34 2 6 3.34 6 5c0 .35.07.69.18 1H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-5-2c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zM9 4c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1z"/>
+                                </svg>
+                            </button>
+                            <button className="btn-secondary px-8 py-4 flex items-center gap-3 justify-center bg-white/10 border border-white/20 text-white hover:bg-white/20">
+                                Contact Team
+                                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    );
 }

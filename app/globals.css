@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Crimson+Text:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&family=Archivo:wght@400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -11,7 +11,10 @@
     font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   }
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Georgia', 'Crimson Text', serif;
+    font-family: 'Playfair Display', 'Cormorant', Georgia, serif;
+  }
+  .font-accent {
+    font-family: 'Archivo', 'Space Grotesk', Inter, sans-serif;
   }
 }
 
@@ -31,15 +34,27 @@
   }
 
   .btn-primary {
-    @apply bg-primary text-neutral px-6 py-3 rounded-md font-semibold transition-all duration-300 hover:bg-opacity-90 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2;
+    @apply bg-primary text-offWhite px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2;
   }
 
   .btn-secondary {
-    @apply border border-primary text-primary px-6 py-3 rounded-md font-semibold transition-all duration-300 hover:bg-primary hover:text-neutral focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2;
+    @apply border border-accent text-accent px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:bg-accent hover:text-primary focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2;
+  }
+
+  .btn-warm {
+    @apply bg-accent text-primary px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2;
+  }
+
+  .btn-warm-outline {
+    @apply border border-accent text-accent px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:bg-accent hover:text-primary focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2;
   }
 
   .card {
-    @apply bg-white rounded-md shadow-sm transition-all duration-300 hover:shadow-md;
+    @apply bg-offWhite rounded-2xl shadow-sm transition-all duration-300 hover:shadow-md hover:translate-y-[-4px];
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-xl hover:translate-y-[-8px];
   }
 
   .image-overlay {
@@ -53,6 +68,22 @@
     background: linear-gradient(to bottom, rgba(45, 80, 22, 0.4), rgba(45, 80, 22, 0.6));
     z-index: 1;
   }
+
+  .animate-fade-in-up {
+    animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  }
+
+  .animate-slide-in-left {
+    animation: slideInLeft 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  }
+
+  .animate-slide-in-right {
+    animation: slideInRight 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.7s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  }
 }
 
 @keyframes fadeIn {
@@ -64,10 +95,10 @@
   }
 }
 
-@keyframes slideUp {
+@keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(30px);
   }
   to {
     opacity: 1;
@@ -75,12 +106,36 @@
   }
 }
 
-@keyframes pulse {
-  0%, 100% {
-    opacity: 1;
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
   }
-  50% {
-    opacity: 0.8;
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
   }
 }
 
