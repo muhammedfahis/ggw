@@ -28,8 +28,8 @@ export default function LeadershipPage() {
         },
         {
             title: "Patron",
-            name: "H.E. Amb. Maman Sambo Sidikou",
-            role: "AU Special Representative for Mali & the Sahel",
+            name: "Maman Sidikou",
+            role: "AU Special Representative",
             image: "/assets/leadership/rs=w:1023,h:1023,cg:true_2.jpeg",
             bio: "Diplomatic champion fostering regional cooperation and peace-building initiatives."
         },
@@ -37,14 +37,14 @@ export default function LeadershipPage() {
 
     const board = [
         {
-            name: "H.E. Ramatoulaye Diallo N'diaye",
-            role: "Chairman & CEO",
+            name: "H.E. Ramatoulaye Diallo N’Daiye",
+            role: "Chairman and CEO",
             image: "/assets/leadership/rs=w:1023,h:1023,cg:true_3.jpeg",
             bio: "Strategic leader uniting culture, finance, and diplomacy to accelerate the Great Green Wall vision."
         },
         {
             name: "H.E. Dr. Lassina Zerbo",
-            role: "Executive Secretary Emeritus, CTBTO",
+            role: "Executive Secretary Emeritus, CTBTO & President, RAEB",
             image: "/assets/leadership/rs=w:1023,h:1023,cg:true_4.jpeg",
             bio: "International expert bringing scientific excellence and global governance experience."
         },
@@ -55,7 +55,7 @@ export default function LeadershipPage() {
             bio: "Cultural icon and advocate leveraging artistic influence for environmental advocacy."
         },
         {
-            name: "Richad Soundardjee",
+            name: "Richard Soundardjee",
             role: "Managing Director, CICC",
             image: "/assets/leadership/rs=w:1023,h:1023,cg:true_6.jpeg",
             bio: "Financial strategist mobilizing investment for sustainable infrastructure development."
@@ -68,7 +68,7 @@ export default function LeadershipPage() {
         },
         {
             name: "Abderrahmane Sissako",
-            role: "Film Director & Producer",
+            role: "Film Director",
             image: "/assets/leadership/abderrahmane-sissako.jpeg",
             bio: "Acclaimed filmmaker using storytelling to amplify environmental narratives."
         },
@@ -76,14 +76,14 @@ export default function LeadershipPage() {
 
     const management = [
         {
-            name: "Ramatoulaye Diallo N'diaye",
+            name: "Ramatoulaye Diallo N’Daiye",
             role: "Chief Executive Officer",
             focus: "Mobilizes culture, finance, and diplomacy to accelerate the Great Green Wall.",
             bio: "Visionary executive leading cross-sector partnerships and strategic initiatives."
         },
         {
             name: "Joseph Faluyi",
-            role: "COO & Executive Director",
+            role: "COO and Executive Director",
             focus: "Oversees programme delivery, governance, and field partnerships across the Sahel.",
             bio: "Operations expert ensuring effective implementation and community engagement."
         },

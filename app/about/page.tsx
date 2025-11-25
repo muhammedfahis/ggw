@@ -103,7 +103,7 @@ export default function AboutPage() {
                         <div className="space-y-8">
                             <p className="font-accent text-xs uppercase tracking-wider text-accent mb-6">ABOUT GGWOA</p>
                             <h1 className="text-5xl md:text-6xl lg:text-7xl font-heading font-bold text-offWhite mb-8 leading-tight">
-                                Unlocking the Potential in Africa's Landscape
+                                Unlocking the potential in Africa’s landscape
                             </h1>
                             <p className="text-xl md:text-2xl lg:text-3xl text-offWhite/90 max-w-4xl mx-auto leading-relaxed mb-12">
                                 We leverage culture, policy, and community partnerships to ensure climate adaptation strategies reduce the trade-offs between economic growth and sustainability.

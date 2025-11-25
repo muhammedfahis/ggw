@@ -207,6 +207,15 @@ export default function ContactPage() {
                             <p className="text-sm text-charcoal/60">
                                 We'll get back to you as soon as possible.
                             </p>
+                            <p className="mt-4 text-sm text-charcoal/70">
+                                433 Plaza Real, Suite 275, Boca Raton, Florida 33432, United States
+                            </p>
+                            <a
+                                href="mailto:Inquiry@ggwoa.org"
+                                className="mt-2 inline-block text-sm font-semibold text-accent hover:text-primary"
+                            >
+                                Inquiry@ggwoa.org
+                            </a>
                         </div>
                     </div>
                 </div>
