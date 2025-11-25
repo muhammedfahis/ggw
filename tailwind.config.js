@@ -7,14 +7,34 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        ggwGreen: "rgb(167 210 99)",
-        ggwBg: "#F6FBF1",
-        ggwDark: "#1C3B2D",
-        ggwAccent: "#E6B655"
+        primary: "#2D5016",
+        secondary: "#D4A574",
+        accent: "#9BA89F",
+        neutral: "#F5F3F0",
+        dark: "#2B2B2B",
+        // Legacy for compatibility
+        ggwGreen: "#2D5016",
+        ggwBg: "#F5F3F0",
+        ggwDark: "#2B2B2B",
+        ggwAccent: "#D4A574",
       },
       fontFamily: {
-        heading: ["Inter", "system-ui", "-apple-system", "BlinkMacSystemFont", "sans-serif"],
-        body: ["Inter", "system-ui", "-apple-system", "BlinkMacSystemFont", "sans-serif"],
+        heading: ["Georgia", "Crimson Text", "serif"],
+        body: ["Inter", "Poppins", "system-ui", "-apple-system", "BlinkMacSystemFont", "sans-serif"],
+      },
+      spacing: {
+        '4px': '4px',
+        '8px': '8px',
+        '12px': '12px',
+        '16px': '16px',
+        '24px': '24px',
+        '32px': '32px',
+        '48px': '48px',
+        '64px': '64px',
+      },
+      borderRadius: {
+        'sm': '2px',
+        'md': '4px',
       },
       animation: {
         'fadeIn': 'fadeIn 0.6s ease-out',
