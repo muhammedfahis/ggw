@@ -61,23 +61,7 @@ const successStories = [
 ];
 
 const team = [
-  // 1. COO and Executive Director – Joseph Faluyi
-  {
-    name: "Joseph Faluyi",
-    title: "COO and Executive Director",
-    role: "Oversees programme delivery, governance, and field partnerships across the Sahel.",
-    bio: "Operations leader ensuring effective implementation and deep community engagement across Great Green Wall countries.",
-    photo: "/assets/leadership/COO and Executive Director.jpeg",
-  },
-  // 2. Dr. Frannie Leautier – Managing Director of Southbridge Investments
-  {
-    name: "Dr. Frannie Leautier",
-    title: "Managing Director of Southbridge Investments",
-    role: "Development finance and innovative climate investment.",
-    bio: "Renowned development finance expert pioneering blended finance models that unlock inclusive, climate-resilient growth.",
-    photo: "/assets/leadership/Dr. Frannie Leautier.jpeg",
-  },
-  // 3. Grand Patron – His Excellency Olusegun Obasanjo
+  // 1. H.E. Alesha Gunobashanjo – Grand Patron
   {
     name: "His Excellency Olusegun Obasanjo",
     title: "Grand Patron",
@@ -85,7 +69,7 @@ const team = [
     bio: "Statesman and Grand Patron of GGWoA, championing pan-African cooperation and long-term investment in the Great Green Wall.",
     photo: "/assets/leadership/Grand Patron.jpeg",
   },
-  // 4. Patron – Aliko Dangote, GCON
+  // 2. Aliko Dangote – Patron
   {
     name: "Aliko Dangote, GCON",
     title: "Patron",
@@ -93,21 +77,37 @@ const team = [
     bio: "Business leader mobilizing private sector capital and industrial know-how to strengthen restoration economies across the Sahel.",
     photo: "/assets/leadership/Aliko Dangote.jpeg",
   },
-  // 5. H.E. Youssou N'Dour – Former Minister of Tourism for Senegal
-  {
-    name: "H.E. Youssou N'Dour",
-    title: "Former Minister of Tourism for Senegal",
-    role: "Cultural diplomacy and creative advocacy.",
-    bio: "Artist and statesman using his global platform to connect culture, youth, and environmental stewardship for the Great Green Wall.",
-    photo: "/assets/leadership/H.E. Youssou N'Dour .jpeg",
-  },
-  // 6. Chief Executive Officer – Ramatoulaye Diallo N'diaye
+  // 3. Client (the speaker)
   {
     name: "Ramatoulaye Diallo N'diaye",
     title: "Chief Executive Officer",
     role: "Mobilizes culture, finance, and diplomacy to accelerate the Great Green Wall.",
     bio: "Chief Executive Officer of GGWoA, leading cross-sector coalitions that align governments, investors, and communities around restoration.",
     photo: "/assets/leadership/Ramatoulaye Diallo N'diaye.jpeg",
+  },
+  // 4. Joseph Aloui
+  {
+    name: "Joseph Faluyi",
+    title: "COO and Executive Director",
+    role: "Oversees programme delivery, governance, and field partnerships across the Sahel.",
+    bio: "Operations leader ensuring effective implementation and deep community engagement across Great Green Wall countries.",
+    photo: "/assets/leadership/COO and Executive Director.jpeg",
+  },
+  // 5. Dr. Frannie Leautier – Managing Director of Southbridge Investments
+  {
+    name: "Dr. Frannie Leautier",
+    title: "Managing Director of Southbridge Investments",
+    role: "Development finance and innovative climate investment.",
+    bio: "Renowned development finance expert pioneering blended finance models that unlock inclusive, climate-resilient growth.",
+    photo: "/assets/leadership/Dr. Frannie Leautier.jpeg",
+  },
+  // 6. H.E. Youssou N'Dour – Former Minister of Tourism for Senegal
+  {
+    name: "H.E. Youssou N'Dour",
+    title: "Former Minister of Tourism for Senegal",
+    role: "Cultural diplomacy and creative advocacy.",
+    bio: "Artist and statesman using his global platform to connect culture, youth, and environmental stewardship for the Great Green Wall.",
+    photo: "/assets/leadership/H.E. Youssou N'Dour .jpeg",
   },
 ];
 
@@ -116,6 +116,33 @@ const partners = [
   { name: "African Union GGW Initiative", logo: "/assets/home/rs=h:100,cg:true,m_1.jpeg", imgClassName: "max-h-12" },
   { name: "Bezos Earth Fund", logo: "/assets/home/rs=h:100,cg:true,m.png" },
   { name: "African Development Bank Group", logo: "/assets/home/rs=h:100,cg:true,m.jpeg" },
+];
+
+const workstreams = [
+  {
+    title: "Regenerative Land Systems",
+    detail: "Restoring soil, water, and biodiversity with agroforestry corridors, dune stabilization, and climate-resilient crops.",
+    icon: <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M17 8C8 10 5.9 16.17 3.82 21.34l1.89.66l.95-2.71c.16-.46.38-.86.66-1.22C9.47 15.97 12.99 12 17 12V8z"/><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>,
+    color: "from-green-600 to-green-800"
+  },
+  {
+    title: "Culture & Narrative",
+    detail: "Film, music, and design collaborations that make stewardship aspirational and mobilize global allies.",
+    icon: <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>,
+    color: "from-purple-600 to-purple-800"
+  },
+  {
+    title: "Education & Skills",
+    detail: "Eco-curricula, early learning canopies, and technical academies preparing youth for green careers.",
+    icon: <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/></svg>,
+    color: "from-blue-600 to-blue-800"
+  },
+  {
+    title: "Finance & Governance",
+    detail: "Blended finance vehicles, public policy design, and data systems that keep value in communities.",
+    icon: <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>,
+    color: "from-amber-600 to-amber-800"
+  },
 ];
 
 export default function HomePage() {
@@ -128,7 +155,7 @@ export default function HomePage() {
   return (
     <main className="bg-offWhite text-charcoal font-body">
       {/* Hero Section */}
-      <section className="relative h-screen overflow-hidden">
+      <section className="relative h-screen">
         <Image
           src="/assets/home/rs=w:1920,m.png"
           alt="Great Green Wall of Africa"
@@ -140,18 +167,32 @@ export default function HomePage() {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-primary/70 via-primary/60 to-primary/80" />
         <div className="absolute inset-0 flex items-center justify-center">
-          <div className="text-center text-offWhite max-w-6xl mx-auto px-6 md:px-12">
-            <div className={`space-y-8 ${isLoaded ? 'animate-fade-in-up' : 'opacity-0'}`}>
-              <h1 className="text-5xl md:text-7xl lg:text-8xl font-heading font-bold mb-6 leading-tight" style={{animationDelay: '0.2s'}}>
+          <div className="text-center text-offWhite max-w-6xl mx-auto px-6 md:px-12 py-12 md:py-16 lg:py-20">
+            <div className={`space-y-6 ${isLoaded ? 'animate-fade-in-up' : 'opacity-0'}`}>
+              {/* GGWA Logo */}
+              <div className="flex justify-center" style={{animationDelay: '0.1s'}}>
+                <div className="relative">
+                  <Image
+                    src="/assets/home/logo.png"
+                    alt="GGWA Foundation"
+                    width={260}
+                    height={130}
+                    className="object-contain filter drop-shadow-2xl hover:scale-105 transition-all duration-700"
+                    priority
+                  />
+                </div>
+              </div>
+              
+              <h1 className="text-5xl md:text-7xl lg:text-8xl font-heading font-bold mb-4 leading-tight" style={{animationDelay: '0.3s'}}>
                 A Living Infrastructure
               </h1>
-              <p className="text-xl md:text-2xl lg:text-3xl font-light mb-8 leading-relaxed" style={{animationDelay: '0.4s'}}>
+              <p className="text-xl md:text-2xl lg:text-3xl font-light mb-6 leading-relaxed" style={{animationDelay: '0.5s'}}>
                 for Nature, Culture, and Prosperity
               </p>
-              <p className="text-lg md:text-xl lg:text-2xl mb-12 font-light max-w-4xl mx-auto opacity-90 leading-relaxed" style={{animationDelay: '0.6s'}}>
+              <p className="text-lg md:text-xl lg:text-2xl mb-8 font-light max-w-4xl mx-auto opacity-90 leading-relaxed" style={{animationDelay: '0.7s'}}>
                 We design regenerative systems alongside governments, traditional leaders, and bold partners so that land restoration becomes the most inspiring development story of this decade.
               </p>
-              <div className="flex flex-col sm:flex-row gap-6 justify-center" style={{animationDelay: '0.8s'}}>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center" style={{animationDelay: '0.9s'}}>
                 <Link href="/about" className="btn-warm text-lg px-8 py-4 hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
                   Discover Our Approach
                 </Link>
@@ -161,7 +202,7 @@ export default function HomePage() {
         </div>
         
         {/* Subtle Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 animate-bounce">
           <div className="w-6 h-10 border-2 border-offWhite/50 rounded-full flex justify-center">
             <div className="w-1 h-3 bg-offWhite/50 rounded-full mt-2 animate-pulse"></div>
           </div>
@@ -258,6 +299,30 @@ export default function HomePage() {
                 <p className="text-lg">Aminata Barry · Community forester, Senegal</p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Core Pillars */}
+      <section className="py-24 md:py-32 px-6 md:px-12 lg:px-32 bg-gradient-to-br from-primary to-deepEarth">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-20">
+            <h2 className="text-5xl md:text-6xl lg:text-7xl font-heading font-bold mb-8 text-offWhite animate-fade-in-up">Core Pillars</h2>
+            <p className="text-xl md:text-2xl text-offWhite/80 max-w-3xl mx-auto leading-relaxed animate-fade-in-up" style={{animationDelay: '0.2s'}}>
+              Four integrated workstreams that restore ecosystems while building resilient livelihoods across the Sahel.
+            </p>
+            <div className="w-32 h-1 bg-accent mx-auto mt-8 animate-scale-in origin-center" style={{animationDelay: '0.4s'}}></div>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {workstreams.map((stream, index) => (
+              <div key={stream.title} className="bg-offWhite/10 backdrop-blur-sm rounded-3xl p-8 border border-offWhite/20 hover:bg-offWhite/20 transition-all duration-500 hover:-translate-y-2 animate-fade-in-up" style={{animationDelay: `${0.6 + index * 0.15}s`}}>
+                <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${stream.color} flex items-center justify-center mb-6 text-offWhite shadow-lg`}>
+                  {stream.icon}
+                </div>
+                <h3 className="text-2xl font-heading font-bold mb-4 text-offWhite">{stream.title}</h3>
+                <p className="text-offWhite/80 leading-relaxed">{stream.detail}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -503,13 +568,13 @@ export default function HomePage() {
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
             {partners.map((partner, index) => (
               <div key={partner.name} className="bg-white p-8 rounded-xl border border-charcoal/10 shadow-sm hover:shadow-lg transition-all duration-300 group animate-fade-in-up" style={{animationDelay: `${0.6 + index * 0.1}s`}}>
-                <div className="flex items-center justify-center h-20">
+                <div className="flex items-center justify-center h-24">
                   <Image
                     src={partner.logo}
                     alt={partner.name}
-                    width={140}
-                    height={70}
-                    className={`object-contain transition-all duration-300 group-hover:scale-105 ${partner.imgClassName ?? ''}`}
+                    width={180}
+                    height={90}
+                    className={`object-contain transition-all duration-300 group-hover:scale-110 ${partner.imgClassName ?? ''}`}
                   />
                 </div>
               </div>

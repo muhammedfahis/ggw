@@ -7,11 +7,11 @@ export const metadata = {
 };
 
 const feature = {
-    title: "Great Green Wall leaders convene at COP28",
-    summary: "GGWoA and ministerial partners unveiled a regenerative finance roadmap, uniting culture, policy, and climate innovators in a groundbreaking initiative that promises to reshape Africa's ecological future.",
-    date: "Dec 4, 2024",
+    title: "Great Green Wall prepares for COP30",
+    summary: "GGWoA and ministerial partners unveil an ambitious regenerative finance roadmap, uniting culture, policy, and climate innovators in a groundbreaking initiative that promises to reshape Africa's ecological future at Brazil's pivotal climate summit.",
+    date: "Nov 10, 2025",
     image: "/assets/news/rs=w:1920,m.jpeg",
-    href: "/news/cop28-briefing",
+    href: "/news/cop30-briefing",
     category: "Climate Summit",
     readTime: "5 min read"
 };
@@ -53,16 +53,16 @@ const spotlights = [
 
 const archive = [
     {
-        date: "Dec 15, 2023",
-        title: "COP28 retrospective",
-        summary: "A defining year of action where GGWoA helped mobilize private sector capital toward 2030 goals through innovative financing mechanisms.",
+        date: "Oct 15, 2025",
+        title: "COP30 preparations accelerate",
+        summary: "GGWoA mobilizes private sector capital toward 2030 goals through innovative financing mechanisms ahead of the Brazil summit.",
         image: "/assets/news/rs=w:600,h:300,cg:true.jpeg",
         category: "Annual Review"
     },
     {
-        date: "Sep 30, 2023",
-        title: "Announcement of GGWoA participation at COP28",
-        summary: "Partnering with PAGGW and AU GGWI to present an accelerated action plan in Dubai that promises transformative impact.",
+        date: "Sep 30, 2025",
+        title: "Announcement of GGWoA participation at COP30",
+        summary: "Partnering with PAGGW and AU GGWI to present an accelerated action plan in Brazil that promises transformative impact.",
         image: "/assets/news/rs=w:600,h:300,cg:true_1.jpeg",
         category: "Climate Summit"
     },
