@@ -12,14 +12,6 @@ export default function LeadershipPage() {
     }, []);
 
     const patrons = [
-        // 1. Dr. Frannie Leautier – Managing Director of Southbridge Investments
-        {
-            title: "Distinguished Leader",
-            name: "Dr. Frannie Leautier",
-            role: "Managing Director of Southbridge Investments",
-            image: "/assets/leadership/Dr. Frannie Leautier.jpeg",
-            bio: "Senior Partner and CEO at SouthBridge Investments with a distinguished career at the World Bank Group and African Development Bank, leading infrastructure, risk and asset management across the African continent.",
-        },
         // 2. Grand Patron – His Excellency Olusegun Obasanjo – Former President of Nigeria
         {
             title: "Grand Patron",
@@ -36,22 +28,37 @@ export default function LeadershipPage() {
             image: "/assets/leadership/Aliko Dangote.jpeg",
             bio: "Chairman of the Dangote Group and one of Africa’s most influential industrialists, championing private sector participation in climate and restoration initiatives.",
         },
+        // 1. Dr. Frannie Leautier – Managing Director of Southbridge Investments
+        {
+            title: "Distinguished Leader",
+            name: "Dr. Frannie Leautier",
+            role: "Managing Director of Southbridge Investments",
+            image: "/assets/leadership/Dr. Frannie Leautier.jpeg",
+            bio: "Senior Partner and CEO at SouthBridge Investments with a distinguished career at the World Bank Group and African Development Bank, leading infrastructure, risk and asset management across the African continent.",
+        },
     ];
 
     const board = [
-        // 1. H.E. Youssou N'Dour – Former Minister of Tourism for Senegal
-        {
-            name: "H.E. Youssou N'Dour",
-            role: "Former Minister of Tourism for Senegal",
-            image: "/assets/leadership/H.E. Youssou N'Dour .jpeg",
-            bio: "World‑renowned Senegalese musician, activist and former Minister of Tourism and Culture, using his cultural platform to mobilize support for climate action.",
-        },
         // 2. Chief Executive Officer – Ramatoulaye Diallo N'diaye
         {
             name: "Ramatoulaye Diallo N'diaye",
             role: "Chief Executive Officer",
             image: "/assets/leadership/Ramatoulaye Diallo N'diaye.jpeg",
             bio: "Founder and CEO of GGWoA with over two decades of experience in mobile financial services, telecoms and investment, dedicated to climate resilience and the empowerment of women and youth in Africa.",
+        },
+        // 8. COO and Executive Director – Joseph Faluyi
+        {
+            name: "Joseph Faluyi",
+            role: "COO and Executive Director",
+            image: "/assets/leadership/COO and Executive Director.jpeg",
+            bio: "Operations leader ensuring effective implementation and deep community engagement across Great Green Wall countries.",
+        },
+        // 1. H.E. Youssou N'Dour – Former Minister of Tourism for Senegal
+        {
+            name: "H.E. Youssou N'Dour",
+            role: "Former Minister of Tourism for Senegal",
+            image: "/assets/leadership/H.E. Youssou N'Dour .jpeg",
+            bio: "World‑renowned Senegalese musician, activist and former Minister of Tourism and Culture, using his cultural platform to mobilize support for climate action.",
         },
         // 3. H.E. Dr. Lassina Zerbo – full role description
         {
@@ -87,13 +94,6 @@ export default function LeadershipPage() {
             role: "AU Special Rep for Mali and the Sahel; Former UN Special Rep. of the Secretary-General for West Africa and the Sahel",
             image: "/assets/leadership/H.E. Ambassador Maman Sambo Sidikou.png",
             bio: "Diplomatic champion fostering regional cooperation, peace-building and strategic partnerships across the Sahel and West Africa.",
-        },
-        // 8. COO and Executive Director – Joseph Faluyi
-        {
-            name: "Joseph Faluyi",
-            role: "COO and Executive Director",
-            image: "/assets/leadership/COO and Executive Director.jpeg",
-            bio: "Operations leader ensuring effective implementation and deep community engagement across Great Green Wall countries.",
         },
     ];
 
