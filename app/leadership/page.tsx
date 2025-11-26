@@ -95,6 +95,42 @@ export default function LeadershipPage() {
             image: "/assets/leadership/H.E. Ambassador Maman Sambo Sidikou.png",
             bio: "Diplomatic champion fostering regional cooperation, peace-building and strategic partnerships across the Sahel and West Africa.",
         },
+        {
+            name: "Anna Getaneh",
+            role: "Founder of African Mosaique",
+            image: "/assets/leadership/Anna Getaneh.webp",
+            bio: "Founder of African Mosaique, leveraging fashion, culture and philanthropy to support education, dignity and opportunity for vulnerable children and communities across Africa.",
+        },
+        {
+            name: "Vanessa Moungar",
+            role: "Chief Diversity Officer of the LVMH Group",
+            image: "/assets/leadership/Vanessa Moungar.webp",
+            bio: "Chief Diversity Officer at LVMH, recognised for championing inclusive growth, gender equity and youth empowerment across the public and private sectors.",
+        },
+        {
+            name: "Dr Mariam Aidara Ba",
+            role: "CEO of Dakar Science Po",
+            image: "/assets/leadership/Dr Mariam Aidara Ba.webp",
+            bio: "Political scientist and CEO of Dakar Science Po, shaping the next generation of African leaders in governance, policy and democratic innovation.",
+        },
+        {
+            name: "Manny Aly Ansar",
+            role: "Founder, Timbuktu Cultural Desert Festival",
+            image: "/assets/leadership/Manny Aly Ansar.webp",
+            bio: "Founder of the Timbuktu Cultural Desert Festival, using music, culture and storytelling to promote peace-building, dialogue and resilience in the Sahel.",
+        },
+        {
+            name: "Kenza Bounjou",
+            role: "Lawyer, Founding Partner at URITI",
+            image: "/assets/leadership/Kenza Bounjou.webp",
+            bio: "Lawyer and founding partner at URITI, advising on governance, investment and impact structures that align climate action with social justice.",
+        },
+        {
+            name: "Will Mbiakop",
+            role: "Founder and Executive Chairman – African Sports and Creative Institute (ASCI)",
+            image: "/assets/leadership/Will Mbiakop.webp",
+            bio: "Founder and Executive Chairman of the African Sports and Creative Institute (ASCI), harnessing sport and creativity as powerful engines for youth opportunity and sustainable development.",
+        },
     ];
 
     const management = [

@@ -4,6 +4,7 @@ const footerLinks = [
   { href: "/about", label: "About" },
   { href: "/leadership", label: "Leadership" },
   { href: "/projects", label: "Projects" },
+  { href: "/the-great-blue-wave", label: "The Great Blue Wave" },
   { href: "/gallery", label: "Gallery" },
   { href: "/news", label: "News" },
   { href: "/contact", label: "Contact" },
