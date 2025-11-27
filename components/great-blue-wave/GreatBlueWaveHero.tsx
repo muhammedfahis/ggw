@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { WaterShaders } from "@/components/ui/water-shaders";
+// import { WaterShaders } from "@/components/ui/water-shaders"; // Disabled - no longer available
 
 // Palette (for reference only, do not change):
 // deep ocean:   #013a63
@@ -33,60 +33,49 @@ function usePrefersReducedMotion(): boolean {
 
 export function GreatBlueWaveHero() {
   const prefersReducedMotion = usePrefersReducedMotion();
-  const showShader = !prefersReducedMotion;
+  const showShader = false; // Always disabled - using CSS-only animation
 
   return (
     <section
       aria-labelledby="great-blue-wave-heading"
       className="relative w-full overflow-hidden bg-[#013a63] text-white"
     >
-      {/* Background layer: WaterShaders or SVG/gradient fallback */}
+      {/* Background layer: SVG/gradient fallback only */}
       <div className="pointer-events-none absolute inset-0" aria-hidden="true">
-        {showShader ? (
-          <WaterShaders
-            className="w-full h-full"
-            speed={1.0}
-            depth={1.2}
-            clarity={0.8}
-            waves={1.1}
-            reflection={0.9}
-          />
-        ) : (
-          <div className="w-full h-full bg-gradient-to-br from-[#013a63] via-[#0369a1] to-[#0ea5e9]">
-            <svg
-              className="h-full w-full"
-              viewBox="0 0 1440 600"
-              preserveAspectRatio="xMidYMid slice"
-              role="img"
-              aria-label="Abstract water background"
-            >
-              <defs>
-                <linearGradient
-                  id="waveGradient"
-                  x1="0%"
-                  y1="0%"
-                  x2="100%"
-                  y2="100%"
-                >
-                  <stop offset="0%" stopColor="#0ea5e9" stopOpacity="0.9" />
-                  <stop offset="50%" stopColor="#0369a1" stopOpacity="0.9" />
-                  <stop offset="100%" stopColor="#013a63" stopOpacity="1" />
-                </linearGradient>
-              </defs>
-              <rect width="1440" height="600" fill="url(#waveGradient)" />
-              <path
-                d="M0,400 C240,360 480,440 720,400 C960,360 1200,420 1440,380 L1440,600 L0,600 Z"
-                fill="#e6f7ff"
-                fillOpacity="0.15"
-              />
-              <path
-                d="M0,450 C240,410 480,470 720,430 C960,390 1200,450 1440,410 L1440,600 L0,600 Z"
-                fill="#ffffff"
-                fillOpacity="0.1"
-              />
-            </svg>
-          </div>
-        )}
+        <div className="w-full h-full bg-gradient-to-br from-[#013a63] via-[#0369a1] to-[#0ea5e9]">
+          <svg
+            className="h-full w-full"
+            viewBox="0 0 1440 600"
+            preserveAspectRatio="xMidYMid slice"
+            role="img"
+            aria-label="Abstract water background"
+          >
+            <defs>
+              <linearGradient
+                id="waveGradient"
+                x1="0%"
+                y1="0%"
+                x2="100%"
+                y2="100%"
+              >
+                <stop offset="0%" stopColor="#0ea5e9" stopOpacity="0.9" />
+                <stop offset="50%" stopColor="#0369a1" stopOpacity="0.9" />
+                <stop offset="100%" stopColor="#013a63" stopOpacity="1" />
+              </linearGradient>
+            </defs>
+            <rect width="1440" height="600" fill="url(#waveGradient)" />
+            <path
+              d="M0,400 C240,360 480,440 720,400 C960,360 1200,420 1440,380 L1440,600 L0,600 Z"
+              fill="#e6f7ff"
+              fillOpacity="0.15"
+            />
+            <path
+              d="M0,450 C240,410 480,470 720,430 C960,390 1200,450 1440,410 L1440,600 L0,600 Z"
+              fill="#ffffff"
+              fillOpacity="0.1"
+            />
+          </svg>
+        </div>
 
         {/* Blue overlay for consistent palette & contrast */}
         <div className="absolute inset-0 bg-gradient-to-b from-[#013a63]/60 via-[#0369a1]/60 to-[#013a63]/80" />
