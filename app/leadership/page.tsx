@@ -17,7 +17,7 @@ export default function LeadershipPage() {
             title: "Grand Patron",
             name: "His Excellency Olusegun Obasanjo",
             role: "Former President of Nigeria",
-            image: "/assets/leadership/Grand Patron.jpeg",
+            image: "/assets/leadership/Olusegun Obasanjo.png",
             bio: "Former President of Nigeria (1999–2007) and respected African statesman, lending diplomatic authority and long-term vision to the Great Green Wall movement.",
         },
         // 3. Aliko Dangote.jpeg = Patron – Aliko Dangote, GCON – Chairman Dangote Group
@@ -25,7 +25,7 @@ export default function LeadershipPage() {
             title: "Patron",
             name: "Aliko Dangote, GCON",
             role: "Chairman Dangote Group",
-            image: "/assets/leadership/Aliko Dangote.jpeg",
+            image: "/assets/leadership/Aliko Dangote.png",
             bio: "Chairman of the Dangote Group and one of Africa’s most influential industrialists, championing private sector participation in climate and restoration initiatives.",
         },
         // 1. Dr. Frannie Leautier – Managing Director of Southbridge Investments
@@ -33,7 +33,7 @@ export default function LeadershipPage() {
             title: "Distinguished Leader",
             name: "Dr. Frannie Leautier",
             role: "Managing Director of Southbridge Investments",
-            image: "/assets/leadership/Dr. Frannie Leautier.jpeg",
+            image: "/assets/leadership/Dr. Frannie Leautier.png",
             bio: "Senior Partner and CEO at SouthBridge Investments with a distinguished career at the World Bank Group and African Development Bank, leading infrastructure, risk and asset management across the African continent.",
         },
     ];
@@ -50,85 +50,85 @@ export default function LeadershipPage() {
         {
             name: "Joseph Faluyi",
             role: "COO and Executive Director",
-            image: "/assets/leadership/COO and Executive Director.jpeg",
+            image: "/assets/leadership/Joseph Faluyi.png",
             bio: "Operations leader ensuring effective implementation and deep community engagement across Great Green Wall countries.",
         },
         // 1. H.E. Youssou N'Dour – Former Minister of Tourism for Senegal
         {
             name: "H.E. Youssou N'Dour",
             role: "Former Minister of Tourism for Senegal",
-            image: "/assets/leadership/H.E. Youssou N'Dour .jpeg",
+            image: "/assets/leadership/H.E. Youssou N'Dour .png",
             bio: "World‑renowned Senegalese musician, activist and former Minister of Tourism and Culture, using his cultural platform to mobilize support for climate action.",
         },
         // 3. H.E. Dr. Lassina Zerbo – full role description
         {
             name: "H.E. Dr. Lassina Zerbo",
             role: "Executive Secretary Emeritus Comprehensive Nuclear Test-Ban Treaty Organization (CTBTO); Chairman Rwanda Atomic Energy Board (RAEB); Former Prime Minister of Burkina Faso",
-            image: "/assets/leadership/H.E. Dr. Lassina Zerbo.jpeg",
+            image: "/assets/leadership/H.E. Dr. Lassina Zerbo.png",
             bio: "Geophysicist and nuclear science diplomat, former Executive Secretary of the CTBTO, advising on science‑driven governance and energy security for a resilient Sahel.",
         },
         // 4. Richad Soundardjee – Managing Director China International Capital Corporation
         {
             name: "Richad Soundardjee",
             role: "Managing Director China International Capital Corporation",
-            image: "/assets/leadership/Richad Soundardjee.jpeg",
+            image: "/assets/leadership/Richad Soundardjee.png",
             bio: "Managing Director at CICC with previous senior leadership at Société Générale, structuring capital markets solutions for emerging markets and sustainable infrastructure.",
         },
         // 5. Abderrahmane Sissako – Film Director, Screenwriter, Producer
         {
             name: "Abderrahmane Sissako",
             role: "Film Director, Screenwriter, Producer",
-            image: "/assets/leadership/Abderrahmane Sissako.jpeg",
+            image: "/assets/leadership/Abderrahmane Sissako .png",
             bio: "Mauritanian‑born Malian filmmaker behind works such as Timbuktu, Bamako and Waiting for Happiness, bringing global attention to stories of justice, culture and the environment.",
         },
         // 6. Patron – Aliko Dangote, GCON – Chairman Dangote Group (Strategic Steward card shares Patron image)
         {
             name: "Aliko Dangote, GCON",
             role: "Chairman Dangote Group",
-            image: "/assets/leadership/Aliko Dangote.jpeg",
+            image: "/assets/leadership/Aliko Dangote.png",
             bio: "Patron and strategic steward bringing private sector scale and long-term investment to the Great Green Wall.",
         },
         // 7. Patron – H.E. Ambassador Maman Sambo Sidikou
         {
             name: "H.E. Ambassador Maman Sambo Sidikou",
             role: "AU Special Rep for Mali and the Sahel; Former UN Special Rep. of the Secretary-General for West Africa and the Sahel",
-            image: "/assets/leadership/H.E. Ambassador Maman Sambo Sidikou.png",
+            image: "/assets/leadership/Sambo Sidikou.png",
             bio: "Diplomatic champion fostering regional cooperation, peace-building and strategic partnerships across the Sahel and West Africa.",
         },
         {
             name: "Anna Getaneh",
             role: "Founder of African Mosaique",
-            image: "/assets/leadership/Anna Getaneh.webp",
+            image: "/assets/leadership/Anna Getaneh.png",
             bio: "Founder of African Mosaique, leveraging fashion, culture and philanthropy to support education, dignity and opportunity for vulnerable children and communities across Africa.",
         },
         {
             name: "Vanessa Moungar",
             role: "Chief Diversity Officer of the LVMH Group",
-            image: "/assets/leadership/Vanessa Moungar.webp",
+            image: "/assets/leadership/Vanessa Moungar.png",
             bio: "Chief Diversity Officer at LVMH, recognised for championing inclusive growth, gender equity and youth empowerment across the public and private sectors.",
         },
         {
             name: "Dr Mariam Aidara Ba",
             role: "CEO of Dakar Science Po",
-            image: "/assets/leadership/Dr Mariam Aidara Ba.webp",
+            image: "/assets/leadership/Dr Mariam Aidara Ba.png",
             bio: "Political scientist and CEO of Dakar Science Po, shaping the next generation of African leaders in governance, policy and democratic innovation.",
         },
         {
             name: "Manny Aly Ansar",
             role: "Founder, Timbuktu Cultural Desert Festival",
-            image: "/assets/leadership/Manny Aly Ansar.webp",
+            image: "/assets/leadership/Manny Aly Ansar.png",
             bio: "Founder of the Timbuktu Cultural Desert Festival, using music, culture and storytelling to promote peace-building, dialogue and resilience in the Sahel.",
         },
         {
             name: "Kenza Bounjou",
             role: "Lawyer, Founding Partner at URITI",
-            image: "/assets/leadership/Kenza Bounjou.webp",
+            image: "/assets/leadership/Kenza Bounjou.png",
             bio: "Lawyer and founding partner at URITI, advising on governance, investment and impact structures that align climate action with social justice.",
         },
         {
             name: "Will Mbiakop",
             role: "Founder and Executive Chairman – African Sports and Creative Institute (ASCI)",
-            image: "/assets/leadership/Will Mbiakop.webp",
+            image: "/assets/leadership/Will Mbiakop.png",
             bio: "Founder and Executive Chairman of the African Sports and Creative Institute (ASCI), harnessing sport and creativity as powerful engines for youth opportunity and sustainable development.",
         },
     ];

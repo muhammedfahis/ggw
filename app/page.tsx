@@ -67,7 +67,7 @@ const team = [
     title: "Grand Patron",
     role: "Former President of Nigeria",
     bio: "Statesman and Grand Patron of GGWoA, championing pan-African cooperation and long-term investment in the Great Green Wall.",
-    photo: "/assets/leadership/Grand Patron.jpeg",
+    photo: "/assets/leadership/Olusegun Obasanjo.png",
   },
   // 2. Aliko Dangote – Patron
   {
@@ -75,7 +75,7 @@ const team = [
     title: "Patron",
     role: "Chairman Dangote Group",
     bio: "Business leader mobilizing private sector capital and industrial know-how to strengthen restoration economies across the Sahel.",
-    photo: "/assets/leadership/Aliko Dangote.jpeg",
+    photo: "/assets/leadership/Aliko Dangote.png",
   },
   // 3. Client (the speaker)
   {
@@ -91,7 +91,7 @@ const team = [
     title: "COO and Executive Director",
     role: "Oversees programme delivery, governance, and field partnerships across the Sahel.",
     bio: "Operations leader ensuring effective implementation and deep community engagement across Great Green Wall countries.",
-    photo: "/assets/leadership/COO and Executive Director.jpeg",
+    photo: "/assets/leadership/Joseph Faluyi.png",
   },
   // 5. Dr. Frannie Leautier – Managing Director of Southbridge Investments
   {
@@ -99,7 +99,7 @@ const team = [
     title: "Managing Director of Southbridge Investments",
     role: "Development finance and innovative climate investment.",
     bio: "Renowned development finance expert pioneering blended finance models that unlock inclusive, climate-resilient growth.",
-    photo: "/assets/leadership/Dr. Frannie Leautier.jpeg",
+    photo: "/assets/leadership/Dr. Frannie Leautier.png",
   },
   // 6. H.E. Youssou N'Dour – Former Minister of Tourism for Senegal
   {
@@ -107,7 +107,7 @@ const team = [
     title: "Former Minister of Tourism for Senegal",
     role: "Cultural diplomacy and creative advocacy.",
     bio: "Artist and statesman using his global platform to connect culture, youth, and environmental stewardship for the Great Green Wall.",
-    photo: "/assets/leadership/H.E. Youssou N'Dour .jpeg",
+    photo: "/assets/leadership/H.E. Youssou N'Dour .png",
   },
 ];
 
