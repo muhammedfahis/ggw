@@ -304,12 +304,13 @@ export default function GreatBlueWavePage() {
             </div>
 
             <div className="mb-12 grid gap-10 lg:grid-cols-[3fr,2fr] items-center">
-              <div className="relative h-72 md:h-80 rounded-3xl overflow-hidden shadow-2xl border border-white/40">
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-white/40">
                 <Image
                   src="/assets/the-great-blue-wave/hawana.jpg"
                   alt="Hawana atmospheric water technology"
-                  fill
-                  className="object-cover"
+                  width={1600}
+                  height={900}
+                  className="w-full h-auto object-cover"
                   sizes="(max-width:1024px) 100vw, 60vw"
                 />
                 <div
@@ -369,7 +370,7 @@ export default function GreatBlueWavePage() {
             </div>
 
             <div className="mb-12 grid gap-10 lg:grid-cols-[3fr,2fr] items-center">
-              <div className="relative h-72 rounded-3xl overflow-hidden shadow-xl">
+              <div className="relative h-80 md:h-96 rounded-3xl overflow-hidden shadow-xl">
                 <Image
                   src="/assets/the-great-blue-wave/ss.jpg"
                   alt="Partners co-designing water access"
