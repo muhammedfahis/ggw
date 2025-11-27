@@ -264,7 +264,7 @@ export default function GreatBlueWavePage() {
 
           <div className="relative mb-16 h-64 md:h-80 rounded-3xl overflow-hidden shadow-2xl border border-offWhite/30">
             <Image
-              src="/assets/the-great-blue-wave/hawana.png"
+              src="/assets/the-great-blue-wave/hawana.jpg"
               alt="Hawana atmospheric water generator and solar-powered technology"
               fill
               className="object-cover object-center"
