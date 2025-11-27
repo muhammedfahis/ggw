@@ -2,6 +2,7 @@ import "./globals.css";
 import type { ReactNode } from "react";
 import { NavBar } from "@/components/NavBar";
 import { Footer } from "@/components/Footer";
+import { WaterThemeWatcher } from "@/components/WaterThemeWatcher";
 
 export const metadata = {
   title: "GGWoA Foundation",
@@ -12,6 +13,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" className="h-full">
       <body className="min-h-screen bg-ggwBg text-ggwDark font-body antialiased">
+        {/* Toggles data-theme="water" for the Great Blue Wave route only */}
+        <WaterThemeWatcher />
         <NavBar />
         <div className="min-h-[calc(100vh-5rem)]">{children}</div>
         <Footer />

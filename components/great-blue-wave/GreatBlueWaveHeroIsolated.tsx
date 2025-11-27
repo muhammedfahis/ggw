@@ -58,15 +58,31 @@ function hasWebGL(): boolean {
  * - No styles leak outside this component.
  */
 export function GreatBlueWaveHeroIsolated() {
-  // Read reduced-motion preference (used indirectly via CSS media query)
-  usePrefersReducedMotion();
+  // Read reduced-motion preference for scroll and animation fallbacks
+  const prefersReducedMotion = usePrefersReducedMotion();
   // Shader disabled; we use CSS-only waves instead
   const showShader = false;
+
+  const handleScrollClick = () => {
+    if (typeof window === "undefined") return;
+
+    const main = document.querySelector("main");
+    if (!main) return;
+
+    const sections = main.querySelectorAll("section");
+    if (sections.length < 2) return;
+
+    const target = sections[1] as HTMLElement;
+    target.scrollIntoView({
+      behavior: prefersReducedMotion ? "auto" : "smooth",
+      block: "start",
+    });
+  };
 
   return (
     <section
       aria-labelledby="great-blue-wave-heading"
-      className="relative flex h-screen w-full overflow-hidden"
+      className="gbw-hero relative flex min-h-[78vh] max-h-[820px] w-full overflow-hidden items-center"
       style={{ backgroundColor: PALETTE.deepOcean }}
     >
       {/* Background layer: static gradient/SVG fallback only */}
@@ -148,68 +164,161 @@ export function GreatBlueWaveHeroIsolated() {
         </>
       </div>
 
-      {/* Content: centered frosted card */}
-      <div className="relative z-10 flex flex-1 items-center justify-center px-4 py-16 sm:px-6 md:px-8 lg:px-12">
-        <div
-          className="max-w-3xl rounded-3xl px-6 py-8 shadow-xl backdrop-blur-md sm:px-8 sm:py-10"
-          style={{
-            backgroundColor: `${PALETTE.paleWater}D9`, // 85% opacity
-            border: `1px solid ${PALETTE.white}4D`,
-          }}
-        >
-          <p
-            className="mb-3 text-xs font-semibold uppercase tracking-[0.25em]"
-            style={{ color: PALETTE.deepOcean }}
-          >
-            WATER RESILIENCE PROGRAMME
-          </p>
+      {/* Content: premium overlay without card */}
+      <div className="relative z-10 flex flex-1 items-center justify-center px-4 pt-10 pb-24 sm:px-6 md:px-8 lg:px-12">
+        <div className="max-w-4xl text-center">
+          {/* Elegant label with subtle underline effect */}
+          <div className="mb-4 inline-block">
+            <p
+              className="text-[0.65rem] font-semibold uppercase tracking-[0.35em]"
+              style={{ color: PALETTE.paleWater }}
+            >
+              Water Resilience Programme
+            </p>
+            <div 
+              className="mt-1 h-px w-full"
+              style={{ 
+                background: `linear-gradient(to right, transparent, ${PALETTE.paleWater}66, transparent)` 
+              }}
+            />
+          </div>
+
+          {/* Premium heading with gradient text effect */}
           <h1
             id="great-blue-wave-heading"
-            className="mb-4 text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl lg:text-6xl"
-            style={{ color: PALETTE.deepOcean }}
+            className="mb-6 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-none"
+            style={{ 
+              color: PALETTE.white,
+              textShadow: `0 2px 20px ${PALETTE.deepOcean}66, 0 0 40px ${PALETTE.midOcean}33`
+            }}
           >
             The Great Blue Wave
           </h1>
+
+          {/* Refined description with better contrast */}
           <p
-            className="mb-8 text-base leading-relaxed sm:text-lg"
-            style={{ color: PALETTE.deepOcean }}
+            className="mb-8 max-w-3xl mx-auto text-base sm:text-lg md:text-xl leading-relaxed font-medium"
+            style={{ 
+              color: PALETTE.paleWater,
+              textShadow: `0 1px 3px ${PALETTE.deepOcean}99`
+            }}
           >
             A water-first initiative weaving atmospheric water, storage, and stewardship into a continuous blue corridor across the Great Green Wall.
           </p>
 
-          <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-start">
+          {/* Premium CTA buttons with enhanced styling */}
+          <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-center sm:gap-6">
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold shadow-md transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
-              style={{
-                backgroundColor: PALETTE.deepOcean,
-                color: PALETTE.white,
+              className="group relative inline-flex items-center justify-center rounded-full px-8 py-4 text-base font-semibold transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent focus-visible:ring-[#0ea5e9]"
+              style={{ 
+                backgroundColor: PALETTE.white,
+                color: PALETTE.deepOcean,
+                boxShadow: `0 8px 32px -12px ${PALETTE.deepOcean}66, 0 0 0 1px ${PALETTE.white}33`
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundColor = PALETTE.midOcean;
+                e.currentTarget.style.backgroundColor = PALETTE.paleWater;
+                e.currentTarget.style.transform = 'translateY(-2px)';
+                e.currentTarget.style.boxShadow = `0 12px 40px -12px ${PALETTE.deepOcean}99, 0 0 0 1px ${PALETTE.white}66`;
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.backgroundColor = PALETTE.deepOcean;
-              }}
-              onFocus={(e: React.FocusEvent<HTMLAnchorElement>) => {
-                e.currentTarget.style.outlineColor = PALETTE.skyBlue;
+                e.currentTarget.style.backgroundColor = PALETTE.white;
+                e.currentTarget.style.transform = 'translateY(0)';
+                e.currentTarget.style.boxShadow = `0 8px 32px -12px ${PALETTE.deepOcean}66, 0 0 0 1px ${PALETTE.white}33`;
               }}
             >
-              Partner on water access
+              Partner on Water Access
+              <svg 
+                className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" 
+                fill="none" 
+                viewBox="0 0 24 24" 
+                stroke="currentColor"
+                style={{ color: PALETTE.deepOcean }}
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+              </svg>
             </Link>
+
             <Link
               href="/projects"
-              className="inline-flex items-center justify-center text-sm font-semibold underline-offset-4 transition-colors hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
-              style={{ color: PALETTE.deepOcean }}
-              onFocus={(e: React.FocusEvent<HTMLAnchorElement>) => {
-                e.currentTarget.style.outlineColor = PALETTE.skyBlue;
+              className="group inline-flex items-center justify-center rounded-full px-8 py-4 text-base font-semibold transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent focus-visible:ring-[#0ea5e9]"
+              style={{ 
+                backgroundColor: 'transparent',
+                color: PALETTE.white,
+                border: `2px solid ${PALETTE.white}66`,
+                boxShadow: `0 4px 20px -8px ${PALETTE.deepOcean}66`
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.backgroundColor = `${PALETTE.white}1A`;
+                e.currentTarget.style.borderColor = PALETTE.white;
+                e.currentTarget.style.transform = 'translateY(-2px)';
+                e.currentTarget.style.boxShadow = `0 8px 32px -8px ${PALETTE.deepOcean}99`;
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.backgroundColor = 'transparent';
+                e.currentTarget.style.borderColor = `${PALETTE.white}66`;
+                e.currentTarget.style.transform = 'translateY(0)';
+                e.currentTarget.style.boxShadow = `0 4px 20px -8px ${PALETTE.deepOcean}66`;
               }}
             >
-              Explore water projects
+              Explore Water Projects
+              <svg 
+                className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-y-0.5" 
+                fill="none" 
+                viewBox="0 0 24 24" 
+                stroke="currentColor"
+                style={{ color: PALETTE.white }}
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+              </svg>
             </Link>
           </div>
         </div>
       </div>
+
+      {/* Scroll-down indicator */}
+      <button
+        type="button"
+        aria-label="Scroll to content"
+        onClick={handleScrollClick}
+        className="gbw-hero-scroll group absolute bottom-10 left-1/2 z-10 flex -translate-x-1/2 flex-col items-center gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#0ea5e9] focus-visible:ring-offset-[#013a63]"
+      >
+        <span className="sr-only">Scroll to content</span>
+        <div className="relative flex h-10 w-6 items-start justify-center rounded-full border border-white/30">
+          <span className="gbw-hero-scroll-dot mt-1 h-1.5 w-1.5 rounded-full bg-[#e6f7ff]" />
+        </div>
+      </button>
+
+      <style jsx>{`
+        .gbw-hero .gbw-hero-scroll-dot {
+          animation: gbw-hero-scroll-dot 1.6s ease-in-out infinite;
+        }
+
+        @keyframes gbw-hero-scroll-dot {
+          0% {
+            opacity: 0;
+            transform: translateY(2px);
+          }
+          20% {
+            opacity: 1;
+            transform: translateY(0);
+          }
+          80% {
+            opacity: 1;
+            transform: translateY(10px);
+          }
+          100% {
+            opacity: 0;
+            transform: translateY(12px);
+          }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+          .gbw-hero .gbw-hero-scroll-dot {
+            animation: none;
+          }
+        }
+      `}</style>
 
       {/* Global CSS for wave animations */}
       <style jsx global>{`
