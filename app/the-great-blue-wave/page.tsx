@@ -481,6 +481,38 @@ export default function GreatBlueWavePage() {
             </div>
           </div>
         </section>
+
+        {/* Video Section */}
+        <section className="bg-[#e6f7ff] px-6 md:px-10 lg:px-24 py-16 md:py-24">
+          <div className="mx-auto max-w-6xl">
+            <div className="mb-12 text-center">
+              <p className="mb-4 text-xs font-semibold tracking-[0.25em] text-[#0369a1] uppercase">
+                WATCH THE STORY
+              </p>
+              <h2 className="mb-4 text-3xl md:text-4xl lg:text-5xl font-semibold text-[#013a63]">
+                The Great Blue Wave in Action
+              </h2>
+              <p className="mx-auto max-w-3xl text-sm md:text-base text-[#013a63]">
+                Discover how atmospheric water harvesting is transforming communities and bringing water security to the Sahel.
+              </p>
+            </div>
+
+            <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-[#0ea5e9]/30">
+              <div className="relative" style={{ paddingBottom: '56.25%' }}>
+                <iframe
+                  className="absolute top-0 left-0 w-full h-full"
+                  src="https://www.youtube.com/embed/zzUQ0cRHswE"
+                  title="The Great Blue Wave - Water Security Initiative"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                  style={{
+                    border: 'none',
+                  }}
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
     </main>
   );

@@ -20,17 +20,15 @@ export function Footer() {
 
   return (
     <footer
-      className={`border-t gbw-theme-transition ${
-        isWater ? "border-[#0ea5e9]/40 bg-[#013a63]" : "border-ggwDark/10 bg-white/80"
-      }`}
+      className={`border-t gbw-theme-transition ${isWater ? "border-[#0ea5e9]/40 bg-[#013a63]" : "border-ggwDark/10 bg-white/80"
+        }`}
     >
       <div className="mx-auto max-w-6xl px-4 py-12 md:px-6">
         <div className="grid gap-10 md:grid-cols-[1.2fr_1fr_1fr]">
           <div className="space-y-4">
             <p
-              className={`text-xs font-semibold uppercase tracking-[0.4em] ${
-                isWater ? "text-[#0ea5e9]" : "text-ggwAccent"
-              }`}
+              className={`text-xs font-semibold uppercase tracking-[0.4em] ${isWater ? "text-[#0ea5e9]" : "text-ggwAccent"
+                }`}
             >
               GGWOA
             </p>
@@ -44,26 +42,23 @@ export function Footer() {
 
           <div>
             <p
-              className={`text-xs font-semibold uppercase tracking-[0.3em] ${
-                isWater ? "text-[#0ea5e9]" : "text-ggwAccent"
-              }`}
+              className={`text-xs font-semibold uppercase tracking-[0.3em] ${isWater ? "text-[#0ea5e9]" : "text-ggwAccent"
+                }`}
             >
               Explore
             </p>
             <nav
-              className={`mt-4 flex flex-col gap-2 text-sm ${
-                isWater ? "text-[#e6f7ff]/80" : "text-ggwDark/70"
-              }`}
+              className={`mt-4 flex flex-col gap-2 text-sm ${isWater ? "text-[#e6f7ff]/80" : "text-ggwDark/70"
+                }`}
             >
               {footerLinks.map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 ${
-                    isWater
+                  className={`transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 ${isWater
                       ? "hover:text-[#ffffff] focus-visible:ring-[#0ea5e9] focus-visible:ring-offset-[#013a63]"
                       : "hover:text-ggwDark focus-visible:ring-ggwGreen focus-visible:ring-offset-white"
-                  }`}
+                    }`}
                 >
                   {item.label}
                 </Link>
@@ -73,35 +68,43 @@ export function Footer() {
 
           <div>
             <p
-              className={`text-xs font-semibold uppercase tracking-[0.3em] ${
-                isWater ? "text-[#0ea5e9]" : "text-ggwAccent"
-              }`}
+              className={`text-xs font-semibold uppercase tracking-[0.3em] ${isWater ? "text-[#0ea5e9]" : "text-ggwAccent"
+                }`}
             >
               Connect
             </p>
             <div
-              className={`mt-4 space-y-3 text-sm ${
-                isWater ? "text-[#e6f7ff]/90" : "text-ggwDark/70"
-              }`}
+              className={`mt-4 space-y-3 text-sm ${isWater ? "text-[#e6f7ff]/90" : "text-ggwDark/70"
+                }`}
             >
+              <div className="space-y-2">
+                <p className="font-medium"><strong>Nigeria Office</strong></p>
+                <p>8B Amaechi Onuoha Crescent,</p>
+                <p>Lekki Phase One, Lekki</p>
+                <p>Lagos, Nigeria</p>
+              </div>
+              <div className="space-y-2 pt-3">
+                <p className="font-medium"><strong>US Office</strong></p>
+                <p>433 Plaza Real, Suite 275</p>
+                <p>Boca Raton, Florida 33432</p>
+                <p>United States</p>
+              </div>
               <a
                 href="mailto:Inquiry@ggwoa.org"
-                className={`font-semibold transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 ${
-                  isWater
+                className={`font-semibold transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 inline-block pt-3 ${isWater
                     ? "text-[#0ea5e9] hover:text-[#e6f7ff] focus-visible:ring-[#0ea5e9] focus-visible:ring-offset-[#013a63]"
                     : "text-ggwGreen hover:text-ggwDark focus-visible:ring-ggwGreen focus-visible:ring-offset-white"
-                }`}
+                  }`}
               >
                 Inquiry@ggwoa.org
               </a>
             </div>
             <Link
               href="/contact"
-              className={`mt-6 inline-flex rounded-full border px-5 py-2.5 text-sm font-semibold transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 ${
-                isWater
+              className={`mt-6 inline-flex rounded-full border px-5 py-2.5 text-sm font-semibold transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 ${isWater
                   ? "border-[#0ea5e9]/50 text-[#e6f7ff] hover:border-[#0ea5e9] hover:bg-[#013a63]/80 focus-visible:ring-[#0ea5e9] focus-visible:ring-offset-[#013a63]"
                   : "border-ggwDark/20 text-ggwDark hover:border-ggwGreen focus-visible:ring-ggwGreen focus-visible:ring-offset-white"
-              }`}
+                }`}
             >
               Start a project
             </Link>
@@ -109,9 +112,8 @@ export function Footer() {
         </div>
 
         <div
-          className={`mt-10 border-t pt-6 text-xs ${
-            isWater ? "border-[#0ea5e9]/30 text-[#e6f7ff]/70" : "border-ggwDark/10 text-ggwDark/60"
-          }`}
+          className={`mt-10 border-t pt-6 text-xs ${isWater ? "border-[#0ea5e9]/30 text-[#e6f7ff]/70" : "border-ggwDark/10 text-ggwDark/60"
+            }`}
         >
           © {currentYear} GGWoA Foundation. All rights reserved.
         </div>

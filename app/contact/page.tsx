@@ -30,30 +30,30 @@ export default function ContactPage() {
 
     const validateForm = (): FormErrors => {
         const newErrors: FormErrors = {};
-        
+
         if (!formData.name.trim()) {
             newErrors.name = "Name is required";
         }
-        
+
         if (!formData.email.trim()) {
             newErrors.email = "Email is required";
         } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
             newErrors.email = "Please enter a valid email";
         }
-        
+
         if (!formData.phone.trim()) {
             newErrors.phone = "Phone number is required";
         } else if (!/^[\d\s\-\+\(\)]+$/.test(formData.phone)) {
             newErrors.phone = "Please enter a valid phone number";
         }
-        
+
         return newErrors;
     };
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
         const newErrors = validateForm();
-        
+
         if (Object.keys(newErrors).length === 0) {
             setIsSubmitted(true);
             // Reset form after 3 seconds
@@ -80,7 +80,7 @@ export default function ContactPage() {
                 <div className="max-w-md w-full text-center animate-fade-in-up">
                     <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
                         <svg className="w-10 h-10 text-primary" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                            <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
                         </svg>
                     </div>
                     <h1 className="text-3xl font-bold text-deepEarth mb-4">Thank You!</h1>
@@ -101,11 +101,11 @@ export default function ContactPage() {
                 <div className="relative z-10 px-6 md:px-12 lg:px-32 py-[120px] md:py-[140px] lg:py-[160px]">
                     <div className="max-w-6xl mx-auto text-center">
                         <div className={`space-y-8 ${isLoaded ? 'animate-fade-in-up' : 'opacity-0'}`}>
-                            <p className="font-accent text-xs uppercase tracking-wider text-accent mb-6" style={{animationDelay: '0.2s'}}>GET IN TOUCH</p>
-                            <h1 className="text-5xl md:text-6xl lg:text-7xl font-heading font-bold text-offWhite mb-8 leading-tight" style={{animationDelay: '0.4s'}}>
+                            <p className="font-accent text-xs uppercase tracking-wider text-accent mb-6" style={{ animationDelay: '0.2s' }}>GET IN TOUCH</p>
+                            <h1 className="text-5xl md:text-6xl lg:text-7xl font-heading font-bold text-offWhite mb-8 leading-tight" style={{ animationDelay: '0.4s' }}>
                                 Contact Us
                             </h1>
-                            <p className="text-xl md:text-2xl lg:text-3xl text-offWhite/90 max-w-4xl mx-auto leading-relaxed" style={{animationDelay: '0.6s'}}>
+                            <p className="text-xl md:text-2xl lg:text-3xl text-offWhite/90 max-w-4xl mx-auto leading-relaxed" style={{ animationDelay: '0.6s' }}>
                                 We'd love to hear from you
                             </p>
                         </div>
@@ -116,7 +116,7 @@ export default function ContactPage() {
             {/* Contact Form Section */}
             <section className="px-6 md:px-12 lg:px-32 py-20 md:py-32">
                 <div className="max-w-lg mx-auto">
-                    <div className={`bg-white rounded-3xl shadow-xl border border-accent/20 p-8 md:p-12 animate-fade-in-up ${isLoaded ? '' : 'opacity-0'}`} style={{animationDelay: '0.4s'}}>
+                    <div className={`bg-white rounded-3xl shadow-xl border border-accent/20 p-8 md:p-12 animate-fade-in-up ${isLoaded ? '' : 'opacity-0'}`} style={{ animationDelay: '0.4s' }}>
                         <form onSubmit={handleSubmit} className="space-y-8">
                             {/* Name Field */}
                             <div>
@@ -128,11 +128,10 @@ export default function ContactPage() {
                                     id="name"
                                     value={formData.name}
                                     onChange={(e) => handleInputChange('name', e.target.value)}
-                                    className={`w-full px-6 py-4 rounded-2xl border transition-all duration-300 bg-offWhite focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary/20 text-lg ${
-                                        errors.name 
-                                            ? 'border-red-500 focus:border-red-500' 
+                                    className={`w-full px-6 py-4 rounded-2xl border transition-all duration-300 bg-offWhite focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary/20 text-lg ${errors.name
+                                            ? 'border-red-500 focus:border-red-500'
                                             : 'border-accent/20 focus:border-primary'
-                                    }`}
+                                        }`}
                                     placeholder="Enter your full name"
                                 />
                                 {errors.name && (
@@ -152,11 +151,10 @@ export default function ContactPage() {
                                     id="email"
                                     value={formData.email}
                                     onChange={(e) => handleInputChange('email', e.target.value)}
-                                    className={`w-full px-6 py-4 rounded-2xl border transition-all duration-300 bg-offWhite focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary/20 text-lg ${
-                                        errors.email 
-                                            ? 'border-red-500 focus:border-red-500' 
+                                    className={`w-full px-6 py-4 rounded-2xl border transition-all duration-300 bg-offWhite focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary/20 text-lg ${errors.email
+                                            ? 'border-red-500 focus:border-red-500'
                                             : 'border-accent/20 focus:border-primary'
-                                    }`}
+                                        }`}
                                     placeholder="Enter your email address"
                                 />
                                 {errors.email && (
@@ -176,11 +174,10 @@ export default function ContactPage() {
                                     id="phone"
                                     value={formData.phone}
                                     onChange={(e) => handleInputChange('phone', e.target.value)}
-                                    className={`w-full px-6 py-4 rounded-2xl border transition-all duration-300 bg-offWhite focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary/20 text-lg ${
-                                        errors.phone 
-                                            ? 'border-red-500 focus:border-red-500' 
+                                    className={`w-full px-6 py-4 rounded-2xl border transition-all duration-300 bg-offWhite focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary/20 text-lg ${errors.phone
+                                            ? 'border-red-500 focus:border-red-500'
                                             : 'border-accent/20 focus:border-primary'
-                                    }`}
+                                        }`}
                                     placeholder="Enter your phone number"
                                 />
                                 {errors.phone && (
@@ -196,23 +193,39 @@ export default function ContactPage() {
                                 className="w-full bg-accent text-primary py-5 text-lg font-semibold rounded-full flex items-center justify-center gap-3 group hover:bg-accent/90 hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300"
                             >
                                 <svg className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+                                    <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
                                 </svg>
                                 Send Message
                             </button>
                         </form>
 
                         {/* Note Under Form */}
-                        <div className="mt-12 text-center animate-fade-in-up" style={{animationDelay: '0.6s'}}>
-                            <p className="text-sm text-charcoal/60">
+                        <div className="mt-12 text-center animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
+                            <p className="text-sm text-charcoal/60 mb-6">
                                 We'll get back to you as soon as possible.
                             </p>
-                            <p className="mt-4 text-sm text-charcoal/70">
-                                433 Plaza Real, Suite 275, Boca Raton, Florida 33432, United States
-                            </p>
+
+                            <div className="space-y-6">
+                                <div>
+                                    <p className="text-sm font-semibold text-charcoal mb-2">Nigeria Office</p>
+                                    <p className="text-sm text-charcoal/70">
+                                        8B Amaechi Onuoha Crescent, Lekki Phase One, Lekki<br />
+                                        Lagos, Nigeria
+                                    </p>
+                                </div>
+
+                                <div>
+                                    <p className="text-sm font-semibold text-charcoal mb-2">US Office</p>
+                                    <p className="text-sm text-charcoal/70">
+                                        433 Plaza Real, Suite 275<br />
+                                        Boca Raton, Florida 33432, United States
+                                    </p>
+                                </div>
+                            </div>
+
                             <a
                                 href="mailto:Inquiry@ggwoa.org"
-                                className="mt-2 inline-block text-sm font-semibold text-accent hover:text-primary"
+                                className="mt-6 inline-block text-sm font-semibold text-accent hover:text-primary"
                             >
                                 Inquiry@ggwoa.org
                             </a>

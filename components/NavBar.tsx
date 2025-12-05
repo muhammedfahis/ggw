@@ -13,7 +13,6 @@ const navItems = [
   { href: "/news", label: "News" },
   { href: "/gallery", label: "Gallery" },
   { href: "/contact", label: "Contact" },
-  { href: "/the-great-blue-wave", label: "The Great Blue Wave" },
 ];
 
 export function NavBar() {
@@ -38,11 +37,11 @@ export function NavBar() {
           href={item.href}
           className="gbw-nav-tab relative inline-flex items-center px-6 py-3 rounded-full font-semibold text-sm transition-all duration-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 overflow-hidden group"
           style={{
-            background: active 
+            background: active
               ? `linear-gradient(135deg, #013a63 0%, #0369a1 60%, #013a63 100%)`
               : `linear-gradient(135deg, #013a63 0%, #0369a1 50%, #013a63 100%)`,
             color: active ? '#ffffff' : '#ffffff',
-            boxShadow: active 
+            boxShadow: active
               ? '0 8px 32px rgba(1, 58, 99, 0.4), 0 0 0 2px rgba(14, 165, 233, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.15)'
               : '0 6px 24px rgba(1, 58, 99, 0.3), 0 0 0 1px rgba(14, 165, 233, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.1)',
             letterSpacing: '0.05em',
@@ -64,19 +63,19 @@ export function NavBar() {
           }}
         >
           <span className="relative z-10">{item.label}</span>
-          
+
           {/* Premium water shimmer animation */}
-          <span 
+          <span
             className="gbw-nav-tab-shimmer absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700"
             style={{
               background: 'linear-gradient(105deg, transparent 30%, rgba(14, 165, 233, 0.4) 50%, transparent 70%)',
               animation: active ? 'gbwShimmerFlow 4s ease-in-out infinite' : 'none',
             }}
           />
-          
+
           {/* Active state glow pulse */}
           {active && (
-            <span 
+            <span
               className="absolute inset-0 rounded-full"
               style={{
                 background: 'radial-gradient(circle at 50% 50%, rgba(14, 165, 233, 0.2) 0%, transparent 60%)',
@@ -145,9 +144,8 @@ export function NavBar() {
         <Link
           key={item.href}
           href={item.href}
-          className={`${baseClasses} focus-visible:ring-[#0ea5e9] focus-visible:ring-offset-[#013a63] ${
-            active ? "text-[#e6f7ff]" : "text-[#e6f7ff]/80 hover:text-[#ffffff]"
-          }`}
+          className={`${baseClasses} focus-visible:ring-[#0ea5e9] focus-visible:ring-offset-[#013a63] ${active ? "text-[#e6f7ff]" : "text-[#e6f7ff]/80 hover:text-[#ffffff]"
+            }`}
         >
           {item.label}
           {active && <span className="absolute -bottom-1 left-0 right-0 h-0.5 rounded-sm bg-[#0ea5e9]" />}
@@ -160,9 +158,8 @@ export function NavBar() {
       <Link
         key={item.href}
         href={item.href}
-        className={`${baseClasses} focus-visible:ring-primary focus-visible:ring-offset-white ${
-          active ? "text-primary" : "text-dark/70 hover:text-primary"
-        }`}
+        className={`${baseClasses} focus-visible:ring-primary focus-visible:ring-offset-white ${active ? "text-primary" : "text-dark/70 hover:text-primary"
+          }`}
       >
         {item.label}
         {active && <span className="absolute -bottom-1 left-0 right-0 h-0.5 rounded-sm bg-primary"></span>}
@@ -172,16 +169,14 @@ export function NavBar() {
 
   return (
     <header
-      className={`sticky top-0 z-50 border-b backdrop-blur-sm shadow-sm gbw-theme-transition ${
-        isWater ? "border-[#0ea5e9]/40 bg-[#013a63]/95" : "border-dark/10 bg-white/95"
-      }`}
+      className={`sticky top-0 z-50 border-b backdrop-blur-sm shadow-sm gbw-theme-transition ${isWater ? "border-[#0ea5e9]/40 bg-[#013a63]/95" : "border-dark/10 bg-white/95"
+        }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         <Link href="/" className="flex items-center gap-3">
           <div
-            className={`relative h-12 w-12 overflow-hidden rounded-md border bg-white shadow-sm ${
-              isWater ? "border-[#0ea5e9]/60" : "border-primary/30"
-            }`}
+            className={`relative h-12 w-12 overflow-hidden rounded-md border bg-white shadow-sm ${isWater ? "border-[#0ea5e9]/60" : "border-primary/30"
+              }`}
           >
             <Image src="/assets/about/rs=w:172.png" alt="GGWoA logo" fill className="object-contain p-2" sizes="48px" />
           </div>
@@ -203,11 +198,10 @@ export function NavBar() {
         <div className="hidden items-center gap-4 md:flex">
           <Link
             href="/contact"
-            className={`text-sm px-4 py-2 rounded-full font-semibold transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 ${
-              isWater
+            className={`text-sm px-4 py-2 rounded-full font-semibold transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 ${isWater
                 ? "bg-[#013a63] text-white hover:bg-[#0369a1] focus-visible:ring-[#0ea5e9] focus-visible:ring-offset-[#013a63]"
                 : "btn-primary"
-            }`}
+              }`}
           >
             Partner with us
           </Link>
@@ -215,11 +209,10 @@ export function NavBar() {
 
         <button
           type="button"
-          className={`relative inline-flex h-10 w-10 items-center justify-center rounded-md border md:hidden transition-colors hover:bg-dark/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 ${
-            isWater
+          className={`relative inline-flex h-10 w-10 items-center justify-center rounded-md border md:hidden transition-colors hover:bg-dark/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 ${isWater
               ? "border-[#0ea5e9]/50 text-[#e6f7ff] hover:bg-[#013a63]/60 focus-visible:ring-[#0ea5e9] focus-visible:ring-offset-[#013a63]"
               : "border-dark/20 text-dark focus-visible:ring-primary focus-visible:ring-offset-white"
-          }`}
+            }`}
           onClick={() => setIsOpen((prev) => !prev)}
           aria-label="Toggle navigation"
           aria-expanded={isOpen}
@@ -232,19 +225,17 @@ export function NavBar() {
 
       {isOpen && (
         <div
-          className={`md:hidden border-t px-6 pb-6 pt-4 shadow-lg gbw-theme-transition ${
-            isWater ? "border-[#0ea5e9]/40 bg-[#013a63]" : "border-dark/10 bg-white"
-          }`}
+          className={`md:hidden border-t px-6 pb-6 pt-4 shadow-lg gbw-theme-transition ${isWater ? "border-[#0ea5e9]/40 bg-[#013a63]" : "border-dark/10 bg-white"
+            }`}
         >
           <div className="flex flex-col gap-4 text-sm">
             {navItems.map(renderLink)}
             <Link
               href="/contact"
-              className={`text-center px-4 py-3 rounded-full font-semibold transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 ${
-                isWater
+              className={`text-center px-4 py-3 rounded-full font-semibold transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 ${isWater
                   ? "bg-[#013a63] text-white hover:bg-[#0369a1] focus-visible:ring-[#0ea5e9] focus-visible:ring-offset-[#013a63]"
                   : "btn-primary"
-              }`}
+                }`}
             >
               Partner with us
             </Link>
