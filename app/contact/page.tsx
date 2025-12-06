@@ -23,6 +23,8 @@ export default function ContactPage() {
     });
     const [errors, setErrors] = useState<FormErrors>({});
     const [isSubmitted, setIsSubmitted] = useState(false);
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [submitError, setSubmitError] = useState<string | null>(null);
 
     useEffect(() => {
         setIsLoaded(true);
@@ -50,19 +52,43 @@ export default function ContactPage() {
         return newErrors;
     };
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        const newErrors = validateForm();
+        setSubmitError(null);
 
-        if (Object.keys(newErrors).length === 0) {
-            setIsSubmitted(true);
-            // Reset form after 3 seconds
-            setTimeout(() => {
-                setFormData({ name: "", email: "", phone: "" });
-                setIsSubmitted(false);
-            }, 3000);
-        } else {
+        const newErrors = validateForm();
+        if (Object.keys(newErrors).length > 0) {
             setErrors(newErrors);
+            return;
+        }
+
+        setIsSubmitting(true);
+
+        try {
+            const response = await fetch("https://formspree.io/f/mkgdzela", {
+                method: "POST",
+                body: JSON.stringify(formData),
+                headers: {
+                    "Accept": "application/json",
+                    "Content-Type": "application/json"
+                }
+            });
+
+            if (response.ok) {
+                setIsSubmitted(true);
+                setFormData({ name: "", email: "", phone: "" });
+            } else {
+                const data = await response.json();
+                if (data.errors) {
+                    setSubmitError(data.errors.map((error: { message: string }) => error.message).join(", "));
+                } else {
+                    setSubmitError("Oops! There was a problem submitting your form.");
+                }
+            }
+        } catch (error) {
+            setSubmitError("Oops! There was a problem submitting your form.");
+        } finally {
+            setIsSubmitting(false);
         }
     };
 
@@ -71,6 +97,9 @@ export default function ContactPage() {
         // Clear error when user starts typing
         if (errors[field]) {
             setErrors(prev => ({ ...prev, [field]: undefined }));
+        }
+        if (submitError) {
+            setSubmitError(null);
         }
     };
 
@@ -89,6 +118,7 @@ export default function ContactPage() {
             </main>
         );
     }
+
 
     return (
         <main className="bg-offWhite text-charcoal min-h-screen">
@@ -118,8 +148,6 @@ export default function ContactPage() {
                 <div className="max-w-lg mx-auto">
                     <div className={`bg-white rounded-3xl shadow-xl border border-accent/20 p-8 md:p-12 animate-fade-in-up ${isLoaded ? '' : 'opacity-0'}`} style={{ animationDelay: '0.4s' }}>
                         <form
-                            action="https://formspree.io/f/YOUR_FORM_ID"
-                            method="POST"
                             onSubmit={handleSubmit}
                             className="space-y-8"
                         >
@@ -134,7 +162,8 @@ export default function ContactPage() {
                                     name="name"
                                     value={formData.name}
                                     onChange={(e) => handleInputChange('name', e.target.value)}
-                                    className={`w-full px-6 py-4 rounded-2xl border transition-all duration-300 bg-offWhite focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary/20 text-lg ${errors.name
+                                    disabled={isSubmitting}
+                                    className={`w-full px-6 py-4 rounded-2xl border transition-all duration-300 bg-offWhite focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary/20 text-lg disabled:opacity-50 ${errors.name
                                         ? 'border-red-500 focus:border-red-500'
                                         : 'border-accent/20 focus:border-primary'
                                         }`}
@@ -158,7 +187,8 @@ export default function ContactPage() {
                                     name="email"
                                     value={formData.email}
                                     onChange={(e) => handleInputChange('email', e.target.value)}
-                                    className={`w-full px-6 py-4 rounded-2xl border transition-all duration-300 bg-offWhite focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary/20 text-lg ${errors.email
+                                    disabled={isSubmitting}
+                                    className={`w-full px-6 py-4 rounded-2xl border transition-all duration-300 bg-offWhite focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary/20 text-lg disabled:opacity-50 ${errors.email
                                         ? 'border-red-500 focus:border-red-500'
                                         : 'border-accent/20 focus:border-primary'
                                         }`}
@@ -182,7 +212,8 @@ export default function ContactPage() {
                                     name="phone"
                                     value={formData.phone}
                                     onChange={(e) => handleInputChange('phone', e.target.value)}
-                                    className={`w-full px-6 py-4 rounded-2xl border transition-all duration-300 bg-offWhite focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary/20 text-lg ${errors.phone
+                                    disabled={isSubmitting}
+                                    className={`w-full px-6 py-4 rounded-2xl border transition-all duration-300 bg-offWhite focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary/20 text-lg disabled:opacity-50 ${errors.phone
                                         ? 'border-red-500 focus:border-red-500'
                                         : 'border-accent/20 focus:border-primary'
                                         }`}
@@ -195,15 +226,35 @@ export default function ContactPage() {
                                 )}
                             </div>
 
+                            {/* Error Message */}
+                            {submitError && (
+                                <div className="p-4 bg-red-50 border border-red-200 rounded-2xl">
+                                    <p className="text-sm text-red-600">{submitError}</p>
+                                </div>
+                            )}
+
                             {/* Submit Button */}
                             <button
                                 type="submit"
-                                className="w-full bg-accent text-primary py-5 text-lg font-semibold rounded-full flex items-center justify-center gap-3 group hover:bg-accent/90 hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300"
+                                disabled={isSubmitting}
+                                className="w-full bg-accent text-primary py-5 text-lg font-semibold rounded-full flex items-center justify-center gap-3 group hover:bg-accent/90 hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
                             >
-                                <svg className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
-                                </svg>
-                                Send Message
+                                {isSubmitting ? (
+                                    <>
+                                        <svg className="w-5 h-5 animate-spin" fill="none" viewBox="0 0 24 24">
+                                            <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                                            <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                                        </svg>
+                                        Sending...
+                                    </>
+                                ) : (
+                                    <>
+                                        <svg className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
+                                        </svg>
+                                        Send Message
+                                    </>
+                                )}
                             </button>
                         </form>
 

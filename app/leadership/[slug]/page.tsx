@@ -1,36 +1,25 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
-import { useParams } from "next/navigation";
-import { getLeaderBySlug } from "@/lib/leaderData";
-import { useState, useEffect } from "react";
+import { getLeaderBySlug, getAllLeaderSlugs } from "@/lib/leaderData";
+import { notFound } from "next/navigation";
 
-export default function LeaderProfilePage() {
-    const params = useParams();
-    const slug = params.slug as string;
+// Generate static params for all leaders at build time
+export function generateStaticParams() {
+    return getAllLeaderSlugs().map((slug) => ({
+        slug: slug,
+    }));
+}
+
+interface LeaderProfilePageProps {
+    params: { slug: string };
+}
+
+export default function LeaderProfilePage({ params }: LeaderProfilePageProps) {
+    const { slug } = params;
     const leader = getLeaderBySlug(slug);
-    const [isLoaded, setIsLoaded] = useState(false);
-
-    useEffect(() => {
-        setIsLoaded(true);
-    }, []);
 
     if (!leader) {
-        return (
-            <main className="bg-offWhite text-charcoal min-h-screen flex items-center justify-center">
-                <div className="text-center">
-                    <h1 className="text-4xl font-heading font-bold text-deepEarth mb-4">Leader Not Found</h1>
-                    <p className="text-xl text-charcoal/70 mb-8">The leader profile you're looking for doesn't exist.</p>
-                    <Link href="/leadership" className="btn-warm inline-flex items-center gap-2">
-                        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z" />
-                        </svg>
-                        Back to Leadership
-                    </Link>
-                </div>
-            </main>
-        );
+        notFound();
     }
 
     return (
@@ -42,7 +31,7 @@ export default function LeaderProfilePage() {
                 </div>
                 <div className="relative z-10 px-6 md:px-12 lg:px-32 py-20 md:py-32">
                     <div className="max-w-6xl mx-auto">
-                        <div className={`${isLoaded ? 'animate-fade-in-up' : 'opacity-0'}`}>
+                        <div className="animate-fade-in-up">
                             {/* Back Button */}
                             <Link
                                 href="/leadership"

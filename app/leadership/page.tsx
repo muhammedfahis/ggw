@@ -32,7 +32,7 @@ export default function LeadershipPage() {
         // Chief Executive Officer – Ramatoulaye Diallo N'diaye
         {
             title: "Distinguished Leader",
-            name: "Ramatoulaye Diallo N'diaye",
+            name: "Dr. Ramatoulaye Diallo N'diaye",
             role: "Chief Executive Officer",
             image: "/assets/leadership/Ramatoulaye Diallo N'diaye.jpeg",
             bio: "Visionary African leader blending diplomacy, cultural renaissance, climate action, and innovative finance. As CEO of GGWoA, she leads continent-wide restoration efforts. Former Minister of Culture, Handicrafts and Tourism of Mali, she champions frameworks like Culture as Capital and the Bridge of Dignity. Chair of Africa Impact Finance Subgroup, Global Impact Disclosure Taskforce. Distinguished with National Orders of Mali and France, UNESCO 70th Anniversary Medal, and UAE Government Decoration.",
@@ -136,7 +136,7 @@ export default function LeadershipPage() {
 
     const management = [
         {
-            name: "Ramatoulaye Diallo N'diaye",
+            name: "Dr. Ramatoulaye Diallo N'diaye",
             role: "Chief Executive Officer",
             focus: "Mobilizes culture, finance, and diplomacy to accelerate the Great Green Wall through strategic partnerships and impact capital.",
             bio: "Visionary African leader with deep experience in cultural diplomacy, climate finance, and governance. Former Minister of Culture of Mali, now leading continent-wide restoration while shaping global standards for inclusive impact finance. Her philosophy bridges heritage, dignity, and ecological stewardship as foundations for sustainable prosperity."

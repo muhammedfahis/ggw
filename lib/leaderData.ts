@@ -19,7 +19,7 @@ export interface LeaderData {
 export const leadersData: LeaderData[] = [
     // PATRONS
     {
-        slug: "olusegun-obasanjo",
+        slug: "his-excellency-olusegun-obasanjo",
         name: "His Excellency Olusegun Obasanjo",
         title: "Grand Patron",
         role: "Former President of Nigeria",
@@ -30,7 +30,7 @@ export const leadersData: LeaderData[] = [
         expertise: ["Diplomacy", "Pan-African Leadership", "Governance"],
     },
     {
-        slug: "aliko-dangote",
+        slug: "aliko-dangote-gcon",
         name: "Aliko Dangote, GCON",
         title: "Patron",
         role: "Chairman Dangote Group",
@@ -42,7 +42,7 @@ export const leadersData: LeaderData[] = [
     },
     {
         slug: "ramatoulaye-diallo-ndiaye",
-        name: "Ramatoulaye Diallo N'diaye",
+        name: "Dr. Ramatoulaye Diallo N'diaye",
         title: "Chief Executive Officer",
         role: "Visionary African leader blending diplomacy, culture, climate action, and innovative finance",
         image: "/assets/leadership/Ramatoulaye Diallo N'diaye.jpeg",
@@ -77,7 +77,7 @@ Ramatoulaye holds a PhD from CEDS Dakar. Her research explores the Great Green W
 
     // BOARD MEMBERS
     {
-        slug: "frannie-leautier",
+        slug: "dr-frannie-leautier",
         name: "Dr. Frannie Leautier",
         title: "Managing Director of Southbridge Investments",
         role: "Development finance and innovative climate investment",
@@ -114,7 +114,7 @@ Joseph holds a bachelor's degree in business management from the University of P
         expertise: ["IT Transformation", "Digital Innovation", "Fintech Solutions", "Strategic Partnerships", "Social Entrepreneurship", "Operations Management"],
     },
     {
-        slug: "youssou-ndour",
+        slug: "h-e-youssou-ndour",
         name: "H.E. Youssou N'Dour",
         title: "Former Minister of Tourism for Senegal",
         role: "Cultural diplomacy and creative advocacy",
@@ -125,7 +125,7 @@ Joseph holds a bachelor's degree in business management from the University of P
         expertise: ["Cultural Diplomacy", "Creative Advocacy", "Youth Mobilization"],
     },
     {
-        slug: "lassina-zerbo",
+        slug: "h-e-dr-lassina-zerbo",
         name: "H.E. Dr. Lassina Zerbo",
         title: "Executive Secretary Emeritus CTBTO",
         role: "Former Prime Minister of Burkina Faso; Chairman Rwanda Atomic Energy Board",
@@ -158,7 +158,7 @@ Joseph holds a bachelor's degree in business management from the University of P
         expertise: ["Filmmaking", "Cultural Storytelling", "Global Advocacy"],
     },
     {
-        slug: "maman-sambo-sidikou",
+        slug: "h-e-ambassador-maman-sambo-sidikou",
         name: "H.E. Ambassador Maman Sambo Sidikou",
         title: "AU High Representative for Mali and the Sahel",
         role: "Former UN Special Rep. of the Secretary-General for West Africa and the Sahel",
@@ -244,7 +244,7 @@ She is happily married with two children.`,
         expertise: ["Diversity & Inclusion", "Gender Equity", "Youth Empowerment"],
     },
     {
-        slug: "mariam-aidara-ba",
+        slug: "dr-mariam-aidara-ba",
         name: "Dr Mariam Aidara Ba",
         title: "CEO of Dakar Science Po",
         role: "Political science and leadership development",

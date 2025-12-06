@@ -80,7 +80,7 @@ const team = [
   },
   // 3. Client (the speaker)
   {
-    name: "Ramatoulaye Diallo N'diaye",
+    name: "Dr. Ramatoulaye Diallo N'diaye",
     title: "Chief Executive Officer",
     role: "Visionary African leader blending diplomacy, culture, climate action, and innovative finance.",
     bio: "CEO of the Great Green Wall of Africa Foundation and Chair of the Africa Impact Finance Subgroup of the Global Impact Disclosure Taskforce. Former Minister of Culture, Handicrafts and Tourism of Mali. Her frameworks Culture as Capital, Bridge of Dignity, and Ubuntu Earth Fund guide transformative development honoring Africa's heritage while catalyzing climate resilience and dignity-centered prosperity.",
@@ -211,44 +211,66 @@ export default function HomePage() {
       </section>
 
       {/* The Great Blue Wave Introduction */}
-      <section className="py-16 md:py-20 px-6 md:px-12 lg:px-32 bg-white border-y border-charcoal/10">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="relative h-80 lg:h-96 rounded-3xl overflow-hidden shadow-lg group animate-slide-in-left">
-              <Image
-                src="/assets/the-great-blue-wave/hawana.jpg"
-                alt="The Great Blue Wave - Water Security Initiative"
-                fill
-                className="object-cover transition-transform duration-700 group-hover:scale-105"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+      <section className="relative py-24 md:py-32 px-6 md:px-12 lg:px-32 overflow-hidden border-y border-charcoal/10">
+        {/* Background Video */}
+        <div className="absolute inset-0 z-0">
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover"
+            poster="/assets/the-great-blue-wave/water-bg.png"
+          >
+            <source src="/assets/home/Water_Animation_Video_Creation.mp4" type="video/mp4" />
+          </video>
+          {/* Gradient overlay for text readability */}
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-900/70 via-blue-800/50 to-blue-900/70"></div>
+        </div>
+
+        <div className="max-w-7xl mx-auto relative z-10">
+          <div className="max-w-4xl mx-auto text-center">
+            {/* Badge */}
+            <div className="inline-flex rounded-full bg-white/20 backdrop-blur-md px-6 py-3 text-sm font-semibold text-white uppercase tracking-wider border border-white/30 mb-8 animate-fade-in-up shadow-lg">
+              <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z" />
+              </svg>
+              Water Security Initiative
             </div>
 
-            <div className="space-y-6 text-charcoal animate-fade-in-up">
-              <div className="inline-flex rounded-full bg-charcoal/5 px-4 py-2 text-xs font-semibold text-charcoal uppercase tracking-wider border border-charcoal/20">
-                Water Security Initiative
-              </div>
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold leading-tight text-deepEarth">
-                The Great Blue Wave
-              </h2>
-              <p className="text-xl md:text-2xl text-charcoal/90 leading-relaxed">
-                Building water-secure futures across the Sahel through innovative atmospheric water harvesting systems
-              </p>
-              <p className="text-lg text-charcoal/70 leading-relaxed">
-                Discover how we're creating a distributed network of water hubs that anchor humanitarian response, schools, clinics, and regenerative farming — turning dry frontiers into thriving communities.
-              </p>
-              <div className="pt-4">
-                <Link
-                  href="/the-great-blue-wave"
-                  className="inline-flex items-center gap-3 bg-charcoal text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-deepEarth transition-all duration-300 hover:scale-105 hover:shadow-xl"
-                >
-                  Learn More
-                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M16.01 11H4v2h12.01v3L20 12l-3.99-4v3z" />
-                  </svg>
-                </Link>
-              </div>
+            {/* Main Heading */}
+            <h2 className="text-5xl md:text-6xl lg:text-7xl font-heading font-bold leading-tight text-white mb-6 animate-fade-in-up drop-shadow-2xl" style={{ animationDelay: '0.1s' }}>
+              The Great Blue Wave
+            </h2>
+
+            {/* Subtitle */}
+            <p className="text-2xl md:text-3xl text-white/95 leading-relaxed mb-6 font-light drop-shadow-lg animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+              Building water-secure futures across the Sahel through innovative atmospheric water harvesting systems
+            </p>
+
+            {/* Description */}
+            <p className="text-lg md:text-xl text-white/90 leading-relaxed mb-10 max-w-3xl mx-auto drop-shadow-md animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
+              Discover how we're creating a distributed network of water hubs that anchor humanitarian response, schools, clinics, and regenerative farming — turning dry frontiers into thriving communities.
+            </p>
+
+            {/* CTA Button */}
+            <div className="pt-4 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
+              <Link
+                href="/the-great-blue-wave"
+                className="inline-flex items-center gap-3 bg-white text-blue-900 px-10 py-5 rounded-full font-semibold text-lg hover:bg-blue-50 transition-all duration-300 hover:scale-105 hover:shadow-2xl group"
+              >
+                Learn More
+                <svg className="w-6 h-6 transition-transform group-hover:translate-x-2" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M16.01 11H4v2h12.01v3L20 12l-3.99-4v3z" />
+                </svg>
+              </Link>
+            </div>
+
+            {/* Decorative water ripples */}
+            <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex gap-4 opacity-30">
+              <div className="w-3 h-3 bg-white rounded-full animate-ping" style={{ animationDuration: '3s' }}></div>
+              <div className="w-3 h-3 bg-white rounded-full animate-ping" style={{ animationDuration: '3s', animationDelay: '1s' }}></div>
+              <div className="w-3 h-3 bg-white rounded-full animate-ping" style={{ animationDuration: '3s', animationDelay: '2s' }}></div>
             </div>
           </div>
         </div>
