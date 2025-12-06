@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import { createSlug } from "@/lib/leaderData";
 
 export default function LeadershipPage() {
     const [isLoaded, setIsLoaded] = useState(false);
@@ -34,7 +35,7 @@ export default function LeadershipPage() {
             name: "Ramatoulaye Diallo N'diaye",
             role: "Chief Executive Officer",
             image: "/assets/leadership/Ramatoulaye Diallo N'diaye.jpeg",
-            bio: "Founder and CEO of GGWoA with over two decades of experience in mobile financial services, telecoms and investment, dedicated to climate resilience and the empowerment of women and youth in Africa.",
+            bio: "Visionary African leader blending diplomacy, cultural renaissance, climate action, and innovative finance. As CEO of GGWoA, she leads continent-wide restoration efforts. Former Minister of Culture, Handicrafts and Tourism of Mali, she champions frameworks like Culture as Capital and the Bridge of Dignity. Chair of Africa Impact Finance Subgroup, Global Impact Disclosure Taskforce. Distinguished with National Orders of Mali and France, UNESCO 70th Anniversary Medal, and UAE Government Decoration.",
         },
     ];
 
@@ -51,7 +52,7 @@ export default function LeadershipPage() {
             name: "Joseph Faluyi",
             role: "COO and Executive Director",
             image: "/assets/leadership/Joseph Faluyi.png",
-            bio: "Operations leader ensuring effective implementation and deep community engagement across Great Green Wall countries.",
+            bio: "Technology executive with over 20 years in IT, digital, and financial services. Former Managing Principal at Capco driving fintech transformation, with experience at Deloitte and Dell Technologies. As COO of GGWoA, he manages internal operations, new business ventures, and strategic partnerships. Previously Executive at Winsun Technologies focusing on climate-sustainable construction. MBA in Technology Management from University of Phoenix.",
         },
         // 1. H.E. Youssou N'Dour – Former Minister of Tourism for Senegal
         {
@@ -99,7 +100,7 @@ export default function LeadershipPage() {
             name: "Anna Getaneh",
             role: "Founder of African Mosaique",
             image: "/assets/leadership/Anna Getaneh.png",
-            bio: "Founder of African Mosaique, leveraging fashion, culture and philanthropy to support education, dignity and opportunity for vulnerable children and communities across Africa.",
+            bio: "Former international model and fashion designer. Founder of African Mosaique (fashion design & manufacturing hub) and The Ethiopian Children's Fund (ECF) serving 1,000+ children. Design philosophy: Source, Design and Develop in Africa. Featured in Vogue, Marie Claire, ELLE. University of Maryland graduate in Business Management.",
         },
         {
             name: "Vanessa Moungar",
@@ -129,7 +130,7 @@ export default function LeadershipPage() {
             name: "Will Mbiakop",
             role: "Founder and Executive Chairman – African Sports and Creative Institute (ASCI)",
             image: "/assets/leadership/Will Mbiakop.png",
-            bio: "Founder and Executive Chairman of the African Sports and Creative Institute (ASCI), harnessing sport and creativity as powerful engines for youth opportunity and sustainable development.",
+            bio: "Innovative sports business leader of Cameroonian and Moroccan heritage. Executive Chairman of AMW Consulting Dubai and ASCI. Led NBA Africa's business development generating 70% of revenue through ground-breaking partnerships. Author of 'Africa Sports Industry: Facts, Challenges and Opportunities'. Launched 'One Million Wins' sports & sustainability program.",
         },
     ];
 
@@ -137,14 +138,14 @@ export default function LeadershipPage() {
         {
             name: "Ramatoulaye Diallo N'diaye",
             role: "Chief Executive Officer",
-            focus: "Mobilizes culture, finance, and diplomacy to accelerate the Great Green Wall.",
-            bio: "Visionary executive leading cross-sector partnerships and strategic initiatives."
+            focus: "Mobilizes culture, finance, and diplomacy to accelerate the Great Green Wall through strategic partnerships and impact capital.",
+            bio: "Visionary African leader with deep experience in cultural diplomacy, climate finance, and governance. Former Minister of Culture of Mali, now leading continent-wide restoration while shaping global standards for inclusive impact finance. Her philosophy bridges heritage, dignity, and ecological stewardship as foundations for sustainable prosperity."
         },
         {
             name: "Joseph Faluyi",
             role: "COO and Executive Director",
-            focus: "Oversees programme delivery, governance, and field partnerships across the Sahel.",
-            bio: "Operations expert ensuring effective implementation and community engagement."
+            focus: "Manages internal operations, new business ventures, and strategic partnerships across the Great Green Wall initiative.",
+            bio: "Technology executive and social entrepreneur with 20+ years driving IT transformation and digital innovation in financial services. As COO of GGWoA, he oversees operational excellence and stakeholder relationships, bringing experience from Capco, Deloitte, Dell Technologies, and climate-focused ventures like Winsun Technologies."
         },
         {
             name: "Regional Fellows",
@@ -193,8 +194,9 @@ export default function LeadershipPage() {
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
                         {patrons.map((patron, index) => (
-                            <article
+                            <Link
                                 key={patron.name}
+                                href={`/leadership/${createSlug(patron.name)}`}
                                 className="group cursor-pointer animate-fade-in-up h-full flex flex-col"
                                 style={{ animationDelay: `${0.4 + index * 0.15}s` }}
                             >
@@ -235,7 +237,7 @@ export default function LeadershipPage() {
                                         </div>
                                     </div>
                                 </div>
-                            </article>
+                            </Link>
                         ))}
                     </div>
                 </div>
@@ -257,8 +259,9 @@ export default function LeadershipPage() {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
                         {board.map((member, index) => (
-                            <article
+                            <Link
                                 key={member.name}
+                                href={`/leadership/${createSlug(member.name)}`}
                                 className="group cursor-pointer animate-fade-in-up h-full flex flex-col"
                                 style={{ animationDelay: `${0.4 + index * 0.15}s` }}
                             >
@@ -290,27 +293,16 @@ export default function LeadershipPage() {
                                         <p className="text-lg font-semibold text-primary mb-4">{member.role}</p>
                                         <p className="text-charcoal/80 leading-relaxed text-lg flex-1">{member.bio}</p>
 
-                                        {/* Social Links */}
-                                        <div className="mt-6 flex items-center gap-3">
-                                            <button className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center text-accent hover:bg-accent hover:text-white transition-all duration-300 hover:scale-110">
-                                                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                                                    <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
-                                                </svg>
-                                            </button>
-                                            <button className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center text-accent hover:bg-accent hover:text-white transition-all duration-300 hover:scale-110">
-                                                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                                                    <path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z" />
-                                                </svg>
-                                            </button>
-                                            <Link href="#" className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center text-accent hover:bg-accent hover:text-white transition-all duration-300 hover:scale-110">
-                                                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
-                                                </svg>
-                                            </Link>
+                                        {/* View Profile Link */}
+                                        <div className="mt-6 flex items-center gap-2 text-accent font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                            <span className="text-sm">View Full Profile</span>
+                                            <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-300" fill="currentColor" viewBox="0 0 24 24">
+                                                <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+                                            </svg>
                                         </div>
                                     </div>
                                 </div>
-                            </article>
+                            </Link>
                         ))}
                     </div>
                 </div>

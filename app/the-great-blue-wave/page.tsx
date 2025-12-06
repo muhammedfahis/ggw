@@ -21,7 +21,7 @@ export default function GreatBlueWavePage() {
       {/* Scoped water-themed sections */}
       <div className={`gbw-page ${inter.className} bg-[#013a63] text-[#013a63]`}>
         {/* Why Water */}
-        <section className="px-6 md:px-10 lg:px-24 py-16 md:py-24 bg-gradient-to-b from-[#013a63] via-[#0369a1] to-[#013a63] text-white">
+        <section className="px-6 md:px-10 lg:px-24 py-16 md:py-24 bg-gradient-to-b from-[#013a63] via-[#0993af] to-[#013a63] text-white">
           <div className="mx-auto max-w-6xl">
             <div className="mb-12 text-center">
               <p className="mb-4 text-xs font-semibold tracking-[0.25em] text-[#e6f7ff] uppercase">
@@ -37,7 +37,7 @@ export default function GreatBlueWavePage() {
 
             <div className="grid gap-8 md:grid-cols-3">
               <div className="rounded-3xl bg-white/10 px-6 py-6 backdrop-blur-md border border-white/15">
-                <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-[#0ea5e9]/20 text-[#e6f7ff]">
+                <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-[#0993af]/20 text-[#e6f7ff]">
                   <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
                     <path d="M12 2C8 7 6 10 6 13.5A6 6 0 0 0 18 13.5C18 10 16 7 12 2Z" />
                   </svg>
@@ -48,7 +48,7 @@ export default function GreatBlueWavePage() {
                 </p>
               </div>
               <div className="rounded-3xl bg-white/10 px-6 py-6 backdrop-blur-md border border-white/15">
-                <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-[#0ea5e9]/20 text-[#e6f7ff]">
+                <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-[#0993af]/20 text-[#e6f7ff]">
                   <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
                     <path d="M5 12l4 4L19 6" />
                   </svg>
@@ -59,7 +59,7 @@ export default function GreatBlueWavePage() {
                 </p>
               </div>
               <div className="rounded-3xl bg-white/10 px-6 py-6 backdrop-blur-md border border-white/15">
-                <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-[#0ea5e9]/20 text-[#e6f7ff]">
+                <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-[#0993af]/20 text-[#e6f7ff]">
                   <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
                     <path d="M3 12h4l3 8 4-16 3 8h4" />
                   </svg>
@@ -77,7 +77,7 @@ export default function GreatBlueWavePage() {
         <section className="bg-[#e6f7ff] px-6 md:px-10 lg:px-24 py-16 md:py-24">
           <div className="mx-auto max-w-6xl">
             <div className="mb-12 text-center">
-              <p className="mb-4 text-xs font-semibold tracking-[0.25em] text-[#0369a1] uppercase">
+              <p className="mb-4 text-xs font-semibold tracking-[0.25em] text-[#0993af] uppercase">
                 STRATEGIC PARTNERS
               </p>
               <h2 className="mb-4 text-3xl md:text-4xl lg:text-5xl font-semibold text-[#013a63]">
@@ -120,8 +120,8 @@ export default function GreatBlueWavePage() {
               </div>
 
               <div className="flex flex-col gap-6">
-                <article className="flex-1 rounded-3xl bg-white/80 px-6 py-6 shadow-md backdrop-blur-md border border-[#0ea5e9]/20">
-                  <p className="mb-2 text-[0.7rem] font-semibold tracking-[0.3em] text-[#0369a1] uppercase">
+                <article className="flex-1 rounded-3xl bg-white/80 px-6 py-6 shadow-md backdrop-blur-md border border-[#0993af]/20">
+                  <p className="mb-2 text-[0.7rem] font-semibold tracking-[0.3em] text-[#0993af] uppercase">
                     MAI SABEEL
                   </p>
                   <h3 className="mb-2 text-lg font-semibold text-[#013a63]">
@@ -134,7 +134,7 @@ export default function GreatBlueWavePage() {
                     href="https://maisabeel.life/"
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex items-center gap-1 text-sm font-semibold text-[#0369a1] hover:text-[#0ea5e9] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0ea5e9]"
+                    className="inline-flex items-center gap-1 text-sm font-semibold text-[#0993af] hover:text-[#0bb5d4] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0993af]"
                   >
                     Visit Mai Sabeel
                     <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
@@ -144,8 +144,8 @@ export default function GreatBlueWavePage() {
                   </Link>
                 </article>
 
-                <article className="flex-1 rounded-3xl bg-white/80 px-6 py-6 shadow-md backdrop-blur-md border border-[#0ea5e9]/20">
-                  <p className="mb-2 text-[0.7rem] font-semibold tracking-[0.3em] text-[#0369a1] uppercase">
+                <article className="flex-1 rounded-3xl bg-white/80 px-6 py-6 shadow-md backdrop-blur-md border border-[#0993af]/20">
+                  <p className="mb-2 text-[0.7rem] font-semibold tracking-[0.3em] text-[#0993af] uppercase">
                     HAWANA WATER
                   </p>
                   <h3 className="mb-2 text-lg font-semibold text-[#013a63]">
@@ -158,7 +158,7 @@ export default function GreatBlueWavePage() {
                     href="https://www.hawanawater.com/"
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex items-center gap-1 text-sm font-semibold text-[#0369a1] hover:text-[#0ea5e9] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0ea5e9]"
+                    className="inline-flex items-center gap-1 text-sm font-semibold text-[#0993af] hover:text-[#0bb5d4] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0993af]"
                   >
                     Visit Hawana Water
                     <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
@@ -176,7 +176,7 @@ export default function GreatBlueWavePage() {
         <section className="bg-white px-6 md:px-10 lg:px-24 py-16 md:py-24">
           <div className="mx-auto max-w-6xl">
             <div className="mb-12 text-center">
-              <p className="mb-4 text-xs font-semibold tracking-[0.25em] text-[#0369a1] uppercase">
+              <p className="mb-4 text-xs font-semibold tracking-[0.25em] text-[#0993af] uppercase">
                 DEPLOYMENT SCENARIOS
               </p>
               <h2 className="mb-4 text-3xl md:text-4xl lg:text-5xl font-semibold text-[#013a63]">
@@ -189,7 +189,7 @@ export default function GreatBlueWavePage() {
 
             <div className="mb-12 grid items-center gap-10 lg:grid-cols-2">
               <div className="order-2 lg:order-1">
-                <div className="inline-flex rounded-full bg-[#0ea5e9]/10 px-4 py-1 text-xs font-semibold text-[#0369a1] uppercase tracking-[0.18em] mb-4">
+                <div className="inline-flex rounded-full bg-[#0993af]/10 px-4 py-1 text-xs font-semibold text-[#0993af] uppercase tracking-[0.18em] mb-4">
                   REAL-WORLD IMPACT
                 </div>
                 <h3 className="mb-3 text-2xl md:text-3xl font-semibold text-[#013a63]">
@@ -200,7 +200,7 @@ export default function GreatBlueWavePage() {
                 </p>
                 <div className="space-y-4">
                   <div className="flex gap-3">
-                    <div className="mt-1 h-9 w-9 flex-shrink-0 rounded-2xl bg-[#0ea5e9]/20 flex items-center justify-center text-[#0369a1]">
+                    <div className="mt-1 h-9 w-9 flex-shrink-0 rounded-2xl bg-[#0993af]/20 flex items-center justify-center text-[#0993af]">
                       <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
                         <path d="M5 13l4 4L19 7" />
                       </svg>
@@ -213,7 +213,7 @@ export default function GreatBlueWavePage() {
                     </div>
                   </div>
                   <div className="flex gap-3">
-                    <div className="mt-1 h-9 w-9 flex-shrink-0 rounded-2xl bg-[#0ea5e9]/20 flex items-center justify-center text-[#0369a1]">
+                    <div className="mt-1 h-9 w-9 flex-shrink-0 rounded-2xl bg-[#0993af]/20 flex items-center justify-center text-[#0993af]">
                       <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
                         <path d="M12 2L4 7v10l8 5 8-5V7z" />
                       </svg>
@@ -247,7 +247,7 @@ export default function GreatBlueWavePage() {
             </div>
 
             <div className="grid gap-6 md:grid-cols-2">
-              <article className="rounded-3xl bg-[#e6f7ff]/80 p-6 shadow-md backdrop-blur-md border border-[#0ea5e9]/30">
+              <article className="rounded-3xl bg-[#e6f7ff]/80 p-6 shadow-md backdrop-blur-md border border-[#0993af]/30">
                 <h3 className="mb-2 text-lg font-semibold text-[#013a63]">
                   Humanitarian & Refugee Settings
                 </h3>
@@ -255,7 +255,7 @@ export default function GreatBlueWavePage() {
                   Flexible units with on-site storage support camps and transit centres, reducing trucking and plastic packaging.
                 </p>
               </article>
-              <article className="rounded-3xl bg-[#e6f7ff]/80 p-6 shadow-md backdrop-blur-md border border-[#0ea5e9]/30">
+              <article className="rounded-3xl bg-[#e6f7ff]/80 p-6 shadow-md backdrop-blur-md border border-[#0993af]/30">
                 <h3 className="mb-2 text-lg font-semibold text-[#013a63]">
                   Schools, Clinics & Community Hubs
                 </h3>
@@ -263,7 +263,7 @@ export default function GreatBlueWavePage() {
                   Mid-scale systems provide daily drinking water, handwashing, and basic service needs where reliability matters most.
                 </p>
               </article>
-              <article className="rounded-3xl bg-[#e6f7ff]/80 p-6 shadow-md backdrop-blur-md border border-[#0ea5e9]/30">
+              <article className="rounded-3xl bg-[#e6f7ff]/80 p-6 shadow-md backdrop-blur-md border border-[#0993af]/30">
                 <h3 className="mb-2 text-lg font-semibold text-[#013a63]">
                   Regenerative Agriculture Sites
                 </h3>
@@ -271,7 +271,7 @@ export default function GreatBlueWavePage() {
                   Water is paired with soil restoration and agroforestry, stabilising yields while new trees take root.
                 </p>
               </article>
-              <article className="rounded-3xl bg-[#e6f7ff]/80 p-6 shadow-md backdrop-blur-md border border-[#0ea5e9]/30">
+              <article className="rounded-3xl bg-[#e6f7ff]/80 p-6 shadow-md backdrop-blur-md border border-[#0993af]/30">
                 <h3 className="mb-2 text-lg font-semibold text-[#013a63]">
                   Village & Market Hubs
                 </h3>
@@ -284,9 +284,9 @@ export default function GreatBlueWavePage() {
         </section>
 
         {/* Technology */}
-        <section className="relative overflow-hidden bg-gradient-to-br from-[#013a63] via-[#0369a1] to-[#0ea5e9] px-6 md:px-10 lg:px-24 py-16 md:py-24 text-white">
+        <section className="relative overflow-hidden bg-gradient-to-br from-[#013a63] via-[#0993af] to-[#0bb5d4] px-6 md:px-10 lg:px-24 py-16 md:py-24 text-white">
           <div className="pointer-events-none absolute inset-0 opacity-40">
-            <div className="absolute -left-24 top-10 h-64 w-64 rounded-full bg-[#0ea5e9]/40 blur-3xl" />
+            <div className="absolute -left-24 top-10 h-64 w-64 rounded-full bg-[#0bb5d4]/40 blur-3xl" />
             <div className="absolute -right-24 bottom-0 h-72 w-72 rounded-full bg-[#013a63]/70 blur-3xl" />
           </div>
 
@@ -304,13 +304,12 @@ export default function GreatBlueWavePage() {
             </div>
 
             <div className="mb-12 grid gap-10 lg:grid-cols-[3fr,2fr] items-center">
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-white/40">
+              <div className="relative h-80 md:h-96 lg:h-[28rem] rounded-3xl overflow-hidden shadow-2xl border border-white/40">
                 <Image
                   src="/assets/the-great-blue-wave/hawana.jpg"
                   alt="Hawana atmospheric water technology"
-                  width={1600}
-                  height={900}
-                  className="w-full h-auto object-cover"
+                  fill
+                  className="object-cover"
                   sizes="(max-width:1024px) 100vw, 60vw"
                 />
                 <div
@@ -321,7 +320,7 @@ export default function GreatBlueWavePage() {
                   }}
                 />
                 <div className="absolute bottom-6 left-6 right-6">
-                  <div className="mb-3 inline-flex rounded-full bg-[#0ea5e9] px-4 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.25em] text-[#013a63]">
+                  <div className="mb-3 inline-flex rounded-full bg-[#0993af] px-4 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.25em] text-white">
                     HAWANA WATER SYSTEMS
                   </div>
                   <h3 className="text-lg md:text-xl font-semibold text-white">
@@ -358,7 +357,7 @@ export default function GreatBlueWavePage() {
         <section className="bg-[#e6f7ff] px-6 md:px-10 lg:px-24 py-16 md:py-24">
           <div className="mx-auto max-w-6xl">
             <div className="mb-12 text-center">
-              <p className="mb-4 text-xs font-semibold tracking-[0.25em] text-[#0369a1] uppercase">
+              <p className="mb-4 text-xs font-semibold tracking-[0.25em] text-[#0993af] uppercase">
                 DEPLOYMENT SCALES
               </p>
               <h2 className="mb-4 text-3xl md:text-4xl lg:text-5xl font-semibold text-[#013a63]">
@@ -396,19 +395,19 @@ export default function GreatBlueWavePage() {
               </div>
 
               <div className="space-y-4">
-                <article className="rounded-2xl bg-white p-5 shadow-md border border-[#0ea5e9]/30">
+                <article className="rounded-2xl bg-white p-5 shadow-md border border-[#0993af]/30">
                   <h3 className="mb-1 text-sm font-semibold text-[#013a63]">Residential</h3>
                   <p className="text-xs text-[#013a63]">
                     Compact units for staff housing, teacher accommodation, and frontline workers, reducing reliance on bottled or trucked water.
                   </p>
                 </article>
-                <article className="rounded-2xl bg-white p-5 shadow-md border border-[#0ea5e9]/30">
+                <article className="rounded-2xl bg-white p-5 shadow-md border border-[#0993af]/30">
                   <h3 className="mb-1 text-sm font-semibold text-[#013a63]">School / Clinic</h3>
                   <p className="text-xs text-[#013a63]">
                     Mid-scale systems with storage and distribution points to serve classrooms, early learning centres, and health posts.
                   </p>
                 </article>
-                <article className="rounded-2xl bg-white p-5 shadow-md border border-[#0ea5e9]/30">
+                <article className="rounded-2xl bg-white p-5 shadow-md border border-[#0993af]/30">
                   <h3 className="mb-1 text-sm font-semibold text-[#013a63]">Commercial / Village</h3>
                   <p className="text-xs text-[#013a63]">
                     High-capacity units anchoring market hubs and village clusters, often through shared public–private partnerships.
@@ -423,7 +422,7 @@ export default function GreatBlueWavePage() {
         <section className="bg-white px-6 md:px-10 lg:px-24 py-16 md:py-24">
           <div className="mx-auto max-w-6xl">
             <div className="mb-12 text-center">
-              <p className="mb-4 text-xs font-semibold tracking-[0.25em] text-[#0369a1] uppercase">
+              <p className="mb-4 text-xs font-semibold tracking-[0.25em] text-[#0993af] uppercase">
                 VISUALISING THE BLUE WAVE
               </p>
               <h2 className="mb-4 text-3xl md:text-4xl lg:text-5xl font-semibold text-[#013a63]">
@@ -470,7 +469,7 @@ export default function GreatBlueWavePage() {
             <div className="text-center">
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 rounded-full bg-[#013a63] px-8 py-3 text-sm font-semibold text-white shadow-md transition-transform hover:scale-105 hover:bg-[#0369a1] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0ea5e9]"
+                className="inline-flex items-center gap-2 rounded-full bg-[#0993af] px-8 py-3 text-sm font-semibold text-white shadow-md transition-transform hover:scale-105 hover:bg-[#0bb5d4] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0993af]"
               >
                 Explore Great Blue Wave Opportunities
                 <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
@@ -486,7 +485,7 @@ export default function GreatBlueWavePage() {
         <section className="bg-[#e6f7ff] px-6 md:px-10 lg:px-24 py-16 md:py-24">
           <div className="mx-auto max-w-6xl">
             <div className="mb-12 text-center">
-              <p className="mb-4 text-xs font-semibold tracking-[0.25em] text-[#0369a1] uppercase">
+              <p className="mb-4 text-xs font-semibold tracking-[0.25em] text-[#0993af] uppercase">
                 WATCH THE STORY
               </p>
               <h2 className="mb-4 text-3xl md:text-4xl lg:text-5xl font-semibold text-[#013a63]">
@@ -497,7 +496,7 @@ export default function GreatBlueWavePage() {
               </p>
             </div>
 
-            <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-[#0ea5e9]/30">
+            <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-[#0993af]/30">
               <div className="relative" style={{ paddingBottom: '56.25%' }}>
                 <iframe
                   className="absolute top-0 left-0 w-full h-full"

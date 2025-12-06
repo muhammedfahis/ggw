@@ -117,7 +117,12 @@ export default function ContactPage() {
             <section className="px-6 md:px-12 lg:px-32 py-20 md:py-32">
                 <div className="max-w-lg mx-auto">
                     <div className={`bg-white rounded-3xl shadow-xl border border-accent/20 p-8 md:p-12 animate-fade-in-up ${isLoaded ? '' : 'opacity-0'}`} style={{ animationDelay: '0.4s' }}>
-                        <form onSubmit={handleSubmit} className="space-y-8">
+                        <form
+                            action="https://formspree.io/f/YOUR_FORM_ID"
+                            method="POST"
+                            onSubmit={handleSubmit}
+                            className="space-y-8"
+                        >
                             {/* Name Field */}
                             <div>
                                 <label htmlFor="name" className="block text-sm font-semibold text-charcoal mb-3">
@@ -126,11 +131,12 @@ export default function ContactPage() {
                                 <input
                                     type="text"
                                     id="name"
+                                    name="name"
                                     value={formData.name}
                                     onChange={(e) => handleInputChange('name', e.target.value)}
                                     className={`w-full px-6 py-4 rounded-2xl border transition-all duration-300 bg-offWhite focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary/20 text-lg ${errors.name
-                                            ? 'border-red-500 focus:border-red-500'
-                                            : 'border-accent/20 focus:border-primary'
+                                        ? 'border-red-500 focus:border-red-500'
+                                        : 'border-accent/20 focus:border-primary'
                                         }`}
                                     placeholder="Enter your full name"
                                 />
@@ -149,11 +155,12 @@ export default function ContactPage() {
                                 <input
                                     type="email"
                                     id="email"
+                                    name="email"
                                     value={formData.email}
                                     onChange={(e) => handleInputChange('email', e.target.value)}
                                     className={`w-full px-6 py-4 rounded-2xl border transition-all duration-300 bg-offWhite focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary/20 text-lg ${errors.email
-                                            ? 'border-red-500 focus:border-red-500'
-                                            : 'border-accent/20 focus:border-primary'
+                                        ? 'border-red-500 focus:border-red-500'
+                                        : 'border-accent/20 focus:border-primary'
                                         }`}
                                     placeholder="Enter your email address"
                                 />
@@ -172,11 +179,12 @@ export default function ContactPage() {
                                 <input
                                     type="tel"
                                     id="phone"
+                                    name="phone"
                                     value={formData.phone}
                                     onChange={(e) => handleInputChange('phone', e.target.value)}
                                     className={`w-full px-6 py-4 rounded-2xl border transition-all duration-300 bg-offWhite focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary/20 text-lg ${errors.phone
-                                            ? 'border-red-500 focus:border-red-500'
-                                            : 'border-accent/20 focus:border-primary'
+                                        ? 'border-red-500 focus:border-red-500'
+                                        : 'border-accent/20 focus:border-primary'
                                         }`}
                                     placeholder="Enter your phone number"
                                 />

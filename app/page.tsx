@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import { Counter } from "@/components/Counter";
 import { ScrollIndicator } from "@/components/ScrollIndicator";
+import { createSlug } from "@/lib/leaderData";
 
 const impactMetrics = [
   { value: "15M+", label: "Trees established", detail: "Native species cultivated with community cooperatives." },
@@ -81,16 +82,16 @@ const team = [
   {
     name: "Ramatoulaye Diallo N'diaye",
     title: "Chief Executive Officer",
-    role: "Mobilizes culture, finance, and diplomacy to accelerate the Great Green Wall.",
-    bio: "Chief Executive Officer of GGWoA, leading cross-sector coalitions that align governments, investors, and communities around restoration.",
+    role: "Visionary African leader blending diplomacy, culture, climate action, and innovative finance.",
+    bio: "CEO of the Great Green Wall of Africa Foundation and Chair of the Africa Impact Finance Subgroup of the Global Impact Disclosure Taskforce. Former Minister of Culture, Handicrafts and Tourism of Mali. Her frameworks Culture as Capital, Bridge of Dignity, and Ubuntu Earth Fund guide transformative development honoring Africa's heritage while catalyzing climate resilience and dignity-centered prosperity.",
     photo: "/assets/leadership/Ramatoulaye Diallo N'diaye.jpeg",
   },
-  // 4. Joseph Aloui
+  // 4. Joseph Faluyi
   {
     name: "Joseph Faluyi",
     title: "COO and Executive Director",
-    role: "Oversees programme delivery, governance, and field partnerships across the Sahel.",
-    bio: "Operations leader ensuring effective implementation and deep community engagement across Great Green Wall countries.",
+    role: "Technology executive with 20+ years driving digital transformation in IT, fintech, and sustainable development.",
+    bio: "COO and Executive Director for GGWoA with extensive experience in IT transformation, fintech solutions, and climate-focused ventures. Former Managing Principal at Capco, he combines technology expertise with social entrepreneurship, managing strategic partnerships and operations. Holds MBA in Technology Management from University of Phoenix.",
     photo: "/assets/leadership/Joseph Faluyi.png",
   },
   // 5. Dr. Frannie Leautier – Managing Director of Southbridge Investments
@@ -584,7 +585,7 @@ export default function HomePage() {
                     </div>
 
                     {/* CTA Button */}
-                    <Link href="/leadership" className="w-full mt-6 py-3 border-2 border-accent text-accent rounded-lg font-semibold uppercase tracking-wider text-sm hover:bg-accent hover:text-white hover:-translate-y-0.5 hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2 group/btn">
+                    <Link href={`/leadership/${createSlug(member.name)}`} className="w-full mt-6 py-3 border-2 border-accent text-accent rounded-lg font-semibold uppercase tracking-wider text-sm hover:bg-accent hover:text-white hover:-translate-y-0.5 hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2 group/btn">
                       View Full Bio
                       <svg className="w-4 h-4 transition-transform group-hover/btn:translate-x-1" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M16.01 11H4v2h12.01v3L20 12l-3.99-4v3z" />
