@@ -714,9 +714,20 @@ export default function HomePage() {
               <p className="text-offWhite/70 text-lg leading-relaxed">
                 Great Green Wall of Africa Foundation. Building a living infrastructure for nature, culture, and prosperity.
               </p>
-              <p className="mt-4 text-sm text-offWhite/70">
-                433 Plaza Real, Suite 275, Boca Raton, Florida 33432, United States
-              </p>
+              <div className="mt-4 space-y-3 text-sm text-offWhite/70">
+                <div>
+                  <p className="font-semibold text-offWhite">Nigeria Office</p>
+                  <p>8B Amaechi Onuoha Crescent, Lekki Phase One, Lekki, Lagos, Nigeria</p>
+                </div>
+                <div>
+                  <p className="font-semibold text-offWhite">US Office</p>
+                  <p>433 Plaza Real, Suite 275, Boca Raton, Florida 33432, United States</p>
+                </div>
+                <div>
+                  <p className="font-semibold text-offWhite">UAE Office</p>
+                  <p>Great Green wall of Africa, DSO - IFZA, IFZA PROPERTIES, Dubai Silicon Oasis, Dubai, UAE</p>
+                </div>
+              </div>
               <a
                 href="mailto:Inquiry@ggwoa.org"
                 className="mt-2 inline-block text-sm font-semibold text-accent hover:text-offWhite"

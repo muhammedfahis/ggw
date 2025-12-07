@@ -280,6 +280,16 @@ export default function ContactPage() {
                                         Boca Raton, Florida 33432, United States
                                     </p>
                                 </div>
+
+                                <div>
+                                    <p className="text-sm font-semibold text-charcoal mb-2">UAE Office</p>
+                                    <p className="text-sm text-charcoal/70">
+                                        Great Green wall of Africa<br />
+                                        DSO - IFZA, IFZA PROPERTIES<br />
+                                        Dubai Silicon Oasis<br />
+                                        Dubai, UAE
+                                    </p>
+                                </div>
                             </div>
 
                             <a

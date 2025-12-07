@@ -56,8 +56,8 @@ export function Footer() {
                   key={item.href}
                   href={item.href}
                   className={`transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 ${isWater
-                      ? "hover:text-[#ffffff] focus-visible:ring-[#0ea5e9] focus-visible:ring-offset-[#013a63]"
-                      : "hover:text-ggwDark focus-visible:ring-ggwGreen focus-visible:ring-offset-white"
+                    ? "hover:text-[#ffffff] focus-visible:ring-[#0ea5e9] focus-visible:ring-offset-[#013a63]"
+                    : "hover:text-ggwDark focus-visible:ring-ggwGreen focus-visible:ring-offset-white"
                     }`}
                 >
                   {item.label}
@@ -89,11 +89,18 @@ export function Footer() {
                 <p>Boca Raton, Florida 33432</p>
                 <p>United States</p>
               </div>
+              <div className="space-y-2 pt-3">
+                <p className="font-medium"><strong>UAE Office</strong></p>
+                <p>Great Green wall of Africa</p>
+                <p>DSO - IFZA, IFZA PROPERTIES</p>
+                <p>Dubai Silicon Oasis</p>
+                <p>Dubai, UAE</p>
+              </div>
               <a
                 href="mailto:Inquiry@ggwoa.org"
                 className={`font-semibold transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 inline-block pt-3 ${isWater
-                    ? "text-[#0ea5e9] hover:text-[#e6f7ff] focus-visible:ring-[#0ea5e9] focus-visible:ring-offset-[#013a63]"
-                    : "text-ggwGreen hover:text-ggwDark focus-visible:ring-ggwGreen focus-visible:ring-offset-white"
+                  ? "text-[#0ea5e9] hover:text-[#e6f7ff] focus-visible:ring-[#0ea5e9] focus-visible:ring-offset-[#013a63]"
+                  : "text-ggwGreen hover:text-ggwDark focus-visible:ring-ggwGreen focus-visible:ring-offset-white"
                   }`}
               >
                 Inquiry@ggwoa.org
@@ -102,8 +109,8 @@ export function Footer() {
             <Link
               href="/contact"
               className={`mt-6 inline-flex rounded-full border px-5 py-2.5 text-sm font-semibold transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 ${isWater
-                  ? "border-[#0ea5e9]/50 text-[#e6f7ff] hover:border-[#0ea5e9] hover:bg-[#013a63]/80 focus-visible:ring-[#0ea5e9] focus-visible:ring-offset-[#013a63]"
-                  : "border-ggwDark/20 text-ggwDark hover:border-ggwGreen focus-visible:ring-ggwGreen focus-visible:ring-offset-white"
+                ? "border-[#0ea5e9]/50 text-[#e6f7ff] hover:border-[#0ea5e9] hover:bg-[#013a63]/80 focus-visible:ring-[#0ea5e9] focus-visible:ring-offset-[#013a63]"
+                : "border-ggwDark/20 text-ggwDark hover:border-ggwGreen focus-visible:ring-ggwGreen focus-visible:ring-offset-white"
                 }`}
             >
               Start a project
