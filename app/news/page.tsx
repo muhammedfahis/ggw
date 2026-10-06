@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import type { ReactNode } from "react";
 import AnimationWrapper from "@/components/AnimationWrapper";
 
 export const metadata = {
@@ -166,297 +167,219 @@ const archive = [
     },
 ];
 
+function Overline({ children, light = false }: { children: ReactNode; light?: boolean }) {
+    return (
+        <p className={`font-accent text-xs font-semibold uppercase tracking-[0.2em] ${light ? "text-accent" : "text-accentDark"}`}>
+            {children}
+        </p>
+    );
+}
+
+function SectionHeader({ overline, title, description }: { overline: string; title: string; description?: string }) {
+    return (
+        <div className="max-w-2xl">
+            <Overline>{overline}</Overline>
+            <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-primary sm:text-4xl">{title}</h2>
+            {description && <p className="mt-4 text-[17px] leading-relaxed text-charcoal/75">{description}</p>}
+        </div>
+    );
+}
+
+function Arrow() {
+    return <span className="transition-transform group-hover:translate-x-1" aria-hidden="true">→</span>;
+}
+
 export default function NewsPage() {
     return (
-        <main className="bg-offWhite text-charcoal min-h-screen">
-            {/* Hero Section */}
-            <section className="relative overflow-hidden">
-                <div className="absolute inset-0">
-                    <div className="absolute inset-0 bg-[url('/assets/home/rs=w:1920,m.jpeg')] bg-cover bg-center opacity-20"></div>
-                    <div className="absolute inset-0 bg-gradient-to-br from-primary/70 via-primary/60 to-primary/80"></div>
-                </div>
-                <div className="relative z-10 px-6 md:px-12 lg:px-32 py-[120px] md:py-[140px] lg:py-[160px]">
-                    <div className="max-w-6xl mx-auto text-center">
-                        <AnimationWrapper className="space-y-8" animationDelay="0s">
-                            <p className="font-accent text-xs uppercase tracking-wider text-accent mb-6" style={{animationDelay: '0.2s'}}>NEWSROOM</p>
-                            <h1 className="text-5xl md:text-6xl lg:text-7xl font-heading font-bold text-offWhite mb-8 leading-tight" style={{animationDelay: '0.4s'}}>
-                                Latest Updates
-                            </h1>
-                            <p className="text-xl md:text-2xl lg:text-3xl text-offWhite/90 max-w-4xl mx-auto leading-relaxed" style={{animationDelay: '0.6s'}}>
-                                Stories driving the world's most ambitious restoration effort. From summit halls to field immersions, follow every milestone of the Great Green Wall as we transform landscapes and empower communities across the continent.
-                            </p>
-                        </AnimationWrapper>
-                    </div>
-                </div>
-            </section>
-
-            {/* Featured Story */}
-            <section className="px-6 md:px-12 lg:px-32 py-20 md:py-32 bg-white">
-                <div className="max-w-6xl mx-auto">
-                    <div className="text-center mb-20">
-                        <AnimationWrapper animationDelay="0s">
-                            <p className="font-accent text-xs uppercase tracking-wider text-accent mb-6" style={{animationDelay: '0.2s'}}>FEATURED STORY</p>
-                        </AnimationWrapper>
-                        <AnimationWrapper animationDelay="0.1s">
-                            <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-deepEarth mb-8 leading-tight">
-                                Breaking News
-                            </h2>
-                        </AnimationWrapper>
-                        <AnimationWrapper animationDelay="0.2s">
-                            <div className="w-32 h-1 bg-accent mx-auto mb-8"></div>
-                        </AnimationWrapper>
-                    </div>
-                    
-                    <AnimationWrapper animationDelay="0.3s">
-                        <article className="group cursor-pointer">
-                        <div className="bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 overflow-hidden border border-accent/20">
-                            <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
-                                {/* Image Section */}
-                                <div className="relative h-96 lg:h-full min-h-[500px] overflow-hidden">
-                                    <Image 
-                                        src={feature.image} 
-                                        alt={feature.title} 
-                                        fill 
-                                        className="object-cover transition-transform duration-700 group-hover:scale-105"
-                                        sizes="(max-width: 1024px) 100vw, 50vw"
-                                    />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent"></div>
-                                    
-                                    {/* Category Badge */}
-                                    <div className="absolute top-4 left-4">
-                                        <span className="bg-accent text-primary px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider backdrop-blur-sm">
-                                            {feature.category}
-                                        </span>
-                                    </div>
-                                    
-                                    {/* Read Time Badge */}
-                                    <div className="absolute top-4 right-4">
-                                        <span className="bg-white/90 backdrop-blur-sm text-primary px-3 py-2 rounded-full text-xs font-semibold">
-                                            {feature.readTime}
-                                        </span>
-                                    </div>
-                                </div>
-                                
-                                {/* Content Section */}
-                                <div className="p-12 lg:p-16 flex flex-col justify-center">
-                                    <div className="space-y-6">
-                                        <p className="font-accent text-xs uppercase tracking-wider text-accent">{feature.date}</p>
-                                        <h3 className="text-3xl lg:text-4xl font-heading font-bold text-deepEarth leading-tight group-hover:text-primary transition-colors duration-300">
-                                            {feature.title}
-                                        </h3>
-                                        <p className="text-lg lg:text-xl text-charcoal/80 leading-relaxed">
-                                            {feature.summary}
-                                        </p>
-                                        <Link 
-                                            href={feature.href} 
-                                            className="inline-flex items-center gap-3 text-accent font-semibold hover:text-primary transition-colors duration-300 group/link"
-                                        >
-                                            Read Full Story
-                                            <svg className="w-5 h-5 transition-transform group-hover/link:translate-x-1" fill="currentColor" viewBox="0 0 24 24">
-                                                <path d="M16.01 11H4v2h12.01v3L20 12l-3.99-4v3z"/>
-                                            </svg>
-                                        </Link>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
+        <main className="bg-offWhite text-charcoal">
+            {/* Hero */}
+            <section className="relative overflow-hidden bg-deepEarth">
+                <div className="absolute inset-0 bg-[url('/assets/home/rs=w:1920,m.png')] bg-cover bg-center opacity-15" aria-hidden="true" />
+                <div className="relative mx-auto max-w-6xl px-4 py-16 md:px-6 md:py-20">
+                    <nav aria-label="Breadcrumb" className="mb-8 flex items-center gap-2 font-accent text-xs uppercase tracking-wider text-offWhite/60">
+                        <Link href="/" className="hover:text-offWhite transition-colors">Home</Link>
+                        <span aria-hidden="true">/</span>
+                        <span className="font-semibold text-offWhite">News</span>
+                    </nav>
+                    <AnimationWrapper className="max-w-2xl">
+                        <Overline light>Newsroom</Overline>
+                        <h1 className="mt-3 font-heading text-4xl font-bold leading-tight tracking-tight text-offWhite sm:text-5xl">
+                            Latest Updates
+                        </h1>
+                        <p className="mt-5 text-lg leading-relaxed text-offWhite/80">
+                            Stories driving the world&apos;s most ambitious restoration effort. From summit halls to field immersions, follow every milestone of the Great Green Wall as we transform landscapes and empower communities across the continent.
+                        </p>
                     </AnimationWrapper>
                 </div>
             </section>
 
-            {/* Latest News */}
-            <section className="px-6 md:px-12 lg:px-32 py-20 md:py-32 bg-secondary">
-                <div className="max-w-6xl mx-auto">
-                    <div className="text-center mb-20">
-                        <AnimationWrapper animationDelay="0s">
-                            <p className="font-accent text-xs uppercase tracking-wider text-accent mb-6" style={{animationDelay: '0.2s'}}>LATEST NEWS</p>
-                        </AnimationWrapper>
-                        <AnimationWrapper animationDelay="0.1s">
-                            <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-deepEarth mb-8 leading-tight">
-                                Recent Stories
-                            </h2>
-                        </AnimationWrapper>
-                        <AnimationWrapper animationDelay="0.2s">
-                            <div className="w-32 h-1 bg-accent mx-auto mb-8"></div>
-                        </AnimationWrapper>
-                        <AnimationWrapper animationDelay="0.3s">
-                            <p className="text-xl text-charcoal/80 max-w-3xl mx-auto leading-relaxed">
-                                Stay updated with our latest milestones, achievements, and insights from across the Great Green Wall initiative.
-                            </p>
-                        </AnimationWrapper>
-                    </div>
-                    
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 lg:gap-12">
+            {/* Featured story */}
+            <section className="px-4 py-16 md:px-6 md:py-20">
+                <div className="mx-auto max-w-6xl">
+                    <SectionHeader overline="Featured story" title="Breaking News" />
+                    <AnimationWrapper className="mt-10" animationDelay="0.1s">
+                        <article className="group grid grid-cols-1 overflow-hidden rounded border border-deepEarth/10 border-t-2 border-t-accent bg-white lg:grid-cols-12">
+                            <div className="relative min-h-[300px] lg:col-span-7 lg:min-h-[440px]">
+                                <Image
+                                    src={feature.image}
+                                    alt={feature.title}
+                                    fill
+                                    priority
+                                    className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+                                    sizes="(max-width: 1024px) 100vw, 58vw"
+                                />
+                                <span className="absolute left-4 top-4 rounded border border-accent/60 bg-primary px-3 py-1 font-accent text-[11px] font-semibold uppercase tracking-wider text-accent">
+                                    {feature.category}
+                                </span>
+                            </div>
+                            <div className="flex flex-col justify-center p-8 lg:col-span-5 lg:p-12">
+                                <p className="font-accent text-xs uppercase tracking-wider text-charcoal/60">
+                                    {feature.date} <span aria-hidden="true">·</span> {feature.readTime}
+                                </p>
+                                <h3 className="mt-3 font-heading text-3xl font-bold leading-tight text-deepEarth transition-colors group-hover:text-primary">
+                                    {feature.title}
+                                </h3>
+                                <p className="mt-4 leading-relaxed text-charcoal/75">{feature.summary}</p>
+                                <Link
+                                    href={feature.href}
+                                    className="mt-8 inline-flex items-center gap-2 self-start rounded bg-primary px-6 py-3 text-sm font-semibold text-offWhite transition-colors hover:bg-primaryDark"
+                                >
+                                    Read full story <Arrow />
+                                </Link>
+                            </div>
+                        </article>
+                    </AnimationWrapper>
+                </div>
+            </section>
+
+            {/* Recent stories */}
+            <section className="border-y border-deepEarth/10 bg-warmGray px-4 py-16 md:px-6 md:py-20">
+                <div className="mx-auto max-w-6xl">
+                    <SectionHeader
+                        overline="Latest news"
+                        title="Recent Stories"
+                        description="Stay updated with our latest milestones, achievements, and insights from across the Great Green Wall initiative."
+                    />
+                    <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2">
                         {spotlights.map((article, index) => (
-                            <AnimationWrapper key={article.title} animationDelay={`${0.4 + index * 0.15}s`}>
-                                <article className="group cursor-pointer h-full flex flex-col">
-                                    <div className="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 overflow-hidden border border-accent/20 h-full flex flex-col">
-                                    {/* Image Section */}
-                                    <div className="relative h-72 lg:h-80 overflow-hidden flex-shrink-0">
-                                        <Image 
-                                            src={article.image} 
-                                            alt={article.title} 
-                                            fill 
-                                            className="object-cover transition-transform duration-700 group-hover:scale-105"
+                            <AnimationWrapper key={article.title} animationDelay={`${0.1 + index * 0.08}s`}>
+                                <article className="group flex h-full flex-col overflow-hidden rounded border border-deepEarth/10 bg-white transition-colors hover:border-primary/40">
+                                    <div className="relative aspect-[16/10] flex-shrink-0 overflow-hidden">
+                                        <Image
+                                            src={article.image}
+                                            alt={article.title}
+                                            fill
+                                            className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
                                             sizes="(max-width: 768px) 100vw, 50vw"
                                         />
-                                        <div className="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent"></div>
-                                        
-                                        {/* Category Badge */}
-                                        <div className="absolute top-4 left-4">
-                                            <span className="bg-accent text-primary px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider backdrop-blur-sm">
-                                                {article.category}
-                                            </span>
-                                        </div>
-                                        
-                                        {/* Read Time Badge */}
-                                        <div className="absolute top-4 right-4">
-                                            <span className="bg-white/90 backdrop-blur-sm text-primary px-3 py-1 rounded-full text-xs font-semibold">
-                                                {article.readTime}
-                                            </span>
-                                        </div>
+                                        <span className="absolute left-4 top-4 rounded bg-secondary px-2.5 py-1 font-accent text-[11px] font-semibold uppercase tracking-wider text-deepEarth">
+                                            {article.category}
+                                        </span>
                                     </div>
-                                    
-                                    {/* Content Section */}
-                                    <div className="p-8 flex-1 flex flex-col">
-                                        <div className="space-y-6 flex-1 flex flex-col justify-between">
-                                            <div className="space-y-6 flex-1">
-                                                <p className="font-accent text-xs uppercase tracking-wider text-accent">{article.date}</p>
-                                                <h3 className="text-2xl lg:text-3xl font-heading font-bold text-deepEarth leading-tight group-hover:text-primary transition-colors duration-300">
-                                                    {article.title}
-                                                </h3>
-                                                <p className="text-lg text-charcoal/80 leading-relaxed flex-1">
-                                                    {article.summary}
-                                                </p>
-                                            </div>
-                                            <Link 
-                                                href="/news" 
-                                                className="inline-flex items-center gap-2 text-accent font-semibold hover:text-primary transition-colors duration-300 group/link"
-                                            >
-                                                Read More
-                                                <svg className="w-4 h-4 transition-transform group-hover/link:translate-x-1" fill="currentColor" viewBox="0 0 24 24">
-                                                    <path d="M16.01 11H4v2h12.01v3L20 12l-3.99-4v3z"/>
-                                                </svg>
-                                            </Link>
-                                        </div>
+                                    <div className="flex flex-1 flex-col p-6">
+                                        <p className="font-accent text-xs uppercase tracking-wider text-charcoal/60">
+                                            {article.date} <span aria-hidden="true">·</span> {article.readTime}
+                                        </p>
+                                        <h3 className="mt-2 font-heading text-2xl font-semibold leading-snug text-deepEarth transition-colors group-hover:text-primary">
+                                            {article.title}
+                                        </h3>
+                                        <p className="mt-3 flex-1 text-sm leading-relaxed text-charcoal/75">{article.summary}</p>
+                                        <Link
+                                            href="/news"
+                                            className="mt-5 inline-flex items-center gap-1 self-start font-accent text-xs font-semibold uppercase tracking-wider text-primary"
+                                        >
+                                            Read more <Arrow />
+                                        </Link>
                                     </div>
-                                </div>
-                            </article>
+                                </article>
                             </AnimationWrapper>
                         ))}
                     </div>
                 </div>
             </section>
 
-            {/* Archive Section */}
-            <section className="px-6 md:px-12 lg:px-32 py-20 md:py-32 bg-white">
-                <div className="max-w-6xl mx-auto">
-                    <div className="text-center mb-20">
-                        <AnimationWrapper animationDelay="0s">
-                            <p className="font-accent text-xs uppercase tracking-wider text-accent mb-6" style={{animationDelay: '0.2s'}}>ARCHIVE</p>
-                        </AnimationWrapper>
-                        <AnimationWrapper animationDelay="0.1s">
-                            <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-deepEarth mb-8 leading-tight">
-                                A Full Chronology of Milestones
-                            </h2>
-                        </AnimationWrapper>
-                        <AnimationWrapper animationDelay="0.2s">
-                            <div className="w-32 h-1 bg-accent mx-auto mb-8"></div>
-                        </AnimationWrapper>
-                        <AnimationWrapper animationDelay="0.3s">
-                            <p className="text-xl text-charcoal/80 max-w-3xl mx-auto leading-relaxed">
-                                Every headline reflects our mandate—championing culture, policy, climate action, and partnerships across the continent.
-                            </p>
-                        </AnimationWrapper>
-                    </div>
-                    
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+            {/* Archive */}
+            <section className="px-4 py-16 md:px-6 md:py-20">
+                <div className="mx-auto max-w-6xl">
+                    <SectionHeader
+                        overline="Archive"
+                        title="A Full Chronology of Milestones"
+                        description="Every headline reflects our mandate—championing culture, policy, climate action, and partnerships across the continent."
+                    />
+                    <div className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
                         {archive.map((item, index) => (
-                            <AnimationWrapper key={`${item.date}-${item.title}`} animationDelay={`${0.4 + index * 0.05}s`}>
-                                <article className="group cursor-pointer bg-secondary rounded-3xl p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-2 border border-accent/20">
-                                    <div className="flex items-start gap-4">
-                                    <div className="relative w-20 h-20 rounded-xl overflow-hidden flex-shrink-0 border-2 border-accent/20">
-                                        <Image 
-                                            src={item.image} 
-                                            alt={item.title} 
-                                            fill 
-                                            className="object-cover transition-transform duration-300 group-hover:scale-110"
+                            <AnimationWrapper key={`${item.date}-${item.title}`} animationDelay={`${0.05 + index * 0.03}s`}>
+                                <article className="group flex h-full gap-4 rounded border border-deepEarth/10 bg-white p-4 transition-colors hover:border-primary/40">
+                                    <div className="relative h-20 w-20 flex-shrink-0 overflow-hidden rounded">
+                                        <Image
+                                            src={item.image}
+                                            alt={item.title}
+                                            fill
+                                            className="object-cover transition-transform duration-300 group-hover:scale-105"
                                             sizes="80px"
                                         />
                                     </div>
-                                    <div className="flex-1 space-y-3">
-                                        <div>
-                                            <p className="font-accent text-xs uppercase tracking-wider text-accent mb-2">{item.date}</p>
-                                            <h4 className="text-lg font-heading font-bold text-deepEarth leading-tight group-hover:text-primary transition-colors duration-300">
-                                                {item.title}
-                                            </h4>
-                                        </div>
-                                        <p className="text-sm text-charcoal/80 leading-relaxed line-clamp-3">
-                                            {item.summary}
-                                        </p>
-                                        <div className="flex items-center justify-between">
-                                            <span className="inline-block px-3 py-1 bg-accent/20 text-primary rounded-full text-xs font-semibold">
+                                    <div className="flex min-w-0 flex-1 flex-col">
+                                        <p className="font-accent text-[11px] uppercase tracking-wider text-charcoal/60">{item.date}</p>
+                                        <h3 className="mt-1 font-heading text-base font-semibold leading-snug text-deepEarth transition-colors group-hover:text-primary">
+                                            {item.title}
+                                        </h3>
+                                        <p className="mt-1.5 line-clamp-2 text-sm leading-relaxed text-charcoal/70">{item.summary}</p>
+                                        <div className="mt-auto flex items-center justify-between pt-3">
+                                            <span className="rounded bg-secondary px-2 py-0.5 font-accent text-[10px] font-semibold uppercase tracking-wider text-deepEarth">
                                                 {item.category}
                                             </span>
-                                            <Link 
-                                                href="/news" 
-                                                className="text-accent font-semibold hover:text-primary transition-colors duration-300 text-sm inline-flex items-center gap-1"
-                                            >
-                                                Read
-                                                <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 24 24">
-                                                    <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
-                                                </svg>
+                                            <Link href="/news" className="inline-flex items-center gap-1 font-accent text-[11px] font-semibold uppercase tracking-wider text-primary">
+                                                Read <Arrow />
                                             </Link>
                                         </div>
                                     </div>
-                                </div>
-                            </article>
+                                </article>
                             </AnimationWrapper>
                         ))}
                     </div>
-                    
-                    {/* Load More */}
-                    <div className="text-center mt-16">
-                        <button className="bg-offWhite text-primary px-10 py-5 rounded-full font-semibold text-lg hover:bg-offWhite/90 transition-all duration-300 hover:scale-105 hover:shadow-2xl inline-flex items-center gap-3">
-                            Load More Stories
-                            <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M16.01 11H4v2h12.01v3L20 12l-3.99-4v3z"/>
-                            </svg>
+
+                    <div className="mt-12 text-center">
+                        <button
+                            type="button"
+                            className="inline-flex items-center gap-2 rounded border-[1.5px] border-primary px-8 py-3 text-sm font-semibold text-primary transition-colors hover:bg-primary hover:text-offWhite"
+                        >
+                            Load more stories
                         </button>
                     </div>
                 </div>
             </section>
 
-            {/* Newsletter CTA */}
-            <section className="px-6 md:px-12 lg:px-32 py-20 md:py-32 bg-gradient-to-br from-primary via-deepEarth to-primary">
-                <div className="max-w-4xl mx-auto text-center">
-                    <AnimationWrapper className="space-y-8" animationDelay="0s">
-                        <p className="font-accent text-xs uppercase tracking-wider text-accent mb-6" style={{animationDelay: '0.2s'}}>STAY CONNECTED</p>
-                        <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-offWhite mb-8 leading-tight" style={{animationDelay: '0.4s'}}>
-                            Join Our Journey
-                        </h2>
-                        <p className="text-xl md:text-2xl text-offWhite/90 mb-12 leading-relaxed max-w-3xl mx-auto" style={{animationDelay: '0.6s'}}>
+            {/* Newsletter */}
+            <section className="border-t-2 border-accent bg-primary px-4 py-16 md:px-6 md:py-20">
+                <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-10 lg:grid-cols-12">
+                    <div className="lg:col-span-6">
+                        <Overline light>Stay connected</Overline>
+                        <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-offWhite sm:text-4xl">Join Our Journey</h2>
+                        <p className="mt-4 text-[17px] leading-relaxed text-offWhite/80">
                             Get the latest stories, milestones, and insights from the Great Green Wall delivered directly to your inbox.
                         </p>
-                        <form className="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto" style={{animationDelay: '0.8s'}}>
+                    </div>
+                    <div className="lg:col-span-6">
+                        <form className="flex flex-col gap-3 sm:flex-row">
+                            <label htmlFor="newsletter-email" className="sr-only">Email address</label>
                             <input
+                                id="newsletter-email"
                                 type="email"
                                 placeholder="Enter your email"
-                                className="flex-1 px-6 py-4 bg-white/10 border border-white/20 rounded-full focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent text-offWhite placeholder-white/60 transition-all duration-300"
+                                autoComplete="email"
+                                className="flex-1 rounded border border-offWhite/25 bg-offWhite/10 px-4 py-3.5 text-offWhite placeholder:text-offWhite/50 transition-colors focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
                                 required
                             />
-                            <button type="submit" className="bg-offWhite text-primary px-10 py-4 rounded-full font-semibold text-lg hover:bg-offWhite/90 transition-all duration-300 hover:scale-105 hover:shadow-2xl inline-flex items-center gap-3">
+                            <button
+                                type="submit"
+                                className="rounded bg-accent px-7 py-3.5 text-sm font-semibold text-deepEarth transition-colors hover:bg-accentDark"
+                            >
                                 Subscribe
-                                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
-                                </svg>
                             </button>
                         </form>
-                        <p className="text-sm text-offWhite/60 mt-6" style={{animationDelay: '1.0s'}}>
-                            Join 10,000+ subscribers. Unsubscribe anytime.
-                        </p>
-                    </AnimationWrapper>
+                        <p className="mt-3 text-sm text-offWhite/60">Join 10,000+ subscribers. Unsubscribe anytime.</p>
+                    </div>
                 </div>
             </section>
         </main>

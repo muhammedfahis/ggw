@@ -20,9 +20,32 @@ export function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
   const isWater = pathname === "/the-great-blue-wave";
 
+  const [isScrolled, setIsScrolled] = useState(false);
+
   useEffect(() => {
     setIsOpen(false);
   }, [pathname]);
+
+  // Compact the bar once the page is scrolled.
+  useEffect(() => {
+    let ticking = false;
+
+    const update = () => {
+      setIsScrolled(window.scrollY > 8);
+      ticking = false;
+    };
+
+    const onScroll = () => {
+      if (!ticking) {
+        ticking = true;
+        window.requestAnimationFrame(update);
+      }
+    };
+
+    update();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   const renderLink = (item: (typeof navItems)[number]) => {
     const active = pathname === item.href;
@@ -169,13 +192,13 @@ export function NavBar() {
 
   return (
     <header
-      className={`sticky top-0 z-50 border-b backdrop-blur-sm shadow-sm gbw-theme-transition ${isWater ? "border-[#0ea5e9]/40 bg-[#013a63]/95" : "border-dark/10 bg-white/95"
+      className={`sticky top-0 z-50 border-b gbw-theme-transition transition-[box-shadow,background-color] duration-300 ease-out motion-reduce:transition-none ${isScrolled ? "shadow-md backdrop-blur-md" : "shadow-sm backdrop-blur-sm"} ${isWater ? "border-[#0ea5e9]/40 bg-[#013a63]/95" : "border-dark/10 bg-white/95"
         }`}
     >
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+      <div className={`mx-auto flex max-w-7xl items-center justify-between px-6 transition-[padding] duration-300 ease-out motion-reduce:transition-none ${isScrolled ? "py-2.5" : "py-4"}`}>
         <Link href="/" className="flex items-center gap-3">
           <div
-            className={`relative h-12 w-12 overflow-hidden rounded-md border bg-white shadow-sm ${isWater ? "border-[#0ea5e9]/60" : "border-primary/30"
+            className={`relative overflow-hidden rounded-md border bg-white shadow-sm transition-all duration-300 ease-out motion-reduce:transition-none ${isScrolled ? "h-10 w-10" : "h-12 w-12"} ${isWater ? "border-[#0ea5e9]/60" : "border-primary/30"
               }`}
           >
             <Image src="/assets/about/rs=w:172.png" alt="GGWoA logo" fill className="object-contain p-2" sizes="48px" />

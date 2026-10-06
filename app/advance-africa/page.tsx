@@ -1,305 +1,474 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
+import type { ReactNode } from "react";
 
 export const metadata: Metadata = {
-  title: "Advance Africa Foundation | Strategic Partner — GGWoA",
+  title: "Africa's Human Capital Transformation | Advance Africa Foundation — GGWoA",
   description:
-    "Advance Africa Foundation's economic conversion system connects underutilized talent to entrepreneurship, financing, and mentorship across the Great Green Wall corridor.",
+    "Advance Africa Foundation, a strategic partner of the Great Green Wall of Africa, converts trained, underutilized talent into employees and business owners — connected to capital, markets and long-term support.",
 };
 
-const programs = [
-  {
-    code: "AAFB",
-    stage: "STAGE 01–03",
-    title: "The Bridge",
-    description:
-      "Candidate discovery, readiness assessment, and placement into apprenticeship or entrepreneurship pathways.",
-    label: "Talent Pipeline",
-    icon: (
-      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
-      </svg>
-    ),
-  },
+const ADAF_URL = "https://advanceafrica.org";
+
+const facts = [
+  { label: "Model", value: "Training-to-enterprise" },
+  { label: "Core platform", value: "The Bridge (AAFB)" },
+  { label: "Flagship event", value: "Annual conference, every April" },
+  { label: "Affiliation", value: "Great Green Wall of Africa" },
+];
+
+const principles = [
+  { title: "Outcomes over participation", body: "Success is income earned, businesses surviving and jobs created — not people trained." },
+  { title: "Partnership over duplication", body: "Builds on training already delivered across Africa instead of competing with it." },
+  { title: "Dignity over dependency", body: "Every pathway leads toward self-reliance, not ongoing assistance." },
+];
+
+const pipeline = [
+  "Intake",
+  "Assessment",
+  "Placement",
+  "Financing & Market Access",
+  "Launch",
+  "Grow",
+  "Employ Others",
+];
+
+const vehicles = [
   {
     code: "AAFN",
-    stage: "STAGE 04–05",
     title: "The Network",
-    description:
-      "Platform connecting entrepreneurs, apprentices, and employers for mentorship, market access, and peer learning.",
-    label: "Collaborative Ecosystem",
-    icon: (
-      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-      </svg>
-    ),
+    body: "Placement, market access and recurring peer events connecting entrepreneurs, apprentices and employers.",
+    href: `${ADAF_URL}/the-network`,
   },
   {
     code: "AAFCA",
-    stage: "STAGE 06",
     title: "Capital Access",
-    description:
-      "Grant funding, equipment financing, and financial literacy for candidates launching their first business.",
-    label: "Non-Dilutive Financing",
-    icon: (
-      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-      </svg>
-    ),
-  },
-  {
-    code: "AAFC",
-    stage: "STAGE 07",
-    title: "The Conference",
-    description:
-      "Annual event bringing candidates, graduates, partners, and employers together for connection and learning.",
-    label: "Pan-African Summit",
-    icon: (
-      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-      </svg>
-    ),
+    body: "Pooled grant capital for assessed candidates today, with investment-ready introductions to institutional finance over time.",
+    href: `${ADAF_URL}/capital-access`,
   },
 ];
 
-const alignmentPoints = [
-  {
-    title: "Restoration Economy",
-    body: "ADAF fills the human capital pipeline for green jobs along the Wall — ensuring local land restoration creates permanent, generative livelihood pathways.",
-    icon: (
-      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-      </svg>
-    ),
-  },
-  {
-    title: "SDG Alignment",
-    body: "Jointly advancing SDG 1 (No Poverty), SDG 5 (Gender Equality), SDG 8 (Decent Work), SDG 10 (Reduced Inequalities), and SDG 17 across 11 trans-Sahelian nations.",
-    icon: (
-      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-      </svg>
-    ),
-  },
-  {
-    title: "Shared Values",
-    body: "Outcomes over participation. Dignity over dependency. Grounding ecological regeneration in self-sustaining African leadership and capital autonomy.",
-    icon: (
-      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-      </svg>
-    ),
-  },
+const stats = [
+  { value: "42%", label: "Average income increase" },
+  { value: "68%", label: "Business survival at 24 months" },
+  { value: "310", label: "Businesses launched" },
+  { value: "980", label: "Jobs created" },
 ];
+
+const alignment = [
+  "A green-job talent pipeline for restoration work along the Wall corridor.",
+  "Restored land turned into lasting livelihoods and locally owned enterprises.",
+  "Shared development commitments across the Sahelian partner nations.",
+];
+
+const sdgs = [
+  { n: 1, name: "No Poverty", color: "#E5243B" },
+  { n: 2, name: "Zero Hunger", color: "#DDA63A" },
+  { n: 5, name: "Gender Equality", color: "#FF3A21" },
+  { n: 8, name: "Decent Work", color: "#A21942" },
+  { n: 10, name: "Reduced Inequalities", color: "#DD1367" },
+  { n: 17, name: "Partnerships", color: "#19486A" },
+];
+
+const partnerRoles = [
+  { title: "Demand", body: "Share the talent and suppliers you'll need in 12–36 months." },
+  { title: "Capability", body: "Provide equipment, facilities, technology or standards." },
+  { title: "Capital", body: "Fund cohorts or contribute startup capital." },
+  { title: "Market", body: "Open procurement, distribution or subcontracting." },
+  { title: "Training", body: "Refer your trained graduates to The Bridge." },
+  { title: "Practitioner", body: "Host apprentices in your workshop or business." },
+];
+
+const partnerBenefits = [
+  "A work-ready talent pipeline",
+  "New suppliers, customers and markets",
+  "Measurable ESG and social-investment outcomes",
+];
+
+const candidatePaths = [
+  { title: "Build My Career", steps: ["Apply", "Assess", "Employment", "Growth"] },
+  { title: "Build My Business", steps: ["Apply", "Assess", "Launch", "Scale"] },
+];
+
+function Overline({ children, light = false }: { children: ReactNode; light?: boolean }) {
+  return (
+    <p className={`font-accent text-xs font-semibold uppercase tracking-[0.2em] ${light ? "text-accent" : "text-accentDark"}`}>
+      {children}
+    </p>
+  );
+}
+
+function ExternalIcon() {
+  return (
+    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+    </svg>
+  );
+}
 
 export default function AdvanceAfricaPage() {
   return (
-    <main className="bg-offWhite text-deepEarth font-body">
+    <main className="bg-offWhite text-charcoal font-body">
 
-      {/* ── HERO ── */}
-      <section className="relative w-full min-h-[540px] flex items-center justify-center overflow-hidden bg-deepEarth">
-        <Image
-          src="/assets/projects/rs=w:365,h:365,cg:true_1.jpeg"
-          alt="African Sahel landscape at golden hour"
-          fill
-          priority
-          className="object-cover object-center"
-          sizes="100vw"
-        />
-        {/* Blue-earth overlay matching ADAF brand */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#4e7de1]/60 to-[#3A2D1A]/85" />
-
-        <div className="relative z-10 max-w-5xl mx-auto px-6 py-16 flex flex-col items-center text-center">
-          {/* Breadcrumb */}
-          <nav className="self-start mb-6 text-xs tracking-wider text-offWhite/60 font-accent uppercase font-medium flex items-center gap-2">
-            <Link href="/" className="hover:text-white transition-colors">Home</Link>
-            <span className="text-offWhite/40">/</span>
-            <span className="text-white font-semibold">Advance Africa</span>
+      {/* ── HERO + FACT BAR ── */}
+      <section className="bg-offWhite">
+        <div className="max-w-6xl mx-auto px-4 md:px-6 pt-8 pb-14 lg:pb-16">
+          <nav aria-label="Breadcrumb" className="mb-8 flex items-center gap-2 font-accent text-xs uppercase tracking-wider text-charcoal/60">
+            <Link href="/" className="hover:text-primary transition-colors">Home</Link>
+            <span aria-hidden="true">/</span>
+            <span>Partners</span>
+            <span aria-hidden="true">/</span>
+            <span className="font-semibold text-primary">Advance Africa Foundation</span>
           </nav>
 
-          {/* Strategic Partner badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#4e7de1] bg-[#4e7de1]/20 backdrop-blur-md mb-6 shadow-sm">
-            <span className="w-2 h-2 rounded-full bg-[#4e7de1] animate-pulse" />
-            <span className="text-xs font-semibold uppercase tracking-widest text-offWhite">Strategic Partner</span>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+            <div className="lg:col-span-6">
+              <div className="inline-flex items-center gap-3 mb-6 pr-4 rounded border border-deepEarth/15 bg-white">
+                <Image src="/assets/advance-africa-logo.png" alt="" width={40} height={40} className="rounded-l object-cover" />
+                <span className="text-sm font-semibold text-deepEarth">Advance Africa Foundation</span>
+              </div>
+              <Overline>Strategic Partner · Human Capital</Overline>
+              <h1 className="mt-3 font-heading font-bold text-4xl sm:text-5xl lg:text-[56px] leading-[1.08] tracking-tight text-primary">
+                Africa&apos;s Human Capital Transformation
+              </h1>
+              <p className="mt-6 text-lg leading-relaxed text-charcoal/80 max-w-xl">
+                Advance Africa Foundation (ADAF) converts trained, underutilized talent into employees and business owners — and connects them to the capital, markets and long-term support they need to create jobs for others.
+              </p>
+              <div className="mt-8 flex flex-wrap gap-3">
+                <a href={`${ADAF_URL}/partners`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded bg-primary px-7 py-3.5 text-sm font-semibold text-offWhite hover:bg-primaryDark transition-colors">
+                  Partner With ADAF
+                </a>
+                <a href={ADAF_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded border-[1.5px] border-primary px-7 py-3.5 text-sm font-semibold text-primary hover:bg-primary hover:text-offWhite transition-colors">
+                  Visit advanceafrica.org <ExternalIcon />
+                </a>
+              </div>
+            </div>
+
+            <div className="lg:col-span-6 relative">
+              <div className="absolute inset-0 translate-x-2 translate-y-2 bg-deepEarth rounded" aria-hidden="true" />
+              <div className="relative aspect-[4/3] overflow-hidden rounded">
+                <Image
+                  src="/assets/advance-africa-panel.png"
+                  alt="An Advance Africa panel discussion with speakers addressing an audience"
+                  fill
+                  priority
+                  sizes="(min-width: 1024px) 50vw, 100vw"
+                  className="object-cover"
+                />
+                <span className="absolute bottom-4 left-4 rounded bg-deepEarth/80 px-3 py-1 text-[11px] italic tracking-wide text-offWhite">
+                  Human Capital Transformation Framework
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="bg-deepEarth">
+          <dl className="max-w-6xl mx-auto px-4 md:px-6 grid grid-cols-2 lg:grid-cols-4 divide-offWhite/10 lg:divide-x">
+            {facts.map((f) => (
+              <div key={f.label} className="py-6 lg:px-6 first:lg:pl-0">
+                <dt className="font-accent text-[11px] uppercase tracking-[0.18em] text-accent">{f.label}</dt>
+                <dd className="mt-1 font-heading text-lg text-offWhite">{f.value}</dd>
+              </div>
+            ))}
+          </dl>
+        </div>
+      </section>
+
+      {/* ── ABOUT + PRINCIPLES ── */}
+      <section className="bg-offWhite py-20 px-4 md:px-6">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+            <div className="lg:col-span-5 relative aspect-[5/4] overflow-hidden rounded border border-deepEarth/10">
+              <Image
+                src="/assets/advance-africa-conference.png"
+                alt="Advance Africa community gathering"
+                fill
+                sizes="(min-width: 1024px) 40vw, 100vw"
+                className="object-cover"
+              />
+            </div>
+            <div className="lg:col-span-7">
+              <Overline>About ADAF</Overline>
+              <h2 className="mt-3 font-heading font-bold text-3xl sm:text-4xl text-primary tracking-tight">
+                An economic conversion system for Africa
+              </h2>
+              <p className="mt-5 text-[17px] leading-relaxed text-charcoal/80">
+                Millions of Africans finish vocational training or apprenticeships and still can&apos;t reach stable work or ownership. ADAF identifies that talent, assesses readiness, and carries each candidate through placement, financing and launch until they are earning — and hiring.
+              </p>
+              <blockquote className="mt-6 border-l-2 border-accent pl-5 font-heading italic text-xl text-deepEarth">
+                &ldquo;ADAF picks up where training ends.&rdquo;
+              </blockquote>
+            </div>
           </div>
 
-          <h1 className="font-heading font-bold text-4xl sm:text-5xl lg:text-[58px] text-white leading-[1.1] tracking-tight mb-4 drop-shadow-md">
-            Advance Africa Foundation
-          </h1>
-          <p className="font-body font-light text-lg sm:text-xl lg:text-[21px] text-offWhite/90 max-w-2xl leading-relaxed mb-8">
-            Economic Conversion System for Africa&apos;s Human Capital
-          </p>
+          <div className="mt-14 grid grid-cols-1 md:grid-cols-3 gap-8 border-t border-deepEarth/10 pt-10">
+            {principles.map((p, i) => (
+              <div key={p.title}>
+                <span className="font-heading text-3xl text-accent">0{i + 1}</span>
+                <h3 className="mt-2 font-heading font-semibold text-xl text-deepEarth">{p.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-charcoal/75">{p.body}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-          {/* Info chips */}
-          <div className="flex flex-wrap items-center justify-center gap-3">
+      {/* ── PIPELINE ── */}
+      <section className="bg-warmGray py-20 px-4 md:px-6 border-y border-deepEarth/10">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center max-w-2xl mx-auto">
+            <Overline>The Economic Conversion Model</Overline>
+            <h2 className="mt-3 font-heading font-bold text-3xl sm:text-4xl text-primary tracking-tight">
+              The 7-stage transformation pipeline
+            </h2>
+            <p className="mt-4 text-sm text-charcoal/70">
+              Training happens first, independently, through partner institutions. ADAF takes each trained candidate the rest of the way.
+            </p>
+          </div>
+
+          <ol className="mt-12 relative grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-y-8 gap-x-4">
+            <div className="hidden lg:block absolute top-6 left-[7%] right-[7%] h-px bg-accent" aria-hidden="true" />
+            {pipeline.map((step, i) => (
+              <li key={step} className="relative flex flex-col items-center text-center">
+                <span className="relative z-10 flex h-12 w-12 items-center justify-center rounded border border-accent bg-primary font-accent text-sm font-semibold text-accent">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <span className="mt-3 font-heading font-semibold text-deepEarth leading-snug">{step}</span>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
+      {/* ── PROGRAMS ── */}
+      <section className="bg-offWhite py-20 px-4 md:px-6">
+        <div className="max-w-6xl mx-auto">
+          <Overline>Programs</Overline>
+          <h2 className="mt-3 font-heading font-bold text-3xl sm:text-4xl text-primary tracking-tight">
+            One core platform, three supporting vehicles
+          </h2>
+
+          <div className="mt-10 grid grid-cols-1 lg:grid-cols-2 gap-6">
+            {/* Featured: The Bridge */}
             <a
-              href="https://advanceafrica.org"
+              href={`${ADAF_URL}/the-bridge`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-white/60 bg-white/10 hover:bg-white/20 text-white font-medium text-sm backdrop-blur-sm transition-all hover:scale-105"
+              className="group flex flex-col justify-between rounded border border-deepEarth/10 border-t-2 border-t-accent bg-primary p-8 lg:p-10 text-offWhite"
             >
-              advanceafrica.org
-              <svg className="w-4 h-4 text-white/80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-              </svg>
+              <div>
+                <span className="inline-block rounded border border-accent px-2 py-0.5 font-accent text-[11px] font-semibold tracking-wider text-accent">
+                  AAFB · CORE PLATFORM
+                </span>
+                <h3 className="mt-5 font-heading font-bold text-3xl">The Bridge</h3>
+                <p className="mt-4 text-offWhite/80 leading-relaxed">
+                  The entry point to the pipeline. The Bridge verifies a candidate&apos;s completed training with the partner institution, assesses readiness, and places them on a career or business track — with no starting over.
+                </p>
+                <ul className="mt-6 grid grid-cols-2 gap-3 text-sm text-offWhite/90">
+                  {["Discovery", "Verification", "Readiness assessment", "Track placement"].map((s) => (
+                    <li key={s} className="flex items-center gap-2">
+                      <span className="h-1.5 w-1.5 rounded-full bg-accent" aria-hidden="true" />
+                      {s}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <span className="mt-8 inline-flex items-center gap-2 font-accent text-xs font-semibold uppercase tracking-wider text-accent">
+                Explore The Bridge <span className="transition-transform group-hover:translate-x-1">→</span>
+              </span>
             </a>
-            <div className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full bg-[#4e7de1] text-white font-medium text-sm shadow-md">
-              <svg className="w-4 h-4 text-white/80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-              </svg>
-              Est. 2020
+
+            <div className="grid grid-cols-1 gap-6">
+              {vehicles.map((v) => (
+                <a
+                  key={v.code}
+                  href={v.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group rounded border border-deepEarth/10 bg-white p-6 hover:border-primary/40 transition-colors"
+                >
+                  <span className="inline-block rounded bg-secondary px-2 py-0.5 font-accent text-[11px] font-semibold tracking-wider text-deepEarth">
+                    {v.code}
+                  </span>
+                  <h3 className="mt-3 font-heading font-semibold text-xl text-primary">{v.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-charcoal/75">{v.body}</p>
+                  <span className="mt-4 inline-flex items-center gap-1 font-accent text-xs font-semibold uppercase tracking-wider text-primary">
+                    Learn more <span className="transition-transform group-hover:translate-x-1">→</span>
+                  </span>
+                </a>
+              ))}
+
+              <div className="rounded border border-deepEarth/10 bg-white p-6">
+                <span className="inline-block rounded bg-secondary px-2 py-0.5 font-accent text-[11px] font-semibold tracking-wider text-deepEarth">
+                  AAFC
+                </span>
+                <h3 className="mt-3 font-heading font-semibold text-xl text-primary">The Conference</h3>
+                <p className="mt-1 font-accent text-xs uppercase tracking-wider text-accentDark">Every April · In-person</p>
+                <p className="mt-2 text-sm leading-relaxed text-charcoal/75">
+                  The annual Human Capital Transformation Conference brings candidates, graduates, mentors, employers, financiers and government together for a day of learning, recognition and connection.
+                </p>
+                <div className="mt-4 flex flex-wrap gap-2">
+                  <a href={`${ADAF_URL}/the-conference`} target="_blank" rel="noopener noreferrer" className="rounded bg-primary px-4 py-2 text-xs font-semibold text-offWhite hover:bg-primaryDark transition-colors">
+                    Register
+                  </a>
+                  <a href={`${ADAF_URL}/the-conference`} target="_blank" rel="noopener noreferrer" className="rounded border border-primary px-4 py-2 text-xs font-semibold text-primary hover:bg-primary hover:text-offWhite transition-colors">
+                    Sponsor
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ── MISSION INTRO ── */}
-      <section className="w-full bg-secondary py-20 px-6 border-b border-accent/20">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-
-          {/* Left: blockquote with ADAF blue border */}
-          <div className="lg:col-span-5">
-            <blockquote className="border-l-4 border-[#4e7de1] pl-6 sm:pl-8 py-2">
-              <p className="font-heading italic font-semibold text-2xl sm:text-3xl lg:text-[34px] text-deepEarth leading-[1.25]">
-                &ldquo;Training without capital produces plans, not businesses.&rdquo;
-              </p>
-              <footer className="mt-4 text-xs font-semibold uppercase tracking-widest text-[#4e7de1] font-accent">
-                — Core Principle of Economic Conversion
-              </footer>
-            </blockquote>
-          </div>
-
-          {/* Right: body paragraphs */}
-          <div className="lg:col-span-7 space-y-6 text-deepEarth/90 font-body text-[17px] leading-relaxed">
-            <p>
-              Advance Africa Foundation operates an economic conversion pipeline transforming underutilized Africans into entrepreneurs and skilled workers. Their 7-stage process takes candidates from initial intake and diagnostic assessment through tailored placement, financing, launch, and ongoing scale — until candidates are actively hiring others in their communities.
-            </p>
-            <p>
-              Through our strategic partnership, the Great Green Wall of Africa integrates ADAF&apos;s proven pipeline directly across restoration zones. This guarantees that communities stewarding 8,000 kilometers of ecological buffers become the primary economic owners and beneficiaries of renewable land wealth.
-            </p>
-          </div>
-
-        </div>
-      </section>
-
-      {/* ── FOUR PROGRAMS ── */}
-      <section className="w-full bg-offWhite py-24 px-6">
+      {/* ── IMPACT ── */}
+      <section className="bg-secondary py-16 px-4 md:px-6">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <p className="text-[#4e7de1] font-accent text-xs font-bold uppercase tracking-[0.25em] mb-3">
-              Their Four Initiatives
-            </p>
-            <h2 className="font-heading font-bold text-3xl sm:text-4xl lg:text-[44px] text-deepEarth tracking-tight mb-4">
-              Four Interconnected Initiatives
-            </h2>
-            <div className="w-10 h-1 bg-[#4e7de1] mx-auto rounded-full" />
+          <div className="text-center">
+            <Overline>Measuring transformation, not participation</Overline>
           </div>
+          <dl className="mt-10 grid grid-cols-2 lg:grid-cols-4 gap-8">
+            {stats.map((s) => (
+              <div key={s.label} className="text-center">
+                <dd className="font-heading font-bold text-5xl text-primary">{s.value}</dd>
+                <div className="mx-auto mt-3 h-0.5 w-10 bg-accent" aria-hidden="true" />
+                <dt className="mt-3 text-sm text-deepEarth/80">{s.label}</dt>
+              </div>
+            ))}
+          </dl>
+          <p className="mt-8 text-center text-[11px] text-deepEarth/50">Source: Advance Africa Foundation</p>
+        </div>
+      </section>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {programs.map((p) => (
-              <div
-                key={p.code}
-                className="bg-white rounded-2xl p-8 border-t-[3px] border-[#4e7de1] shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between group"
-              >
-                <div>
-                  <div className="flex items-center justify-between mb-6">
-                    <div className="w-12 h-12 rounded-xl bg-[#4e7de1]/10 flex items-center justify-center text-[#4e7de1] transition-transform group-hover:scale-110">
-                      {p.icon}
-                    </div>
-                    <span className="text-xs font-semibold tracking-wider text-[#4e7de1]/80 bg-[#4e7de1]/5 px-2.5 py-1 rounded-md">
-                      {p.stage}
-                    </span>
-                  </div>
-                  <h3 className="font-heading font-bold text-2xl text-deepEarth mb-3 group-hover:text-[#4e7de1] transition-colors">
-                    {p.title} ({p.code})
-                  </h3>
-                  <p className="text-deepEarth/80 font-body text-base leading-relaxed">
-                    {p.description}
-                  </p>
-                </div>
-                <div className="mt-8 pt-4 border-t border-gray-100 flex items-center text-xs font-semibold uppercase tracking-wider text-[#4e7de1] gap-1.5">
-                  <span>{p.label}</span>
-                  <svg className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+      {/* ── GGWOA ALIGNMENT + SDGs ── */}
+      <section className="bg-primary py-20 px-4 md:px-6 text-offWhite border-t-2 border-accent">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div className="lg:col-span-7">
+            <Overline light>Why ADAF × GGWoA</Overline>
+            <h2 className="mt-3 font-heading font-bold text-3xl sm:text-4xl tracking-tight">
+              Building the human capital behind the restoration economy
+            </h2>
+            <ul className="mt-8 space-y-4">
+              {alignment.map((a) => (
+                <li key={a} className="flex gap-3 text-offWhite/85 leading-relaxed">
+                  <svg className="mt-1 h-5 w-5 flex-none text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                </div>
-              </div>
-            ))}
+                  {a}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="lg:col-span-5">
+            <p className="font-accent text-xs uppercase tracking-[0.18em] text-accent">UN Sustainable Development Goals</p>
+            <ul className="mt-4 grid grid-cols-3 gap-3">
+              {sdgs.map((g) => (
+                <li
+                  key={g.n}
+                  className="aspect-square rounded p-3 flex flex-col justify-between text-white"
+                  style={{ backgroundColor: g.color }}
+                >
+                  <span className="font-heading font-bold text-3xl leading-none">{g.n}</span>
+                  <span className="text-[11px] font-semibold uppercase leading-tight">{g.name}</span>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>
 
-      {/* ── GGWOA ALIGNMENT BAND ── */}
-      <section className="w-full bg-primary text-white py-20 px-6 relative overflow-hidden border-y border-primary/60">
-        {/* Subtle background ring */}
-        <div className="absolute inset-0 opacity-5 pointer-events-none flex items-center justify-center">
-          <div className="w-[800px] h-[800px] rounded-full border-[40px] border-white" />
-        </div>
-
-        <div className="max-w-6xl mx-auto relative z-10">
-          <div className="text-center mb-16">
-            <p className="text-accent font-accent text-xs font-bold uppercase tracking-[0.25em] mb-3">
-              Strategic Cohesion
-            </p>
-            <h2 className="font-heading font-bold text-3xl sm:text-4xl text-white tracking-tight mb-4">
-              Why This Partnership Matters
-            </h2>
-            <div className="w-10 h-1 bg-accent mx-auto rounded-full" />
+      {/* ── GET INVOLVED ── */}
+      <section className="bg-offWhite py-20 px-4 md:px-6">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center">
+            <Overline>Get involved</Overline>
+            <h2 className="mt-3 font-heading font-bold text-3xl sm:text-4xl text-primary tracking-tight">Where do you fit?</h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-            {alignmentPoints.map((pt) => (
-              <div
-                key={pt.title}
-                className="bg-primary/60 rounded-2xl p-8 border border-accent/20 flex flex-col items-start hover:border-accent/50 transition-colors"
-              >
-                <div className="w-12 h-12 rounded-xl bg-accent/15 flex items-center justify-center text-accent mb-6">
-                  {pt.icon}
+          <div className="mt-12 grid grid-cols-1 lg:grid-cols-12 gap-8">
+            {/* Organizations */}
+            <div className="lg:col-span-7 rounded border border-deepEarth/10 bg-white p-8">
+              <p className="font-accent text-xs uppercase tracking-[0.18em] text-accentDark">For organizations</p>
+              <h3 className="mt-2 font-heading font-semibold text-2xl text-deepEarth">Six ways to partner</h3>
+              <ul className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-5">
+                {partnerRoles.map((r, i) => (
+                  <li key={r.title} className="flex gap-3">
+                    <span className="font-heading text-lg text-accent leading-none mt-0.5">0{i + 1}</span>
+                    <div>
+                      <p className="font-semibold text-primary">{r.title} Partner</p>
+                      <p className="text-sm text-charcoal/70">{r.body}</p>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+              <div className="mt-8 border-t border-deepEarth/10 pt-6 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6">
+                <ul className="space-y-2 text-sm text-charcoal/80">
+                  {partnerBenefits.map((b) => (
+                    <li key={b} className="flex items-center gap-2">
+                      <span className="text-primary" aria-hidden="true">✓</span>
+                      {b}
+                    </li>
+                  ))}
+                </ul>
+                <div className="flex flex-col items-start sm:items-end gap-3">
+                  <a href={`${ADAF_URL}/partners`} target="_blank" rel="noopener noreferrer" className="rounded bg-primary px-6 py-3 text-sm font-semibold text-offWhite hover:bg-primaryDark transition-colors">
+                    Become a Partner
+                  </a>
+                  <a href={`${ADAF_URL}/become-a-mentor`} target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-primary underline decoration-accent underline-offset-4">
+                    Become a mentor →
+                  </a>
                 </div>
-                <h3 className="font-heading font-bold text-xl text-white mb-3">{pt.title}</h3>
-                <p className="text-white/80 font-body text-sm leading-relaxed">{pt.body}</p>
               </div>
-            ))}
+            </div>
+
+            {/* Candidates */}
+            <div className="lg:col-span-5 rounded border border-deepEarth/10 bg-warmGray p-8 flex flex-col">
+              <p className="font-accent text-xs uppercase tracking-[0.18em] text-accentDark">For candidates</p>
+              <h3 className="mt-2 font-heading font-semibold text-2xl text-deepEarth">Two doors, one journey</h3>
+              <div className="mt-6 space-y-4 flex-1">
+                {candidatePaths.map((p) => (
+                  <div key={p.title} className="rounded border border-deepEarth/10 bg-white p-5">
+                    <p className="font-heading font-semibold text-lg text-primary">{p.title}</p>
+                    <p className="mt-2 text-sm text-charcoal/70">
+                      {p.steps.join(" → ")}
+                    </p>
+                  </div>
+                ))}
+              </div>
+              <a href={`${ADAF_URL}/find-your-path`} target="_blank" rel="noopener noreferrer" className="mt-6 self-start rounded border-[1.5px] border-primary px-6 py-3 text-sm font-semibold text-primary hover:bg-primary hover:text-offWhite transition-colors">
+                Find Your Path
+              </a>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* ── EXTERNAL CTA ── */}
-      <section className="w-full bg-deepEarth py-24 md:py-[100px] px-6 text-center relative overflow-hidden">
-        {/* Ambient blue glow */}
-        <div className="absolute inset-0 pointer-events-none opacity-20 flex items-center justify-center">
-          <div className="w-[600px] h-[300px] bg-[#4e7de1] blur-[140px] rounded-full" />
-        </div>
-
-        <div className="max-w-4xl mx-auto relative z-10 flex flex-col items-center">
-          <div className="w-12 h-12 rounded-full border border-[#4e7de1]/30 bg-[#4e7de1]/10 flex items-center justify-center mb-6 text-[#4e7de1]">
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
-            </svg>
-          </div>
-
-          <h2 className="font-heading font-bold text-3xl sm:text-4xl lg:text-[48px] text-offWhite leading-tight tracking-tight mb-6">
-            Explore the Advance Africa Ecosystem
+      {/* ── CONTACT CTA ── */}
+      <section className="bg-deepEarth py-20 px-4 md:px-6 text-center">
+        <div className="max-w-3xl mx-auto flex flex-col items-center">
+          <Image src="/assets/advance-africa-logo.png" alt="Advance Africa Foundation" width={64} height={64} className="rounded object-cover" />
+          <h2 className="mt-6 font-heading font-bold text-3xl sm:text-4xl text-offWhite tracking-tight">
+            Connect with Advance Africa
           </h2>
-
-          <p className="font-body text-[18px] text-offWhite/75 max-w-[600px] leading-relaxed mb-10">
-            Visit advanceafrica.org to learn about candidacy pathways, partner tiers, capital access programs, and how ADAF&apos;s human capital pipeline connects to the Great Green Wall&apos;s restoration economy.
+          <p className="mt-4 text-offWhite/70 leading-relaxed">
+            Whether you are a company, funder, training institution or candidate, ADAF will route you to the right team.
           </p>
-
-          <a
-            href="https://advanceafrica.org"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 px-14 py-5 rounded-full bg-[#4e7de1] hover:bg-[#6c95ea] text-white font-accent font-semibold text-[20px] shadow-xl hover:shadow-2xl transition-all hover:-translate-y-0.5 active:scale-95"
-          >
-            Visit Advance Africa Foundation
-            <span className="text-xl">↗</span>
-          </a>
-
-          <p className="mt-4 font-body text-[13px] text-offWhite/40">
-            Opens advanceafrica.org in a new tab
-          </p>
+          <div className="mt-6 flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm">
+            <a href="mailto:inquiry@AdvanceAfrica.org" className="text-accent hover:underline underline-offset-4">inquiry@AdvanceAfrica.org</a>
+            <a href="https://www.linkedin.com/advance-africa-foundation" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline underline-offset-4">LinkedIn</a>
+            <a href={ADAF_URL} target="_blank" rel="noopener noreferrer" className="text-accent hover:underline underline-offset-4">advanceafrica.org</a>
+          </div>
+          <div className="mt-8 flex flex-wrap justify-center gap-3">
+            <a href={`${ADAF_URL}/partners`} target="_blank" rel="noopener noreferrer" className="rounded bg-accent px-7 py-3.5 text-sm font-semibold text-deepEarth hover:bg-accentDark transition-colors">
+              Become a Partner
+            </a>
+            <a href={`${ADAF_URL}/apply-1`} target="_blank" rel="noopener noreferrer" className="rounded border-[1.5px] border-offWhite/60 px-7 py-3.5 text-sm font-semibold text-offWhite hover:bg-offWhite hover:text-deepEarth transition-colors">
+              Apply as a Candidate
+            </a>
+          </div>
         </div>
       </section>
 

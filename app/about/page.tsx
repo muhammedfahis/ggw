@@ -6,259 +6,283 @@ export const metadata = {
     description: "Learn how the Great Green Wall of Africa Foundation mobilizes culture, policy, and communities to regenerate the Sahel.",
 };
 
+const iconStroke = { fill: "none", stroke: "currentColor", viewBox: "0 0 24 24" } as const;
+
 const pillars = [
     {
         title: "Climate Change Initiative",
         copy: "Promoting bold climate projects that deliver measurable ecological gains and economic opportunity through innovative restoration strategies.",
-        icon: <svg className="w-10 h-10" fill="currentColor" viewBox="0 0 24 24"><path d="M17 8C8 10 5.9 16.17 3.82 21.34l1.89.66l.95-2.71c.16-.46.38-.86.66-1.22C9.47 15.97 12.99 12 17 12V8z"/><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>,
-        color: "from-green-600 to-green-800"
+        iconClass: "bg-green-100 border-green-200 text-green-700 group-hover:bg-primary",
+        icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />,
     },
     {
         title: "Culture Building",
         copy: "Mobilizing cultural leaders and storytellers so stewardship becomes an expression of pride and identity across communities.",
-        icon: <svg className="w-10 h-10" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>,
-        color: "from-purple-600 to-purple-800"
+        iconClass: "bg-purple-100 border-purple-200 text-purple-700 group-hover:bg-purple-800",
+        icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />,
     },
     {
         title: "Child Education Expansion",
         copy: "Creating early learning experiences under 'green canopies' that connect children to land-based knowledge and environmental stewardship.",
-        icon: <svg className="w-10 h-10" fill="currentColor" viewBox="0 0 24 24"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/></svg>,
-        color: "from-blue-600 to-blue-800"
+        iconClass: "bg-blue-100 border-blue-200 text-blue-700 group-hover:bg-blue-700",
+        icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />,
     },
     {
         title: "Community Empowerment",
         copy: "Investing in local governance, skills, and circular economies so communities design their own pathways to sustainable prosperity.",
-        icon: <svg className="w-10 h-10" fill="currentColor" viewBox="0 0 24 24"><path d="M16 4c0-1.11.89-2 2-2s2 .89 2 2-.89 2-2 2-2-.89-2-2zM4 18v-4h3v4h2v-7.5c0-1.38 1.12-2.5 2.5-2.5s2.5 1.12 2.5 2.5V18h2v-7.5c0-1.38 1.12-2.5 2.5-2.5s2.5 1.12 2.5 2.5V18h2v-4h3v4h2v-4c0-1.11-.89-2-2-2h-1c-1.11 0-2 .89-2 2v1h-2v-1c0-1.11-.89-2-2-2h-1c-1.11 0-2 .89-2 2v1h-2v-1c0-1.11-.89-2-2-2H6c-1.11 0-2 .89-2 2v4h2z"/></svg>,
-        color: "from-amber-600 to-amber-800"
+        iconClass: "bg-amber-100 border-amber-200 text-amber-700 group-hover:bg-amber-600",
+        icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />,
     },
 ];
 
 const stats = [
-    { label: "Trees established", value: "15M+", detail: "Native species cultivated with community cooperatives.", icon: "🌳" },
-    { label: "Hectares restored", value: "50K+", detail: "Dune stabilization, soil regeneration, and water retention.", icon: "🏞️" },
-    { label: "Youth & women trained", value: "120K+", detail: "Entrepreneurship, agroforestry, and civic leadership.", icon: "👥" },
+    {
+        value: "15M+",
+        label: "Trees established",
+        detail: "Indigenous acacia, baobab, and shea species cultivated with community cooperatives.",
+        icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />,
+    },
+    {
+        value: "50K+",
+        label: "Hectares restored",
+        detail: "Dune stabilization, soil regeneration, and water retention across degraded land.",
+        icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />,
+    },
+    {
+        value: "120K+",
+        label: "Youth & women trained",
+        detail: "Entrepreneurship, agroforestry, and civic leadership.",
+        icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />,
+    },
 ];
 
 const principles = [
     {
-        title: "Culture is infrastructure",
-        description: "Creative expression unlocks momentum and trust in communities."
+        title: "Culture is Infrastructure",
+        description: "Creative expression unlocks momentum and trust in communities.",
     },
     {
-        title: "Communities lead from day zero",
-        description: "Local partners sit at the design table and share in the upside."
+        title: "Communities Lead from Day Zero",
+        description: "Local partners sit at the design table and share in the upside.",
     },
     {
-        title: "Cross-sector collaboration",
-        description: "Policy makers, artists, scientists, and investors solve in the same room."
+        title: "Cross-Sector Collaboration",
+        description: "Policy makers, artists, scientists, and investors solve in the same room.",
     },
     {
-        title: "Measurable impact",
-        description: "Every hectare is measured for ecological, social, and economic outcomes."
+        title: "Measurable Impact",
+        description: "Every hectare is measured for ecological, social, and economic outcomes.",
     },
 ];
 
 const milestones = [
-    { 
-        year: "2010–2015", 
-        focus: "Listening tours & cultural mapping",
-        description: "Building foundational relationships and understanding local contexts across the Sahel region."
+    {
+        year: "2010 – 2015",
+        focus: "Listening Tours & Cultural Mapping",
+        description: "Building foundational relationships and understanding local contexts across the Sahel region.",
     },
-    { 
-        year: "2016–2020", 
-        focus: "Pilot forests, creative coalitions, and policy advocacy",
-        description: "Testing restoration models and building strategic partnerships for scale."
+    {
+        year: "2016 – 2020",
+        focus: "Pilot Forests, Creative Coalitions, and Policy Advocacy",
+        description: "Testing restoration models and building strategic partnerships for scale.",
     },
-    { 
-        year: "2021–2023", 
-        focus: "Cross-border projects, women-led innovation labs",
-        description: "Expanding impact across multiple countries with community-centered approaches."
+    {
+        year: "2021 – 2023",
+        focus: "Cross-Border Projects & Women-Led Innovation Labs",
+        description: "Expanding impact across multiple countries with community-centered approaches.",
     },
-    { 
-        year: "2024+", 
-        focus: "Pan-African alliance scaling regenerative economies",
-        description: "Building continental coalition for systemic transformation and sustainable growth."
+    {
+        year: "2024+",
+        focus: "Pan-African Alliance Scaling Regenerative Economies",
+        description: "Building a continental coalition for systemic transformation and sustainable growth.",
     },
 ];
+
+const collage = [
+    { src: "/assets/about/stitch/elder-council.jpg", alt: "Sahel community elders and youth planning restoration", caption: "Elder Council Dialogue" },
+    { src: "/assets/about/stitch/micro-catchments.jpg", alt: "Aerial view of agroforestry restoration in the Sahel", caption: "Living Wall Micro-Catchments" },
+    { src: "/assets/about/stitch/solar-wellhead.jpg", alt: "Solar-powered community water system", caption: "Atmospheric & Solar Wellhead" },
+    { src: "/assets/about/stitch/agro-lab.jpg", alt: "Youth climate technology and agro-ecology lab", caption: "Agro-technology Lab" },
+];
+
+function SectionRule({ className = "mx-auto" }: { className?: string }) {
+    return <div className={`w-12 h-1 bg-accent rounded-full ${className}`}></div>;
+}
 
 export default function AboutPage() {
     return (
         <main className="bg-offWhite text-charcoal min-h-screen">
-            {/* Hero Section */}
-            <section className="relative overflow-hidden">
+            {/* Hero */}
+            <section className="relative min-h-[520px] w-full flex items-center overflow-hidden py-24">
                 <div className="absolute inset-0">
                     <Image
-                        src="/assets/about/rs=w:1209.jpeg"
-                        alt="GGWoA field work"
+                        src="/assets/about/stitch/sahel-hero.jpg"
+                        alt="Sahel landscape with acacia trees at golden hour"
                         fill
                         priority
                         className="object-cover"
                         sizes="100vw"
-                        quality={90}
                     />
-                    <div className="absolute inset-0 bg-gradient-to-br from-primary/70 via-primary/60 to-primary/80"></div>
+                    <div className="absolute inset-0 bg-primary/65"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-primary via-transparent to-black/30"></div>
                 </div>
-                <div className="relative z-10 px-6 md:px-12 lg:px-32 py-[120px] md:py-[140px] lg:py-[160px]">
-                    <div className="max-w-6xl mx-auto text-center">
-                        <div className="space-y-8">
-                            <p className="font-accent text-xs uppercase tracking-wider text-accent mb-6">ABOUT GGWOA</p>
-                            <h1 className="text-5xl md:text-6xl lg:text-7xl font-heading font-bold text-offWhite mb-8 leading-tight">
-                                Unlocking the potential in Africa’s landscape
-                            </h1>
-                            <p className="text-xl md:text-2xl lg:text-3xl text-offWhite/90 max-w-4xl mx-auto leading-relaxed mb-12">
-                                We leverage culture, policy, and community partnerships to ensure climate adaptation strategies reduce the trade-offs between economic growth and sustainability.
+                <div className="relative z-10 max-w-5xl mx-auto px-6 text-center flex flex-col items-center">
+                    <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/20 mb-6">
+                        <span className="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
+                        <span className="text-[11px] font-semibold tracking-[0.2em] text-accent uppercase">Continental Living Infrastructure</span>
+                    </div>
+                    <h1 className="font-heading font-bold text-white text-4xl sm:text-5xl lg:text-[56px] leading-[1.12] tracking-tight max-w-4xl">
+                        Unlocking the potential in Africa’s landscape
+                    </h1>
+                    <p className="text-white/85 text-lg sm:text-[20px] leading-relaxed max-w-3xl mt-5">
+                        We leverage culture, policy, and community partnerships to ensure climate adaptation strategies reduce the trade-offs between economic growth and sustainability.
+                    </p>
+                    <div className="flex flex-wrap items-center justify-center gap-4 mt-8">
+                        <Link href="/projects" className="group bg-accent hover:bg-accentDark text-deepEarth font-bold text-sm tracking-wide px-7 py-3 rounded-full transition-all duration-200 shadow-lg hover:shadow-xl inline-flex items-center gap-2">
+                            View Progress Work
+                            <span className="group-hover:translate-x-1 transition-transform">→</span>
+                        </Link>
+                        <Link href="/leadership" className="group border-2 border-white/80 hover:border-white text-white hover:bg-white/10 font-medium text-sm tracking-wide px-7 py-3 rounded-full transition-all duration-200 inline-flex items-center gap-2">
+                            Our Leadership
+                            <span className="group-hover:translate-x-1 transition-transform">→</span>
+                        </Link>
+                    </div>
+                </div>
+            </section>
+
+            {/* Culture-Powered Climate Action */}
+            <section className="bg-offWhite py-20 px-6 border-b border-stone-200/60">
+                <div className="max-w-4xl mx-auto text-center flex flex-col items-center">
+                    <h2 className="font-heading font-bold text-primary text-3xl sm:text-[40px] leading-tight">
+                        Culture-Powered Climate Action
+                    </h2>
+                    <SectionRule className="my-4" />
+                    <p className="text-neutral-700 text-[17px] leading-relaxed max-w-2xl mt-2">
+                        The Great Green Wall of Africa Foundation supports projects with concurrent high positive impact. We convene communities, stakeholders, and policy makers so that climate adaptation strategies become integrated development strategies.
+                    </p>
+                    <div className="mt-12 bg-white rounded-2xl p-7 sm:p-9 shadow-md border border-stone-200/80 text-left max-w-3xl w-full flex flex-col sm:flex-row items-start sm:items-center gap-6">
+                        <div className="w-14 h-14 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center shrink-0 text-primary">
+                            <svg className="w-7 h-7" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M17 8C8 10 5.9 16.17 3.82 21.34L5.71 22l1-2.3A9.49 9.49 0 0 0 12 21c7 0 11-8 11-8s-2.5 1-6 1c0 0 4-4 2-8a9.12 9.12 0 0 0-2 2zM12 19c-2.12 0-3.89-.9-4.83-2.19C9.28 13.9 12.75 11.23 18 10.3c-.63 3.63-2.73 8.7-6 8.7z" />
+                            </svg>
+                        </div>
+                        <div className="flex-1">
+                            <span className="block text-[11px] font-bold uppercase tracking-wider text-accent mb-1.5">Institutional Philosophy</span>
+                            <h3 className="font-heading font-bold text-primary text-xl mb-2">How We Work</h3>
+                            <p className="text-neutral-600 text-sm leading-relaxed">
+                                Diagnostics and storytelling reveal the cultural context of each landscape. From there, we co-design investments that honour traditional knowledge, integrate technology, and anchor long-term governance.
                             </p>
-                            <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                                <Link href="/projects" className="btn-warm px-8 py-4 flex items-center gap-3 justify-center hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
-                                    View Flagship Work
-                                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M16.01 11H4v2h12.01v3L20 12l-3.99-4v3z"/>
-                                    </svg>
-                                </Link>
-                                <Link href="/contact" className="btn-secondary px-8 py-4 flex items-center gap-3 justify-center hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
-                                    Start a Conversation
-                                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/>
-                                    </svg>
-                                </Link>
-                            </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* Mission Statement Section */}
-            <section className="px-6 md:px-12 lg:px-32 py-20 md:py-32">
+            {/* From Cultural Spark to Continental Movement */}
+            <section id="wisdom" className="bg-secondary py-24 px-6 border-b border-[#D8CBB0]">
                 <div className="max-w-6xl mx-auto">
-                    <div className="text-center mb-20">
-                        <p className="font-accent text-xs uppercase tracking-wider text-accent mb-6">MISSION STATEMENT</p>
-                        <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-deepEarth mb-8 leading-tight">
-                            Culture-Powered Climate Action
-                        </h2>
-                        <div className="w-32 h-1 bg-accent mx-auto mb-8"></div>
-                        <p className="text-xl md:text-2xl text-charcoal leading-relaxed max-w-[70ch] mx-auto">
-                            The Great Green Wall of Africa Foundation supports projects with concurrent high positive impact. We convene communities, stakeholders, and policy makers so that climate adaptation strategies become integrated development strategies.
-                        </p>
-                    </div>
-                    
-                    {/* How We Work Block */}
-                    <div className="bg-white rounded-3xl p-12 shadow-xl border border-accent/20 max-w-4xl mx-auto">
-                        <div className="flex items-start gap-8">
-                            <div className="w-20 h-20 bg-accent/20 rounded-2xl flex items-center justify-center flex-shrink-0">
-                                <span className="text-accent font-bold text-2xl">💡</span>
-                            </div>
-                            <div>
-                                <h3 className="text-3xl font-heading font-bold text-deepEarth mb-6">How We Work</h3>
-                                <p className="text-xl text-charcoal/80 leading-relaxed max-w-[65ch]">
-                                    Diagnostics and storytelling reveal the cultural context of each landscape. From there, we co-design investments that honour traditional knowledge, integrate technology, and anchor long-term governance.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Story Section with Alternating Layout */}
-            <section className="px-6 md:px-12 lg:px-32 py-20 md:py-32 bg-secondary">
-                <div className="max-w-6xl mx-auto">
-                    <div className="text-center mb-20">
-                        <p className="font-accent text-xs uppercase tracking-wider text-accent mb-6">OUR STORY</p>
-                        <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-deepEarth mb-8 leading-tight">
+                    <div className="text-center mb-16">
+                        <span className="text-xs uppercase tracking-[0.2em] text-deepEarth/70 font-bold">Our Evolution &amp; Praxis</span>
+                        <h2 className="font-heading font-bold text-deepEarth text-3xl sm:text-[36px] mt-1.5">
                             From Cultural Spark to Continental Movement
                         </h2>
-                        <div className="w-32 h-1 bg-accent mx-auto mb-8"></div>
+                        <SectionRule className="mx-auto mt-3" />
                     </div>
-                    
-                    {/* First Story Block */}
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center mb-32">
-                        <div className="space-y-8">
-                            <div>
-                                <h3 className="text-3xl lg:text-4xl font-heading font-bold text-deepEarth mb-6 leading-tight">
+
+                    <div className="space-y-20">
+                        {/* Rooted in Community Wisdom */}
+                        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                            <div className="lg:col-span-5 space-y-4">
+                                <span className="text-xs uppercase tracking-widest text-primary font-bold block">Grassroots Architecture</span>
+                                <h3 className="font-heading font-bold text-deepEarth text-2xl sm:text-[26px] leading-tight">
                                     Rooted in Community Wisdom
                                 </h3>
-                                <p className="text-xl text-charcoal leading-relaxed max-w-[65ch]">
-                                    Our journey began with listening tours across the Sahel, where we learned that the most powerful restoration strategies emerge when cultural knowledge guides climate action. Communities weren't just stakeholders—they were the architects of change.
+                                <p className="text-neutral-700 text-sm sm:text-base leading-relaxed">
+                                    Our journey began with listening tours across the Sahel, where we learned that the most powerful restoration strategies emerge when cultural knowledge guides climate action.
                                 </p>
-                            </div>
-                            <div className="bg-white rounded-2xl p-8 shadow-lg border border-accent/20">
-                                <div className="flex items-center gap-4 mb-4">
-                                    <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
-                                        <svg className="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 24 24">
-                                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                <p className="text-neutral-700 text-sm leading-relaxed">
+                                    Communities weren't just stakeholders—they were the architects of change. By aligning modern science with elder council stewardship, restoration becomes something communities own, cultivate, and defend.
+                                </p>
+                                <div className="bg-white/80 backdrop-blur-sm border border-deepEarth/15 rounded-xl p-4 flex items-start gap-3.5 shadow-sm mt-4">
+                                    <div className="w-9 h-9 rounded-lg bg-accent/20 flex items-center justify-center shrink-0 text-deepEarth">
+                                        <svg className="w-5 h-5" {...iconStroke}>
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.674M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
                                         </svg>
                                     </div>
-                                    <p className="font-semibold text-deepEarth">Key Insight</p>
-                                </div>
-                                <p className="text-charcoal/80 leading-relaxed">
-                                    Cultural identity is the most powerful driver of environmental stewardship.
-                                </p>
-                            </div>
-                        </div>
-                        
-                        <div className="relative h-[400px] lg:h-[500px] overflow-hidden rounded-3xl shadow-2xl">
-                            <Image
-                                src="/assets/about/rs=w:1160,h:538.jpeg"
-                                alt="Community planting efforts"
-                                fill
-                                className="object-cover transition-transform duration-700 hover:scale-105"
-                                sizes="(max-width: 1024px) 100vw, 50vw"
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent"></div>
-                            <div className="absolute bottom-6 left-6">
-                                <div className="flex items-center gap-2 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full">
-                                    <svg className="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-                                    </svg>
-                                    <span className="text-sm font-semibold text-deepEarth">Sahel Region</span>
+                                    <div>
+                                        <h4 className="font-body font-semibold text-deepEarth text-xs uppercase tracking-wider">Our Insight</h4>
+                                        <p className="text-neutral-700 text-xs mt-0.5 leading-relaxed">
+                                            Cultural identity is the most powerful driver of environmental stewardship. Restoration fails when imposed top-down.
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
+
+                            <div className="lg:col-span-7">
+                                <div className="grid grid-cols-2 gap-4">
+                                    {collage.map((photo) => (
+                                        <div key={photo.src} className="relative rounded-2xl overflow-hidden shadow-md group h-40 sm:h-52">
+                                            <Image
+                                                src={photo.src}
+                                                alt={photo.alt}
+                                                fill
+                                                className="object-cover group-hover:scale-105 transition-transform duration-500"
+                                                sizes="(max-width: 1024px) 50vw, 30vw"
+                                            />
+                                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                                            <div className="absolute bottom-3 left-3 right-3 text-white text-[11px] font-medium leading-tight">
+                                                {photo.caption}
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    
-                    {/* Second Story Block (Reversed) */}
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center lg:flex-row-reverse">
-                        <div className="space-y-8">
-                            <div>
-                                <h3 className="text-3xl lg:text-4xl font-heading font-bold text-deepEarth mb-6 leading-tight">
+
+                        {/* Scaling Through Partnership */}
+                        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center pt-8 border-t border-deepEarth/15">
+                            <div className="lg:col-span-5 space-y-4">
+                                <span className="text-xs uppercase tracking-widest text-primary font-bold block">Institutional Synthesis</span>
+                                <h3 className="font-heading font-bold text-deepEarth text-2xl sm:text-[26px] leading-tight">
                                     Scaling Through Partnership
                                 </h3>
-                                <p className="text-xl text-charcoal leading-relaxed max-w-[65ch]">
+                                <p className="text-neutral-700 text-sm sm:text-base leading-relaxed">
                                     Today, we convene governments, financiers, artists, and communities around shared restoration goals. By creating platforms for cross-sector collaboration, we've transformed local insights into continental impact.
                                 </p>
-                            </div>
-                            <div className="bg-white rounded-2xl p-8 shadow-lg border border-accent/20">
-                                <div className="flex items-center gap-4 mb-4">
-                                    <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
-                                        <svg className="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 24 24">
-                                            <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
-                                            <circle cx="9" cy="7" r="4"/>
-                                            <path d="M23 21v-2a4 4 0 00-3-3.87"/>
-                                            <path d="M16 3.13a4 4 0 010 7.75"/>
+                                <p className="text-neutral-700 text-sm leading-relaxed">
+                                    Through strategic alliances with partners like the Advance Africa Foundation, we convert environmental interventions into green employment, enterprise, and sustainable trade.
+                                </p>
+                                <div className="bg-white/80 backdrop-blur-sm border border-deepEarth/15 rounded-xl p-4 flex items-start gap-3.5 shadow-sm mt-4">
+                                    <div className="w-9 h-9 rounded-lg bg-primary/20 flex items-center justify-center shrink-0 text-primary">
+                                        <svg className="w-5 h-5" {...iconStroke}>
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                                         </svg>
                                     </div>
-                                    <p className="font-semibold text-deepEarth">Our Network</p>
+                                    <div>
+                                        <h4 className="font-body font-semibold text-deepEarth text-xs uppercase tracking-wider">Our Network</h4>
+                                        <p className="text-neutral-700 text-xs mt-0.5 leading-relaxed">
+                                            11 countries, 100+ partners, and thousands of community leaders working together.
+                                        </p>
+                                    </div>
                                 </div>
-                                <p className="text-charcoal/80 leading-relaxed">
-                                    11 countries, 100+ partners, and thousands of community leaders working together.
-                                </p>
                             </div>
-                        </div>
-                        
-                        <div className="relative h-[400px] lg:h-[500px] overflow-hidden rounded-3xl shadow-2xl">
-                            <Image
-                                src="/assets/home/rs=w:730.jpeg"
-                                alt="Partnership meeting"
-                                fill
-                                className="object-cover transition-transform duration-700 hover:scale-105"
-                                sizes="(max-width: 1024px) 100vw, 50vw"
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent"></div>
-                            <div className="absolute bottom-6 left-6">
-                                <div className="flex items-center gap-2 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full">
-                                    <svg className="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-                                    </svg>
-                                    <span className="text-sm font-semibold text-deepEarth">Partnership Success</span>
+
+                            <div className="lg:col-span-7">
+                                <div className="relative rounded-2xl overflow-hidden shadow-xl border-4 border-white/60 group h-[300px] sm:h-[380px]">
+                                    <Image
+                                        src="/assets/about/stitch/nursery-cooperative.jpg"
+                                        alt="Community stewards working in an agroforestry nursery"
+                                        fill
+                                        className="object-cover group-hover:scale-105 transition-transform duration-700"
+                                        sizes="(max-width: 1024px) 100vw, 60vw"
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                                    <div className="absolute bottom-5 left-6 right-6 text-white">
+                                        <span className="inline-block px-2.5 py-0.5 bg-accent text-deepEarth font-bold text-[10px] uppercase tracking-wider rounded mb-2">Equitable Co-Development</span>
+                                        <h4 className="font-heading font-bold text-lg leading-tight">Women-Led Agroforestry &amp; Native Nursery Cooperatives</h4>
+                                        <p className="text-xs text-white/80 mt-1 max-w-xl">
+                                            Local nursery workers cultivating indigenous seedlings for Sahel reforestation.
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -266,95 +290,82 @@ export default function AboutPage() {
                 </div>
             </section>
 
-            {/* Four Pillars Section */}
-            <section className="px-6 md:px-12 lg:px-32 py-20 md:py-32 bg-offWhite">
+            {/* Four Pillars */}
+            <section id="pillars" className="bg-white py-24 px-6 border-b border-stone-200">
                 <div className="max-w-6xl mx-auto">
-                    <div className="text-center mb-20">
-                        <p className="font-accent text-xs uppercase tracking-wider text-accent mb-6">WHAT WE ACTIVATE</p>
-                        <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-deepEarth mb-8 leading-tight">
+                    <div className="text-center max-w-3xl mx-auto mb-16">
+                        <h2 className="font-heading font-bold text-primary text-3xl sm:text-[36px] leading-tight">
                             Four Pillars to Regenerate the Sahel
                         </h2>
-                        <div className="w-32 h-1 bg-accent mx-auto mb-8"></div>
-                        <p className="text-xl text-charcoal/80 max-w-3xl mx-auto leading-relaxed">
+                        <SectionRule className="mx-auto my-3" />
+                        <p className="text-neutral-600 text-[17px] leading-relaxed mt-3">
                             Inspired by communities on the frontlines, each pillar combines policy engagement, financing, and storytelling to unlock scale.
                         </p>
                     </div>
-                    
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                        {pillars.map((pillar, index) => (
-                            <div 
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        {pillars.map((pillar) => (
+                            <Link
                                 key={pillar.title}
-                                className="group bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 border border-accent/20"
+                                href="/projects"
+                                className="bg-offWhite border border-stone-200/90 rounded-2xl p-6 hover:shadow-lg transition-all duration-300 flex flex-col justify-between group"
                             >
-                                <div className={`w-20 h-20 bg-gradient-to-br ${pillar.color} rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                                    {pillar.icon}
+                                <div>
+                                    <div className={`w-12 h-12 rounded-xl border flex items-center justify-center mb-5 group-hover:text-white transition-colors duration-300 ${pillar.iconClass}`}>
+                                        <svg className="w-6 h-6" {...iconStroke}>{pillar.icon}</svg>
+                                    </div>
+                                    <h3 className="font-heading font-bold text-primary text-xl mb-3">{pillar.title}</h3>
+                                    <p className="text-neutral-600 text-sm leading-relaxed">{pillar.copy}</p>
                                 </div>
-                                <h3 className="text-xl font-heading font-bold text-deepEarth mb-4 group-hover:text-primary transition-colors duration-300">
-                                    {pillar.title}
-                                </h3>
-                                <p className="text-charcoal/80 leading-relaxed">
-                                    {pillar.copy}
-                                </p>
-                            </div>
+                                <div className="pt-6 mt-4 border-t border-stone-200/60 flex items-center text-xs font-semibold text-primary group-hover:text-accent transition-colors">
+                                    <span>Learn More</span>
+                                    <span className="ml-1.5 group-hover:translate-x-1 transition-transform">→</span>
+                                </div>
+                            </Link>
                         ))}
                     </div>
                 </div>
             </section>
 
-            {/* Impact Snapshot & Principles */}
-            <section className="px-6 md:px-12 lg:px-32 py-20 md:py-32 bg-secondary">
-                <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20">
-                    {/* Impact Stats */}
-                    <div>
-                        <p className="font-accent text-xs uppercase tracking-wider text-accent mb-6">IMPACT SNAPSHOT</p>
-                        <h2 className="text-4xl md:text-5xl font-heading font-bold text-deepEarth mb-12 leading-tight">
-                            Measurable Progress
-                        </h2>
-                        <div className="w-20 h-1 bg-accent mb-12"></div>
-                        
-                        <div className="space-y-8">
-                            {stats.map((stat, index) => (
-                                <div 
-                                    key={stat.label}
-                                    className="bg-white rounded-3xl p-8 shadow-lg border border-accent/20 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
-                                >
-                                    <div className="flex items-start gap-6">
-                                        <div className="w-16 h-16 bg-accent/20 rounded-2xl flex items-center justify-center text-2xl flex-shrink-0">
-                                            {stat.icon}
+            {/* Measurable Progress & Guiding Values */}
+            <section className="bg-secondary py-24 px-6 border-b border-[#D8CBB0]">
+                <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+                    <div className="bg-white/90 backdrop-blur-sm rounded-3xl p-8 sm:p-10 shadow-md border border-deepEarth/15">
+                        <span className="text-xs uppercase tracking-widest text-accent font-bold block mb-1">Impact Verified Across 11 Nations</span>
+                        <h2 className="font-heading font-bold text-primary text-2xl sm:text-[32px] leading-tight">Measurable Progress</h2>
+                        <SectionRule className="w-10 mt-3 mb-8" />
+                        <div className="space-y-6">
+                            {stats.map((stat) => (
+                                <div key={stat.label} className="flex items-start gap-4 p-4 rounded-2xl bg-offWhite border border-stone-200">
+                                    <div className="w-12 h-12 rounded-xl bg-accent/20 border border-accent/40 flex items-center justify-center shrink-0 text-accentDark">
+                                        <svg className="w-6 h-6" {...iconStroke}>{stat.icon}</svg>
+                                    </div>
+                                    <div>
+                                        <div className="flex flex-wrap items-baseline gap-x-2">
+                                            <span className="font-heading font-bold text-3xl text-deepEarth">{stat.value}</span>
+                                            <span className="font-semibold text-xs tracking-wider text-primary uppercase">{stat.label}</span>
                                         </div>
-                                        <div className="flex-1">
-                                            <div className="text-4xl font-heading font-bold text-primary mb-2">{stat.value}</div>
-                                            <div className="text-lg font-semibold text-deepEarth mb-2">{stat.label}</div>
-                                            <div className="text-charcoal/70 leading-relaxed">{stat.detail}</div>
-                                        </div>
+                                        <p className="text-xs text-neutral-600 mt-1 leading-relaxed">{stat.detail}</p>
                                     </div>
                                 </div>
                             ))}
                         </div>
                     </div>
-                    
-                    {/* Operating Principles */}
-                    <div>
-                        <p className="font-accent text-xs uppercase tracking-wider text-accent mb-6">OPERATING PRINCIPLES</p>
-                        <h2 className="text-4xl md:text-5xl font-heading font-bold text-deepEarth mb-12 leading-tight">
-                            Our Guiding Values
-                        </h2>
-                        <div className="w-20 h-1 bg-accent mb-12"></div>
-                        
+
+                    <div className="bg-white/90 backdrop-blur-sm rounded-3xl p-8 sm:p-10 shadow-md border border-deepEarth/15">
+                        <span className="text-xs uppercase tracking-widest text-accent font-bold block mb-1">Guiding Ethical Pillars</span>
+                        <h2 className="font-heading font-bold text-primary text-2xl sm:text-[32px] leading-tight">Our Guiding Values</h2>
+                        <SectionRule className="w-10 mt-3 mb-8" />
                         <div className="space-y-6">
-                            {principles.map((principle, index) => (
-                                <div 
-                                    key={principle.title}
-                                    className="bg-white rounded-3xl p-8 shadow-lg border border-accent/20 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
-                                >
-                                    <div className="flex items-start gap-4">
-                                        <div className="w-12 h-12 bg-accent/20 rounded-full flex items-center justify-center flex-shrink-0">
-                                            <span className="text-accent font-bold text-lg">{index + 1}</span>
-                                        </div>
-                                        <div>
-                                            <h3 className="text-xl font-heading font-bold text-deepEarth mb-3">{principle.title}</h3>
-                                            <p className="text-charcoal/80 leading-relaxed">{principle.description}</p>
-                                        </div>
+                            {principles.map((principle) => (
+                                <div key={principle.title} className="flex items-start gap-4">
+                                    <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0 text-white shadow-sm mt-0.5">
+                                        <svg className="w-4 h-4" {...iconStroke}>
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h3 className="font-heading font-bold text-deepEarth text-lg">{principle.title}</h3>
+                                        <p className="text-xs text-neutral-600 mt-1 leading-relaxed">{principle.description}</p>
                                     </div>
                                 </div>
                             ))}
@@ -363,83 +374,62 @@ export default function AboutPage() {
                 </div>
             </section>
 
-            {/* Journey Timeline */}
-            <section className="px-6 md:px-12 lg:px-32 py-20 md:py-32 bg-offWhite">
-                <div className="max-w-6xl mx-auto">
-                    <div className="text-center mb-20">
-                        <p className="font-accent text-xs uppercase tracking-wider text-accent mb-6">OUR JOURNEY</p>
-                        <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-deepEarth mb-8 leading-tight">
+            {/* Timeline */}
+            <section className="bg-offWhite py-24 px-6 border-b border-stone-200">
+                <div className="max-w-4xl mx-auto">
+                    <div className="text-center mb-16">
+                        <span className="text-xs uppercase tracking-widest text-accent font-bold block mb-1">Our Historical Journey</span>
+                        <h2 className="font-heading font-bold text-primary text-3xl sm:text-[32px] leading-tight">
                             From Cultural Spark to Continental Coalition
                         </h2>
-                        <div className="w-32 h-1 bg-accent mx-auto mb-8"></div>
-                        <p className="text-xl text-charcoal/80 max-w-3xl mx-auto leading-relaxed mb-8">
-                            Follow our evolution from local listening tours to Pan-African movement building.
-                        </p>
-                        <Link href="/news" className="inline-flex items-center gap-2 text-accent font-semibold hover:text-primary transition-colors duration-300">
-                            Follow Announcements
-                            <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M16.01 11H4v2h12.01v3L20 12l-3.99-4v3z"/>
-                            </svg>
-                        </Link>
+                        <SectionRule className="mx-auto my-3" />
                     </div>
-                    
                     <div className="relative">
-                        {/* Timeline Line */}
-                        <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-accent/30 hidden lg:block"></div>
-                        
-                        <div className="space-y-12">
-                            {milestones.map((milestone, index) => (
-                                <div 
-                                    key={milestone.year}
-                                    className="relative flex items-start gap-8 lg:gap-12"
-                                >
-                                    {/* Timeline Dot */}
-                                    <div className="relative z-10">
-                                        <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">
+                        <div className="absolute left-6 top-8 bottom-8 w-0.5 bg-accent/40 hidden sm:block"></div>
+                        <div className="space-y-8">
+                            {milestones.map((milestone, index) => {
+                                const isCurrent = index === milestones.length - 1;
+                                return (
+                                    <div key={milestone.year} className="relative flex items-start gap-4 sm:gap-6 group">
+                                        <div className="w-12 h-12 rounded-full bg-accent text-deepEarth font-heading font-bold text-lg flex items-center justify-center shrink-0 shadow-md border-2 border-white ring-4 ring-secondary/40 z-10">
                                             {index + 1}
                                         </div>
-                                    </div>
-                                    
-                                    {/* Content */}
-                                    <div className="flex-1 bg-white rounded-3xl p-8 shadow-lg border border-accent/20 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
-                                        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6">
-                                            <h3 className="text-2xl font-heading font-bold text-deepEarth">{milestone.year}</h3>
+                                        <div className="flex-1 bg-white p-6 sm:p-7 rounded-2xl border border-stone-200 shadow-sm group-hover:border-accent transition-colors">
+                                            <span className={`inline-block px-3 py-1 ${isCurrent ? "bg-accent" : "bg-secondary"} text-deepEarth font-bold text-xs uppercase tracking-wider rounded-md mb-2`}>
+                                                {milestone.year}
+                                            </span>
+                                            <h3 className="font-heading font-bold text-primary text-xl mb-1.5">{milestone.focus}</h3>
+                                            <p className="text-neutral-600 text-sm leading-relaxed">{milestone.description}</p>
                                         </div>
-                                        <h4 className="text-xl font-semibold text-primary mb-4">{milestone.focus}</h4>
-                                        <p className="text-charcoal/80 leading-relaxed">{milestone.description}</p>
                                     </div>
-                                </div>
-                            ))}
+                                );
+                            })}
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* Join Our Coalition CTA */}
-            <section className="px-6 md:px-12 lg:px-32 py-20 md:py-32 bg-gradient-to-br from-primary via-deepEarth to-primary">
-                <div className="max-w-4xl mx-auto text-center">
-                    <div className="space-y-8">
-                        <p className="font-accent text-xs uppercase tracking-wider text-accent mb-6">JOIN OUR COALITION</p>
-                        <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-offWhite mb-8 leading-tight">
-                            Help Design the Largest Living Structure on Earth
-                        </h2>
-                        <p className="text-xl md:text-2xl text-offWhite/90 mb-12 leading-relaxed max-w-3xl mx-auto">
-                            Whether you represent government, philanthropy, or creative industries, we are ready to co-create long-term impact along the Great Green Wall.
-                        </p>
-                        <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                            <Link href="/contact" className="bg-offWhite text-primary px-10 py-5 rounded-full font-semibold text-lg hover:bg-offWhite/90 transition-all duration-300 hover:scale-105 hover:shadow-2xl inline-flex items-center gap-3">
-                                Talk to Our Team
-                                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/>
-                                </svg>
-                            </Link>
-                            <Link href="/leadership" className="border border-offWhite text-offWhite px-10 py-5 rounded-full font-semibold text-lg hover:bg-offWhite hover:text-primary transition-all duration-300 hover:scale-105 hover:shadow-2xl inline-flex items-center gap-3">
-                                Meet the Leadership
-                                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M16 7c0 2.21-1.79 4-4 4S8 9.21 8 7s1.79-4 4-4 4 1.79 4 4zm-4 6c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-                                </svg>
-                            </Link>
-                        </div>
+            {/* CTA */}
+            <section className="bg-primary text-white py-24 px-6 relative overflow-hidden">
+                <div className="absolute -right-24 -bottom-24 w-96 h-96 rounded-full border border-white/10 pointer-events-none"></div>
+                <div className="absolute -right-12 -bottom-12 w-96 h-96 rounded-full border border-white/5 pointer-events-none"></div>
+                <div className="max-w-4xl mx-auto text-center relative z-10 flex flex-col items-center">
+                    <span className="text-xs uppercase tracking-[0.25em] text-accent font-bold mb-3">Join The Continental Mobilization</span>
+                    <h2 className="font-heading font-bold text-3xl sm:text-4xl lg:text-[44px] leading-tight">
+                        Help Design the Largest Living Structure on Earth
+                    </h2>
+                    <p className="text-white/80 text-base sm:text-lg max-w-2xl mt-4 leading-relaxed">
+                        Whether you represent government, philanthropy, or creative industries, we are ready to co-create long-term impact along the Great Green Wall.
+                    </p>
+                    <div className="flex flex-wrap items-center justify-center gap-4 mt-9">
+                        <Link href="/contact" className="group bg-white hover:bg-offWhite text-primary font-bold text-sm tracking-wide px-8 py-3.5 rounded-full transition-all duration-200 shadow-lg hover:shadow-xl inline-flex items-center gap-2">
+                            Talk to Our Team
+                            <span className="group-hover:translate-x-1 transition-transform">→</span>
+                        </Link>
+                        <Link href="/leadership" className="group border-2 border-white text-white hover:bg-white/10 font-semibold text-sm tracking-wide px-8 py-3.5 rounded-full transition-all duration-200 inline-flex items-center gap-2">
+                            Meet the Leadership
+                            <span className="group-hover:translate-x-1 transition-transform">→</span>
+                        </Link>
                     </div>
                 </div>
             </section>

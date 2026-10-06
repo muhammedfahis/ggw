@@ -10,6 +10,8 @@ module.exports = {
         primary: "#2D5016",
         secondary: "#E8DCC4",
         accent: "#D4AF37",
+        primaryDark: "#1F3810",
+        accentDark: "#B8972E",
         // Secondary colors
         deepEarth: "#3A2D1A",
         skyBlue: "#87CEEB",
