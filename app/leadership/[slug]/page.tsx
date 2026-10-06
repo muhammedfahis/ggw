@@ -29,7 +29,7 @@ export default function LeaderProfilePage({ params }: LeaderProfilePageProps) {
                 <div className="absolute inset-0 opacity-10">
                     <div className="absolute inset-0 bg-[url('/assets/home/rs=w:1920,m.jpeg')] bg-cover bg-center"></div>
                 </div>
-                <div className="relative z-10 px-6 md:px-12 lg:px-32 py-20 md:py-32">
+                <div className="relative z-10 px-4 md:px-6 py-20 md:py-24">
                     <div className="max-w-6xl mx-auto">
                         <div className="animate-fade-in-up">
                             {/* Back Button */}
@@ -45,7 +45,7 @@ export default function LeaderProfilePage({ params }: LeaderProfilePageProps) {
 
                             <div className="grid grid-cols-1 lg:grid-cols-[350px,1fr] gap-12 items-start">
                                 {/* Profile Image */}
-                                <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-accent">
+                                <div className="relative rounded overflow-hidden border-2 border-accent">
                                     <div className="relative aspect-[4/5]">
                                         <Image
                                             src={leader.image}
@@ -59,7 +59,7 @@ export default function LeaderProfilePage({ params }: LeaderProfilePageProps) {
                                     </div>
                                     {/* Category Badge */}
                                     <div className="absolute top-6 left-6">
-                                        <span className="px-4 py-2 bg-accent text-primary rounded-full text-sm font-bold uppercase tracking-wide backdrop-blur-sm">
+                                        <span className="tag bg-accent text-primary">
                                             {leader.category === "patron" ? "Distinguished Leader" : leader.category === "board" ? "Board" : "Management"}
                                         </span>
                                     </div>
@@ -67,10 +67,10 @@ export default function LeaderProfilePage({ params }: LeaderProfilePageProps) {
 
                                 {/* Profile Info */}
                                 <div className="text-offWhite">
-                                    <h1 className="text-5xl md:text-6xl lg:text-7xl font-heading font-bold mb-6 leading-tight">
+                                    <h1 className="text-4xl sm:text-5xl lg:text-[56px] font-heading font-bold mb-6 leading-[1.08] tracking-tight">
                                         {leader.name}
                                     </h1>
-                                    <p className="text-2xl md:text-3xl font-semibold text-accent mb-4">
+                                    <p className="text-xl md:text-2xl font-semibold text-accent mb-4">
                                         {leader.title}
                                     </p>
                                     <p className="text-xl md:text-2xl text-offWhite/90 mb-8 leading-relaxed">
@@ -83,7 +83,7 @@ export default function LeaderProfilePage({ params }: LeaderProfilePageProps) {
                                             {leader.expertise.map((skill) => (
                                                 <span
                                                     key={skill}
-                                                    className="px-4 py-2 bg-white/10 backdrop-blur-sm text-offWhite rounded-full text-sm font-medium border border-white/20"
+                                                    className="px-3 py-1.5 bg-white/10 backdrop-blur-sm text-offWhite rounded text-sm font-medium border border-white/20"
                                                 >
                                                     {skill}
                                                 </span>
@@ -126,11 +126,11 @@ export default function LeaderProfilePage({ params }: LeaderProfilePageProps) {
             </section>
 
             {/* Biography Section */}
-            <section className="px-6 md:px-12 lg:px-32 py-20 md:py-32 bg-white">
+            <section className="px-4 md:px-6 py-16 md:py-20 bg-white">
                 <div className="max-w-5xl mx-auto">
                     <div className="mb-12">
-                        <p className="font-accent text-xs uppercase tracking-wider text-accent mb-4">BIOGRAPHY</p>
-                        <h2 className="text-4xl md:text-5xl font-heading font-bold text-deepEarth mb-8">About {leader.name.split(' ').slice(-1)[0]}</h2>
+                        <p className="eyebrow mb-3">BIOGRAPHY</p>
+                        <h2 className="text-3xl sm:text-4xl font-heading font-bold text-deepEarth tracking-tight mb-8">About {leader.name.split(' ').slice(-1)[0]}</h2>
                         <div className="w-32 h-1 bg-accent"></div>
                     </div>
 
@@ -146,11 +146,11 @@ export default function LeaderProfilePage({ params }: LeaderProfilePageProps) {
 
             {/* Highlights Section */}
             {leader.highlights && leader.highlights.length > 0 && (
-                <section className="px-6 md:px-12 lg:px-32 py-20 md:py-32 bg-secondary">
+                <section className="px-4 md:px-6 py-16 md:py-20 bg-secondary">
                     <div className="max-w-5xl mx-auto">
                         <div className="mb-12">
-                            <p className="font-accent text-xs uppercase tracking-wider text-accent mb-4">CAREER</p>
-                            <h2 className="text-4xl md:text-5xl font-heading font-bold text-deepEarth mb-8">Key Highlights</h2>
+                            <p className="eyebrow mb-3">CAREER</p>
+                            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-deepEarth tracking-tight mb-8">Key Highlights</h2>
                             <div className="w-32 h-1 bg-accent"></div>
                         </div>
 
@@ -158,7 +158,7 @@ export default function LeaderProfilePage({ params }: LeaderProfilePageProps) {
                             {leader.highlights.map((highlight, index) => (
                                 <div
                                     key={index}
-                                    className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow border border-accent/10"
+                                    className="bg-white rounded p-6 border border-deepEarth/10"
                                 >
                                     <div className="flex items-start gap-4">
                                         <div className="w-10 h-10 bg-accent/10 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
@@ -177,11 +177,11 @@ export default function LeaderProfilePage({ params }: LeaderProfilePageProps) {
 
             {/* Distinctions Section */}
             {leader.distinctions && leader.distinctions.length > 0 && (
-                <section className="px-6 md:px-12 lg:px-32 py-20 md:py-32 bg-white">
+                <section className="px-4 md:px-6 py-16 md:py-20 bg-white">
                     <div className="max-w-5xl mx-auto">
                         <div className="mb-12">
-                            <p className="font-accent text-xs uppercase tracking-wider text-accent mb-4">HONORS</p>
-                            <h2 className="text-4xl md:text-5xl font-heading font-bold text-deepEarth mb-8">Distinctions & Awards</h2>
+                            <p className="eyebrow mb-3">HONORS</p>
+                            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-deepEarth tracking-tight mb-8">Distinctions & Awards</h2>
                             <div className="w-32 h-1 bg-accent"></div>
                         </div>
 
@@ -189,7 +189,7 @@ export default function LeaderProfilePage({ params }: LeaderProfilePageProps) {
                             {leader.distinctions.map((distinction, index) => (
                                 <div
                                     key={index}
-                                    className="bg-gradient-to-br from-accent/5 to-accent/10 rounded-2xl p-8 border border-accent/20 hover:border-accent/40 transition-colors"
+                                    className="bg-gradient-to-br from-accent/5 to-accent/10 rounded p-8 border border-accent/20 hover:border-accent/40 transition-colors"
                                 >
                                     <div className="flex items-start gap-4">
                                         <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center flex-shrink-0">
@@ -207,18 +207,18 @@ export default function LeaderProfilePage({ params }: LeaderProfilePageProps) {
             )}
 
             {/* CTA Section */}
-            <section className="px-6 md:px-12 lg:px-32 py-20 md:py-32 bg-gradient-to-br from-primary via-deepEarth to-primary">
+            <section className="px-4 md:px-6 py-16 md:py-20 bg-gradient-to-br from-primary via-deepEarth to-primary">
                 <div className="max-w-4xl mx-auto text-center">
-                    <h2 className="text-4xl md:text-5xl font-heading font-bold text-offWhite mb-8">
+                    <h2 className="text-3xl sm:text-4xl font-heading font-bold text-offWhite tracking-tight mb-6">
                         Interested in Our Leadership Team?
                     </h2>
-                    <p className="text-xl md:text-2xl text-offWhite/90 mb-12 leading-relaxed max-w-3xl mx-auto">
+                    <p className="text-lg text-offWhite/80 mb-10 leading-relaxed max-w-2xl mx-auto">
                         Learn more about how our leaders are shaping the future of climate restoration across the Sahel.
                     </p>
-                    <div className="flex flex-col sm:flex-row gap-6 justify-center">
+                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <Link
                             href="/leadership"
-                            className="bg-offWhite text-primary px-10 py-5 rounded-full font-semibold text-lg hover:bg-offWhite/90 transition-all duration-300 hover:scale-105 hover:shadow-2xl inline-flex items-center gap-3"
+                            className="btn-accent"
                         >
                             <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                                 <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z" />
@@ -227,7 +227,7 @@ export default function LeaderProfilePage({ params }: LeaderProfilePageProps) {
                         </Link>
                         <Link
                             href="/contact"
-                            className="border border-offWhite text-offWhite px-10 py-5 rounded-full font-semibold text-lg hover:bg-offWhite hover:text-primary transition-all duration-300 hover:scale-105 hover:shadow-2xl inline-flex items-center gap-3"
+                            className="btn-outline-light"
                         >
                             Get in Touch
                             <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">

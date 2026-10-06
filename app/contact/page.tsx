@@ -168,7 +168,7 @@ export default function ContactPage() {
                         <span className="font-semibold text-offWhite">Contact</span>
                     </nav>
                     <div className="max-w-2xl animate-fade-in-up">
-                        <p className="font-accent text-xs font-semibold uppercase tracking-[0.2em] text-accent">Get in touch</p>
+                        <p className="eyebrow eyebrow-light">Get in touch</p>
                         <h1 className="mt-3 font-heading text-4xl font-bold leading-tight tracking-tight text-offWhite sm:text-5xl">
                             Let&apos;s restore the Sahel together
                         </h1>
@@ -285,7 +285,7 @@ export default function ContactPage() {
                                     <button
                                         type="submit"
                                         disabled={isSubmitting}
-                                        className="inline-flex items-center justify-center rounded bg-primary px-8 py-3.5 text-sm font-semibold text-offWhite transition-colors hover:bg-primaryDark disabled:cursor-not-allowed disabled:opacity-60"
+                                        className="btn-primary"
                                     >
                                         {isSubmitting ? "Sending…" : "Send message"}
                                     </button>
@@ -296,7 +296,7 @@ export default function ContactPage() {
 
                     <div className="flex flex-col gap-6 lg:col-span-5">
                         <div className="rounded border border-deepEarth/10 bg-white p-6 sm:p-8">
-                            <p className="font-accent text-xs font-semibold uppercase tracking-[0.2em] text-accentDark">Direct inquiries</p>
+                            <p className="eyebrow">Direct inquiries</p>
                             <h2 className="mt-2 font-heading text-2xl font-bold text-deepEarth">Email us</h2>
                             <p className="mt-3 text-sm leading-relaxed text-charcoal/70">
                                 For administrative, institutional and strategic partnership correspondence:
@@ -313,12 +313,12 @@ export default function ContactPage() {
                         </div>
 
                         <div className="rounded border border-deepEarth/10 bg-white p-6 sm:p-8">
-                            <p className="font-accent text-xs font-semibold uppercase tracking-[0.2em] text-accentDark">Permanent delegations</p>
+                            <p className="eyebrow">Permanent delegations</p>
                             <h2 className="mt-2 font-heading text-2xl font-bold text-deepEarth">Our offices</h2>
                             <ul className="mt-5 divide-y divide-deepEarth/10">
                                 {offices.map((o) => (
                                     <li key={o.name} className="flex gap-4 py-4 first:pt-0 last:pb-0">
-                                        <span className="flex h-10 w-10 flex-none items-center justify-center rounded-md bg-secondary text-primary">
+                                        <span className="flex h-10 w-10 flex-none items-center justify-center rounded bg-secondary text-primary">
                                             <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.75} d={o.icon} />
                                             </svg>
@@ -336,10 +336,10 @@ export default function ContactPage() {
             </section>
 
             {/* How can we help */}
-            <section className="border-t border-deepEarth/10 bg-secondary/40 px-4 py-16 md:px-6">
+            <section className="border-t border-deepEarth/10 bg-secondary/40 px-4 py-16 md:px-6 md:py-20">
                 <div className="mx-auto max-w-6xl">
-                    <p className="font-accent text-xs font-semibold uppercase tracking-[0.2em] text-accentDark">Not sure who to contact?</p>
-                    <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-primary">How can we help?</h2>
+                    <p className="eyebrow">Not sure who to contact?</p>
+                    <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-primary sm:text-4xl">How can we help?</h2>
                     <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-3">
                         {helpTopics.map((t) => (
                             <Link
@@ -352,7 +352,7 @@ export default function ContactPage() {
                                 </svg>
                                 <h3 className="mt-4 font-heading text-xl font-semibold text-deepEarth">{t.title}</h3>
                                 <p className="mt-2 text-sm leading-relaxed text-charcoal/70">{t.body}</p>
-                                <span className="mt-4 inline-flex items-center gap-1 font-accent text-xs font-semibold uppercase tracking-wider text-primary">
+                                <span className="link-arrow mt-4">
                                     {t.cta} <span className="transition-transform group-hover:translate-x-1">→</span>
                                 </span>
                             </Link>

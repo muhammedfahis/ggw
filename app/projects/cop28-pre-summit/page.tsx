@@ -76,22 +76,22 @@ export default function Cop28PreSummitPage() {
           <div className="absolute inset-0 bg-gradient-to-br from-primary/70 via-primary/60 to-primary/80" />
         </div>
 
-        <div className="relative z-10 px-6 md:px-12 lg:px-32 py-[120px] md:py-[140px] lg:py-[160px]">
+        <div className="relative z-10 px-4 md:px-6 py-20 md:py-24">
           <div className="max-w-6xl mx-auto text-center">
-            <div className="space-y-8">
-              <p className="font-accent text-xs uppercase tracking-wider text-accent mb-6">
+            <div>
+              <p className="eyebrow eyebrow-light mb-3">
                 CLIMATE SUMMIT SERIES
               </p>
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-heading font-bold text-offWhite mb-8 leading-tight">
+              <h1 className="text-4xl sm:text-5xl lg:text-[56px] font-heading font-bold text-offWhite mb-6 leading-[1.08] tracking-tight">
                 COP28 Pre-summit Series
               </h1>
-              <p className="text-xl md:text-2xl lg:text-3xl text-offWhite/90 max-w-4xl mx-auto leading-relaxed mb-12">
+              <p className="text-lg sm:text-xl text-offWhite/85 max-w-3xl mx-auto leading-relaxed mb-10">
                 Aligning climate, education, food security, health, and culture coalitions ahead of COP28 through cross-sector dialogues that put communities at the centre.
               </p>
-              <div className="flex flex-col sm:flex-row gap-6 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   href="/contact"
-                  className="bg-offWhite text-primary px-10 py-5 rounded-full font-semibold text-lg hover:bg-offWhite/90 transition-all duration-300 hover:scale-105 hover:shadow-2xl inline-flex items-center gap-3 justify-center"
+                  className="btn-accent"
                 >
                   Explore Partnerships
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -100,7 +100,7 @@ export default function Cop28PreSummitPage() {
                 </Link>
                 <Link
                   href="/projects"
-                  className="border border-offWhite text-offWhite px-10 py-5 rounded-full font-semibold text-lg hover:bg-offWhite hover:text-primary transition-all duration-300 hover:scale-105 hover:shadow-2xl inline-flex items-center gap-3 justify-center"
+                  className="btn-outline-light"
                 >
                   Browse All Projects
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -114,17 +114,17 @@ export default function Cop28PreSummitPage() {
       </section>
 
       {/* Overview + Stats */}
-      <section className="px-6 md:px-12 lg:px-32 py-20 md:py-32 bg-white">
+      <section className="px-4 md:px-6 py-16 md:py-20 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="mb-16 text-center">
-            <p className="font-accent text-xs uppercase tracking-wider text-accent mb-6">
+            <p className="eyebrow mb-3">
               PROJECT OVERVIEW
             </p>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-deepEarth mb-8 leading-tight">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-deepEarth mb-6 tracking-tight leading-tight">
               One Table for Many Coalitions
             </h2>
-            <div className="w-32 h-1 bg-accent mx-auto mb-8" />
-            <p className="text-xl text-charcoal/80 max-w-3xl mx-auto leading-relaxed">
+            <div className="w-12 h-0.5 bg-accent mx-auto mb-6" />
+            <p className="text-[17px] text-charcoal/75 max-w-3xl mx-auto leading-relaxed">
               The COP28 Pre-summit Series convened leaders from multiple sectors so that commitments on paper translate into coordinated action across ministries, agencies, and movements.
             </p>
           </div>
@@ -133,12 +133,12 @@ export default function Cop28PreSummitPage() {
             {stats.map((stat) => (
               <div
                 key={stat.label}
-                className="text-center bg-secondary rounded-3xl p-10 shadow-lg border border-accent/20 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
+                className="text-center bg-secondary rounded p-10 border border-accent/20"
               >
                 <div className="text-4xl md:text-5xl font-heading font-bold text-primary mb-4">
                   {stat.value}
                 </div>
-                <div className="text-lg font-semibold text-deepEarth mb-2 uppercase tracking-wide">
+                <div className="font-accent text-sm font-semibold text-deepEarth mb-2 uppercase tracking-wider">
                   {stat.label}
                 </div>
                 <div className="text-charcoal/70 leading-relaxed text-base">
@@ -151,17 +151,17 @@ export default function Cop28PreSummitPage() {
       </section>
 
       {/* Project Background */}
-      <section className="px-6 md:px-12 lg:px-32 py-20 md:py-32 bg-offWhite">
+      <section className="px-4 md:px-6 py-16 md:py-20 bg-offWhite">
         <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div>
             <div className="mb-8">
-              <p className="font-accent text-xs uppercase tracking-wider text-accent mb-4">
+              <p className="eyebrow mb-3">
                 PROJECT BACKGROUND
               </p>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-deepEarth mb-6 leading-tight">
+              <h2 className="text-3xl sm:text-4xl font-heading font-bold text-deepEarth mb-6 tracking-tight leading-tight">
                 Preparing the Ground Before the Summit Stage
               </h2>
-              <div className="w-24 h-1 bg-accent mb-6" />
+              <div className="w-12 h-0.5 bg-accent mb-6" />
             </div>
             <div className="space-y-5 text-lg text-charcoal/80 leading-relaxed">
               <p>
@@ -176,7 +176,7 @@ export default function Cop28PreSummitPage() {
             </div>
           </div>
 
-          <div className="bg-white rounded-3xl shadow-lg border border-accent/20 overflow-hidden">
+          <div className="bg-white rounded border border-deepEarth/10 overflow-hidden">
             <div className="relative h-80 md:h-96 lg:h-[420px] overflow-hidden">
               <Image
                 src="/assets/projects/rs=w:365,h:365,cg:true_1.jpeg"
@@ -187,7 +187,7 @@ export default function Cop28PreSummitPage() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent" />
               <div className="absolute bottom-6 left-6 right-6 text-offWhite">
-                <p className="text-xs uppercase tracking-wider mb-2 font-semibold">
+                <p className="eyebrow eyebrow-light mb-2">
                   FIELD NOTE
                 </p>
                 <p className="text-xl md:text-2xl font-heading font-semibold leading-tight mb-2">
@@ -201,17 +201,17 @@ export default function Cop28PreSummitPage() {
       </section>
 
       {/* Programme Design */}
-      <section className="px-6 md:px-12 lg:px-32 py-20 md:py-32 bg-white">
+      <section className="px-4 md:px-6 py-16 md:py-20 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <p className="font-accent text-xs uppercase tracking-wider text-accent mb-6">
+            <p className="eyebrow mb-3">
               PROGRAMME DESIGN
             </p>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-deepEarth mb-8 leading-tight">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-deepEarth mb-6 tracking-tight leading-tight">
               How the Series Was Structured
             </h2>
-            <div className="w-32 h-1 bg-accent mx-auto mb-8" />
-            <p className="text-xl text-charcoal/80 max-w-3xl mx-auto leading-relaxed">
+            <div className="w-12 h-0.5 bg-accent mx-auto mb-6" />
+            <p className="text-[17px] text-charcoal/75 max-w-3xl mx-auto leading-relaxed">
               Each gathering layered strategic briefings with grounded stories and creative interventions, so that decisions were anchored in lived realities.
             </p>
           </div>
@@ -220,9 +220,9 @@ export default function Cop28PreSummitPage() {
             {approach.map((item) => (
               <div
                 key={item.title}
-                className="bg-offWhite rounded-3xl p-8 shadow-lg border border-accent/20 hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 flex flex-col"
+                className="bg-offWhite rounded p-8 border border-deepEarth/10 hover:border-primary/40 transition-colors flex flex-col"
               >
-                <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center mb-5">
+                <div className="w-12 h-12 rounded bg-accent/10 flex items-center justify-center mb-5">
                   <span className="w-3 h-3 rounded-full bg-accent" />
                 </div>
                 <h3 className="text-xl md:text-2xl font-heading font-bold text-deepEarth mb-4 leading-tight">
@@ -236,17 +236,17 @@ export default function Cop28PreSummitPage() {
       </section>
 
       {/* Series Gallery */}
-      <section className="px-6 md:px-12 lg:px-32 py-20 md:py-32 bg-offWhite">
+      <section className="px-4 md:px-6 py-16 md:py-20 bg-offWhite">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <p className="font-accent text-xs uppercase tracking-wider text-accent mb-6">
+            <p className="eyebrow mb-3">
               SERIES HIGHLIGHTS
             </p>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-deepEarth mb-8 leading-tight">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-deepEarth mb-6 tracking-tight leading-tight">
               Scenes from the Pre-summit Series
             </h2>
-            <div className="w-32 h-1 bg-accent mx-auto mb-8" />
-            <p className="text-xl text-charcoal/80 max-w-3xl mx-auto leading-relaxed">
+            <div className="w-12 h-0.5 bg-accent mx-auto mb-6" />
+            <p className="text-[17px] text-charcoal/75 max-w-3xl mx-auto leading-relaxed">
               Moments from plenaries, working groups, and cultural performances that shaped the road to COP28.
             </p>
           </div>
@@ -255,7 +255,7 @@ export default function Cop28PreSummitPage() {
             {galleryImages.map((image) => (
               <div
                 key={image.alt}
-                className="bg-white rounded-3xl shadow-lg border border-accent/20 overflow-hidden group"
+                className="bg-white rounded border border-deepEarth/10 overflow-hidden group"
               >
                 <div className="relative aspect-[4/3] overflow-hidden">
                   <Image
@@ -276,22 +276,22 @@ export default function Cop28PreSummitPage() {
       </section>
 
       {/* Call to Action */}
-      <section className="px-6 md:px-12 lg:px-32 py-20 md:py-32 bg-gradient-to-br from-primary via-deepEarth to-primary">
+      <section className="px-4 md:px-6 py-16 md:py-20 bg-gradient-to-br from-primary via-deepEarth to-primary">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="space-y-8">
-            <p className="font-accent text-xs uppercase tracking-wider text-accent mb-6">
+          <div>
+            <p className="eyebrow eyebrow-light mb-3">
               BEYOND THE SUMMIT
             </p>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-offWhite mb-8 leading-tight">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-offWhite mb-6 tracking-tight leading-tight">
               Turn Commitments into Coordinated Action
             </h2>
-            <p className="text-xl md:text-2xl text-offWhite/90 mb-12 leading-relaxed max-w-3xl mx-auto">
+            <p className="text-lg text-offWhite/80 mb-10 leading-relaxed max-w-2xl mx-auto">
               Work with GGWoA to design convenings, coalitions, and creative moments that keep the spirit of the COP28 Pre-summit Series alive in communities across the Sahel and beyond.
             </p>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/contact"
-                className="bg-offWhite text-primary px-10 py-5 rounded-full font-semibold text-lg hover:bg-offWhite/90 transition-all duration-300 hover:scale-105 hover:shadow-2xl inline-flex items-center gap-3 justify-center"
+                className="btn-accent"
               >
                 Start a Conversation
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -300,7 +300,7 @@ export default function Cop28PreSummitPage() {
               </Link>
               <Link
                 href="/projects"
-                className="border border-offWhite text-offWhite px-10 py-5 rounded-full font-semibold text-lg hover:bg-offWhite hover:text-primary transition-all duration-300 hover:scale-105 hover:shadow-2xl inline-flex items-center gap-3 justify-center"
+                className="btn-outline-light"
               >
                 Explore Flagship Work
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">

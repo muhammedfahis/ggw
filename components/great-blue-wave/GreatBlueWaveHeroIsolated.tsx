@@ -210,7 +210,7 @@ export function GreatBlueWaveHeroIsolated() {
           <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-center sm:gap-6">
             <Link
               href="/contact"
-              className="group relative inline-flex items-center justify-center rounded-full px-8 py-4 text-base font-semibold transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent focus-visible:ring-[#0ea5e9]"
+              className="group relative inline-flex items-center justify-center rounded-full px-8 py-4 text-base font-semibold transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent focus-visible:ring-water-bright"
               style={{ 
                 backgroundColor: PALETTE.white,
                 color: PALETTE.deepOcean,
@@ -241,7 +241,7 @@ export function GreatBlueWaveHeroIsolated() {
 
             <Link
               href="/projects"
-              className="group inline-flex items-center justify-center rounded-full px-8 py-4 text-base font-semibold transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent focus-visible:ring-[#0ea5e9]"
+              className="group inline-flex items-center justify-center rounded-full px-8 py-4 text-base font-semibold transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent focus-visible:ring-water-bright"
               style={{ 
                 backgroundColor: 'transparent',
                 color: PALETTE.white,
@@ -281,11 +281,11 @@ export function GreatBlueWaveHeroIsolated() {
         type="button"
         aria-label="Scroll to content"
         onClick={handleScrollClick}
-        className="gbw-hero-scroll group absolute bottom-10 left-1/2 z-10 flex -translate-x-1/2 flex-col items-center gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#0ea5e9] focus-visible:ring-offset-[#013a63]"
+        className="gbw-hero-scroll group absolute bottom-10 left-1/2 z-10 flex -translate-x-1/2 flex-col items-center gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-water-bright focus-visible:ring-offset-water-deep"
       >
         <span className="sr-only">Scroll to content</span>
         <div className="relative flex h-10 w-6 items-start justify-center rounded-full border border-white/30">
-          <span className="gbw-hero-scroll-dot mt-1 h-1.5 w-1.5 rounded-full bg-[#e6f7ff]" />
+          <span className="gbw-hero-scroll-dot mt-1 h-1.5 w-1.5 rounded-full bg-water-foam" />
         </div>
       </button>
 

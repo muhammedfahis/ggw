@@ -488,14 +488,14 @@ export default function GalleryPage() {
                     <div className="absolute inset-0 bg-[url('/assets/gallery/rs=w:1110_1.jpeg')] bg-cover bg-center opacity-20"></div>
                     <div className="absolute inset-0 bg-gradient-to-br from-primary/70 via-primary/60 to-primary/80"></div>
                 </div>
-                <div className="relative z-10 px-6 md:px-12 lg:px-32 py-[120px] md:py-[140px] lg:py-[160px]">
+                <div className="relative z-10 px-4 md:px-6 py-20 md:py-24">
                     <div className="max-w-6xl mx-auto text-center">
                         <div className={`space-y-8 ${isLoaded ? 'animate-fade-in-up' : 'opacity-0'}`}>
-                            <p className="font-accent text-xs uppercase tracking-wider text-accent mb-6" style={{animationDelay: '0.2s'}}>GALLERY</p>
-                            <h1 className="text-5xl md:text-6xl lg:text-7xl font-heading font-bold text-offWhite mb-8 leading-tight" style={{animationDelay: '0.4s'}}>
+                            <p className="eyebrow eyebrow-light mb-3" style={{animationDelay: '0.2s'}}>GALLERY</p>
+                            <h1 className="text-4xl sm:text-5xl lg:text-[56px] font-heading font-bold text-offWhite mb-6 leading-[1.08] tracking-tight" style={{animationDelay: '0.4s'}}>
                                 Our Work in Images
                             </h1>
-                            <p className="text-xl md:text-2xl lg:text-3xl text-offWhite/90 max-w-4xl mx-auto leading-relaxed" style={{animationDelay: '0.6s'}}>
+                            <p className="text-lg sm:text-xl text-offWhite/85 max-w-3xl mx-auto leading-relaxed" style={{animationDelay: '0.6s'}}>
                                 Explore our projects and moments through photography. From policy rooms to Sahel dunes, witness the chapters powering the Great Green Wall movement.
                             </p>
                         </div>
@@ -504,7 +504,7 @@ export default function GalleryPage() {
             </section>
 
             {/* Filter Controls */}
-            <section className="sticky top-0 bg-white/95 backdrop-blur-sm border-b border-accent/20 z-40 px-6 md:px-12 lg:px-32 py-6">
+            <section className="sticky top-0 bg-white/95 backdrop-blur-sm border-b border-accent/20 z-40 px-4 md:px-6 py-4">
                 <div className="max-w-6xl mx-auto">
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                         <div className="flex flex-wrap items-center gap-3">
@@ -512,10 +512,10 @@ export default function GalleryPage() {
                                 <button
                                     key={category}
                                     onClick={() => setSelectedCategory(category)}
-                                    className={`px-6 py-3 rounded-full text-sm font-semibold whitespace-nowrap transition-all duration-300 ${
+                                    className={`btn btn-sm text-sm whitespace-nowrap border ${
                                         selectedCategory === category
-                                            ? 'bg-accent text-primary scale-105 shadow-lg'
-                                            : 'bg-transparent border border-accent/30 text-charcoal hover:bg-accent hover:text-primary hover:border-accent'
+                                            ? 'bg-primary border-primary text-offWhite'
+                                            : 'bg-transparent border-deepEarth/15 text-charcoal hover:border-primary hover:text-primary'
                                     }`}
                                 >
                                     {category}
@@ -530,7 +530,7 @@ export default function GalleryPage() {
             </section>
 
             {/* Gallery Grid */}
-            <section className="px-6 md:px-12 lg:px-32 py-20 md:py-32">
+            <section className="px-4 md:px-6 py-16 md:py-20">
                 <div className="max-w-6xl mx-auto">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 lg:gap-10">
                         {filteredImages.map((image, index) => (
@@ -540,7 +540,7 @@ export default function GalleryPage() {
                                 style={{animationDelay: `${0.2 + index * 0.05}s`}}
                                 onClick={() => openLightbox(image)}
                             >
-                                <div className="relative overflow-hidden rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 border border-accent/20">
+                                <div className="relative overflow-hidden rounded border border-deepEarth/10 hover:border-primary/40 transition-colors">
                                     {/* Image Container */}
                                     <div className="relative aspect-[3/2] overflow-hidden">
                                         <Image
@@ -555,7 +555,7 @@ export default function GalleryPage() {
                                         <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                             <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
                                                 <div className="flex items-center gap-3 mb-3">
-                                                    <span className="px-3 py-1 bg-accent/90 text-primary rounded-full text-xs font-bold uppercase backdrop-blur-sm">
+                                                    <span className="tag bg-accent/90 text-primary backdrop-blur-sm">
                                                         {image.category}
                                                     </span>
                                                     <span className="text-xs font-medium">View Full Size</span>
@@ -566,7 +566,7 @@ export default function GalleryPage() {
                                         
                                         {/* Category Badge */}
                                         <div className="absolute top-4 left-4">
-                                            <span className="px-3 py-1 bg-white/90 backdrop-blur-sm text-primary rounded-full text-xs font-semibold">
+                                            <span className="tag bg-white/90 backdrop-blur-sm text-primary">
                                                 {image.category}
                                             </span>
                                         </div>
@@ -635,7 +635,7 @@ export default function GalleryPage() {
                         {/* Caption */}
                         <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-8">
                             <div className="flex items-center gap-3 mb-3">
-                                <span className="px-3 py-1 bg-accent text-primary rounded-full text-sm font-bold uppercase">
+                                <span className="tag bg-accent text-primary">
                                     {selectedImage.category}
                                 </span>
                             </div>
@@ -652,24 +652,24 @@ export default function GalleryPage() {
             )}
 
             {/* Media Desk CTA */}
-            <section className="px-6 md:px-12 lg:px-32 py-20 md:py-32 bg-gradient-to-br from-primary via-deepEarth to-primary">
+            <section className="px-4 md:px-6 py-16 md:py-20 bg-gradient-to-br from-primary via-deepEarth to-primary">
                 <div className="max-w-4xl mx-auto text-center">
                     <div className={`space-y-8 ${isLoaded ? 'animate-fade-in-up' : 'opacity-0'}`}>
-                        <p className="font-accent text-xs uppercase tracking-wider text-accent mb-6" style={{animationDelay: '0.2s'}}>MEDIA DESK</p>
-                        <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-offWhite mb-8 leading-tight" style={{animationDelay: '0.4s'}}>
+                        <p className="eyebrow eyebrow-light mb-3" style={{animationDelay: '0.2s'}}>MEDIA DESK</p>
+                        <h2 className="text-3xl sm:text-4xl font-heading font-bold text-offWhite mb-6 tracking-tight leading-tight" style={{animationDelay: '0.4s'}}>
                             Need Full-Resolution Assets or Editorial Stories?
                         </h2>
-                        <p className="text-xl md:text-2xl text-offWhite/90 mb-12 leading-relaxed max-w-3xl mx-auto" style={{animationDelay: '0.6s'}}>
+                        <p className="text-lg text-offWhite/80 mb-10 leading-relaxed max-w-2xl mx-auto" style={{animationDelay: '0.6s'}}>
                             The GGWoA media desk curates ready-to-publish sets for partners, press, and collaborators. Let us know what you need for your coverage.
                         </p>
-                        <div className="flex flex-col sm:flex-row gap-6 justify-center" style={{animationDelay: '0.8s'}}>
-                            <Link href="/contact" className="bg-offWhite text-primary px-10 py-5 rounded-full font-semibold text-lg hover:bg-offWhite/90 transition-all duration-300 hover:scale-105 hover:shadow-2xl inline-flex items-center gap-3">
+                        <div className="flex flex-col sm:flex-row gap-4 justify-center" style={{animationDelay: '0.8s'}}>
+                            <Link href="/contact" className="btn-accent">
                                 Contact Media Desk
                                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                                     <path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/>
                                 </svg>
                             </Link>
-                            <Link href="/news" className="border border-offWhite text-offWhite px-10 py-5 rounded-full font-semibold text-lg hover:bg-offWhite hover:text-primary transition-all duration-300 hover:scale-105 hover:shadow-2xl inline-flex items-center gap-3">
+                            <Link href="/news" className="btn-outline-light">
                                 Browse News Archive
                                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                                     <path d="M16.01 11H4v2h12.01v3L20 12l-3.99-4v3z"/>

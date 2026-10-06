@@ -12,7 +12,7 @@ export const metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" className="h-full">
-      <body className="min-h-screen bg-ggwBg text-ggwDark font-body antialiased">
+      <body className="min-h-screen bg-offWhite text-charcoal font-body antialiased">
         {/* Toggles data-theme="water" for the Great Blue Wave route only */}
         <WaterThemeWatcher />
         <NavBar />

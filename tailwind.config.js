@@ -20,11 +20,14 @@ module.exports = {
         offWhite: "#FDFBF7",
         warmGray: "#F5F1E8",
         charcoal: "#2C2C2C",
-        // Legacy for compatibility
-        ggwGreen: "#2D5016",
-        ggwBg: "#FDFBF7",
-        ggwDark: "#2C2C2C",
-        ggwAccent: "#D4AF37",
+        // The Great Blue Wave theme
+        water: {
+          deep: "#013a63", // navy surfaces (nav, footer, hero)
+          DEFAULT: "#0369a1", // mid blue
+          teal: "#0993af", // accent text and buttons on light backgrounds
+          bright: "#0ea5e9", // accent on dark backgrounds, hover states
+          foam: "#e6f7ff", // text on navy, pale section backgrounds
+        },
       },
       fontFamily: {
         heading: ["Playfair Display", "Cormorant", "Georgia", "serif"],
@@ -42,14 +45,6 @@ module.exports = {
         '64px': '64px',
         '96px': '96px',
         '128px': '128px',
-      },
-      borderRadius: {
-        'sm': '2px',
-        'md': '4px',
-        'lg': '8px',
-        'xl': '12px',
-        '2xl': '16px',
-        '3xl': '24px',
       },
       animation: {
         'fadeIn': 'fadeIn 0.6s ease-out',

@@ -93,7 +93,7 @@ const candidatePaths = [
 
 function Overline({ children, light = false }: { children: ReactNode; light?: boolean }) {
   return (
-    <p className={`font-accent text-xs font-semibold uppercase tracking-[0.2em] ${light ? "text-accent" : "text-accentDark"}`}>
+    <p className={`eyebrow ${light ? "eyebrow-light" : ""}`}>
       {children}
     </p>
   );
@@ -136,10 +136,10 @@ export default function AdvanceAfricaPage() {
                 Advance Africa Foundation (ADAF) converts trained, underutilized talent into employees and business owners — and connects them to the capital, markets and long-term support they need to create jobs for others.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
-                <a href={`${ADAF_URL}/partners`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded bg-primary px-7 py-3.5 text-sm font-semibold text-offWhite hover:bg-primaryDark transition-colors">
+                <a href={`${ADAF_URL}/partners`} target="_blank" rel="noopener noreferrer" className="btn-primary">
                   Partner With ADAF
                 </a>
-                <a href={ADAF_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded border-[1.5px] border-primary px-7 py-3.5 text-sm font-semibold text-primary hover:bg-primary hover:text-offWhite transition-colors">
+                <a href={ADAF_URL} target="_blank" rel="noopener noreferrer" className="btn-outline">
                   Visit advanceafrica.org <ExternalIcon />
                 </a>
               </div>
@@ -168,7 +168,7 @@ export default function AdvanceAfricaPage() {
           <dl className="max-w-6xl mx-auto px-4 md:px-6 grid grid-cols-2 lg:grid-cols-4 divide-offWhite/10 lg:divide-x">
             {facts.map((f) => (
               <div key={f.label} className="py-6 lg:px-6 first:lg:pl-0">
-                <dt className="font-accent text-[11px] uppercase tracking-[0.18em] text-accent">{f.label}</dt>
+                <dt className="font-accent text-[11px] uppercase tracking-[0.2em] text-accent">{f.label}</dt>
                 <dd className="mt-1 font-heading text-lg text-offWhite">{f.value}</dd>
               </div>
             ))}
@@ -294,7 +294,7 @@ export default function AdvanceAfricaPage() {
                   </span>
                   <h3 className="mt-3 font-heading font-semibold text-xl text-primary">{v.title}</h3>
                   <p className="mt-2 text-sm leading-relaxed text-charcoal/75">{v.body}</p>
-                  <span className="mt-4 inline-flex items-center gap-1 font-accent text-xs font-semibold uppercase tracking-wider text-primary">
+                  <span className="link-arrow mt-4">
                     Learn more <span className="transition-transform group-hover:translate-x-1">→</span>
                   </span>
                 </a>
@@ -305,15 +305,15 @@ export default function AdvanceAfricaPage() {
                   AAFC
                 </span>
                 <h3 className="mt-3 font-heading font-semibold text-xl text-primary">The Conference</h3>
-                <p className="mt-1 font-accent text-xs uppercase tracking-wider text-accentDark">Every April · In-person</p>
+                <p className="mt-1 font-accent text-xs font-semibold uppercase tracking-wider text-accentDark">Every April · In-person</p>
                 <p className="mt-2 text-sm leading-relaxed text-charcoal/75">
                   The annual Human Capital Transformation Conference brings candidates, graduates, mentors, employers, financiers and government together for a day of learning, recognition and connection.
                 </p>
                 <div className="mt-4 flex flex-wrap gap-2">
-                  <a href={`${ADAF_URL}/the-conference`} target="_blank" rel="noopener noreferrer" className="rounded bg-primary px-4 py-2 text-xs font-semibold text-offWhite hover:bg-primaryDark transition-colors">
+                  <a href={`${ADAF_URL}/the-conference`} target="_blank" rel="noopener noreferrer" className="btn-primary btn-sm">
                     Register
                   </a>
-                  <a href={`${ADAF_URL}/the-conference`} target="_blank" rel="noopener noreferrer" className="rounded border border-primary px-4 py-2 text-xs font-semibold text-primary hover:bg-primary hover:text-offWhite transition-colors">
+                  <a href={`${ADAF_URL}/the-conference`} target="_blank" rel="noopener noreferrer" className="btn-outline btn-sm">
                     Sponsor
                   </a>
                 </div>
@@ -363,7 +363,7 @@ export default function AdvanceAfricaPage() {
           </div>
 
           <div className="lg:col-span-5">
-            <p className="font-accent text-xs uppercase tracking-[0.18em] text-accent">UN Sustainable Development Goals</p>
+            <p className="eyebrow eyebrow-light">UN Sustainable Development Goals</p>
             <ul className="mt-4 grid grid-cols-3 gap-3">
               {sdgs.map((g) => (
                 <li
@@ -391,7 +391,7 @@ export default function AdvanceAfricaPage() {
           <div className="mt-12 grid grid-cols-1 lg:grid-cols-12 gap-8">
             {/* Organizations */}
             <div className="lg:col-span-7 rounded border border-deepEarth/10 bg-white p-8">
-              <p className="font-accent text-xs uppercase tracking-[0.18em] text-accentDark">For organizations</p>
+              <p className="eyebrow">For organizations</p>
               <h3 className="mt-2 font-heading font-semibold text-2xl text-deepEarth">Six ways to partner</h3>
               <ul className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-5">
                 {partnerRoles.map((r, i) => (
@@ -414,7 +414,7 @@ export default function AdvanceAfricaPage() {
                   ))}
                 </ul>
                 <div className="flex flex-col items-start sm:items-end gap-3">
-                  <a href={`${ADAF_URL}/partners`} target="_blank" rel="noopener noreferrer" className="rounded bg-primary px-6 py-3 text-sm font-semibold text-offWhite hover:bg-primaryDark transition-colors">
+                  <a href={`${ADAF_URL}/partners`} target="_blank" rel="noopener noreferrer" className="btn-primary">
                     Become a Partner
                   </a>
                   <a href={`${ADAF_URL}/become-a-mentor`} target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-primary underline decoration-accent underline-offset-4">
@@ -426,7 +426,7 @@ export default function AdvanceAfricaPage() {
 
             {/* Candidates */}
             <div className="lg:col-span-5 rounded border border-deepEarth/10 bg-warmGray p-8 flex flex-col">
-              <p className="font-accent text-xs uppercase tracking-[0.18em] text-accentDark">For candidates</p>
+              <p className="eyebrow">For candidates</p>
               <h3 className="mt-2 font-heading font-semibold text-2xl text-deepEarth">Two doors, one journey</h3>
               <div className="mt-6 space-y-4 flex-1">
                 {candidatePaths.map((p) => (
@@ -438,7 +438,7 @@ export default function AdvanceAfricaPage() {
                   </div>
                 ))}
               </div>
-              <a href={`${ADAF_URL}/find-your-path`} target="_blank" rel="noopener noreferrer" className="mt-6 self-start rounded border-[1.5px] border-primary px-6 py-3 text-sm font-semibold text-primary hover:bg-primary hover:text-offWhite transition-colors">
+              <a href={`${ADAF_URL}/find-your-path`} target="_blank" rel="noopener noreferrer" className="btn-outline mt-6 self-start">
                 Find Your Path
               </a>
             </div>
@@ -462,10 +462,10 @@ export default function AdvanceAfricaPage() {
             <a href={ADAF_URL} target="_blank" rel="noopener noreferrer" className="text-accent hover:underline underline-offset-4">advanceafrica.org</a>
           </div>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
-            <a href={`${ADAF_URL}/partners`} target="_blank" rel="noopener noreferrer" className="rounded bg-accent px-7 py-3.5 text-sm font-semibold text-deepEarth hover:bg-accentDark transition-colors">
+            <a href={`${ADAF_URL}/partners`} target="_blank" rel="noopener noreferrer" className="btn-accent">
               Become a Partner
             </a>
-            <a href={`${ADAF_URL}/apply-1`} target="_blank" rel="noopener noreferrer" className="rounded border-[1.5px] border-offWhite/60 px-7 py-3.5 text-sm font-semibold text-offWhite hover:bg-offWhite hover:text-deepEarth transition-colors">
+            <a href={`${ADAF_URL}/apply-1`} target="_blank" rel="noopener noreferrer" className="btn-outline-light">
               Apply as a Candidate
             </a>
           </div>

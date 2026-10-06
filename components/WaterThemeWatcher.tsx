@@ -2,6 +2,7 @@
 
 import { usePathname } from "next/navigation";
 import { useEffect } from "react";
+import { isBlueWavePath } from "@/lib/utils";
 
 /**
  * Toggles a scoped water theme on the root <html> element
@@ -18,7 +19,7 @@ export function WaterThemeWatcher() {
     if (typeof document === "undefined") return;
     const root = document.documentElement;
 
-    if (pathname === "/the-great-blue-wave") {
+    if (isBlueWavePath(pathname)) {
       root.setAttribute("data-theme", "water");
     } else if (root.getAttribute("data-theme") === "water") {
       root.removeAttribute("data-theme");

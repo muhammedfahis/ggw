@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { isBlueWavePath } from "@/lib/utils";
 
 const footerLinks = [
   { href: "/about", label: "About" },
@@ -23,31 +24,29 @@ const offices = [
 
 export function Footer() {
   const pathname = usePathname();
-  const isWater = pathname === "/the-great-blue-wave";
-  // trailingSlash is on, so the Blue Wave path may arrive as "/the-great-blue-wave/".
-  const isBlueWave = pathname?.replace(/\/$/, "") === "/the-great-blue-wave";
+  const isWater = isBlueWavePath(pathname);
   const currentYear = new Date().getFullYear();
 
   const t = isWater
     ? {
-        shell: "border-[#0ea5e9]/40 bg-[#013a63]",
-        label: "text-[#0ea5e9]",
-        heading: "text-[#e6f7ff]",
-        body: "text-[#e6f7ff]/75",
-        link: "hover:text-white focus-visible:ring-[#0ea5e9] focus-visible:ring-offset-[#013a63]",
-        accentLink: "text-[#0ea5e9] hover:text-[#e6f7ff]",
-        button: "border-[#0ea5e9]/50 text-[#e6f7ff] hover:border-[#0ea5e9] hover:bg-[#0ea5e9]/10",
-        divider: "border-[#0ea5e9]/25",
+        shell: "border-water-bright/40 bg-water-deep",
+        label: "text-water-bright",
+        heading: "text-water-foam",
+        body: "text-water-foam/75",
+        link: "hover:text-white focus-visible:ring-water-bright focus-visible:ring-offset-water-deep",
+        accentLink: "text-water-bright hover:text-water-foam",
+        button: "border-water-bright/50 text-water-foam hover:border-water-bright hover:bg-water-bright/10",
+        divider: "border-water-bright/25",
       }
     : {
-        shell: `border-ggwDark/10 ${isBlueWave ? "bg-white" : "bg-warmGray"}`,
-        label: "text-ggwAccent",
-        heading: "text-ggwDark",
-        body: "text-ggwDark/70",
-        link: `hover:text-ggwGreen focus-visible:ring-ggwGreen ${isBlueWave ? "focus-visible:ring-offset-white" : "focus-visible:ring-offset-warmGray"}`,
-        accentLink: "text-ggwGreen hover:text-ggwDark",
-        button: "border-ggwGreen text-ggwGreen hover:bg-ggwGreen hover:text-offWhite",
-        divider: "border-ggwDark/10",
+        shell: "border-charcoal/10 bg-warmGray",
+        label: "text-accentDark",
+        heading: "text-charcoal",
+        body: "text-charcoal/70",
+        link: "hover:text-primary focus-visible:ring-primary focus-visible:ring-offset-warmGray",
+        accentLink: "text-primary hover:text-charcoal",
+        button: "border-primary text-primary hover:bg-primary hover:text-offWhite",
+        divider: "border-charcoal/10",
       };
 
   const focusRing = "rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2";
@@ -72,7 +71,7 @@ export function Footer() {
             <div className="mt-5 flex flex-wrap items-center gap-x-5 gap-y-3">
               <Link
                 href="/contact"
-                className={`inline-flex rounded border-[1.5px] px-4 py-2 text-sm font-semibold transition ${focusRing} ${t.button}`}
+                className={`btn btn-sm text-sm border-[1.5px] ${t.button}`}
               >
                 Start a project
               </Link>
@@ -84,7 +83,7 @@ export function Footer() {
 
           {/* Explore */}
           <div className="md:col-span-3">
-            <p className={`text-xs font-semibold uppercase tracking-[0.25em] ${t.label}`}>Explore</p>
+            <p className={`font-accent text-xs font-semibold uppercase tracking-[0.2em] ${t.label}`}>Explore</p>
             <nav className={`mt-4 grid grid-cols-2 gap-x-4 gap-y-2 text-sm ${t.body}`}>
               {footerLinks.map((item) => (
                 <Link key={item.href} href={item.href} className={`transition ${focusRing} ${t.link}`}>
@@ -96,7 +95,7 @@ export function Footer() {
 
           {/* Offices */}
           <div className="md:col-span-5">
-            <p className={`text-xs font-semibold uppercase tracking-[0.25em] ${t.label}`}>Offices</p>
+            <p className={`font-accent text-xs font-semibold uppercase tracking-[0.2em] ${t.label}`}>Offices</p>
             <div className="mt-4 grid grid-cols-1 gap-5 sm:grid-cols-3 sm:gap-4">
               {offices.map((o) => (
                 <address key={o.name} className={`not-italic text-sm leading-relaxed ${t.body}`}>

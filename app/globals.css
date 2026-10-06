@@ -26,71 +26,57 @@
   }
 }
 
-@layer utilities {
-  .line-clamp-2 {
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-  }
-
-  .line-clamp-3 {
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
+@layer components {
+  /* Buttons — square-cornered, the site-wide CTA style. Size with .btn-sm. */
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded px-7 py-3.5 text-sm font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-60;
   }
 
   .btn-primary {
-    @apply bg-primary text-offWhite px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2;
+    @apply btn bg-primary text-offWhite hover:bg-primaryDark;
   }
 
-  .btn-secondary {
-    @apply border border-accent text-accent px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:bg-accent hover:text-primary focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2;
+  .btn-accent {
+    @apply btn bg-accent text-deepEarth hover:bg-accentDark;
   }
 
-  .btn-warm {
-    @apply bg-accent text-primary px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2;
+  .btn-outline {
+    @apply btn border-[1.5px] border-primary text-primary hover:bg-primary hover:text-offWhite;
   }
 
-  .btn-warm-outline {
-    @apply border border-accent text-accent px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:bg-accent hover:text-primary focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2;
+  /* Outline button for dark/photo backgrounds */
+  .btn-outline-light {
+    @apply btn border-[1.5px] border-offWhite/60 text-offWhite hover:bg-offWhite hover:text-deepEarth;
   }
 
-  .card {
-    @apply bg-offWhite rounded-2xl shadow-sm transition-all duration-300 hover:shadow-md hover:translate-y-[-4px];
+  /* Must come after the variants above so it wins over their padding. */
+  .btn-sm {
+    @apply px-4 py-2 text-xs;
   }
 
-  .card-hover {
-    @apply transition-all duration-300 hover:shadow-xl hover:translate-y-[-8px];
+  /* Small uppercase label above headings. Add .eyebrow-light on dark backgrounds. */
+  .eyebrow {
+    @apply font-accent text-xs font-semibold uppercase tracking-[0.2em] text-accentDark;
   }
 
-  .image-overlay {
-    @apply relative overflow-hidden;
+  .eyebrow-light {
+    @apply text-accent;
   }
 
-  .image-overlay::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to bottom, rgba(45, 80, 22, 0.4), rgba(45, 80, 22, 0.6));
-    z-index: 1;
+  /* Uppercase text link, e.g. "Learn more →" */
+  .link-arrow {
+    @apply inline-flex items-center gap-1 font-accent text-xs font-semibold uppercase tracking-wider text-primary;
   }
 
+  /* Category/status chip */
+  .tag {
+    @apply inline-block rounded bg-secondary px-2.5 py-1 font-accent text-[11px] font-semibold uppercase tracking-wider text-deepEarth;
+  }
+}
+
+@layer utilities {
   .animate-fade-in-up {
     animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-  }
-
-  .animate-slide-in-left {
-    animation: slideInLeft 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-  }
-
-  .animate-slide-in-right {
-    animation: slideInRight 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-  }
-
-  .animate-scale-in {
-    animation: scaleIn 0.7s cubic-bezier(0.4, 0, 0.2, 1) forwards;
   }
 
   .gbw-theme-transition {
@@ -120,100 +106,8 @@
   }
 }
 
-@keyframes slideInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-50px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes slideInRight {
-  from {
-    opacity: 0;
-    transform: translateX(50px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes scaleIn {
-  from {
-    opacity: 0;
-    transform: scale(0.9);
-  }
-
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
 @media (prefers-reduced-motion: reduce) {
   .gbw-theme-transition {
     transition: none !important;
   }
-}
-
-/* Water Wave Animations */
-@keyframes waterWave {
-  0% {
-    transform: translateX(0) translateY(0);
-  }
-
-  50% {
-    transform: translateX(-25px) translateY(-10px);
-  }
-
-  100% {
-    transform: translateX(0) translateY(0);
-  }
-}
-
-@keyframes waterShimmer {
-
-  0%,
-  100% {
-    opacity: 0.3;
-  }
-
-  50% {
-    opacity: 0.6;
-  }
-}
-
-@keyframes ripple {
-  0% {
-    transform: scale(1);
-    opacity: 0.8;
-  }
-
-  100% {
-    transform: scale(1.5);
-    opacity: 0;
-  }
-}
-
-.water-wave-animate {
-  animation: waterWave 8s ease-in-out infinite;
-}
-
-.water-shimmer {
-  animation: waterShimmer 4s ease-in-out infinite;
-}
-
-.water-bg-overlay {
-  background: linear-gradient(135deg,
-      rgba(13, 110, 253, 0.15) 0%,
-      rgba(135, 206, 235, 0.1) 25%,
-      rgba(13, 110, 253, 0.08) 50%,
-      rgba(135, 206, 235, 0.12) 75%,
-      rgba(13, 110, 253, 0.15) 100%);
 }

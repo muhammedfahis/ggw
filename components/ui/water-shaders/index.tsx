@@ -37,7 +37,7 @@ export const WaterShaders = React.forwardRef<HTMLDivElement, WaterShadersProps>(
       <div
         ref={ref}
         className={cn(
-          "relative h-full w-full overflow-hidden bg-[#013a63]",
+          "relative h-full w-full overflow-hidden bg-water-deep",
           className,
         )}
         {...props}

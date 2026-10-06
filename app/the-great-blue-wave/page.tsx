@@ -19,53 +19,53 @@ export default function GreatBlueWavePage() {
       <GreatBlueWaveHeroIsolated />
 
       {/* Scoped water-themed sections */}
-      <div className={`gbw-page ${inter.className} bg-[#013a63] text-[#013a63]`}>
+      <div className={`gbw-page ${inter.className} bg-water-deep text-water-deep`}>
         {/* Why Water */}
-        <section className="px-6 md:px-10 lg:px-24 py-16 md:py-24 bg-gradient-to-b from-[#013a63] via-[#0993af] to-[#013a63] text-white">
+        <section className="px-6 md:px-10 lg:px-24 py-16 md:py-24 bg-gradient-to-b from-water-deep via-water-teal to-water-deep text-white">
           <div className="mx-auto max-w-6xl">
             <div className="mb-12 text-center">
-              <p className="mb-4 text-xs font-semibold tracking-[0.25em] text-[#e6f7ff] uppercase">
+              <p className="mb-4 text-xs font-semibold tracking-[0.25em] text-water-foam uppercase">
                 THE WATER CRISIS
               </p>
               <h2 className="mb-4 text-3xl md:text-4xl lg:text-5xl font-semibold leading-tight">
                 Turning Dry Frontiers into a Connected Blue Corridor
               </h2>
-              <p className="mx-auto max-w-3xl text-sm md:text-base text-[#e6f7ff]">
+              <p className="mx-auto max-w-3xl text-sm md:text-base text-water-foam">
                 Across the Sahel, dependable water access is the thin line between staying rooted and being forced to move. The Great Blue Wave links sites into a continuous, water-secure network.
               </p>
             </div>
 
             <div className="grid gap-8 md:grid-cols-3">
               <div className="rounded-3xl bg-white/10 px-6 py-6 backdrop-blur-md border border-white/15">
-                <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-[#0993af]/20 text-[#e6f7ff]">
+                <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-water-teal/20 text-water-foam">
                   <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
                     <path d="M12 2C8 7 6 10 6 13.5A6 6 0 0 0 18 13.5C18 10 16 7 12 2Z" />
                   </svg>
                 </div>
                 <h3 className="mb-2 text-lg font-semibold text-white">The Pressure on Water</h3>
-                <p className="text-sm text-[#e6f7ff]">
+                <p className="text-sm text-water-foam">
                   Reduced rainfall, failing boreholes, and growing demand leave communities exposed to climate shocks and displacement.
                 </p>
               </div>
               <div className="rounded-3xl bg-white/10 px-6 py-6 backdrop-blur-md border border-white/15">
-                <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-[#0993af]/20 text-[#e6f7ff]">
+                <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-water-teal/20 text-water-foam">
                   <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
                     <path d="M5 12l4 4L19 6" />
                   </svg>
                 </div>
                 <h3 className="mb-2 text-lg font-semibold text-white">A Distributed Blue Network</h3>
-                <p className="text-sm text-[#e6f7ff]">
+                <p className="text-sm text-water-foam">
                   Atmospheric water, storage, and governance are woven into each restoration site, creating a chain of dependable blue hubs.
                 </p>
               </div>
               <div className="rounded-3xl bg-white/10 px-6 py-6 backdrop-blur-md border border-white/15">
-                <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-[#0993af]/20 text-[#e6f7ff]">
+                <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-water-teal/20 text-water-foam">
                   <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
                     <path d="M3 12h4l3 8 4-16 3 8h4" />
                   </svg>
                 </div>
                 <h3 className="mb-2 text-lg font-semibold text-white">Staying, Planting, Thriving</h3>
-                <p className="text-sm text-[#e6f7ff]">
+                <p className="text-sm text-water-foam">
                   When water is predictable, families can invest in land, education, and local enterprise instead of preparing to move.
                 </p>
               </div>
@@ -74,16 +74,16 @@ export default function GreatBlueWavePage() {
         </section>
 
         {/* Strategic Partners */}
-        <section className="bg-[#e6f7ff] px-6 md:px-10 lg:px-24 py-16 md:py-24">
+        <section className="bg-water-foam px-6 md:px-10 lg:px-24 py-16 md:py-24">
           <div className="mx-auto max-w-6xl">
             <div className="mb-12 text-center">
-              <p className="mb-4 text-xs font-semibold tracking-[0.25em] text-[#0993af] uppercase">
+              <p className="mb-4 text-xs font-semibold tracking-[0.25em] text-water-teal uppercase">
                 STRATEGIC PARTNERS
               </p>
-              <h2 className="mb-4 text-3xl md:text-4xl lg:text-5xl font-semibold text-[#013a63]">
+              <h2 className="mb-4 text-3xl md:text-4xl lg:text-5xl font-semibold text-water-deep">
                 A Coalition for Water-Secure Futures
               </h2>
-              <p className="mx-auto max-w-3xl text-sm md:text-base text-[#013a63]">
+              <p className="mx-auto max-w-3xl text-sm md:text-base text-water-deep">
                 Humanitarian, technical, and financing partners assemble the Great Blue Wave so communities receive water systems that are as robust as they are dignified.
               </p>
             </div>
@@ -106,13 +106,13 @@ export default function GreatBlueWavePage() {
                 />
                 <div className="relative z-10 flex h-full items-center px-8 py-8 md:px-10">
                   <div className="max-w-xl">
-                    <p className="mb-3 text-xs font-semibold tracking-[0.25em] text-[#e6f7ff] uppercase">
+                    <p className="mb-3 text-xs font-semibold tracking-[0.25em] text-water-foam uppercase">
                       PURPOSE-LED IMPACT
                     </p>
                     <h3 className="mb-3 text-2xl md:text-3xl font-semibold text-white">
                       Water for Every Child, Every Community
                     </h3>
-                    <p className="text-sm md:text-base text-[#e6f7ff]">
+                    <p className="text-sm md:text-base text-water-foam">
                       Together we co-design deployments that fit local culture, infrastructure, and humanitarian priorities across the Sahel.
                     </p>
                   </div>
@@ -120,21 +120,21 @@ export default function GreatBlueWavePage() {
               </div>
 
               <div className="flex flex-col gap-6">
-                <article className="flex-1 rounded-3xl bg-white/80 px-6 py-6 shadow-md backdrop-blur-md border border-[#0993af]/20">
-                  <p className="mb-2 text-[0.7rem] font-semibold tracking-[0.3em] text-[#0993af] uppercase">
+                <article className="flex-1 rounded-3xl bg-white/80 px-6 py-6 shadow-md backdrop-blur-md border border-water-teal/20">
+                  <p className="mb-2 text-[0.7rem] font-semibold tracking-[0.3em] text-water-teal uppercase">
                     MAI SABEEL
                   </p>
-                  <h3 className="mb-2 text-lg font-semibold text-[#013a63]">
+                  <h3 className="mb-2 text-lg font-semibold text-water-deep">
                     Water for Charity, at Scale
                   </h3>
-                  <p className="mb-4 text-sm text-[#013a63]">
+                  <p className="mb-4 text-sm text-water-deep">
                     A UAE-based initiative ensuring that every deployment is logistically feasible, financially sustainable, and dedicated to those most in need.
                   </p>
                   <Link
                     href="https://maisabeel.life/"
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex items-center gap-1 text-sm font-semibold text-[#0993af] hover:text-[#0bb5d4] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0993af]"
+                    className="inline-flex items-center gap-1 text-sm font-semibold text-water-teal hover:text-water-bright focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-water-teal"
                   >
                     Visit Mai Sabeel
                     <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
@@ -144,21 +144,21 @@ export default function GreatBlueWavePage() {
                   </Link>
                 </article>
 
-                <article className="flex-1 rounded-3xl bg-white/80 px-6 py-6 shadow-md backdrop-blur-md border border-[#0993af]/20">
-                  <p className="mb-2 text-[0.7rem] font-semibold tracking-[0.3em] text-[#0993af] uppercase">
+                <article className="flex-1 rounded-3xl bg-white/80 px-6 py-6 shadow-md backdrop-blur-md border border-water-teal/20">
+                  <p className="mb-2 text-[0.7rem] font-semibold tracking-[0.3em] text-water-teal uppercase">
                     HAWANA WATER
                   </p>
-                  <h3 className="mb-2 text-lg font-semibold text-[#013a63]">
+                  <h3 className="mb-2 text-lg font-semibold text-water-deep">
                     Atmospheric Water Harvesting Systems
                   </h3>
-                  <p className="mb-4 text-sm text-[#013a63]">
+                  <p className="mb-4 text-sm text-water-deep">
                     High-efficiency units generate clean water directly from air humidity, from household scale up to village-scale infrastructure.
                   </p>
                   <Link
                     href="https://www.hawanawater.com/"
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex items-center gap-1 text-sm font-semibold text-[#0993af] hover:text-[#0bb5d4] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0993af]"
+                    className="inline-flex items-center gap-1 text-sm font-semibold text-water-teal hover:text-water-bright focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-water-teal"
                   >
                     Visit Hawana Water
                     <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
@@ -176,51 +176,51 @@ export default function GreatBlueWavePage() {
         <section className="bg-white px-6 md:px-10 lg:px-24 py-16 md:py-24">
           <div className="mx-auto max-w-6xl">
             <div className="mb-12 text-center">
-              <p className="mb-4 text-xs font-semibold tracking-[0.25em] text-[#0993af] uppercase">
+              <p className="mb-4 text-xs font-semibold tracking-[0.25em] text-water-teal uppercase">
                 DEPLOYMENT SCENARIOS
               </p>
-              <h2 className="mb-4 text-3xl md:text-4xl lg:text-5xl font-semibold text-[#013a63]">
+              <h2 className="mb-4 text-3xl md:text-4xl lg:text-5xl font-semibold text-water-deep">
                 Where the Great Blue Wave Works
               </h2>
-              <p className="mx-auto max-w-3xl text-sm md:text-base text-[#013a63]">
+              <p className="mx-auto max-w-3xl text-sm md:text-base text-water-deep">
                 From emergency response to long-term food security, Great Blue Wave hubs are configured to support communities at different stages of resilience.
               </p>
             </div>
 
             <div className="mb-12 grid items-center gap-10 lg:grid-cols-2">
               <div className="order-2 lg:order-1">
-                <div className="inline-flex rounded-full bg-[#0993af]/10 px-4 py-1 text-xs font-semibold text-[#0993af] uppercase tracking-[0.18em] mb-4">
+                <div className="inline-flex rounded-full bg-water-teal/10 px-4 py-1 text-xs font-semibold text-water-teal uppercase tracking-[0.18em] mb-4">
                   REAL-WORLD IMPACT
                 </div>
-                <h3 className="mb-3 text-2xl md:text-3xl font-semibold text-[#013a63]">
+                <h3 className="mb-3 text-2xl md:text-3xl font-semibold text-water-deep">
                   Meeting Communities Where They Are
                 </h3>
-                <p className="mb-6 text-sm md:text-base text-[#013a63]">
+                <p className="mb-6 text-sm md:text-base text-water-deep">
                   Modular systems can anchor disaster response, refugee settlements, schools, clinics, and regenerative farming plots, with different mixes of generation, storage, and distribution.
                 </p>
                 <div className="space-y-4">
                   <div className="flex gap-3">
-                    <div className="mt-1 h-9 w-9 flex-shrink-0 rounded-2xl bg-[#0993af]/20 flex items-center justify-center text-[#0993af]">
+                    <div className="mt-1 h-9 w-9 flex-shrink-0 rounded-2xl bg-water-teal/20 flex items-center justify-center text-water-teal">
                       <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
                         <path d="M5 13l4 4L19 7" />
                       </svg>
                     </div>
                     <div>
-                      <p className="text-sm font-semibold text-[#013a63]">Rapid humanitarian deployment</p>
-                      <p className="text-xs text-[#013a63]">
+                      <p className="text-sm font-semibold text-water-deep">Rapid humanitarian deployment</p>
+                      <p className="text-xs text-water-deep">
                         Plug-and-play units provide safe water within days of arrival, even where infrastructure is heavily damaged.
                       </p>
                     </div>
                   </div>
                   <div className="flex gap-3">
-                    <div className="mt-1 h-9 w-9 flex-shrink-0 rounded-2xl bg-[#0993af]/20 flex items-center justify-center text-[#0993af]">
+                    <div className="mt-1 h-9 w-9 flex-shrink-0 rounded-2xl bg-water-teal/20 flex items-center justify-center text-water-teal">
                       <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
                         <path d="M12 2L4 7v10l8 5 8-5V7z" />
                       </svg>
                     </div>
                     <div>
-                      <p className="text-sm font-semibold text-[#013a63]">Anchoring long-term programmes</p>
-                      <p className="text-xs text-[#013a63]">
+                      <p className="text-sm font-semibold text-water-deep">Anchoring long-term programmes</p>
+                      <p className="text-xs text-water-deep">
                         Water hubs are integrated into education, health, and restoration programmes to sustain outcomes beyond an emergency window.
                       </p>
                     </div>
@@ -247,35 +247,35 @@ export default function GreatBlueWavePage() {
             </div>
 
             <div className="grid gap-6 md:grid-cols-2">
-              <article className="rounded-3xl bg-[#e6f7ff]/80 p-6 shadow-md backdrop-blur-md border border-[#0993af]/30">
-                <h3 className="mb-2 text-lg font-semibold text-[#013a63]">
+              <article className="rounded-3xl bg-water-foam/80 p-6 shadow-md backdrop-blur-md border border-water-teal/30">
+                <h3 className="mb-2 text-lg font-semibold text-water-deep">
                   Humanitarian & Refugee Settings
                 </h3>
-                <p className="text-sm text-[#013a63]">
+                <p className="text-sm text-water-deep">
                   Flexible units with on-site storage support camps and transit centres, reducing trucking and plastic packaging.
                 </p>
               </article>
-              <article className="rounded-3xl bg-[#e6f7ff]/80 p-6 shadow-md backdrop-blur-md border border-[#0993af]/30">
-                <h3 className="mb-2 text-lg font-semibold text-[#013a63]">
+              <article className="rounded-3xl bg-water-foam/80 p-6 shadow-md backdrop-blur-md border border-water-teal/30">
+                <h3 className="mb-2 text-lg font-semibold text-water-deep">
                   Schools, Clinics & Community Hubs
                 </h3>
-                <p className="text-sm text-[#013a63]">
+                <p className="text-sm text-water-deep">
                   Mid-scale systems provide daily drinking water, handwashing, and basic service needs where reliability matters most.
                 </p>
               </article>
-              <article className="rounded-3xl bg-[#e6f7ff]/80 p-6 shadow-md backdrop-blur-md border border-[#0993af]/30">
-                <h3 className="mb-2 text-lg font-semibold text-[#013a63]">
+              <article className="rounded-3xl bg-water-foam/80 p-6 shadow-md backdrop-blur-md border border-water-teal/30">
+                <h3 className="mb-2 text-lg font-semibold text-water-deep">
                   Regenerative Agriculture Sites
                 </h3>
-                <p className="text-sm text-[#013a63]">
+                <p className="text-sm text-water-deep">
                   Water is paired with soil restoration and agroforestry, stabilising yields while new trees take root.
                 </p>
               </article>
-              <article className="rounded-3xl bg-[#e6f7ff]/80 p-6 shadow-md backdrop-blur-md border border-[#0993af]/30">
-                <h3 className="mb-2 text-lg font-semibold text-[#013a63]">
+              <article className="rounded-3xl bg-water-foam/80 p-6 shadow-md backdrop-blur-md border border-water-teal/30">
+                <h3 className="mb-2 text-lg font-semibold text-water-deep">
                   Village & Market Hubs
                 </h3>
-                <p className="text-sm text-[#013a63]">
+                <p className="text-sm text-water-deep">
                   High-capacity units can serve clusters of households, small enterprises, and local markets through shared infrastructure.
                 </p>
               </article>
@@ -284,21 +284,21 @@ export default function GreatBlueWavePage() {
         </section>
 
         {/* Technology */}
-        <section className="relative overflow-hidden bg-gradient-to-br from-[#013a63] via-[#0993af] to-[#0bb5d4] px-6 md:px-10 lg:px-24 py-16 md:py-24 text-white">
+        <section className="relative overflow-hidden bg-gradient-to-br from-water-deep via-water-teal to-water-bright px-6 md:px-10 lg:px-24 py-16 md:py-24 text-white">
           <div className="pointer-events-none absolute inset-0 opacity-40">
-            <div className="absolute -left-24 top-10 h-64 w-64 rounded-full bg-[#0bb5d4]/40 blur-3xl" />
-            <div className="absolute -right-24 bottom-0 h-72 w-72 rounded-full bg-[#013a63]/70 blur-3xl" />
+            <div className="absolute -left-24 top-10 h-64 w-64 rounded-full bg-water-bright/40 blur-3xl" />
+            <div className="absolute -right-24 bottom-0 h-72 w-72 rounded-full bg-water-deep/70 blur-3xl" />
           </div>
 
           <div className="relative z-10 mx-auto max-w-6xl">
             <div className="mb-12 text-center">
-              <p className="mb-4 text-xs font-semibold tracking-[0.25em] text-[#e6f7ff] uppercase">
+              <p className="mb-4 text-xs font-semibold tracking-[0.25em] text-water-foam uppercase">
                 CORNERSTONE TECHNOLOGY
               </p>
               <h2 className="mb-4 text-3xl md:text-4xl lg:text-5xl font-semibold">
                 Atmospheric Water Systems, Tuned for the Sahel
               </h2>
-              <p className="mx-auto max-w-3xl text-sm md:text-base text-[#e6f7ff]">
+              <p className="mx-auto max-w-3xl text-sm md:text-base text-water-foam">
                 Clean water is generated from air humidity using highly efficient, solar-ready units that can operate in off-grid and fragile contexts.
               </p>
             </div>
@@ -320,7 +320,7 @@ export default function GreatBlueWavePage() {
                   }}
                 />
                 <div className="absolute bottom-6 left-6 right-6">
-                  <div className="mb-3 inline-flex rounded-full bg-[#0993af] px-4 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.25em] text-white">
+                  <div className="mb-3 inline-flex rounded-full bg-water-teal px-4 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.25em] text-white">
                     HAWANA WATER SYSTEMS
                   </div>
                   <h3 className="text-lg md:text-xl font-semibold text-white">
@@ -332,19 +332,19 @@ export default function GreatBlueWavePage() {
               <div className="grid gap-4">
                 <div className="rounded-2xl bg-white/10 p-5 backdrop-blur-md border border-white/20">
                   <h3 className="mb-2 text-sm font-semibold text-white">Energy Efficient</h3>
-                  <p className="text-xs text-[#e6f7ff]">
+                  <p className="text-xs text-water-foam">
                     Optimised power consumption and solar compatibility make units viable where grid power is scarce or unreliable.
                   </p>
                 </div>
                 <div className="rounded-2xl bg-white/10 p-5 backdrop-blur-md border border-white/20">
                   <h3 className="mb-2 text-sm font-semibold text-white">Modular & Maintainable</h3>
-                  <p className="text-xs text-[#e6f7ff]">
+                  <p className="text-xs text-water-foam">
                     Components are modular, enabling local technicians and youth cooperatives to manage routine maintenance.
                   </p>
                 </div>
                 <div className="rounded-2xl bg-white/10 p-5 backdrop-blur-md border border-white/20">
                   <h3 className="mb-2 text-sm font-semibold text-white">Scalable Family of Units</h3>
-                  <p className="text-xs text-[#e6f7ff]">
+                  <p className="text-xs text-water-foam">
                     From household to village-scale, different unit sizes can be combined to match demand and funding models.
                   </p>
                 </div>
@@ -354,16 +354,16 @@ export default function GreatBlueWavePage() {
         </section>
 
         {/* Deployment Scales */}
-        <section className="bg-[#e6f7ff] px-6 md:px-10 lg:px-24 py-16 md:py-24">
+        <section className="bg-water-foam px-6 md:px-10 lg:px-24 py-16 md:py-24">
           <div className="mx-auto max-w-6xl">
             <div className="mb-12 text-center">
-              <p className="mb-4 text-xs font-semibold tracking-[0.25em] text-[#0993af] uppercase">
+              <p className="mb-4 text-xs font-semibold tracking-[0.25em] text-water-teal uppercase">
                 DEPLOYMENT SCALES
               </p>
-              <h2 className="mb-4 text-3xl md:text-4xl lg:text-5xl font-semibold text-[#013a63]">
+              <h2 className="mb-4 text-3xl md:text-4xl lg:text-5xl font-semibold text-water-deep">
                 From Households to Whole Villages
               </h2>
-              <p className="mx-auto max-w-3xl text-sm md:text-base text-[#013a63]">
+              <p className="mx-auto max-w-3xl text-sm md:text-base text-water-deep">
                 Different unit sizes and financing approaches allow communities, institutions, and partners to on-board water systems at the pace that fits them.
               </p>
             </div>
@@ -385,7 +385,7 @@ export default function GreatBlueWavePage() {
                   }}
                 />
                 <div className="absolute bottom-6 left-6 right-6 text-white">
-                  <p className="mb-2 text-xs font-semibold tracking-[0.25em] text-[#e6f7ff] uppercase">
+                  <p className="mb-2 text-xs font-semibold tracking-[0.25em] text-water-foam uppercase">
                     CO-DESIGN
                   </p>
                   <h3 className="text-lg md:text-xl font-semibold">
@@ -395,21 +395,21 @@ export default function GreatBlueWavePage() {
               </div>
 
               <div className="space-y-4">
-                <article className="rounded-2xl bg-white p-5 shadow-md border border-[#0993af]/30">
-                  <h3 className="mb-1 text-sm font-semibold text-[#013a63]">Residential</h3>
-                  <p className="text-xs text-[#013a63]">
+                <article className="rounded-2xl bg-white p-5 shadow-md border border-water-teal/30">
+                  <h3 className="mb-1 text-sm font-semibold text-water-deep">Residential</h3>
+                  <p className="text-xs text-water-deep">
                     Compact units for staff housing, teacher accommodation, and frontline workers, reducing reliance on bottled or trucked water.
                   </p>
                 </article>
-                <article className="rounded-2xl bg-white p-5 shadow-md border border-[#0993af]/30">
-                  <h3 className="mb-1 text-sm font-semibold text-[#013a63]">School / Clinic</h3>
-                  <p className="text-xs text-[#013a63]">
+                <article className="rounded-2xl bg-white p-5 shadow-md border border-water-teal/30">
+                  <h3 className="mb-1 text-sm font-semibold text-water-deep">School / Clinic</h3>
+                  <p className="text-xs text-water-deep">
                     Mid-scale systems with storage and distribution points to serve classrooms, early learning centres, and health posts.
                   </p>
                 </article>
-                <article className="rounded-2xl bg-white p-5 shadow-md border border-[#0993af]/30">
-                  <h3 className="mb-1 text-sm font-semibold text-[#013a63]">Commercial / Village</h3>
-                  <p className="text-xs text-[#013a63]">
+                <article className="rounded-2xl bg-white p-5 shadow-md border border-water-teal/30">
+                  <h3 className="mb-1 text-sm font-semibold text-water-deep">Commercial / Village</h3>
+                  <p className="text-xs text-water-deep">
                     High-capacity units anchoring market hubs and village clusters, often through shared public–private partnerships.
                   </p>
                 </article>
@@ -422,13 +422,13 @@ export default function GreatBlueWavePage() {
         <section className="bg-white px-6 md:px-10 lg:px-24 py-16 md:py-24">
           <div className="mx-auto max-w-6xl">
             <div className="mb-12 text-center">
-              <p className="mb-4 text-xs font-semibold tracking-[0.25em] text-[#0993af] uppercase">
+              <p className="mb-4 text-xs font-semibold tracking-[0.25em] text-water-teal uppercase">
                 VISUALISING THE BLUE WAVE
               </p>
-              <h2 className="mb-4 text-3xl md:text-4xl lg:text-5xl font-semibold text-[#013a63]">
+              <h2 className="mb-4 text-3xl md:text-4xl lg:text-5xl font-semibold text-water-deep">
                 Water, Infrastructure, and Community Life
               </h2>
-              <p className="mx-auto max-w-3xl text-sm md:text-base text-[#013a63]">
+              <p className="mx-auto max-w-3xl text-sm md:text-base text-water-deep">
                 A glimpse of the landscapes and community spaces that the Great Blue Wave seeks to multiply along the Great Green Wall.
               </p>
             </div>
@@ -469,7 +469,7 @@ export default function GreatBlueWavePage() {
             <div className="text-center">
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 rounded-full bg-[#0993af] px-8 py-3 text-sm font-semibold text-white shadow-md transition-transform hover:scale-105 hover:bg-[#0bb5d4] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0993af]"
+                className="inline-flex items-center gap-2 rounded-full bg-water-teal px-8 py-3 text-sm font-semibold text-white shadow-md transition-transform hover:scale-105 hover:bg-water-bright focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-water-teal"
               >
                 Explore Great Blue Wave Opportunities
                 <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
@@ -482,21 +482,21 @@ export default function GreatBlueWavePage() {
         </section>
 
         {/* Video Section */}
-        <section className="bg-[#e6f7ff] px-6 md:px-10 lg:px-24 py-16 md:py-24">
+        <section className="bg-water-foam px-6 md:px-10 lg:px-24 py-16 md:py-24">
           <div className="mx-auto max-w-6xl">
             <div className="mb-12 text-center">
-              <p className="mb-4 text-xs font-semibold tracking-[0.25em] text-[#0993af] uppercase">
+              <p className="mb-4 text-xs font-semibold tracking-[0.25em] text-water-teal uppercase">
                 WATCH THE STORY
               </p>
-              <h2 className="mb-4 text-3xl md:text-4xl lg:text-5xl font-semibold text-[#013a63]">
+              <h2 className="mb-4 text-3xl md:text-4xl lg:text-5xl font-semibold text-water-deep">
                 The Great Blue Wave in Action
               </h2>
-              <p className="mx-auto max-w-3xl text-sm md:text-base text-[#013a63]">
+              <p className="mx-auto max-w-3xl text-sm md:text-base text-water-deep">
                 Discover how atmospheric water harvesting is transforming communities and bringing water security to the Sahel.
               </p>
             </div>
 
-            <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-[#0993af]/30">
+            <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-water-teal/30">
               <div className="relative" style={{ paddingBottom: '56.25%' }}>
                 <iframe
                   className="absolute top-0 left-0 w-full h-full"

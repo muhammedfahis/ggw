@@ -169,7 +169,7 @@ const archive = [
 
 function Overline({ children, light = false }: { children: ReactNode; light?: boolean }) {
     return (
-        <p className={`font-accent text-xs font-semibold uppercase tracking-[0.2em] ${light ? "text-accent" : "text-accentDark"}`}>
+        <p className={`eyebrow ${light ? "eyebrow-light" : ""}`}>
             {children}
         </p>
     );
@@ -242,7 +242,7 @@ export default function NewsPage() {
                                 <p className="mt-4 leading-relaxed text-charcoal/75">{feature.summary}</p>
                                 <Link
                                     href={feature.href}
-                                    className="mt-8 inline-flex items-center gap-2 self-start rounded bg-primary px-6 py-3 text-sm font-semibold text-offWhite transition-colors hover:bg-primaryDark"
+                                    className="btn-primary mt-8 self-start"
                                 >
                                     Read full story <Arrow />
                                 </Link>
@@ -272,7 +272,7 @@ export default function NewsPage() {
                                             className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
                                             sizes="(max-width: 768px) 100vw, 50vw"
                                         />
-                                        <span className="absolute left-4 top-4 rounded bg-secondary px-2.5 py-1 font-accent text-[11px] font-semibold uppercase tracking-wider text-deepEarth">
+                                        <span className="tag absolute left-4 top-4">
                                             {article.category}
                                         </span>
                                     </div>
@@ -286,7 +286,7 @@ export default function NewsPage() {
                                         <p className="mt-3 flex-1 text-sm leading-relaxed text-charcoal/75">{article.summary}</p>
                                         <Link
                                             href="/news"
-                                            className="mt-5 inline-flex items-center gap-1 self-start font-accent text-xs font-semibold uppercase tracking-wider text-primary"
+                                            className="link-arrow mt-5 self-start"
                                         >
                                             Read more <Arrow />
                                         </Link>
@@ -342,7 +342,7 @@ export default function NewsPage() {
                     <div className="mt-12 text-center">
                         <button
                             type="button"
-                            className="inline-flex items-center gap-2 rounded border-[1.5px] border-primary px-8 py-3 text-sm font-semibold text-primary transition-colors hover:bg-primary hover:text-offWhite"
+                            className="btn-outline"
                         >
                             Load more stories
                         </button>
@@ -373,7 +373,7 @@ export default function NewsPage() {
                             />
                             <button
                                 type="submit"
-                                className="rounded bg-accent px-7 py-3.5 text-sm font-semibold text-deepEarth transition-colors hover:bg-accentDark"
+                                className="btn-accent"
                             >
                                 Subscribe
                             </button>

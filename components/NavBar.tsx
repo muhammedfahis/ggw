@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import { isBlueWavePath, normalizePath } from "@/lib/utils";
 
 const navItems = [
   { href: "/", label: "Home" },
@@ -18,7 +19,8 @@ const navItems = [
 export function NavBar() {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
-  const isWater = pathname === "/the-great-blue-wave";
+  const isWater = isBlueWavePath(pathname);
+  const currentPath = normalizePath(pathname);
 
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -48,7 +50,7 @@ export function NavBar() {
   }, []);
 
   const renderLink = (item: (typeof navItems)[number]) => {
-    const active = pathname === item.href;
+    const active = currentPath === item.href;
     const isWaterTab = item.href === "/the-great-blue-wave";
     const baseClasses = "relative text-sm font-medium transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2";
 
@@ -167,11 +169,11 @@ export function NavBar() {
         <Link
           key={item.href}
           href={item.href}
-          className={`${baseClasses} focus-visible:ring-[#0ea5e9] focus-visible:ring-offset-[#013a63] ${active ? "text-[#e6f7ff]" : "text-[#e6f7ff]/80 hover:text-[#ffffff]"
+          className={`${baseClasses} focus-visible:ring-water-bright focus-visible:ring-offset-water-deep ${active ? "text-water-foam" : "text-water-foam/80 hover:text-white"
             }`}
         >
           {item.label}
-          {active && <span className="absolute -bottom-1 left-0 right-0 h-0.5 rounded-sm bg-[#0ea5e9]" />}
+          {active && <span className="absolute -bottom-1 left-0 right-0 h-0.5 rounded-sm bg-water-bright" />}
         </Link>
       );
     }
@@ -181,7 +183,7 @@ export function NavBar() {
       <Link
         key={item.href}
         href={item.href}
-        className={`${baseClasses} focus-visible:ring-primary focus-visible:ring-offset-white ${active ? "text-primary" : "text-dark/70 hover:text-primary"
+        className={`${baseClasses} focus-visible:ring-primary focus-visible:ring-offset-white ${active ? "text-primary" : "text-charcoal/70 hover:text-primary"
           }`}
       >
         {item.label}
@@ -192,38 +194,35 @@ export function NavBar() {
 
   return (
     <header
-      className={`sticky top-0 z-50 border-b gbw-theme-transition transition-[box-shadow,background-color] duration-300 ease-out motion-reduce:transition-none ${isScrolled ? "shadow-md backdrop-blur-md" : "shadow-sm backdrop-blur-sm"} ${isWater ? "border-[#0ea5e9]/40 bg-[#013a63]/95" : "border-dark/10 bg-white/95"
+      className={`sticky top-0 z-50 border-b gbw-theme-transition transition-[box-shadow,background-color] duration-300 ease-out motion-reduce:transition-none ${isScrolled ? "shadow-md backdrop-blur-md" : "shadow-sm backdrop-blur-sm"} ${isWater ? "border-water-bright/40 bg-water-deep/95" : "border-charcoal/10 bg-white/95"
         }`}
     >
-      <div className={`mx-auto flex max-w-7xl items-center justify-between px-6 transition-[padding] duration-300 ease-out motion-reduce:transition-none ${isScrolled ? "py-2.5" : "py-4"}`}>
+      <div className={`mx-auto flex max-w-6xl items-center justify-between px-4 md:px-6 transition-[padding] duration-300 ease-out motion-reduce:transition-none ${isScrolled ? "py-2.5" : "py-4"}`}>
         <Link href="/" className="flex items-center gap-3">
           <div
-            className={`relative overflow-hidden rounded-md border bg-white shadow-sm transition-all duration-300 ease-out motion-reduce:transition-none ${isScrolled ? "h-10 w-10" : "h-12 w-12"} ${isWater ? "border-[#0ea5e9]/60" : "border-primary/30"
+            className={`relative overflow-hidden rounded-md border bg-white shadow-sm transition-all duration-300 ease-out motion-reduce:transition-none ${isScrolled ? "h-10 w-10" : "h-12 w-12"} ${isWater ? "border-water-bright/60" : "border-primary/30"
               }`}
           >
-            <Image src="/assets/about/rs=w:172.png" alt="GGWoA logo" fill className="object-contain p-2" sizes="48px" />
+            <Image src="/assets/home/logo.png" alt="GGWoA logo" fill className="object-contain p-2" sizes="48px" />
           </div>
           <div className="leading-tight">
-            <p
-              className="text-[11px] font-semibold uppercase tracking-[0.4em]"
-              style={{ color: isWater ? "#e6f7ff" : undefined }}
-            >
+            <p className={`font-accent text-[11px] font-semibold uppercase tracking-[0.2em] ${isWater ? "text-water-foam" : "text-charcoal"}`}>
               GGWOA
             </p>
-            <p className={`text-sm font-semibold ${isWater ? "text-[#e6f7ff]" : "text-dark"}`}>
+            <p className={`text-sm font-semibold ${isWater ? "text-water-foam" : "text-charcoal"}`}>
               Great Green Wall of Africa
             </p>
           </div>
         </Link>
 
-        <nav className="hidden items-center gap-8 md:flex ml-12">{navItems.map(renderLink)}</nav>
+        <nav className="hidden items-center gap-6 lg:gap-8 md:flex ml-8">{navItems.map(renderLink)}</nav>
 
         <div className="hidden items-center gap-4 md:flex">
           <Link
             href="/contact"
-            className={`text-sm px-4 py-2 rounded-full font-semibold transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 ${isWater
-                ? "bg-[#013a63] text-white hover:bg-[#0369a1] focus-visible:ring-[#0ea5e9] focus-visible:ring-offset-[#013a63]"
-                : "btn-primary"
+            className={`btn btn-sm text-sm ${isWater
+                ? "bg-white text-water-deep hover:bg-water-bright focus-visible:ring-water-bright focus-visible:ring-offset-water-deep"
+                : "bg-primary text-offWhite hover:bg-primaryDark"
               }`}
           >
             Partner with us
@@ -232,9 +231,9 @@ export function NavBar() {
 
         <button
           type="button"
-          className={`relative inline-flex h-10 w-10 items-center justify-center rounded-md border md:hidden transition-colors hover:bg-dark/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 ${isWater
-              ? "border-[#0ea5e9]/50 text-[#e6f7ff] hover:bg-[#013a63]/60 focus-visible:ring-[#0ea5e9] focus-visible:ring-offset-[#013a63]"
-              : "border-dark/20 text-dark focus-visible:ring-primary focus-visible:ring-offset-white"
+          className={`relative inline-flex h-10 w-10 items-center justify-center rounded border md:hidden transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 ${isWater
+              ? "border-water-bright/50 text-water-foam hover:bg-water-foam/10 focus-visible:ring-water-bright focus-visible:ring-offset-water-deep"
+              : "border-charcoal/20 text-charcoal hover:bg-charcoal/5 focus-visible:ring-primary focus-visible:ring-offset-white"
             }`}
           onClick={() => setIsOpen((prev) => !prev)}
           aria-label="Toggle navigation"
@@ -248,16 +247,16 @@ export function NavBar() {
 
       {isOpen && (
         <div
-          className={`md:hidden border-t px-6 pb-6 pt-4 shadow-lg gbw-theme-transition ${isWater ? "border-[#0ea5e9]/40 bg-[#013a63]" : "border-dark/10 bg-white"
+          className={`md:hidden border-t px-6 pb-6 pt-4 shadow-lg gbw-theme-transition ${isWater ? "border-water-bright/40 bg-water-deep" : "border-charcoal/10 bg-white"
             }`}
         >
           <div className="flex flex-col gap-4 text-sm">
             {navItems.map(renderLink)}
             <Link
               href="/contact"
-              className={`text-center px-4 py-3 rounded-full font-semibold transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 ${isWater
-                  ? "bg-[#013a63] text-white hover:bg-[#0369a1] focus-visible:ring-[#0ea5e9] focus-visible:ring-offset-[#013a63]"
-                  : "btn-primary"
+              className={`btn ${isWater
+                  ? "bg-white text-water-deep hover:bg-water-bright focus-visible:ring-water-bright focus-visible:ring-offset-water-deep"
+                  : "bg-primary text-offWhite hover:bg-primaryDark"
                 }`}
             >
               Partner with us
