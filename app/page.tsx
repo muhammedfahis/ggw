@@ -284,7 +284,7 @@ export default function HomePage() {
             {/* Left: editorial image panel */}
             <div className="relative w-full h-80 lg:h-auto overflow-hidden bg-deepEarth">
               <Image
-                src="/assets/projects/rs=w:365,h:365,cg:true_1.jpeg"
+                src="/assets/advance-africa-hero.png"
                 alt="Advance Africa Foundation — Entrepreneurs across the Sahel"
                 fill
                 className="object-cover object-center contrast-105"
@@ -304,9 +304,7 @@ export default function HomePage() {
               {/* ADAF badge bottom-left */}
               <div className="absolute bottom-8 left-8">
                 <div className="flex items-center gap-3 px-4 py-2 rounded-2xl bg-deepEarth/80 backdrop-blur-md border border-accent/50 shadow-xl">
-                  <div className="w-8 h-8 rounded-lg bg-accent flex items-center justify-center">
-                    <span className="text-deepEarth font-heading font-bold text-xs">AA</span>
-                  </div>
+                  <Image src="/assets/advance-africa-logo.png" alt="" width={32} height={32} className="w-8 h-8 rounded-lg object-cover" />
                   <div className="flex flex-col">
                     <span className="text-xs font-bold text-offWhite tracking-wider uppercase">Advance Africa</span>
                     <span className="text-[9px] text-accent font-medium tracking-widest uppercase">Foundation</span>
