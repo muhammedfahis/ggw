@@ -1,0 +1,10 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "ggw",
+  "compatibility_date": "2026-10-01",
+  // Static export (next.config.mjs: output: 'export') — serve the generated files only
+  "assets": {
+    "directory": "./out",
+    "not_found_handling": "404-page"
+  }
+}

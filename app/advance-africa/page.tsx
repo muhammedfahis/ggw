@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 
@@ -114,14 +113,6 @@ export default function AdvanceAfricaPage() {
       {/* ── HERO + FACT BAR ── */}
       <section className="bg-offWhite">
         <div className="max-w-6xl mx-auto px-4 md:px-6 pt-8 pb-14 lg:pb-16">
-          <nav aria-label="Breadcrumb" className="mb-8 flex items-center gap-2 font-accent text-xs uppercase tracking-wider text-charcoal/60">
-            <Link href="/" className="hover:text-primary transition-colors">Home</Link>
-            <span aria-hidden="true">/</span>
-            <span>Partners</span>
-            <span aria-hidden="true">/</span>
-            <span className="font-semibold text-primary">Advance Africa Foundation</span>
-          </nav>
-
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
             <div className="lg:col-span-6">
               <div className="inline-flex items-center gap-3 mb-6 pr-4 rounded border border-deepEarth/15 bg-white">
