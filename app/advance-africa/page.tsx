@@ -127,30 +127,31 @@ export default function AdvanceAfricaPage() {
     <main className="bg-offWhite text-charcoal min-h-screen">
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden">
-        <div className="absolute inset-0">
+      <section className="relative overflow-hidden bg-primary">
+        {/* Mobile: photo as a banner above the text; md+: full-bleed background */}
+        <div className="relative aspect-[4/3] sm:aspect-[16/9] md:absolute md:inset-0 md:aspect-auto">
           <Image
             src="/assets/advance-africa-hero.png"
             alt="Advance Africa Foundation — Entrepreneurs across the Sahel"
             fill
             priority
-            className="object-cover"
+            className="object-cover object-[68%_center] md:object-center"
             sizes="100vw"
             quality={90}
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/80 via-primary/65 to-deepEarth/85" />
+          <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/10 to-transparent md:bg-gradient-to-br md:from-primary/80 md:via-primary/65 md:to-deepEarth/85" />
         </div>
-        <div className="relative z-10 px-6 md:px-12 lg:px-32 py-[120px] md:py-[140px] lg:py-[160px]">
+        <div className="relative z-10 px-6 md:px-12 lg:px-32 pt-6 pb-28 md:py-[140px] lg:py-[160px]">
           <div className="max-w-5xl mx-auto text-center">
             <div className="inline-flex items-center gap-3 mb-8 pl-1.5 pr-5 py-1.5 rounded-full bg-white/90 backdrop-blur-sm shadow-lg">
               <Image src="/assets/advance-africa-logo.png" alt="" width={36} height={36} className="rounded-full object-cover" />
               <span className="text-sm font-semibold text-deepEarth">Advance Africa Foundation</span>
             </div>
             <p className="font-accent text-xs uppercase tracking-wider text-accent mb-6">STRATEGIC PARTNER · HUMAN CAPITAL</p>
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-heading font-bold text-offWhite mb-8 leading-tight">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-bold text-offWhite mb-6 md:mb-8 leading-tight break-words">
               Africa&apos;s Human Capital Transformation
             </h1>
-            <p className="text-xl md:text-2xl text-offWhite/90 max-w-4xl mx-auto leading-relaxed mb-12">
+            <p className="text-lg md:text-2xl text-offWhite/90 max-w-4xl mx-auto leading-relaxed mb-10 md:mb-12">
               Advance Africa Foundation (ADAF) converts trained, underutilized talent into employees and business owners — and connects them to the capital, markets and long-term support they need to create jobs for others.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
