@@ -156,7 +156,7 @@ export default function HomePage() {
   return (
     <main className="bg-offWhite text-charcoal font-body">
       {/* Hero Section */}
-      <section className="relative h-screen">
+      <section className="relative min-h-[calc(100svh-5rem)] flex items-center justify-center overflow-hidden">
         <Image
           src="/assets/home/rs=w:1920,m.png"
           alt="Great Green Wall of Africa"
@@ -167,9 +167,9 @@ export default function HomePage() {
           quality={90}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-primary/70 via-primary/60 to-primary/80" />
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="text-center text-offWhite max-w-6xl mx-auto px-6 md:px-12 py-12 md:py-16 lg:py-20">
-            <div className={`space-y-6 ${isLoaded ? 'animate-fade-in-up' : 'opacity-0'}`}>
+        <div className="relative z-10 w-full flex items-center justify-center">
+          <div className="text-center text-offWhite max-w-6xl mx-auto px-6 md:px-12 pt-12 pb-20 md:py-16 lg:py-20">
+            <div className={`space-y-4 md:space-y-6 ${isLoaded ? 'animate-fade-in-up' : 'opacity-0'}`}>
               {/* GGWA Logo */}
               <div className="flex justify-center" style={{ animationDelay: '0.1s' }}>
                 <div className="relative">
@@ -178,19 +178,19 @@ export default function HomePage() {
                     alt="GGWA Foundation"
                     width={260}
                     height={130}
-                    className="object-contain filter drop-shadow-2xl hover:scale-105 transition-all duration-700"
+                    className="w-[180px] md:w-[260px] h-auto object-contain filter drop-shadow-2xl hover:scale-105 transition-all duration-700"
                     priority
                   />
                 </div>
               </div>
 
-              <h1 className="text-5xl md:text-7xl lg:text-8xl font-heading font-bold mb-4 leading-tight" style={{ animationDelay: '0.3s' }}>
+              <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-heading font-bold mb-4 leading-tight" style={{ animationDelay: '0.3s' }}>
                 A Living Infrastructure
               </h1>
               <p className="text-xl md:text-2xl lg:text-3xl font-light mb-6 leading-relaxed" style={{ animationDelay: '0.5s' }}>
                 for Nature, Culture, and Prosperity
               </p>
-              <p className="text-lg md:text-xl lg:text-2xl mb-8 font-light max-w-4xl mx-auto opacity-90 leading-relaxed" style={{ animationDelay: '0.7s' }}>
+              <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-6 md:mb-8 font-light max-w-4xl mx-auto opacity-90 leading-relaxed" style={{ animationDelay: '0.7s' }}>
                 We design regenerative systems alongside governments, traditional leaders, and bold partners so that land restoration becomes the most inspiring development story of this decade.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center" style={{ animationDelay: '0.9s' }}>
@@ -203,7 +203,7 @@ export default function HomePage() {
         </div>
 
         {/* Subtle Scroll Indicator */}
-        <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <div className="absolute bottom-2 left-1/2 z-10 transform -translate-x-1/2 animate-bounce">
           <div className="w-6 h-10 border-2 border-offWhite/50 rounded-full flex justify-center">
             <div className="w-1 h-3 bg-offWhite/50 rounded-full mt-2 animate-pulse"></div>
           </div>
