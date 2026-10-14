@@ -284,10 +284,10 @@ export default function HomePage() {
             {/* Left: editorial image panel */}
             <div className="relative w-full h-80 lg:h-auto overflow-hidden bg-deepEarth">
               <Image
-                src="/assets/advance-africa-hero.png"
-                alt="Advance Africa Foundation — Entrepreneurs across the Sahel"
+                src="/assets/advance-africa-home.png"
+                alt="Smiling young entrepreneur in her textile shop"
                 fill
-                className="object-cover object-center contrast-105"
+                className="object-cover object-[65%_center] contrast-105"
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
               <div className="absolute inset-0 bg-gradient-to-r from-deepEarth/85 via-deepEarth/40 to-transparent" />
@@ -300,29 +300,10 @@ export default function HomePage() {
                   &ldquo;Training without capital produces plans, not businesses.&rdquo;
                 </p>
               </div>
-
-              {/* ADAF badge bottom-left */}
-              <div className="absolute bottom-8 left-8">
-                <div className="flex items-center gap-3 px-4 py-2 rounded-2xl bg-deepEarth/80 backdrop-blur-md border border-accent/50 shadow-xl">
-                  <Image src="/assets/advance-africa-logo.png" alt="" width={32} height={32} className="w-8 h-8 rounded-lg object-cover" />
-                  <div className="flex flex-col">
-                    <span className="text-xs font-bold text-offWhite tracking-wider uppercase">Advance Africa</span>
-                    <span className="text-[9px] text-accent font-medium tracking-widest uppercase">Foundation</span>
-                  </div>
-                </div>
-              </div>
             </div>
 
             {/* Right: content panel */}
             <div className="bg-offWhite p-8 md:p-14 lg:p-16 flex flex-col justify-center">
-
-              {/* ADAF blue "Strategic Partner" badge */}
-              <div className="inline-flex items-center gap-2 self-start px-3.5 py-1 rounded-full bg-[#4e7de1] text-white font-semibold text-xs tracking-wider uppercase mb-5 shadow-sm">
-                <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
-                <span>Strategic Partner</span>
-              </div>
 
               <h2 className="font-heading text-3xl sm:text-4xl font-bold text-deepEarth leading-tight mb-4">
                 Transforming Human Capital Across Africa
@@ -331,7 +312,7 @@ export default function HomePage() {
               <div className="w-12 h-1 bg-accent mb-6 rounded-full" />
 
               <p className="font-body text-base text-charcoal/80 leading-relaxed mb-8">
-                Advance Africa Foundation bridges the gap between trained talent and economic opportunity — connecting candidates across the Sahel to entrepreneurship, financing, and mentorship networks that strengthen the Great Green Wall corridor.
+                Advance Africa bridges the gap between trained talent and economic opportunity.
               </p>
 
               {/* Stat chips */}
@@ -350,16 +331,10 @@ export default function HomePage() {
                   href="/advance-africa"
                   className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-accent text-deepEarth font-semibold text-sm tracking-wide uppercase hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300"
                 >
-                  Discover Advance Africa
+                  Learn More
                   <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M16.01 11H4v2h12.01v3L20 12l-3.99-4v3z" />
                   </svg>
-                </Link>
-                <Link
-                  href="/advance-africa"
-                  className="text-sm font-medium text-charcoal/70 hover:text-deepEarth underline decoration-accent/50 underline-offset-4 transition-colors"
-                >
-                  About the partnership ↗
                 </Link>
               </div>
 
