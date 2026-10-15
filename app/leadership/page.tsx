@@ -4,6 +4,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { createSlug } from "@/lib/leaderData";
+import { truncateText } from "@/lib/utils";
+
+// Max characters of a bio shown on a card; the full bio is on the profile page.
+const CARD_BIO_MAX = 150;
 
 export default function LeadershipPage() {
     const [isLoaded, setIsLoaded] = useState(false);
@@ -29,13 +33,13 @@ export default function LeadershipPage() {
             image: "/assets/leadership/Aliko Dangote.png",
             bio: "Chairman of the Dangote Group and one of Africa's most influential industrialists, championing private sector participation in climate and restoration initiatives.",
         },
-        // Chief Executive Officer – Ramatoulaye Diallo N'diaye
+        // Group CEO – Ramatoulaye Diallo N'diaye
         {
             title: "Distinguished Leader",
             name: "Dr. Ramatoulaye Diallo N'diaye",
-            role: "Chief Executive Officer",
+            role: "Group CEO",
             image: "/assets/leadership/Ramatoulaye Diallo N'diaye.jpeg",
-            bio: "Visionary African leader blending diplomacy, cultural renaissance, climate action, and innovative finance. As CEO of GGWoA, she leads continent-wide restoration efforts. Former Minister of Culture, Handicrafts and Tourism of Mali, she champions frameworks like Culture as Capital and the Bridge of Dignity. Chair of Africa Impact Finance Subgroup, Global Impact Disclosure Taskforce. Distinguished with National Orders of Mali and France, UNESCO 70th Anniversary Medal, and UAE Government Decoration.",
+            bio: "Visionary African leader blending diplomacy, cultural renaissance, climate action, and innovative finance. As Group CEO of GGWoA, she leads continent-wide restoration efforts. Former Minister of Culture, Handicrafts and Tourism of Mali, she champions frameworks like Culture as Capital and the Bridge of Dignity. Chair of Africa Impact Finance Subgroup, Global Impact Disclosure Taskforce. Distinguished with National Orders of Mali and France, UNESCO 70th Anniversary Medal, and UAE Government Decoration.",
         },
     ];
 
@@ -137,7 +141,7 @@ export default function LeadershipPage() {
     const management = [
         {
             name: "Dr. Ramatoulaye Diallo N'diaye",
-            role: "Chief Executive Officer",
+            role: "Group CEO",
             focus: "Mobilizes culture, finance, and diplomacy to accelerate the Great Green Wall through strategic partnerships and impact capital.",
             bio: "Visionary African leader with deep experience in cultural diplomacy, climate finance, and governance. Former Minister of Culture of Mali, now leading continent-wide restoration while shaping global standards for inclusive impact finance. Her philosophy bridges heritage, dignity, and ecological stewardship as foundations for sustainable prosperity."
         },
@@ -224,9 +228,9 @@ export default function LeadershipPage() {
 
                                     {/* Content */}
                                     <div className="p-8 flex-1 flex flex-col">
-                                        <h3 className="text-2xl lg:text-3xl font-heading font-bold text-deepEarth mb-3 leading-tight">{patron.name}</h3>
-                                        <p className="text-lg font-semibold text-primary mb-4">{patron.role}</p>
-                                        <p className="text-charcoal/80 leading-relaxed text-lg flex-1">{patron.bio}</p>
+                                        <h3 className="text-2xl lg:text-3xl font-heading font-bold text-deepEarth mb-3 leading-tight min-h-[2.5em]">{patron.name}</h3>
+                                        <p className="text-lg font-semibold text-primary mb-4 line-clamp-2 min-h-[3.5rem]" title={patron.role}>{patron.role}</p>
+                                        <p className="text-charcoal/80 leading-relaxed text-lg flex-1 min-h-[8.125em]">{truncateText(patron.bio, CARD_BIO_MAX)}</p>
 
                                         {/* Hover Link */}
                                         <div className="mt-6 flex items-center gap-2 text-accent font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -289,9 +293,9 @@ export default function LeadershipPage() {
 
                                     {/* Content */}
                                     <div className="p-8 flex-1 flex flex-col">
-                                        <h3 className="text-2xl lg:text-3xl font-heading font-bold text-deepEarth mb-3 leading-tight">{member.name}</h3>
-                                        <p className="text-lg font-semibold text-primary mb-4">{member.role}</p>
-                                        <p className="text-charcoal/80 leading-relaxed text-lg flex-1">{member.bio}</p>
+                                        <h3 className="text-2xl lg:text-3xl font-heading font-bold text-deepEarth mb-3 leading-tight min-h-[2.5em]">{member.name}</h3>
+                                        <p className="text-lg font-semibold text-primary mb-4 line-clamp-2 min-h-[3.5rem]" title={member.role}>{member.role}</p>
+                                        <p className="text-charcoal/80 leading-relaxed text-lg flex-1 min-h-[8.125em]">{truncateText(member.bio, CARD_BIO_MAX)}</p>
 
                                         {/* View Profile Link */}
                                         <div className="mt-6 flex items-center gap-2 text-accent font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -326,10 +330,10 @@ export default function LeadershipPage() {
                         {management.map((person, index) => (
                             <article
                                 key={person.name}
-                                className="group cursor-pointer animate-fade-in-up"
+                                className="group cursor-pointer animate-fade-in-up h-full"
                                 style={{ animationDelay: `${0.4 + index * 0.15}s` }}
                             >
-                                <div className="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 p-8 border border-accent/20">
+                                <div className="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 p-8 border border-accent/20 h-full">
                                     {/* Role Badge */}
                                     <div className="mb-6">
                                         <span className="px-4 py-2 bg-secondary/10 text-secondary rounded-full text-sm font-bold uppercase tracking-wide">
@@ -340,7 +344,7 @@ export default function LeadershipPage() {
                                     {/* Content */}
                                     <h3 className="text-2xl lg:text-3xl font-heading font-bold text-deepEarth mb-4 leading-tight">{person.name}</h3>
                                     <p className="text-lg text-charcoal/80 leading-relaxed mb-6">{person.focus}</p>
-                                    <p className="text-charcoal/70 leading-relaxed text-lg">{person.bio}</p>
+                                    <p className="text-charcoal/70 leading-relaxed text-lg min-h-[8.125em]">{truncateText(person.bio, CARD_BIO_MAX)}</p>
 
                                     {/* Contact Link */}
                                     <div className="mt-8 flex items-center gap-2 text-accent font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300">

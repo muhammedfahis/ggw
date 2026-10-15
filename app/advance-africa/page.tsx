@@ -10,11 +10,6 @@ export const metadata: Metadata = {
 
 const ADAF_URL = "https://advanceafrica.org";
 
-const facts = [
-  { label: "Model", value: "Training-to-enterprise" },
-  { label: "Affiliation", value: "Great Green Wall of Africa" },
-];
-
 const pipeline = [
   "Intake",
   "Assessment",
@@ -110,18 +105,6 @@ export default function AdvanceAfricaPage() {
             </div>
           </div>
         </div>
-      </section>
-
-      {/* Key Facts */}
-      <section className="px-6 md:px-12 lg:px-32 -mt-16 relative z-20">
-        <dl className="max-w-3xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-6">
-          {facts.map((f) => (
-            <div key={f.label} className="bg-white rounded-3xl p-8 shadow-xl border border-accent/20 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
-              <dt className="font-accent text-xs uppercase tracking-wider text-accent mb-3">{f.label}</dt>
-              <dd className="text-xl font-heading font-bold text-deepEarth leading-snug">{f.value}</dd>
-            </div>
-          ))}
-        </dl>
       </section>
 
       {/* About ADAF */}

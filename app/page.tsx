@@ -6,6 +6,10 @@ import { useState, useEffect } from "react";
 import { Counter } from "@/components/Counter";
 import { ScrollIndicator } from "@/components/ScrollIndicator";
 import { createSlug } from "@/lib/leaderData";
+import { truncateText } from "@/lib/utils";
+
+// Max characters of a bio shown on a card; the full bio is on the profile page.
+const CARD_BIO_MAX = 150;
 
 const impactMetrics = [
   { value: "15M+", label: "Trees established", detail: "Native species cultivated with community cooperatives." },
@@ -81,9 +85,9 @@ const team = [
   // 3. Client (the speaker)
   {
     name: "Dr. Ramatoulaye Diallo N'diaye",
-    title: "Chief Executive Officer",
+    title: "Group CEO",
     role: "Visionary African leader blending diplomacy, culture, climate action, and innovative finance.",
-    bio: "CEO of the Great Green Wall of Africa Foundation and Chair of the Africa Impact Finance Subgroup of the Global Impact Disclosure Taskforce. Former Minister of Culture, Handicrafts and Tourism of Mali. Her frameworks Culture as Capital, Bridge of Dignity, and Ubuntu Earth Fund guide transformative development honoring Africa's heritage while catalyzing climate resilience and dignity-centered prosperity.",
+    bio: "Group CEO of the Great Green Wall of Africa Foundation and Chair of the Africa Impact Finance Subgroup of the Global Impact Disclosure Taskforce. Former Minister of Culture, Handicrafts and Tourism of Mali. Her frameworks Culture as Capital, Bridge of Dignity, and Ubuntu Earth Fund guide transformative development honoring Africa's heritage while catalyzing climate resilience and dignity-centered prosperity.",
     photo: "/assets/leadership/Ramatoulaye Diallo N'diaye.jpeg",
   },
   // 4. Joseph Faluyi
@@ -656,8 +660,8 @@ export default function HomePage() {
 
                     <div className="w-10 h-0.5 bg-accent mb-6 group-hover:w-full transition-all duration-400"></div>
 
-                    <p className="text-base text-charcoal leading-relaxed mb-6 line-clamp-4 group-hover:line-clamp-none transition-all duration-300">
-                      {member.bio}
+                    <p className="text-base text-charcoal leading-relaxed mb-6 min-h-[6.5em]">
+                      {truncateText(member.bio, CARD_BIO_MAX)}
                     </p>
 
                     {/* Expertise Tags */}

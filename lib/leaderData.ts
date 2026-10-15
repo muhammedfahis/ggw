@@ -41,16 +41,16 @@ export const leadersData: LeaderData[] = [
         expertise: ["Industrial Leadership", "Private Sector Investment", "Infrastructure"],
     },
     {
-        slug: "ramatoulaye-diallo-ndiaye",
+        slug: "dr-ramatoulaye-diallo-ndiaye",
         name: "Dr. Ramatoulaye Diallo N'diaye",
-        title: "Chief Executive Officer",
+        title: "Group CEO",
         role: "Visionary African leader blending diplomacy, culture, climate action, and innovative finance",
         image: "/assets/leadership/Ramatoulaye Diallo N'diaye.jpeg",
         category: "patron",
-        bio: "Visionary African leader blending diplomacy, cultural renaissance, climate action, and innovative finance. As CEO of GGWoA, she leads continent-wide restoration efforts. Former Minister of Culture, Handicrafts and Tourism of Mali, she champions frameworks like Culture as Capital and the Bridge of Dignity.",
+        bio: "Visionary African leader blending diplomacy, cultural renaissance, climate action, and innovative finance. As Group CEO of GGWoA, she leads continent-wide restoration efforts. Former Minister of Culture, Handicrafts and Tourism of Mali, she champions frameworks like Culture as Capital and the Bridge of Dignity.",
         fullBio: `Ramatoulaye Diallo N'Diaye is a visionary African leader whose work blends diplomacy, cultural renaissance, climate action, and innovative finance into a uniquely powerful voice for transformation on the continent. Her journey reflects a lifelong commitment to dignity, heritage, ecological stewardship, and the belief that Africa's cultural and environmental wealth can serve as a foundation for a new era of prosperity.
 
-As CEO of the Great Green Wall of Africa Foundation, she leads a continent wide mission to restore landscapes, build climate resilience, and unlock new pathways for sustainable development. Her work focuses on mobilizing impact capital, forging strategic partnerships across global institutions, and ensuring that African communities remain at the center of the transformation of the Great Green Wall into one of the world's most ambitious ecological projects.
+As Group CEO of the Great Green Wall of Africa Foundation, she leads a continent wide mission to restore landscapes, build climate resilience, and unlock new pathways for sustainable development. Her work focuses on mobilizing impact capital, forging strategic partnerships across global institutions, and ensuring that African communities remain at the center of the transformation of the Great Green Wall into one of the world's most ambitious ecological projects.
 
 Ramatoulaye also serves as Chair of the Africa Impact Finance Subgroup of the Global Impact Disclosure Taskforce, a role through which she helps shape a more inclusive global financial architecture for small and medium enterprises. Her leadership emphasizes transparency, dignity, and the central role of African voices in defining new standards for sustainability and impact.
 
@@ -60,7 +60,7 @@ Her signature frameworks such as Culture as Capital, the Bridge of Dignity, and 
 
 Ramatoulaye holds a PhD from CEDS Dakar. Her research explores the Great Green Wall as a symbol of time, resilience, and generational responsibility. Today she stands among Africa's most influential and trusted voices working to advance climate justice, cultural sovereignty, peace, and human dignity across the continent and beyond.`,
         highlights: [
-            "CEO of the Great Green Wall of Africa Foundation",
+            "Group CEO of the Great Green Wall of Africa Foundation",
             "Chair, Africa Impact Finance Subgroup of the Global Impact Disclosure Taskforce",
             "Former Minister of Culture, Handicrafts and Tourism of Mali",
             "Board member of Human Capital Africa and the School of Politics, Policy and Governance",
