@@ -634,9 +634,9 @@ export default function HomePage() {
                 className="group cursor-pointer animate-fade-in-up"
                 style={{ animationDelay: `${0.4 + index * 0.1}s` }}
               >
-                <div className="bg-offWhite rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 border-2 border-transparent hover:border-accent overflow-hidden">
+                <div className="bg-offWhite rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 border-2 border-transparent hover:border-accent overflow-hidden flex flex-col h-[970px] lg:h-[1060px] xl:h-[1000px]">
                   {/* Photo Section */}
-                  <div className="relative h-96 lg:h-[400px] overflow-hidden">
+                  <div className="relative h-96 lg:h-[400px] shrink-0 overflow-hidden">
                     <Image
                       src={member.photo}
                       alt={`Portrait of ${member.name}, ${member.title}`}
@@ -653,14 +653,14 @@ export default function HomePage() {
                   </div>
 
                   {/* Content Section */}
-                  <div className="p-8 lg:p-10">
-                    <h3 className="text-3xl font-heading font-bold text-deepEarth mb-2 tracking-tight">{member.name}</h3>
-                    <p className="text-lg font-semibold text-accent uppercase tracking-wider mb-1">{member.title}</p>
-                    <p className="text-base italic text-charcoal/70 mb-6">{member.role || 'Climate Finance & Diplomacy'}</p>
+                  <div className="p-8 lg:p-10 flex flex-col flex-1 min-h-0">
+                    <h3 className="text-3xl font-heading font-bold text-deepEarth mb-2 tracking-tight line-clamp-2">{member.name}</h3>
+                    <p className="text-lg font-semibold text-accent uppercase tracking-wider mb-1 line-clamp-2">{member.title}</p>
+                    <p className="text-base italic text-charcoal/70 mb-6 line-clamp-2">{member.role || 'Climate Finance & Diplomacy'}</p>
 
                     <div className="w-10 h-0.5 bg-accent mb-6 group-hover:w-full transition-all duration-400"></div>
 
-                    <p className="text-base text-charcoal leading-relaxed mb-6 min-h-[6.5em]">
+                    <p className="text-base text-charcoal leading-relaxed mb-6 line-clamp-4">
                       {truncateText(member.bio, CARD_BIO_MAX)}
                     </p>
 
@@ -678,7 +678,7 @@ export default function HomePage() {
                     </div>
 
                     {/* CTA Button */}
-                    <Link href={`/leadership/${createSlug(member.name)}`} className="w-full mt-6 py-3 border-2 border-accent text-accent rounded-lg font-semibold uppercase tracking-wider text-sm hover:bg-accent hover:text-white hover:-translate-y-0.5 hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2 group/btn">
+                    <Link href={`/leadership/${createSlug(member.name)}`} className="w-full mt-auto py-3 border-2 border-accent text-accent rounded-lg font-semibold uppercase tracking-wider text-sm hover:bg-accent hover:text-white hover:-translate-y-0.5 hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2 group/btn">
                       View Full Bio
                       <svg className="w-4 h-4 transition-transform group-hover/btn:translate-x-1" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M16.01 11H4v2h12.01v3L20 12l-3.99-4v3z" />
