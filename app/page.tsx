@@ -72,7 +72,7 @@ const team = [
     title: "Grand Patron",
     role: "Former President of Nigeria",
     bio: "Statesman and Grand Patron of GGWoA, championing pan-African cooperation and long-term investment in the Great Green Wall.",
-    photo: "/assets/leadership/Olusegun Obasanjo.png",
+    photo: "/assets/leadership/Olusegun Obasanjo.webp",
   },
   // 2. Aliko Dangote – Patron
   {
@@ -80,7 +80,7 @@ const team = [
     title: "Patron",
     role: "Chairman Dangote Group",
     bio: "Business leader mobilizing private sector capital and industrial know-how to strengthen restoration economies across the Sahel.",
-    photo: "/assets/leadership/Aliko Dangote.png",
+    photo: "/assets/leadership/Aliko Dangote.webp",
   },
   // 3. Client (the speaker)
   {
@@ -96,7 +96,7 @@ const team = [
     title: "COO and Executive Director",
     role: "Technology executive with 20+ years driving digital transformation in IT, fintech, and sustainable development.",
     bio: "COO and Executive Director for GGWoA with extensive experience in IT transformation, fintech solutions, and climate-focused ventures. Former Managing Principal at Capco, he combines technology expertise with social entrepreneurship, managing strategic partnerships and operations. Holds MBA in Technology Management from University of Phoenix.",
-    photo: "/assets/leadership/Joseph Faluyi.png",
+    photo: "/assets/leadership/Joseph Faluyi.webp",
   },
   // 5. Dr. Frannie Leautier – Managing Director of Southbridge Investments
   {
@@ -104,7 +104,7 @@ const team = [
     title: "Managing Director of Southbridge Investments",
     role: "Development finance and innovative climate investment.",
     bio: "Renowned development finance expert pioneering blended finance models that unlock inclusive, climate-resilient growth.",
-    photo: "/assets/leadership/Dr. Frannie Leautier.png",
+    photo: "/assets/leadership/Dr. Frannie Leautier.webp",
   },
   // 6. H.E. Youssou N'Dour – Former Minister of Tourism for Senegal
   {
@@ -112,14 +112,14 @@ const team = [
     title: "Former Minister of Tourism for Senegal",
     role: "Cultural diplomacy and creative advocacy.",
     bio: "Artist and statesman using his global platform to connect culture, youth, and environmental stewardship for the Great Green Wall.",
-    photo: "/assets/leadership/H.E. Youssou N'Dour .png",
+    photo: "/assets/leadership/H.E. Youssou N'Dour .webp",
   },
 ];
 
 const partners = [
   { name: "Pan-African Agency of the Great Green Wall", logo: "/assets/home/rs=h:100,cg:true,m.jpeg" },
   { name: "African Union GGW Initiative", logo: "/assets/home/rs=h:100,cg:true,m_1.jpeg", imgClassName: "max-h-12" },
-  { name: "Bezos Earth Fund", logo: "/assets/home/rs=h:100,cg:true,m.png" },
+  { name: "Bezos Earth Fund", logo: "/assets/home/rs=h:100,cg:true,m.webp" },
   { name: "African Development Bank Group", logo: "/assets/home/rs=h:100,cg:true,m.jpeg" },
 ];
 
@@ -162,7 +162,7 @@ export default function HomePage() {
       {/* Hero Section */}
       <section className="relative min-h-[calc(100svh-5rem)] flex items-center justify-center overflow-hidden">
         <Image
-          src="/assets/home/rs=w:1920,m.png"
+          src="/assets/home/rs=w:1920,m.webp"
           alt="Great Green Wall of Africa"
           fill
           priority
@@ -178,7 +178,7 @@ export default function HomePage() {
               <div className="flex justify-center" style={{ animationDelay: '0.1s' }}>
                 <div className="relative">
                   <Image
-                    src="/assets/home/logo.png"
+                    src="/assets/home/logo.webp"
                     alt="GGWA Foundation"
                     width={260}
                     height={130}
@@ -224,7 +224,7 @@ export default function HomePage() {
             loop
             playsInline
             className="absolute inset-0 w-full h-full object-cover"
-            poster="/assets/the-great-blue-wave/water-bg.png"
+            poster="/assets/the-great-blue-wave/water-bg.webp"
           >
             <source src="/assets/home/Water_Animation_Video_Creation.mp4" type="video/mp4" />
           </video>
@@ -288,7 +288,7 @@ export default function HomePage() {
             {/* Left: editorial image panel */}
             <div className="relative w-full h-80 lg:h-auto overflow-hidden bg-deepEarth">
               <Image
-                src="/assets/advance-africa-home.png"
+                src="/assets/advance-africa-home.webp"
                 alt="Smiling young entrepreneur in her textile shop"
                 fill
                 className="object-cover object-[65%_center] contrast-105"

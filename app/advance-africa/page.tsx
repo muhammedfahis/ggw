@@ -75,7 +75,7 @@ export default function AdvanceAfricaPage() {
         {/* Mobile: photo as a banner above the text; md+: full-bleed background */}
         <div className="relative aspect-[4/3] sm:aspect-[16/9] md:absolute md:inset-0 md:aspect-auto">
           <Image
-            src="/assets/advance-africa-hero.png"
+            src="/assets/advance-africa-hero.webp"
             alt="Advance Africa — Entrepreneurs across the Sahel"
             fill
             priority
@@ -126,7 +126,7 @@ export default function AdvanceAfricaPage() {
 
             <div className="relative h-[400px] lg:h-[500px] overflow-hidden rounded-3xl shadow-2xl">
               <Image
-                src="/assets/advance-africa-conference.png"
+                src="/assets/advance-africa-conference.webp"
                 alt="Advance Africa community gathering"
                 fill
                 className="object-cover transition-transform duration-700 hover:scale-105"
@@ -205,7 +205,7 @@ export default function AdvanceAfricaPage() {
       <section className="px-6 md:px-12 lg:px-32 py-20 md:py-32 bg-gradient-to-br from-deepEarth to-primary text-center">
         <div className="max-w-4xl mx-auto flex flex-col items-center">
           <div className="w-24 h-24 rounded-full bg-white p-1.5 shadow-2xl mb-8">
-            <Image src="/assets/advance-africa-logo.png" alt="Advance Africa" width={84} height={84} className="rounded-full object-cover w-full h-full" />
+            <Image src="/assets/advance-africa-logo.webp" alt="Advance Africa" width={84} height={84} className="rounded-full object-cover w-full h-full" />
           </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-offWhite mb-8 leading-tight">
             Connect with Advance Africa

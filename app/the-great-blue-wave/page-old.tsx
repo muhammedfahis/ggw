@@ -72,7 +72,7 @@ export default function GreatBlueWavePage() {
           </div>
           <div className="relative h-80 md:h-96 rounded-3xl overflow-hidden shadow-2xl border border-accent/40">
             <Image
-              src="/assets/the-great-blue-wave/why-water.png"
+              src="/assets/the-great-blue-wave/why-water.webp"
               alt="Why water, why now – Great Blue Wave illustration (close-up)"
               fill
               className="object-cover object-center scale-110"
@@ -118,7 +118,7 @@ export default function GreatBlueWavePage() {
             <article className="bg-white rounded-3xl p-8 shadow-lg border border-accent/20">
               <div className="relative mb-6 h-48 rounded-2xl overflow-hidden">
                 <Image
-                  src="/assets/the-great-blue-wave/technology.png"
+                  src="/assets/the-great-blue-wave/technology.webp"
                   alt="Mai Sabeel water for charity technology illustration"
                   fill
                   className="object-cover object-center"
@@ -155,7 +155,7 @@ export default function GreatBlueWavePage() {
             <article className="bg-white rounded-3xl p-8 shadow-lg border border-accent/20">
               <div className="relative mb-6 h-48 rounded-2xl overflow-hidden">
                 <Image
-                  src="/assets/the-great-blue-wave/mai-sabeel.png"
+                  src="/assets/the-great-blue-wave/mai-sabeel.webp"
                   alt="Hawana Water atmospheric water harvesting technology illustration"
                   fill
                   className="object-cover object-center"
@@ -199,7 +199,7 @@ export default function GreatBlueWavePage() {
 
           <div className="relative mb-16 h-64 md:h-80 rounded-3xl overflow-hidden shadow-2xl border border-accent/30">
             <Image
-              src="/assets/the-great-blue-wave/happy-child.png"
+              src="/assets/the-great-blue-wave/happy-child.webp"
               alt="Children benefiting from humanitarian aid, disaster response, and agricultural resilience"
               fill
               className="object-cover object-center"
@@ -316,7 +316,7 @@ export default function GreatBlueWavePage() {
 
           <div className="relative mb-16 h-64 md:h-80 rounded-3xl overflow-hidden shadow-2xl border border-charcoal/15">
             <Image
-              src="/assets/the-great-blue-wave/partnership.png"
+              src="/assets/the-great-blue-wave/partnership.webp"
               alt="Partners co-designing water access from households to whole villages"
               fill
               className="object-cover object-center"
@@ -373,7 +373,7 @@ export default function GreatBlueWavePage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
             <div className="relative h-64 md:h-72 rounded-3xl overflow-hidden shadow-lg">
               <Image
-                src="/assets/the-great-blue-wave/refugee-camp.png"
+                src="/assets/the-great-blue-wave/refugee-camp.webp"
                 alt="Refugee camp and surrounding community benefiting from restored, water-secure landscapes"
                 fill
                 className="object-cover"
@@ -382,7 +382,7 @@ export default function GreatBlueWavePage() {
             </div>
             <div className="relative h-64 md:h-72 rounded-3xl overflow-hidden shadow-lg">
               <Image
-                src="/assets/the-great-blue-wave/rural-water-access.png"
+                src="/assets/the-great-blue-wave/rural-water-access.webp"
                 alt="Rural agricultural landscape supported by reliable water access"
                 fill
                 className="object-cover"
@@ -391,7 +391,7 @@ export default function GreatBlueWavePage() {
             </div>
             <div className="relative h-64 md:h-72 rounded-3xl overflow-hidden shadow-lg">
               <Image
-                src="/assets/the-great-blue-wave/water-purification-children.png"
+                src="/assets/the-great-blue-wave/water-purification-children.webp"
                 alt="Children collecting safe water from purification units in their community"
                 fill
                 className="object-cover"

@@ -22,7 +22,7 @@ export default function LeadershipPage() {
             title: "Grand Patron",
             name: "His Excellency Olusegun Obasanjo",
             role: "Former President of Nigeria",
-            image: "/assets/leadership/Olusegun Obasanjo.png",
+            image: "/assets/leadership/Olusegun Obasanjo.webp",
             bio: "Former President of Nigeria (1999–2007) and respected African statesman, lending diplomatic authority and long-term vision to the Great Green Wall movement.",
         },
         // 3. Aliko Dangote.jpeg = Patron – Aliko Dangote, GCON – Chairman Dangote Group
@@ -30,7 +30,7 @@ export default function LeadershipPage() {
             title: "Patron",
             name: "Aliko Dangote, GCON",
             role: "Chairman Dangote Group",
-            image: "/assets/leadership/Aliko Dangote.png",
+            image: "/assets/leadership/Aliko Dangote.webp",
             bio: "Chairman of the Dangote Group and one of Africa's most influential industrialists, championing private sector participation in climate and restoration initiatives.",
         },
         // Group CEO – Ramatoulaye Diallo N'diaye
@@ -48,92 +48,92 @@ export default function LeadershipPage() {
         {
             name: "Dr. Frannie Leautier",
             role: "Managing Director of Southbridge Investments",
-            image: "/assets/leadership/Dr. Frannie Leautier.png",
+            image: "/assets/leadership/Dr. Frannie Leautier.webp",
             bio: "Senior Partner and CEO at SouthBridge Investments with a distinguished career at the World Bank Group and African Development Bank, leading infrastructure, risk and asset management across the African continent.",
         },
         // 8. COO and Executive Director – Joseph Faluyi
         {
             name: "Joseph Faluyi",
             role: "COO and Executive Director",
-            image: "/assets/leadership/Joseph Faluyi.png",
+            image: "/assets/leadership/Joseph Faluyi.webp",
             bio: "Technology executive with over 20 years in IT, digital, and financial services. Former Managing Principal at Capco driving fintech transformation, with experience at Deloitte and Dell Technologies. As COO of GGWoA, he manages internal operations, new business ventures, and strategic partnerships. Previously Executive at Winsun Technologies focusing on climate-sustainable construction. MBA in Technology Management from University of Phoenix.",
         },
         // 1. H.E. Youssou N'Dour – Former Minister of Tourism for Senegal
         {
             name: "H.E. Youssou N'Dour",
             role: "Former Minister of Tourism for Senegal",
-            image: "/assets/leadership/H.E. Youssou N'Dour .png",
+            image: "/assets/leadership/H.E. Youssou N'Dour .webp",
             bio: "World‑renowned Senegalese musician, activist and former Minister of Tourism and Culture, using his cultural platform to mobilize support for climate action.",
         },
         // 3. H.E. Dr. Lassina Zerbo – full role description
         {
             name: "H.E. Dr. Lassina Zerbo",
             role: "Executive Secretary Emeritus Comprehensive Nuclear Test-Ban Treaty Organization (CTBTO); Chairman Rwanda Atomic Energy Board (RAEB); Former Prime Minister of Burkina Faso",
-            image: "/assets/leadership/H.E. Dr. Lassina Zerbo.png",
+            image: "/assets/leadership/H.E. Dr. Lassina Zerbo.webp",
             bio: "Geophysicist and nuclear science diplomat, former Executive Secretary of the CTBTO, advising on science‑driven governance and energy security for a resilient Sahel.",
         },
         // 4. Richad Soundardjee – Managing Director China International Capital Corporation
         {
             name: "Richad Soundardjee",
             role: "Managing Director China International Capital Corporation",
-            image: "/assets/leadership/Richad Soundardjee.png",
+            image: "/assets/leadership/Richad Soundardjee.webp",
             bio: "Managing Director at CICC with previous senior leadership at Société Générale, structuring capital markets solutions for emerging markets and sustainable infrastructure.",
         },
         // 5. Abderrahmane Sissako – Film Director, Screenwriter, Producer
         {
             name: "Abderrahmane Sissako",
             role: "Film Director, Screenwriter, Producer",
-            image: "/assets/leadership/Abderrahmane Sissako .png",
+            image: "/assets/leadership/Abderrahmane Sissako .webp",
             bio: "Mauritanian‑born Malian filmmaker behind works such as Timbuktu, Bamako and Waiting for Happiness, bringing global attention to stories of justice, culture and the environment.",
         },
         // 6. Patron – Aliko Dangote, GCON – Chairman Dangote Group (Strategic Steward card shares Patron image)
         {
             name: "Aliko Dangote, GCON",
             role: "Chairman Dangote Group",
-            image: "/assets/leadership/Aliko Dangote.png",
+            image: "/assets/leadership/Aliko Dangote.webp",
             bio: "Patron and strategic steward bringing private sector scale and long-term investment to the Great Green Wall.",
         },
         // 7. Patron – H.E. Ambassador Maman Sambo Sidikou
         {
             name: "H.E. Ambassador Maman Sambo Sidikou",
             role: "AU Special Rep for Mali and the Sahel; Former UN Special Rep. of the Secretary-General for West Africa and the Sahel",
-            image: "/assets/leadership/Sambo Sidikou.png",
+            image: "/assets/leadership/Sambo Sidikou.webp",
             bio: "Diplomatic champion fostering regional cooperation, peace-building and strategic partnerships across the Sahel and West Africa.",
         },
         {
             name: "Anna Getaneh",
             role: "Founder of African Mosaique",
-            image: "/assets/leadership/Anna Getaneh.png",
+            image: "/assets/leadership/Anna Getaneh.webp",
             bio: "Former international model and fashion designer. Founder of African Mosaique (fashion design & manufacturing hub) and The Ethiopian Children's Fund (ECF) serving 1,000+ children. Design philosophy: Source, Design and Develop in Africa. Featured in Vogue, Marie Claire, ELLE. University of Maryland graduate in Business Management.",
         },
         {
             name: "Vanessa Moungar",
             role: "Chief Diversity Officer of the LVMH Group",
-            image: "/assets/leadership/Vanessa Moungar.png",
+            image: "/assets/leadership/Vanessa Moungar.webp",
             bio: "Chief Diversity Officer at LVMH, recognised for championing inclusive growth, gender equity and youth empowerment across the public and private sectors.",
         },
         {
             name: "Dr Mariam Aidara Ba",
             role: "CEO of Dakar Science Po",
-            image: "/assets/leadership/Dr Mariam Aidara Ba.png",
+            image: "/assets/leadership/Dr Mariam Aidara Ba.webp",
             bio: "Political scientist and CEO of Dakar Science Po, shaping the next generation of African leaders in governance, policy and democratic innovation.",
         },
         {
             name: "Manny Aly Ansar",
             role: "Founder, Timbuktu Cultural Desert Festival",
-            image: "/assets/leadership/Manny Aly Ansar.png",
+            image: "/assets/leadership/Manny Aly Ansar.webp",
             bio: "Founder of the Timbuktu Cultural Desert Festival, using music, culture and storytelling to promote peace-building, dialogue and resilience in the Sahel.",
         },
         {
             name: "Kenza Bounjou",
             role: "Lawyer, Founding Partner at URITI",
-            image: "/assets/leadership/Kenza Bounjou.png",
+            image: "/assets/leadership/Kenza Bounjou.webp",
             bio: "Lawyer and founding partner at URITI, advising on governance, investment and impact structures that align climate action with social justice.",
         },
         {
             name: "Will Mbiakop",
             role: "Founder and Executive Chairman – African Sports and Creative Institute (ASCI)",
-            image: "/assets/leadership/Will Mbiakop.png",
+            image: "/assets/leadership/Will Mbiakop.webp",
             bio: "Innovative sports business leader of Cameroonian and Moroccan heritage. Executive Chairman of AMW Consulting Dubai and ASCI. Led NBA Africa's business development generating 70% of revenue through ground-breaking partnerships. Author of 'Africa Sports Industry: Facts, Challenges and Opportunities'. Launched 'One Million Wins' sports & sustainability program.",
         },
     ];

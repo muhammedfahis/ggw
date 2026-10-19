@@ -178,7 +178,7 @@ export function NavBar() {
             className={`relative h-12 w-12 overflow-hidden rounded-md border bg-white shadow-sm ${isWater ? "border-[#0ea5e9]/60" : "border-primary/30"
               }`}
           >
-            <Image src="/assets/about/rs=w:172.png" alt="GGWoA logo" fill className="object-contain p-2" sizes="48px" />
+            <Image src="/assets/about/rs=w:172.webp" alt="GGWoA logo" fill className="object-contain p-2" sizes="48px" />
           </div>
           <div className="leading-tight">
             <p

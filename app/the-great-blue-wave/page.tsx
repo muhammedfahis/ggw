@@ -230,7 +230,7 @@ export default function GreatBlueWavePage() {
 
               <div className="relative order-1 h-80 rounded-3xl overflow-hidden shadow-xl lg:order-2">
                 <Image
-                  src="/assets/the-great-blue-wave/happy-child.png"
+                  src="/assets/the-great-blue-wave/happy-child.webp"
                   alt="Children supported by water-secure programmes"
                   fill
                   className="object-cover"
@@ -435,15 +435,15 @@ export default function GreatBlueWavePage() {
 
             <div className="mb-12 grid gap-6 md:grid-cols-3">
               {[{
-                src: "/assets/the-great-blue-wave/refugee-camp.png",
+                src: "/assets/the-great-blue-wave/refugee-camp.webp",
                 alt: "Refugee camp and surrounding community",
               },
               {
-                src: "/assets/the-great-blue-wave/rural-water-access.png",
+                src: "/assets/the-great-blue-wave/rural-water-access.webp",
                 alt: "Rural agricultural landscape supported by water access",
               },
               {
-                src: "/assets/the-great-blue-wave/water-purification-children.png",
+                src: "/assets/the-great-blue-wave/water-purification-children.webp",
                 alt: "Children collecting safe water from purification units",
               }].map((img) => (
                 <div key={img.src} className="group relative h-64 rounded-3xl overflow-hidden shadow-xl">

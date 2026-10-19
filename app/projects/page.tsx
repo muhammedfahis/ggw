@@ -9,7 +9,7 @@ const initiatives = [
     {
         title: "The Great Blue Wave",
         summary: "Building water-secure futures across the Sahel through innovative atmospheric water harvesting systems and distributed blue hubs.",
-        image: "/assets/the-great-blue-wave/why-water.png",
+        image: "/assets/the-great-blue-wave/why-water.webp",
         tags: ["Water Security", "Technology", "Infrastructure"],
         category: "Water & Climate",
         status: "Active",
