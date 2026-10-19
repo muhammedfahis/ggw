@@ -27,7 +27,7 @@ export default function LeaderProfilePage({ params }: LeaderProfilePageProps) {
             {/* Hero Section */}
             <section className="relative overflow-hidden bg-gradient-to-br from-primary via-deepEarth to-primary">
                 <div className="absolute inset-0 opacity-10">
-                    <div className="absolute inset-0 bg-[url('/assets/home/rs=w:1920,m.jpeg')] bg-cover bg-center"></div>
+                    <div className="absolute inset-0 bg-[url('/assets/home/rs=w:1920,m.webp')] bg-cover bg-center"></div>
                 </div>
                 <div className="relative z-10 px-6 md:px-12 lg:px-32 py-20 md:py-32">
                     <div className="max-w-6xl mx-auto">

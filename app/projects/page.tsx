@@ -124,7 +124,7 @@ export default function ProjectsPage() {
             {/* Hero Section */}
             <section className="relative overflow-hidden">
                 <div className="absolute inset-0">
-                    <div className="absolute inset-0 bg-[url('/assets/home/rs=w:1920,m.jpeg')] bg-cover bg-center opacity-20"></div>
+                    <div className="absolute inset-0 bg-[url('/assets/home/rs=w:1920,m.webp')] bg-cover bg-center opacity-20"></div>
                     <div className="absolute inset-0 bg-gradient-to-br from-primary/70 via-primary/60 to-primary/80"></div>
                 </div>
                 <div className="relative z-10 px-6 md:px-12 lg:px-32 py-[120px] md:py-[140px] lg:py-[160px]">
