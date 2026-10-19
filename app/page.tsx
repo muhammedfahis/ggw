@@ -22,7 +22,7 @@ const programs = [
   {
     title: "Thiès Forest Restoration",
     description: "Transforming former mining land through native planting, water harvesting, and youth employment.",
-    image: "/assets/home/rs=w:365,h:365,cg:true_1.jpeg",
+    image: "/assets/home/rs=w:365,h:365,cg:true_1.webp",
     href: "/projects/thies-forest",
     status: "Active",
     category: "Initiative",
@@ -31,7 +31,7 @@ const programs = [
   {
     title: "Project SCALE",
     description: "Scaling climate-resilient livelihoods along the Great Green Wall with regenerative agriculture hubs.",
-    image: "/assets/home/rs=w:365,h:365,cg:true_2.jpeg",
+    image: "/assets/home/rs=w:365,h:365,cg:true_2.webp",
     href: "/projects/scale",
     status: "Active",
     category: "Initiative",
@@ -40,7 +40,7 @@ const programs = [
   {
     title: "IMAGINE-1",
     description: "Pan-African creative campaign reframing the wall through music, film, and immersive art.",
-    image: "/assets/home/rs=w:365,h:365,cg:true.jpeg",
+    image: "/assets/home/rs=w:365,h:365,cg:true.webp",
     href: "/projects/imagine-1",
     status: "Active",
     category: "Initiative",
@@ -52,14 +52,14 @@ const successStories = [
   {
     title: "Thiès Quarry Revival",
     story: "A 5‑hectare former quarry in Senegal is now a thriving native forest with 92% tree survival, creating jobs for 300 youth and reducing flood risk for nearby communities.",
-    image: "/assets/home/rs=w:730.jpeg",
+    image: "/assets/home/rs=w:730.webp",
     location: "Thiès, Senegal",
     status: "Completed",
   },
   {
     title: "Women-Led Cooperatives",
     story: "In Niger and Djibouti, women's cooperatives manage nurseries and micro‑irrigation, boosting household incomes by 45% while planting 2.5 million trees.",
-    image: "/assets/projects/rs=w:365,h:365,cg:true_1.jpeg",
+    image: "/assets/projects/rs=w:365,h:365,cg:true_1.webp",
     location: "Niger & Djibouti",
     status: "Completed",
   },
@@ -88,7 +88,7 @@ const team = [
     title: "Group CEO",
     role: "Visionary African leader blending diplomacy, culture, climate action, and innovative finance.",
     bio: "Group CEO of the Great Green Wall of Africa Foundation and Chair of the Africa Impact Finance Subgroup of the Global Impact Disclosure Taskforce. Former Minister of Culture, Handicrafts and Tourism of Mali. Her frameworks Culture as Capital, Bridge of Dignity, and Ubuntu Earth Fund guide transformative development honoring Africa's heritage while catalyzing climate resilience and dignity-centered prosperity.",
-    photo: "/assets/leadership/Ramatoulaye Diallo N'diaye.jpeg",
+    photo: "/assets/leadership/Ramatoulaye Diallo N'diaye.webp",
   },
   // 4. Joseph Faluyi
   {
@@ -117,10 +117,10 @@ const team = [
 ];
 
 const partners = [
-  { name: "Pan-African Agency of the Great Green Wall", logo: "/assets/home/rs=h:100,cg:true,m.jpeg" },
-  { name: "African Union GGW Initiative", logo: "/assets/home/rs=h:100,cg:true,m_1.jpeg", imgClassName: "max-h-12" },
+  { name: "Pan-African Agency of the Great Green Wall", logo: "/assets/home/rs=h:100,cg:true,m_jpeg.webp" },
+  { name: "African Union GGW Initiative", logo: "/assets/home/rs=h:100,cg:true,m_1.webp", imgClassName: "max-h-12" },
   { name: "Bezos Earth Fund", logo: "/assets/home/rs=h:100,cg:true,m.webp" },
-  { name: "African Development Bank Group", logo: "/assets/home/rs=h:100,cg:true,m.jpeg" },
+  { name: "African Development Bank Group", logo: "/assets/home/rs=h:100,cg:true,m_jpeg.webp" },
 ];
 
 const workstreams = [
@@ -422,7 +422,7 @@ export default function HomePage() {
             </div>
             <div className="relative h-96 lg:h-full min-h-[600px] rounded-3xl overflow-hidden border-4 border-accent shadow-2xl group animate-slide-in-right">
               <Image
-                src="/assets/home/field-note.jpeg"
+                src="/assets/home/field-note.webp"
                 alt="Landscape restoration"
                 fill
                 className="object-cover transition-transform duration-1000 group-hover:scale-105"

@@ -88,7 +88,7 @@ export default function AboutPage() {
             <section className="relative overflow-hidden">
                 <div className="absolute inset-0">
                     <Image
-                        src="/assets/about/rs=w:1209.jpeg"
+                        src="/assets/about/rs=w:1209.webp"
                         alt="GGWoA field work"
                         fill
                         priority
@@ -197,7 +197,7 @@ export default function AboutPage() {
                         
                         <div className="relative h-[400px] lg:h-[500px] overflow-hidden rounded-3xl shadow-2xl">
                             <Image
-                                src="/assets/about/rs=w:1160,h:538.jpeg"
+                                src="/assets/about/rs=w:1160,h:538.webp"
                                 alt="Community planting efforts"
                                 fill
                                 className="object-cover transition-transform duration-700 hover:scale-105"
@@ -246,7 +246,7 @@ export default function AboutPage() {
                         
                         <div className="relative h-[400px] lg:h-[500px] overflow-hidden rounded-3xl shadow-2xl">
                             <Image
-                                src="/assets/home/rs=w:730.jpeg"
+                                src="/assets/home/rs=w:730.webp"
                                 alt="Partnership meeting"
                                 fill
                                 className="object-cover transition-transform duration-700 hover:scale-105"

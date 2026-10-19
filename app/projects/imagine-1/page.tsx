@@ -42,19 +42,19 @@ const approach = [
 
 const galleryImages = [
   {
-    src: "/assets/projects/rs=w:365,h:365,cg:true_3.jpeg",
+    src: "/assets/projects/rs=w:365,h:365,cg:true_3.webp",
     alt: "Artists performing at an IMAGINE-1 showcase",
   },
   {
-    src: "/assets/projects/rs=w:365,h:365,cg:true.jpeg",
+    src: "/assets/projects/rs=w:365,h:365,cg:true.webp",
     alt: "Audience at a Great Green Wall storytelling event",
   },
   {
-    src: "/assets/projects/rs=w:365,h:365,cg:true_2.jpeg",
+    src: "/assets/projects/rs=w:365,h:365,cg:true_2.webp",
     alt: "Film crew capturing scenes in a Sahelian landscape",
   },
   {
-    src: "/assets/projects/rs=w:365,h:365,cg:true_4.jpeg",
+    src: "/assets/projects/rs=w:365,h:365,cg:true_4.webp",
     alt: "Immersive installation inspired by the Great Green Wall",
   },
 ];
@@ -66,7 +66,7 @@ export default function ImagineOnePage() {
       <section className="relative overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="/assets/projects/rs=w:365,h:365,cg:true_3.jpeg"
+            src="/assets/projects/rs=w:365,h:365,cg:true_3.webp"
             alt="Stage lighting at an IMAGINE-1 performance"
             fill
             priority
@@ -179,7 +179,7 @@ export default function ImagineOnePage() {
           <div className="bg-white rounded-3xl shadow-lg border border-accent/20 overflow-hidden">
             <div className="relative h-80 md:h-96 lg:h-[420px] overflow-hidden">
               <Image
-                src="/assets/projects/rs=w:365,h:365,cg:true.jpeg"
+                src="/assets/projects/rs=w:365,h:365,cg:true.webp"
                 alt="Artist speaking on stage about the Great Green Wall"
                 fill
                 className="object-cover transition-transform duration-700 hover:scale-105"

@@ -13,409 +13,409 @@ interface GalleryImage {
 
 const galleryImages: GalleryImage[] = [
     {
-        src: "/assets/gallery/rs=w:1110_1.jpeg",
+        src: "/assets/gallery/rs=w:1110_1.webp",
         alt: "2024 CC Forum's Global Investment in Sustainable Development",
         category: "Summit",
         caption: "Leaders and investors outlining regenerative finance instruments to accelerate the wall."
     },
     {
-        src: "/assets/gallery/rs=w:1110_2.jpeg",
+        src: "/assets/gallery/rs=w:1110_2.webp",
         alt: "Investment Forum Panel Discussion",
         category: "Summit",
         caption: "Strategic dialogue on sustainable development financing."
     },
     {
-        src: "/assets/gallery/rs=w:1110_3.jpeg",
+        src: "/assets/gallery/rs=w:1110_3.webp",
         alt: "Global Investment Partners",
         category: "Summit",
         caption: "International coalition building for climate finance."
     },
     {
-        src: "/assets/gallery/rs=w:1110_4.jpeg",
+        src: "/assets/gallery/rs=w:1110_4.webp",
         alt: "COP16 Cultural Activations",
         category: "Conference",
         caption: "Cultural showcases during the CBD COP in Colombia."
     },
     {
-        src: "/assets/gallery/rs=w:1110_5.jpeg",
+        src: "/assets/gallery/rs=w:1110_5.webp",
         alt: "COP16 Policy Briefing",
         category: "Conference",
         caption: "Media briefings and policy discussions at COP16."
     },
     {
-        src: "/assets/gallery/rs=w:1110_6.jpeg",
+        src: "/assets/gallery/rs=w:1110_6.webp",
         alt: "COP16 Delegates",
         category: "Conference",
         caption: "Global delegates gathering for biodiversity action."
     },
     {
-        src: "/assets/gallery/rs=w:1110_7.jpeg",
+        src: "/assets/gallery/rs=w:1110_7.webp",
         alt: "COP29 Coalition Building",
         category: "Conference",
         caption: "Ministers and allies creating strategic partnerships."
     },
     {
-        src: "/assets/gallery/rs=w:1110_8.jpeg",
+        src: "/assets/gallery/rs=w:1110_8.webp",
         alt: "COP29 Creative Showcase",
         category: "Conference",
         caption: "Creative activations at COP29 climate summit."
     },
     {
-        src: "/assets/gallery/rs=w:1110_9.jpeg",
+        src: "/assets/gallery/rs=w:1110_9.webp",
         alt: "COP29 Youth Engagement",
         category: "Conference",
         caption: "Youth voices leading climate action discussions."
     },
     {
-        src: "/assets/gallery/rs=w:1110_10.jpeg",
+        src: "/assets/gallery/rs=w:1110_10.webp",
         alt: "Summit of the Future Dialogue",
         category: "Summit",
         caption: "Indigenous knowledge keepers sharing wisdom."
     },
     {
-        src: "/assets/gallery/rs=w:1110_11.jpeg",
+        src: "/assets/gallery/rs=w:1110_11.webp",
         alt: "Youth Leadership Circle",
         category: "Summit",
         caption: "Young leaders shaping sustainable futures."
     },
     {
-        src: "/assets/gallery/rs=w:1110_12.jpeg",
+        src: "/assets/gallery/rs=w:1110_12.webp",
         alt: "Future Summit Innovation",
         category: "Summit",
         caption: "Innovation labs for climate solutions."
     },
     {
-        src: "/assets/gallery/rs=w:1110_13.jpeg",
+        src: "/assets/gallery/rs=w:1110_13.webp",
         alt: "NDC Summit Alignment",
         category: "Policy",
         caption: "Member states aligning with national commitments."
     },
     {
-        src: "/assets/gallery/rs=w:1110_14.jpeg",
+        src: "/assets/gallery/rs=w:1110_14.webp",
         alt: "National Climate Planning",
         category: "Policy",
         caption: "Strategic planning for Great Green Wall outcomes."
     },
     {
-        src: "/assets/gallery/rs=w:1110_15.jpeg",
+        src: "/assets/gallery/rs=w:1110_15.webp",
         alt: "Policy Implementation",
         category: "Policy",
         caption: "Translating commitments into actionable strategies."
     },
     {
-        src: "/assets/gallery/rs=w:1110_16.jpeg",
+        src: "/assets/gallery/rs=w:1110_16.webp",
         alt: "UAE-Africa Economic Summit",
         category: "Investment",
         caption: "Investment briefings on infrastructure and logistics."
     },
     {
-        src: "/assets/gallery/rs=w:1110_17.jpeg",
+        src: "/assets/gallery/rs=w:1110_17.webp",
         alt: "Economic Corridor Development",
         category: "Investment",
         caption: "Building sustainable economic partnerships."
     },
     {
-        src: "/assets/gallery/rs=w:1110_18.jpeg",
+        src: "/assets/gallery/rs=w:1110_18.webp",
         alt: "Circular Economy Solutions",
         category: "Investment",
         caption: "Showcasing circular economy innovations."
     },
     {
-        src: "/assets/gallery/rs=w:1110_19.jpeg",
+        src: "/assets/gallery/rs=w:1110_19.webp",
         alt: "Climate Action Africa Forum",
         category: "Innovation",
         caption: "Policy hackathons accelerating climate entrepreneurship."
     },
     {
-        src: "/assets/gallery/rs=w:1110_20.jpeg",
+        src: "/assets/gallery/rs=w:1110_20.webp",
         alt: "CAAF24 Creative Showcase",
         category: "Innovation",
         caption: "Creative solutions for climate action."
     },
     {
-        src: "/assets/gallery/rs=w:1110_21.jpeg",
+        src: "/assets/gallery/rs=w:1110_21.webp",
         alt: "Climate Entrepreneurship",
         category: "Innovation",
         caption: "Young entrepreneurs presenting climate solutions."
     },
     {
-        src: "/assets/gallery/rs=w:1110_22.jpeg",
+        src: "/assets/gallery/rs=w:1110_22.webp",
         alt: "Soil Health Summit",
         category: "Science",
         caption: "Demonstrations of soil regeneration science."
     },
     {
-        src: "/assets/gallery/rs=w:1110_23.jpeg",
+        src: "/assets/gallery/rs=w:1110_23.webp",
         alt: "Farmer Cooperative Training",
         category: "Science",
         caption: "Hands-on training with farmer cooperatives."
     },
     {
-        src: "/assets/gallery/rs=w:1110_24.jpeg",
+        src: "/assets/gallery/rs=w:1110_24.webp",
         alt: "Regenerative Agriculture",
         category: "Science",
         caption: "Advanced techniques in soil regeneration."
     },
     {
-        src: "/assets/gallery/rs=w:1110_25.jpeg",
+        src: "/assets/gallery/rs=w:1110_25.webp",
         alt: "Diaspora Investment Symposium",
         category: "Community",
         caption: "Diaspora leaders mobilizing capital for restoration."
     },
     {
-        src: "/assets/gallery/rs=w:1110_26.jpeg",
+        src: "/assets/gallery/rs=w:1110_26.webp",
         alt: "Storytelling for Impact",
         category: "Community",
         caption: "Mobilizing storytelling for project funding."
     },
     {
-        src: "/assets/gallery/rs=w:1110_27.jpeg",
+        src: "/assets/gallery/rs=w:1110_27.webp",
         alt: "Community Partnership",
         category: "Community",
         caption: "Building community-led restoration projects."
     },
     {
-        src: "/assets/gallery/rs=w:1110_28.jpeg",
+        src: "/assets/gallery/rs=w:1110_28.webp",
         alt: "Youth Climate Summit",
         category: "Summit",
         caption: "Young leaders convening for climate action."
     },
     {
-        src: "/assets/gallery/rs=w:1110_29.jpeg",
+        src: "/assets/gallery/rs=w:1110_29.webp",
         alt: "Innovation Showcase",
         category: "Innovation",
         caption: "Climate tech innovations on display."
     },
     {
-        src: "/assets/gallery/rs=w:1110_30.jpeg",
+        src: "/assets/gallery/rs=w:1110_30.webp",
         alt: "Policy Workshop",
         category: "Policy",
         caption: "Stakeholders collaborating on policy frameworks."
     },
     {
-        src: "/assets/gallery/rs=w:1110_31.jpeg",
+        src: "/assets/gallery/rs=w:1110_31.webp",
         alt: "Investment Forum",
         category: "Investment",
         caption: "Investment opportunities in green infrastructure."
     },
     {
-        src: "/assets/gallery/rs=w:1110_32.jpeg",
+        src: "/assets/gallery/rs=w:1110_32.webp",
         alt: "Science Symposium",
         category: "Science",
         caption: "Research presentations on climate adaptation."
     },
     {
-        src: "/assets/gallery/rs=w:1110_33.jpeg",
+        src: "/assets/gallery/rs=w:1110_33.webp",
         alt: "Community Assembly",
         category: "Community",
         caption: "Local communities gathering for planning."
     },
     {
-        src: "/assets/gallery/rs=w:1110_34.jpeg",
+        src: "/assets/gallery/rs=w:1110_34.webp",
         alt: "Global Partners Meeting",
         category: "Summit",
         caption: "International partners strategic alignment."
     },
     {
-        src: "/assets/gallery/rs=w:1110_35.jpeg",
+        src: "/assets/gallery/rs=w:1110_35.webp",
         alt: "Climate Innovation Lab",
         category: "Innovation",
         caption: "Testing new climate technologies."
     },
     {
-        src: "/assets/gallery/rs=w:1110_36.jpeg",
+        src: "/assets/gallery/rs=w:1110_36.webp",
         alt: "Policy Dialogue",
         category: "Policy",
         caption: "High-level policy discussions."
     },
     {
-        src: "/assets/gallery/rs=w:1110_37.jpeg",
+        src: "/assets/gallery/rs=w:1110_37.webp",
         alt: "Green Investment Summit",
         category: "Investment",
         caption: "Mobilizing capital for green projects."
     },
     {
-        src: "/assets/gallery/rs=w:1110_38.jpeg",
+        src: "/assets/gallery/rs=w:1110_38.webp",
         alt: "Environmental Research",
         category: "Science",
         caption: "Field research on ecosystem restoration."
     },
     {
-        src: "/assets/gallery/rs=w:1110_39.jpeg",
+        src: "/assets/gallery/rs=w:1110_39.webp",
         alt: "Community Training",
         category: "Community",
         caption: "Capacity building for local communities."
     },
     {
-        src: "/assets/gallery/rs=w:1110_40.jpeg",
+        src: "/assets/gallery/rs=w:1110_40.webp",
         alt: "Leadership Summit",
         category: "Summit",
         caption: "Leadership development for climate action."
     },
     {
-        src: "/assets/gallery/rs=w:1110_41.jpeg",
+        src: "/assets/gallery/rs=w:1110_41.webp",
         alt: "Tech Innovation",
         category: "Innovation",
         caption: "Technology solutions for climate challenges."
     },
     {
-        src: "/assets/gallery/rs=w:1110_42.jpeg",
+        src: "/assets/gallery/rs=w:1110_42.webp",
         alt: "Climate Policy Forum",
         category: "Policy",
         caption: "Policy makers discussing climate strategies."
     },
     {
-        src: "/assets/gallery/rs=w:1110_43.jpeg",
+        src: "/assets/gallery/rs=w:1110_43.webp",
         alt: "Sustainable Investment",
         category: "Investment",
         caption: "Investment in sustainable development."
     },
     {
-        src: "/assets/gallery/rs=w:1110_44.jpeg",
+        src: "/assets/gallery/rs=w:1110_44.webp",
         alt: "Climate Science Forum",
         category: "Science",
         caption: "Scientific discussions on climate change."
     },
     {
-        src: "/assets/gallery/rs=w:1110_45.jpeg",
+        src: "/assets/gallery/rs=w:1110_45.webp",
         alt: "Community Empowerment",
         category: "Community",
         caption: "Empowering communities for sustainable development."
     },
     {
-        src: "/assets/gallery/rs=w:1110_46.jpeg",
+        src: "/assets/gallery/rs=w:1110_46.webp",
         alt: "Global Climate Summit",
         category: "Summit",
         caption: "World leaders addressing climate challenges."
     },
     {
-        src: "/assets/gallery/rs=w:1110_47.jpeg",
+        src: "/assets/gallery/rs=w:1110_47.webp",
         alt: "Innovation Exhibition",
         category: "Innovation",
         caption: "Showcasing climate innovation solutions."
     },
     {
-        src: "/assets/gallery/rs=w:1110_48.jpeg",
+        src: "/assets/gallery/rs=w:1110_48.webp",
         alt: "Policy Implementation Workshop",
         category: "Policy",
         caption: "Workshop on implementing climate policies."
     },
     {
-        src: "/assets/gallery/rs=w:1110_49.jpeg",
+        src: "/assets/gallery/rs=w:1110_49.webp",
         alt: "Climate Finance Meeting",
         category: "Investment",
         caption: "Discussion on climate finance mechanisms."
     },
     {
-        src: "/assets/gallery/rs=w:1110_50.jpeg",
+        src: "/assets/gallery/rs=w:1110_50.webp",
         alt: "Environmental Science Conference",
         category: "Science",
         caption: "Conference on environmental sciences."
     },
     {
-        src: "/assets/gallery/rs=w:1110_51.jpeg",
+        src: "/assets/gallery/rs=w:1110_51.webp",
         alt: "Community Development Forum",
         category: "Community",
         caption: "Forum on community-led development."
     },
     {
-        src: "/assets/gallery/rs=w:1110_52.jpeg",
+        src: "/assets/gallery/rs=w:1110_52.webp",
         alt: "Climate Action Summit",
         category: "Summit",
         caption: "Summit on accelerating climate action."
     },
     {
-        src: "/assets/gallery/rs=w:1110_53.jpeg",
+        src: "/assets/gallery/rs=w:1110_53.webp",
         alt: "Green Technology Showcase",
         category: "Innovation",
         caption: "Showcase of green technologies."
     },
     {
-        src: "/assets/gallery/rs=w:1110_54.jpeg",
+        src: "/assets/gallery/rs=w:1110_54.webp",
         alt: "Climate Policy Summit",
         category: "Policy",
         caption: "Summit on climate policy development."
     },
     {
-        src: "/assets/gallery/rs=w:1110_55.jpeg",
+        src: "/assets/gallery/rs=w:1110_55.webp",
         alt: "Sustainable Investment Forum",
         category: "Investment",
         caption: "Forum on sustainable investment opportunities."
     },
     {
-        src: "/assets/gallery/rs=w:1110_56.jpeg",
+        src: "/assets/gallery/rs=w:1110_56.webp",
         alt: "Climate Research Symposium",
         category: "Science",
         caption: "Symposium on climate research findings."
     },
     {
-        src: "/assets/gallery/rs=w:1110_57.jpeg",
+        src: "/assets/gallery/rs=w:1110_57.webp",
         alt: "Community Resilience Workshop",
         category: "Community",
         caption: "Workshop on building community resilience."
     },
     {
-        src: "/assets/gallery/rs=w:1110_58.jpeg",
+        src: "/assets/gallery/rs=w:1110_58.webp",
         alt: "Global Climate Conference",
         category: "Summit",
         caption: "International conference on climate solutions."
     },
     {
-        src: "/assets/gallery/rs=w:1110_59.jpeg",
+        src: "/assets/gallery/rs=w:1110_59.webp",
         alt: "Climate Innovation Summit",
         category: "Innovation",
         caption: "Summit on climate innovation and technology."
     },
     {
-        src: "/assets/gallery/rs=w:1110_60.jpeg",
+        src: "/assets/gallery/rs=w:1110_60.webp",
         alt: "Environmental Policy Forum",
         category: "Policy",
         caption: "Forum on environmental policy development."
     },
     {
-        src: "/assets/gallery/rs=w:1110_61.jpeg",
+        src: "/assets/gallery/rs=w:1110_61.webp",
         alt: "Green Finance Conference",
         category: "Investment",
         caption: "Conference on green finance mechanisms."
     },
     {
-        src: "/assets/gallery/rs=w:1110_62.jpeg",
+        src: "/assets/gallery/rs=w:1110_62.webp",
         alt: "Climate Science Workshop",
         category: "Science",
         caption: "Workshop on climate science applications."
     },
     {
-        src: "/assets/gallery/rs=w:1110_63.jpeg",
+        src: "/assets/gallery/rs=w:1110_63.webp",
         alt: "Community Climate Action",
         category: "Community",
         caption: "Community-led climate action initiatives."
     },
     {
-        src: "/assets/gallery/rs=w:1110_64.jpeg",
+        src: "/assets/gallery/rs=w:1110_64.webp",
         alt: "International Climate Summit",
         category: "Summit",
         caption: "International summit on climate cooperation."
     },
     {
-        src: "/assets/gallery/rs=w:1110_65.jpeg",
+        src: "/assets/gallery/rs=w:1110_65.webp",
         alt: "Sustainable Innovation Forum",
         category: "Innovation",
         caption: "Forum on sustainable innovation solutions."
     },
     {
-        src: "/assets/gallery/rs=w:1110_66.jpeg",
+        src: "/assets/gallery/rs=w:1110_66.webp",
         alt: "Climate Policy Dialogue",
         category: "Policy",
         caption: "Dialogue on effective climate policies."
     },
     {
-        src: "/assets/gallery/rs=w:1110_67.jpeg",
+        src: "/assets/gallery/rs=w:1110_67.webp",
         alt: "Impact Investment Summit",
         category: "Investment",
         caption: "Summit on impact investment strategies."
     },
     {
-        src: "/assets/gallery/rs=w:1110_68.jpeg",
+        src: "/assets/gallery/rs=w:1110_68.webp",
         alt: "Environmental Research Forum",
         category: "Science",
         caption: "Forum on environmental research findings."
@@ -485,7 +485,7 @@ export default function GalleryPage() {
             {/* Hero Section */}
             <section className="relative overflow-hidden">
                 <div className="absolute inset-0">
-                    <div className="absolute inset-0 bg-[url('/assets/gallery/rs=w:1110_1.jpeg')] bg-cover bg-center opacity-20"></div>
+                    <div className="absolute inset-0 bg-[url('/assets/gallery/rs=w:1110_1.webp')] bg-cover bg-center opacity-20"></div>
                     <div className="absolute inset-0 bg-gradient-to-br from-primary/70 via-primary/60 to-primary/80"></div>
                 </div>
                 <div className="relative z-10 px-6 md:px-12 lg:px-32 py-[120px] md:py-[140px] lg:py-[160px]">

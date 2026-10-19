@@ -20,7 +20,7 @@ const initiatives = [
     {
         title: "COP28 Pre-summit Series",
         summary: "Aligning climate, education, food security, health, and culture coalitions to accelerate 2030 commitments through unprecedented cross-sector collaboration.",
-        image: "/assets/projects/rs=w:365,h:365,cg:true.jpeg",
+        image: "/assets/projects/rs=w:365,h:365,cg:true.webp",
         tags: ["Policy", "Culture", "Finance"],
         category: "Climate Summit",
         status: "Active",
@@ -31,7 +31,7 @@ const initiatives = [
     {
         title: "Thiès Forest Restoration",
         summary: "Transforming former mining land through native planting, water harvesting, and youth employment to create sustainable ecosystems and livelihoods.",
-        image: "/assets/projects/rs=w:365,h:365,cg:true_1.jpeg",
+        image: "/assets/projects/rs=w:365,h:365,cg:true_1.webp",
         tags: ["Land restoration", "Youth jobs"],
         category: "Restoration",
         status: "Active",
@@ -42,7 +42,7 @@ const initiatives = [
     {
         title: "SCALE",
         summary: "Scaling climate-resilient livelihoods along the Great Green Wall with regenerative agriculture hubs that empower local communities.",
-        image: "/assets/projects/rs=w:365,h:365,cg:true_2.jpeg",
+        image: "/assets/projects/rs=w:365,h:365,cg:true_2.webp",
         tags: ["Agriculture", "Finance"],
         category: "Livelihoods",
         status: "Active",
@@ -53,7 +53,7 @@ const initiatives = [
     {
         title: "IMAGINE-1",
         summary: "Pan-African creative campaign reframing the wall through music, film, and immersive art to inspire global action and local pride.",
-        image: "/assets/projects/rs=w:365,h:365,cg:true_3.jpeg",
+        image: "/assets/projects/rs=w:365,h:365,cg:true_3.webp",
         tags: ["Culture", "Storytelling"],
         category: "Arts & Culture",
         status: "Active",
@@ -64,7 +64,7 @@ const initiatives = [
     {
         title: "ENGAGE",
         summary: "Community assemblies in 30+ villages to co-design adaptation plans and governance charters that ensure local ownership and success.",
-        image: "/assets/projects/rs=w:365,h:365,cg:true_4.jpeg",
+        image: "/assets/projects/rs=w:365,h:365,cg:true_4.webp",
         tags: ["Community", "Policy"],
         category: "Governance",
         status: "Active",
@@ -75,7 +75,7 @@ const initiatives = [
     {
         title: "WORK",
         summary: "Job awareness labs highlighting the climate careers unlocked by the Great Green Wall, connecting youth with green employment opportunities.",
-        image: "/assets/projects/rs=w:365,h:365,cg:true,m.jpeg",
+        image: "/assets/projects/rs=w:365,h:365,cg:true,m.webp",
         tags: ["Jobs", "Education"],
         category: "Education",
         status: "Planning",

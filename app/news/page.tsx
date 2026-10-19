@@ -10,7 +10,7 @@ const feature = {
     title: "Great Green Wall prepares for COP30",
     summary: "GGWoA and ministerial partners unveil an ambitious regenerative finance roadmap, uniting culture, policy, and climate innovators in a groundbreaking initiative that promises to reshape Africa's ecological future at Brazil's pivotal climate summit.",
     date: "Nov 10, 2025",
-    image: "/assets/news/rs=w:1920,m.jpeg",
+    image: "/assets/news/rs=w:1920,m.webp",
     href: "/news/cop30-briefing",
     category: "Climate Summit",
     readTime: "5 min read"
@@ -21,7 +21,7 @@ const spotlights = [
         title: "Thiès restoration site reaches 92% tree survival",
         summary: "Community cooperatives piloted new water-harvesting designs that now inform regional scale plans, demonstrating remarkable success in sustainable land management.",
         date: "Nov 18, 2024",
-        image: "/assets/news/rs=w:388,h:194,cg:true.jpeg",
+        image: "/assets/news/rs=w:388,h:194,cg:true.webp",
         category: "Success Story",
         readTime: "3 min read"
     },
@@ -29,7 +29,7 @@ const spotlights = [
         title: "IMAGINE-1 creative tour launches in Lagos",
         summary: "Artists, filmmakers, and designers co-created immersive experiences to reframe land stewardship through the power of creative expression.",
         date: "Oct 27, 2024",
-        image: "/assets/news/rs=w:388,h:194,cg:true_1.jpeg",
+        image: "/assets/news/rs=w:388,h:194,cg:true_1.webp",
         category: "Cultural Initiative",
         readTime: "4 min read"
     },
@@ -37,7 +37,7 @@ const spotlights = [
         title: "Youth climate labs open in Niamey & Ndjamena",
         summary: "Early learning canopies double as entrepreneurship hubs equipping young people for green careers and sustainable futures.",
         date: "Oct 10, 2024",
-        image: "/assets/news/rs=w:388,h:194,cg:true_2.jpeg",
+        image: "/assets/news/rs=w:388,h:194,cg:true_2.webp",
         category: "Education",
         readTime: "6 min read"
     },
@@ -45,7 +45,7 @@ const spotlights = [
         title: "Diaspora fund backs microgrants for community water systems",
         summary: "The ENGAGE programme mobilized diaspora capital to expand solar-powered boreholes across rural communities.",
         date: "Sep 25, 2024",
-        image: "/assets/news/rs=w:388,h:194,cg:true_3.jpeg",
+        image: "/assets/news/rs=w:388,h:194,cg:true_3.webp",
         category: "Partnership",
         readTime: "4 min read"
     },
@@ -56,112 +56,112 @@ const archive = [
         date: "Oct 15, 2025",
         title: "COP30 preparations accelerate",
         summary: "GGWoA mobilizes private sector capital toward 2030 goals through innovative financing mechanisms ahead of the Brazil summit.",
-        image: "/assets/news/rs=w:600,h:300,cg:true.jpeg",
+        image: "/assets/news/rs=w:600,h:300,cg:true.webp",
         category: "Annual Review"
     },
     {
         date: "Sep 30, 2025",
         title: "Announcement of GGWoA participation at COP30",
         summary: "Partnering with PAGGW and AU GGWI to present an accelerated action plan in Brazil that promises transformative impact.",
-        image: "/assets/news/rs=w:600,h:300,cg:true_1.jpeg",
+        image: "/assets/news/rs=w:600,h:300,cg:true_1.webp",
         category: "Climate Summit"
     },
     {
         date: "Oct 29, 2023",
         title: "5 hectares of an old quarry restored in Thiès, Senegal",
         summary: "In partnership with DEFCCS and ASERGMV, native species were planted to combat flooding and climate change.",
-        image: "/assets/news/rs=w:388,h:194,cg:true_4.jpeg",
+        image: "/assets/news/rs=w:388,h:194,cg:true_4.webp",
         category: "Restoration"
     },
     {
         date: "Oct 29, 2023",
         title: "Arabia CSR Awards event in UAE",
         summary: "Leadership highlighted sustainability wins alongside regional champions at this prestigious recognition ceremony.",
-        image: "/assets/news/rs=w:388,h:194,cg:true_5.jpeg",
+        image: "/assets/news/rs=w:388,h:194,cg:true_5.webp",
         category: "Recognition"
     },
     {
         date: "Oct 29, 2023",
         title: "Participation at the Africa Diaspora Network's Beyond Remittance",
         summary: "CEO Ramatoulaye Diallo N'Diaye catalyzed partnerships with innovators, entrepreneurs, and investors.",
-        image: "/assets/news/rs=w:388,h:194,cg:true_6.jpeg",
+        image: "/assets/news/rs=w:388,h:194,cg:true_6.webp",
         category: "Partnership"
     },
     {
         date: "Sep 22, 2023",
         title: "Meeting with AfDB to discuss partnership",
         summary: "Engagement with VP Kevin Kariuki reinforced GGWoA's role in Africa's climate agenda and sustainable development.",
-        image: "/assets/news/rs=w:388,h:194,cg:true_7.jpeg",
+        image: "/assets/news/rs=w:388,h:194,cg:true_7.webp",
         category: "Partnership"
     },
     {
         date: "Sep 20, 2023",
         title: "Private sector engagement event planning in Senegal",
         summary: "Discussions with President Macky Sall to champion Dakar's January 2024 convening of global leaders.",
-        image: "/assets/news/rs=w:388,h:194,cg:true_8.jpeg",
+        image: "/assets/news/rs=w:388,h:194,cg:true_8.webp",
         category: "Engagement"
     },
     {
         date: "Sep 20, 2023",
         title: "Climate and Capital event during UNGA78",
         summary: "LG Nova and GGWoA explored investment pathways born from climate opportunity and sustainable innovation.",
-        image: "/assets/news/rs=w:388,h:194,cg:true_9.jpeg",
+        image: "/assets/news/rs=w:388,h:194,cg:true_9.webp",
         category: "Finance"
     },
     {
         date: "Aug 7, 2023",
         title: "Partnership with Afriwocc",
         summary: "Highlighting women-led inclusion at the African Women and Children Inclusion & Climate Action Conference.",
-        image: "/assets/news/rs=w:388,h:194,cg:true_10.jpeg",
+        image: "/assets/news/rs=w:388,h:194,cg:true_10.webp",
         category: "Inclusion"
     },
     {
         date: "Jun 5, 2023",
         title: "Private sector engagement in Niger",
         summary: "Collaboration with the Issoufou Mahamadou Foundation to grow human capital and biodiversity protection.",
-        image: "/assets/news/rs=w:388,h:194,cg:true_11.jpeg",
+        image: "/assets/news/rs=w:388,h:194,cg:true_11.webp",
         category: "Partnership"
     },
     {
         date: "Dec 12, 2022",
         title: "Official launch of GGWoA Foundation",
         summary: "Grand Patron H.E. Olusegun Obasanjo joined the CEO at the US-Africa Summit in Washington DC.",
-        image: "/assets/news/rs=w:388,h:194,cg:true_12.jpeg",
+        image: "/assets/news/rs=w:388,h:194,cg:true_12.webp",
         category: "Launch"
     },
     {
         date: "Nov 2, 2022",
         title: "Residence of Artists in Benguerir, Morocco",
         summary: "Project IMAGINE united art with ecological stewardship in North Africa through creative collaboration.",
-        image: "/assets/news/rs=w:388,h:194,cg:true_13.jpeg",
+        image: "/assets/news/rs=w:388,h:194,cg:true_13.webp",
         category: "Cultural Initiative"
     },
     {
         date: "Oct 29, 2022",
         title: "Chairman's first official travel",
         summary: "Ambassador Sidikou strengthened partnerships during a strategic delegation to Morocco.",
-        image: "/assets/news/rs=w:388,h:194,cg:true_14.jpeg",
+        image: "/assets/news/rs=w:388,h:194,cg:true_14.webp",
         category: "Diplomacy"
     },
     {
         date: "Sep 27, 2022",
         title: "Chairman announcement",
         summary: "Ambassador Maman Sidikou named Chairman of the Board, bringing decades of diplomatic leadership.",
-        image: "/assets/news/rs=w:388,h:194,cg:true.jpeg",
+        image: "/assets/news/rs=w:388,h:194,cg:true.webp",
         category: "Leadership"
     },
     {
         date: "Sep 19, 2022",
         title: "Meeting with Bezos Earth Fund",
         summary: "Discussing potential partnerships that scale land restoration financing across the continent.",
-        image: "/assets/news/rs=w:388,h:194,cg:true_1.jpeg",
+        image: "/assets/news/rs=w:388,h:194,cg:true_1.webp",
         category: "Partnership"
     },
     {
         date: "Jul 27, 2022",
         title: "Initiation of GGWoA",
         summary: "Founders met with Nigeria's former President Olusegun Obasanjo to chart the movement's beginnings.",
-        image: "/assets/news/rs=w:388,h:194,cg:true_2.jpeg",
+        image: "/assets/news/rs=w:388,h:194,cg:true_2.webp",
         category: "Foundation"
     },
 ];

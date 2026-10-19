@@ -42,19 +42,19 @@ const approach = [
 
 const galleryImages = [
   {
-    src: "/assets/projects/rs=w:365,h:365,cg:true_1.jpeg",
+    src: "/assets/projects/rs=w:365,h:365,cg:true_1.webp",
     alt: "Aerial view of restored forest plots in Thiès, Senegal",
   },
   {
-    src: "/assets/projects/rs=w:365,h:365,cg:true.jpeg",
+    src: "/assets/projects/rs=w:365,h:365,cg:true.webp",
     alt: "Youth planting native trees on terraced quarry slopes",
   },
   {
-    src: "/assets/projects/rs=w:365,h:365,cg:true_2.jpeg",
+    src: "/assets/projects/rs=w:365,h:365,cg:true_2.webp",
     alt: "Water harvesting basins capturing rainfall around young trees",
   },
   {
-    src: "/assets/projects/rs=w:365,h:365,cg:true_3.jpeg",
+    src: "/assets/projects/rs=w:365,h:365,cg:true_3.webp",
     alt: "Community members walking through a young forest corridor",
   },
 ];
@@ -66,7 +66,7 @@ export default function ThiesForestPage() {
       <section className="relative overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="/assets/projects/rs=w:365,h:365,cg:true_1.jpeg"
+            src="/assets/projects/rs=w:365,h:365,cg:true_1.webp"
             alt="Restored forest landscape in Thiès, Senegal"
             fill
             priority
@@ -179,7 +179,7 @@ export default function ThiesForestPage() {
           <div className="bg-white rounded-3xl shadow-lg border border-accent/20 overflow-hidden">
             <div className="relative h-80 md:h-96 lg:h-[420px] overflow-hidden">
               <Image
-                src="/assets/projects/rs=w:365,h:365,cg:true.jpeg"
+                src="/assets/projects/rs=w:365,h:365,cg:true.webp"
                 alt="Terraced and replanted slopes at the Thiès restoration site"
                 fill
                 className="object-cover transition-transform duration-700 hover:scale-105"

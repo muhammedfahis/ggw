@@ -91,7 +91,7 @@ export default function GreatBlueWavePage() {
             <div className="mb-12 grid gap-8 lg:grid-cols-[3fr,2fr] items-stretch">
               <div className="relative overflow-hidden rounded-3xl shadow-xl">
                 <Image
-                  src="/assets/the-great-blue-wave/children.jpg"
+                  src="/assets/the-great-blue-wave/children.webp"
                   alt="Children benefiting from water-secure partnerships"
                   fill
                   className="object-cover"
@@ -306,7 +306,7 @@ export default function GreatBlueWavePage() {
             <div className="mb-12 grid gap-10 lg:grid-cols-[3fr,2fr] items-center">
               <div className="relative h-80 md:h-96 lg:h-[28rem] rounded-3xl overflow-hidden shadow-2xl border border-white/40">
                 <Image
-                  src="/assets/the-great-blue-wave/hawana.jpg"
+                  src="/assets/the-great-blue-wave/hawana.webp"
                   alt="Hawana atmospheric water technology"
                   fill
                   className="object-cover"
@@ -371,7 +371,7 @@ export default function GreatBlueWavePage() {
             <div className="mb-12 grid gap-10 lg:grid-cols-[3fr,2fr] items-center">
               <div className="relative h-80 md:h-96 rounded-3xl overflow-hidden shadow-xl">
                 <Image
-                  src="/assets/the-great-blue-wave/ss.jpg"
+                  src="/assets/the-great-blue-wave/ss.webp"
                   alt="Partners co-designing water access"
                   fill
                   className="object-cover"

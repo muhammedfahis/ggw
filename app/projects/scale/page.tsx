@@ -42,19 +42,19 @@ const approach = [
 
 const galleryImages = [
   {
-    src: "/assets/projects/rs=w:365,h:365,cg:true_2.jpeg",
+    src: "/assets/projects/rs=w:365,h:365,cg:true_2.webp",
     alt: "Farmers gathered at a Project SCALE training hub",
   },
   {
-    src: "/assets/projects/rs=w:365,h:365,cg:true,m.jpeg",
+    src: "/assets/projects/rs=w:365,h:365,cg:true,m.webp",
     alt: "Rows of climate-resilient crops in experimental plots",
   },
   {
-    src: "/assets/projects/rs=w:365,h:365,cg:true_3.jpeg",
+    src: "/assets/projects/rs=w:365,h:365,cg:true_3.webp",
     alt: "Facilitators and youth leaders planning seasonal activities",
   },
   {
-    src: "/assets/projects/rs=w:365,h:365,cg:true_4.jpeg",
+    src: "/assets/projects/rs=w:365,h:365,cg:true_4.webp",
     alt: "Community members discussing farm plans around a field map",
   },
 ];
@@ -66,7 +66,7 @@ export default function ScaleProjectPage() {
       <section className="relative overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="/assets/projects/rs=w:365,h:365,cg:true_2.jpeg"
+            src="/assets/projects/rs=w:365,h:365,cg:true_2.webp"
             alt="Farmers participating in Project SCALE activities"
             fill
             priority
@@ -179,7 +179,7 @@ export default function ScaleProjectPage() {
           <div className="bg-white rounded-3xl shadow-lg border border-accent/20 overflow-hidden">
             <div className="relative h-80 md:h-96 lg:h-[420px] overflow-hidden">
               <Image
-                src="/assets/projects/rs=w:365,h:365,cg:true,m.jpeg"
+                src="/assets/projects/rs=w:365,h:365,cg:true,m.webp"
                 alt="Participants discussing planting strategies at a SCALE hub"
                 fill
                 className="object-cover transition-transform duration-700 hover:scale-105"

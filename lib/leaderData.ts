@@ -45,7 +45,7 @@ export const leadersData: LeaderData[] = [
         name: "Dr. Ramatoulaye Diallo N'diaye",
         title: "Group CEO",
         role: "Visionary African leader blending diplomacy, culture, climate action, and innovative finance",
-        image: "/assets/leadership/Ramatoulaye Diallo N'diaye.jpeg",
+        image: "/assets/leadership/Ramatoulaye Diallo N'diaye.webp",
         category: "patron",
         bio: "Visionary African leader blending diplomacy, cultural renaissance, climate action, and innovative finance. As Group CEO of GGWoA, she leads continent-wide restoration efforts. Former Minister of Culture, Handicrafts and Tourism of Mali, she champions frameworks like Culture as Capital and the Bridge of Dignity.",
         fullBio: `Ramatoulaye Diallo N'Diaye is a visionary African leader whose work blends diplomacy, cultural renaissance, climate action, and innovative finance into a uniquely powerful voice for transformation on the continent. Her journey reflects a lifelong commitment to dignity, heritage, ecological stewardship, and the belief that Africa's cultural and environmental wealth can serve as a foundation for a new era of prosperity.

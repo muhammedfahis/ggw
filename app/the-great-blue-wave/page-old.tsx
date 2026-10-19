@@ -11,7 +11,7 @@ export default function GreatBlueWavePage() {
       {/* Hero Section */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-[url('/assets/the-great-blue-wave/hero-section.jpeg')] bg-cover bg-center opacity-40" />
+          <div className="absolute inset-0 bg-[url('/assets/the-great-blue-wave/hero-section.webp')] bg-cover bg-center opacity-40" />
           <div className="absolute inset-0 bg-gradient-to-br from-skyBlue/70 via-primary/80 to-deepEarth/90" />
         </div>
         <div className="relative z-10 px-6 md:px-12 lg:px-32 py-[120px] md:py-[140px] lg:py-[160px]">
@@ -105,7 +105,7 @@ export default function GreatBlueWavePage() {
 
           <div className="relative mb-16 h-64 md:h-80 rounded-3xl overflow-hidden shadow-2xl border border-accent/30">
             <Image
-              src="/assets/the-great-blue-wave/children.jpg"
+              src="/assets/the-great-blue-wave/children.webp"
               alt="Children benefiting from water-secure, purpose-driven partnerships"
               fill
               className="object-cover object-center"
@@ -264,7 +264,7 @@ export default function GreatBlueWavePage() {
 
           <div className="relative mb-16 h-64 md:h-80 rounded-3xl overflow-hidden shadow-2xl border border-offWhite/30">
             <Image
-              src="/assets/the-great-blue-wave/hawana.jpg"
+              src="/assets/the-great-blue-wave/hawana.webp"
               alt="Hawana atmospheric water generator and solar-powered technology"
               fill
               className="object-cover object-center"

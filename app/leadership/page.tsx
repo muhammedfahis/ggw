@@ -38,7 +38,7 @@ export default function LeadershipPage() {
             title: "Distinguished Leader",
             name: "Dr. Ramatoulaye Diallo N'diaye",
             role: "Group CEO",
-            image: "/assets/leadership/Ramatoulaye Diallo N'diaye.jpeg",
+            image: "/assets/leadership/Ramatoulaye Diallo N'diaye.webp",
             bio: "Visionary African leader blending diplomacy, cultural renaissance, climate action, and innovative finance. As Group CEO of GGWoA, she leads continent-wide restoration efforts. Former Minister of Culture, Handicrafts and Tourism of Mali, she champions frameworks like Culture as Capital and the Bridge of Dignity. Chair of Africa Impact Finance Subgroup, Global Impact Disclosure Taskforce. Distinguished with National Orders of Mali and France, UNESCO 70th Anniversary Medal, and UAE Government Decoration.",
         },
     ];
