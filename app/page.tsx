@@ -289,7 +289,7 @@ export default function HomePage() {
             <div className="relative w-full h-80 lg:h-auto overflow-hidden bg-deepEarth">
               <Image
                 src="/assets/advance-africa-home.webp"
-                alt="Smiling young entrepreneur in her textile shop"
+                alt="Smiling young entrepreneur in a textile warehouse"
                 fill
                 className="object-cover object-[65%_center] contrast-105"
                 sizes="(max-width: 1024px) 100vw, 50vw"
