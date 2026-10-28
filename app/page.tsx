@@ -448,7 +448,7 @@ export default function HomePage() {
       </section>
 
       {/* Core Pillars */}
-      <section className="py-24 md:py-32 px-6 md:px-12 lg:px-32 bg-gradient-to-br from-primary to-deepEarth">
+      <section className="py-24 md:py-32 px-6 md:px-12 lg:px-32 xl:px-16 bg-gradient-to-br from-primary to-deepEarth">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-20">
             <h2 className="text-5xl md:text-6xl lg:text-7xl font-heading font-bold mb-8 text-offWhite animate-fade-in-up">Core Pillars</h2>
@@ -457,13 +457,13 @@ export default function HomePage() {
             </p>
             <div className="w-32 h-1 bg-accent mx-auto mt-8 animate-scale-in origin-center" style={{ animationDelay: '0.4s' }}></div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 xl:grid-cols-5 gap-8 xl:gap-6">
             {workstreams.map((stream, index) => (
-              <div key={stream.title} className={`bg-offWhite/10 backdrop-blur-sm rounded-3xl p-8 border border-offWhite/20 hover:bg-offWhite/20 transition-all duration-500 hover:-translate-y-2 animate-fade-in-up lg:col-span-2 ${index === 3 ? "lg:col-start-2" : ""} ${index === workstreams.length - 1 ? "md:col-span-2 md:w-full md:max-w-[calc(50%-1rem)] md:mx-auto lg:max-w-none" : ""}`} style={{ animationDelay: `${0.6 + index * 0.15}s` }}>
+              <div key={stream.title} className={`bg-offWhite/10 backdrop-blur-sm rounded-3xl p-8 border border-offWhite/20 hover:bg-offWhite/20 transition-all duration-500 hover:-translate-y-2 animate-fade-in-up lg:col-span-2 xl:col-span-1 xl:p-6 ${index === 3 ? "lg:col-start-2 xl:col-start-auto" : ""} ${index === workstreams.length - 1 ? "md:col-span-2 md:w-full md:max-w-[calc(50%-1rem)] md:mx-auto lg:max-w-none" : ""}`} style={{ animationDelay: `${0.6 + index * 0.15}s` }}>
                 <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${stream.color} flex items-center justify-center mb-6 text-offWhite shadow-lg`}>
                   {stream.icon}
                 </div>
-                <h3 className="text-2xl font-heading font-bold mb-4 text-offWhite">{stream.title}</h3>
+                <h3 className="text-2xl xl:text-xl font-heading font-bold mb-4 text-offWhite">{stream.title}</h3>
                 <p className="text-offWhite/80 leading-relaxed">{stream.detail}</p>
               </div>
             ))}
