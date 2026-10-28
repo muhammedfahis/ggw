@@ -110,12 +110,18 @@ const workstreams = [
         icon: <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z" /></svg>,
         color: "from-amber-600 to-amber-800"
     },
+    {
+        title: "Human Capital Development",
+        detail: "Converting trained, underutilized talent into employees and business owners connected to capital, markets, and long-term support.",
+        icon: <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h9.5a6.5 6.5 0 0 1 .67-5.9C13.4 14.04 12.66 14 12 14zm6.5-1l-3.5 3.5 1.41 1.41L18.5 15.8V21h2v-5.2l2.09 2.11L24 16.5 20.5 13h-2z" /></svg>,
+        color: "from-teal-600 to-teal-800"
+    },
 ];
 
 const impactStats = [
     { value: "12", label: "Countries", detail: "Active engagement" },
     { value: "7", label: "Flagship Initiatives", detail: "Currently active" },
-    { value: "4", label: "Core Workstreams", detail: "Strategic pillars" },
+    { value: "5", label: "Core Workstreams", detail: "Strategic pillars" },
 ];
 
 export default function ProjectsPage() {
@@ -298,11 +304,11 @@ export default function ProjectsPage() {
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
                         {workstreams.map((stream, index) => (
                             <div
                                 key={stream.title}
-                                className="group bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 border border-accent/20"
+                                className={`group bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 border border-accent/20 lg:col-span-2 ${index === 3 ? "lg:col-start-2" : ""} ${index === workstreams.length - 1 ? "md:col-span-2 md:w-full md:max-w-[calc(50%-1rem)] md:mx-auto lg:max-w-none" : ""}`}
                             >
                                 <div className={`w-20 h-20 bg-gradient-to-br ${stream.color} rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform duration-300`}>
                                     {stream.icon}

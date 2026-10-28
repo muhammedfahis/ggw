@@ -31,6 +31,12 @@ const pillars = [
         icon: <svg className="w-10 h-10" fill="currentColor" viewBox="0 0 24 24"><path d="M16 4c0-1.11.89-2 2-2s2 .89 2 2-.89 2-2 2-2-.89-2-2zM4 18v-4h3v4h2v-7.5c0-1.38 1.12-2.5 2.5-2.5s2.5 1.12 2.5 2.5V18h2v-7.5c0-1.38 1.12-2.5 2.5-2.5s2.5 1.12 2.5 2.5V18h2v-4h3v4h2v-4c0-1.11-.89-2-2-2h-1c-1.11 0-2 .89-2 2v1h-2v-1c0-1.11-.89-2-2-2h-1c-1.11 0-2 .89-2 2v1h-2v-1c0-1.11-.89-2-2-2H6c-1.11 0-2 .89-2 2v4h2z"/></svg>,
         color: "from-amber-600 to-amber-800"
     },
+    {
+        title: "Human Capital Development",
+        copy: "Turning trained, underutilized talent into employees and business owners, connected to the capital, markets, and mentorship that let them create jobs for others.",
+        icon: <svg className="w-10 h-10" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h9.5a6.5 6.5 0 0 1 .67-5.9C13.4 14.04 12.66 14 12 14zm6.5-1l-3.5 3.5 1.41 1.41L18.5 15.8V21h2v-5.2l2.09 2.11L24 16.5 20.5 13h-2z"/></svg>,
+        color: "from-teal-600 to-teal-800"
+    },
 ];
 
 const stats = [
@@ -266,13 +272,13 @@ export default function AboutPage() {
                 </div>
             </section>
 
-            {/* Four Pillars Section */}
+            {/* Five Pillars Section */}
             <section className="px-6 md:px-12 lg:px-32 py-20 md:py-32 bg-offWhite">
                 <div className="max-w-6xl mx-auto">
                     <div className="text-center mb-20">
                         <p className="font-accent text-xs uppercase tracking-wider text-accent mb-6">WHAT WE ACTIVATE</p>
                         <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-deepEarth mb-8 leading-tight">
-                            Four Pillars to Regenerate the Sahel
+                            Five Pillars to Regenerate the Sahel
                         </h2>
                         <div className="w-32 h-1 bg-accent mx-auto mb-8"></div>
                         <p className="text-xl text-charcoal/80 max-w-3xl mx-auto leading-relaxed">
@@ -280,11 +286,11 @@ export default function AboutPage() {
                         </p>
                     </div>
                     
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
                         {pillars.map((pillar, index) => (
                             <div 
                                 key={pillar.title}
-                                className="group bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 border border-accent/20"
+                                className={`group bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 border border-accent/20 lg:col-span-2 ${index === 3 ? "lg:col-start-2" : ""} ${index === pillars.length - 1 ? "md:col-span-2 md:w-full md:max-w-[calc(50%-1rem)] md:mx-auto lg:max-w-none" : ""}`}
                             >
                                 <div className={`w-20 h-20 bg-gradient-to-br ${pillar.color} rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform duration-300`}>
                                     {pillar.icon}
